@@ -1,23 +1,67 @@
 {
-  "ComponentIndexes": {},
+  "ComponentIndexes": {
+    "cmHeader": 1,
+    "cmNavigator": 2,
+    "cmQuestion": 3
+  },
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "cmHeader": 3,
+    "cmNavigator": 4,
+    "cmQuestion": 5,
+    "Label1": 7,
+    "Label2": 8,
+    "Screen1": 6
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:22:03",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
-  "OrderComponentMetadata": {},
-  "OrderComponentTemplate": {},
+  "OrderComponentMetadata": {
+    "2a28f6a0470946c18f9a252357de2cb8": 2,
+    "93b0e31de2e64c04b0c113d1887e9b44": 1,
+    "e20f299b14b24e8f9cf27224af65c6bc": 0
+  },
+  "OrderComponentTemplate": {
+    "2a28f6a0470946c18f9a252357de2cb8": 2,
+    "93b0e31de2e64c04b0c113d1887e9b44": 1,
+    "e20f299b14b24e8f9cf27224af65c6bc": 0
+  },
   "OrderDataSource": {},
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
+  "OrderXMLTemplate": {
+    "label": 0
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "cmHeader": 1,
+    "cmNavigator": 2,
+    "cmQuestion": 3,
+    "Label1": 6,
+    "Label2": 7,
+    "Screen1": 5
+  },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0355125,
+    "ControlCount": {
+      "2a28f6a0470946c18f9a252357de2cb8": 1,
+      "93b0e31de2e64c04b0c113d1887e9b44": 1,
+      "e20f299b14b24e8f9cf27224af65c6bc": 1,
+      "label": 2,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 0.6009668,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }
