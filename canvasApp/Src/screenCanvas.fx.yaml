@@ -3,6 +3,7 @@ screenCanvas As screen:
     formThema As form:
         DataSource: ='仮説構築支援ツール - テーマ'
         Height: =423
+        Item: =galleryThema.Selected
         X: =40
         Y: =117
         ZIndex: =1
