@@ -1,8 +1,8 @@
 {
   "ComponentIndexes": {
-    "cmHeader": 3,
-    "cmNavigator": 4,
-    "cmQuestion": 5
+    "cmHeader": 2,
+    "cmNavigator": 3,
+    "cmQuestion": 4
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -25,10 +25,7 @@
     "Icon1": 34,
     "Icon2": 35,
     "Image1": 12,
-    "Label1": 7,
-    "Label2": 8,
     "NextArrow1": 15,
-    "Screen1": 6,
     "screenCanvas": 17,
     "screenThema": 9,
     "Separator1": 16,
@@ -43,7 +40,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:31:27",
+  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:32:44",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "d57d2637-4b22-4d80-81d5-de5ffd2e9396": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/67ec2c6d83e74b0eb1dc0bca3aad6848\""
@@ -71,10 +68,10 @@
   "OrderXMLTemplate": {
     "attachments": 7,
     "form": 5,
-    "gallery": 1,
+    "gallery": 0,
     "icon": 3,
-    "image": 2,
-    "label": 0,
+    "image": 1,
+    "label": 2,
     "rectangle": 4,
     "text": 6
   },
@@ -98,10 +95,7 @@
     "Icon1": 9,
     "Icon2": 10,
     "Image1": 4,
-    "Label1": 1,
-    "Label2": 0,
     "NextArrow1": 6,
-    "Screen1": 5,
     "screenCanvas": 0,
     "screenThema": 0,
     "Separator1": 8,
