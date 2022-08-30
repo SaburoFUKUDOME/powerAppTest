@@ -1,13 +1,14 @@
 screenThema As screen:
 
     "galleryThema As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =505
         Items: ='仮説構築支援ツール - テーマ'
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
+        TemplateSize: =141
         X: =40
-        Y: =40
+        Y: =110
         ZIndex: =1
 
         Image1 As image:
@@ -68,4 +69,10 @@ screenThema As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    Label2 As label:
+        Text: ="テーマ一覧"
+        X: =60
+        Y: =60
+        ZIndex: =2
 
