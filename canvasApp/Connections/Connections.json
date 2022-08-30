@@ -1,1 +1,27 @@
-{}
+{
+  "d57d2637-4b22-4d80-81d5-de5ffd2e9396": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL": {
+        "dataSources": {
+          "仮説構築支援ツール - テーマ": {
+            "tableName": "d9efbd81-92b2-4e83-aaa7-bdd33702bc7f"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "仮説構築支援ツール - テーマ"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d57d2637-4b22-4d80-81d5-de5ffd2e9396"
+  }
+}

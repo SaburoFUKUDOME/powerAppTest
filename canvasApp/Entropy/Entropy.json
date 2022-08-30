@@ -1,8 +1,8 @@
 {
   "ComponentIndexes": {
-    "cmHeader": 1,
-    "cmNavigator": 2,
-    "cmQuestion": 3
+    "cmHeader": 2,
+    "cmNavigator": 3,
+    "cmQuestion": 4
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -10,15 +10,25 @@
     "cmHeader": 3,
     "cmNavigator": 4,
     "cmQuestion": 5,
+    "galleryTemplate1": 11,
+    "galleryThema": 10,
+    "Image1": 12,
     "Label1": 7,
     "Label2": 8,
-    "Screen1": 6
+    "NextArrow1": 15,
+    "Screen1": 6,
+    "screenThema": 9,
+    "Separator1": 16,
+    "Subtitle1": 14,
+    "Title1": 13
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:22:03",
+  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:24:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
+  "LocalConnectionIDReferences": {
+    "d57d2637-4b22-4d80-81d5-de5ffd2e9396": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/67ec2c6d83e74b0eb1dc0bca3aad6848\""
+  },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
@@ -32,27 +42,44 @@
     "93b0e31de2e64c04b0c113d1887e9b44": 1,
     "e20f299b14b24e8f9cf27224af65c6bc": 0
   },
-  "OrderDataSource": {},
+  "OrderDataSource": {
+    "CustomGallerySample": 0,
+    "仮説構築支援ツール - テーマ": 1
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "label": 0
+    "gallery": 1,
+    "icon": 3,
+    "image": 2,
+    "label": 0,
+    "rectangle": 4
   },
   "PublishOrderIndices": {
     "App": 0,
     "cmHeader": 1,
     "cmNavigator": 2,
     "cmQuestion": 3,
+    "galleryTemplate1": 0,
+    "galleryThema": 0,
+    "Image1": 0,
     "Label1": 6,
     "Label2": 7,
-    "Screen1": 5
+    "NextArrow1": 0,
+    "Screen1": 5,
+    "screenThema": 0,
+    "Separator1": 0,
+    "Subtitle1": 0,
+    "Title1": 0
   },
-  "ResourcesJsonIndices": {},
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0355125,
+    "AnalysisLoadTime": 0.0868851,
     "ControlCount": {
       "2a28f6a0470946c18f9a252357de2cb8": 1,
       "93b0e31de2e64c04b0c113d1887e9b44": 1,
@@ -60,7 +87,7 @@
       "label": 2,
       "screen": 1
     },
-    "DeserializationLoadTime": 0.6009668,
+    "DeserializationLoadTime": 0.5902604,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
