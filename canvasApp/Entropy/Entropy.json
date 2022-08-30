@@ -11,11 +11,12 @@
     "cmNavigator": 4,
     "cmQuestion": 5,
     "Label1": 7,
+    "Label2": 8,
     "Screen1": 6
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/30/2022 06:56:14",
+  "HeaderLastSavedDateTimeUTC": "08/30/2022 07:02:58",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -44,13 +45,14 @@
     "cmNavigator": 0,
     "cmQuestion": 0,
     "Label1": 0,
+    "Label2": 0,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0832224,
+    "AnalysisLoadTime": 0.0750493,
     "ControlCount": {
       "2a28f6a0470946c18f9a252357de2cb8": 1,
       "93b0e31de2e64c04b0c113d1887e9b44": 1,
@@ -58,7 +60,7 @@
       "label": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.0445721,
+    "DeserializationLoadTime": 1.2728081,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
