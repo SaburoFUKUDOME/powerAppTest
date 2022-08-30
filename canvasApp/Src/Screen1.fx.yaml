@@ -1,0 +1,10 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Height: =58
+        Text: ="福留が追加したラベル"
+        Width: =256
+        X: =111
+        Y: =696
+        ZIndex: =1
+
