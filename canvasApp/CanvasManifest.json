@@ -15,7 +15,7 @@
       "appinstrumentationcorrelationtracing": false,
       "autocreateenvironmentvariables": false,
       "backfromhostaction": false,
-      "behaviorpropertyui": false,
+      "behaviorpropertyui": true,
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
       "classiccontrols": false,
@@ -91,11 +91,11 @@
     "Id": "1117fe75-065d-4a44-8a6a-00249397042e",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール",
+    "Name": "仮説構築支援ツール（技術検証）",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール",
+    "AppName": "仮説構築支援ツール（技術検証）",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

@@ -1,0 +1,15 @@
+functionTest As CanvasComponent:
+    addition(param1 As Number, param2 As Number):
+        param1:
+            Default: =100
+        param2:
+            Default: =100
+        ThisProperty:
+            Default: =param1+param2
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

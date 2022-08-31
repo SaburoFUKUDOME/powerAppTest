@@ -141,3 +141,28 @@ screenQuestion As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
+    Label5 As label:
+        Text: ="共通関数テスト"
+        X: =465
+        Y: =398
+        ZIndex: =11
+
+    Label6 As label:
+        Text: =funcRet
+        X: =615
+        Y: =398
+        ZIndex: =12
+
+    Icon10 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =Set(funcRet, functionTest_1.addition(1,2))
+        X: =312
+        Y: =386
+        ZIndex: =13
+
+    functionTest_1 As functionTest:
+        addition: =param1+param2
+        Height: =92
+        Width: =40
+        ZIndex: =14
+
