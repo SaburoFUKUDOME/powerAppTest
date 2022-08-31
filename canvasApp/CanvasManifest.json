@@ -57,6 +57,7 @@
       "improvedtabstopbehavior": true,
       "keeprecentscreensloaded": false,
       "longlivingcache": false,
+      "namedformulas": false,
       "nativecdsexperimental": true,
       "optimizedforteamsmeeting": false,
       "parallelcodegen": false,
@@ -90,7 +91,7 @@
     "Id": "1117fe75-065d-4a44-8a6a-00249397042e",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "%25e4%25bb%25ae%25e8%25aa%25ac%25e6%25a7%258b%25e7%25af%2589%25e6%2594%25af%25e6%258f%25b4%25e3%2583%2584%25e3%2583%25bc%25e3%2583%25ab.msapp",
+    "Name": "仮説構築支援ツール",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
@@ -106,6 +107,7 @@
   },
   "ScreenOrder": [
     "screenThema",
-    "screenCanvas"
+    "screenCanvas",
+    "screenQuestion"
   ]
 }

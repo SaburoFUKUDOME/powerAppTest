@@ -76,7 +76,7 @@ screenCanvas As screen:
                 Y: =DataCardKey1.Y
                 ZIndex: =4
 
-        列１_DataCard1 As typedDataCard.textualEditCard:
+        cardAnswer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="OData__x5217__xff11_"
             Default: =ThisItem.列１
@@ -86,7 +86,7 @@ screenCanvas As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "OData__x5217__xff11_")
             Required: =false
-            Update: =DataCardValue2.Text
+            Update: =cardAnswerValue.Text
             Width: =266
             X: =1
             Y: =0
@@ -102,7 +102,7 @@ screenCanvas As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue2 As text:
+            cardAnswerValue As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -131,7 +131,7 @@ screenCanvas As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue2.Y + DataCardValue2.Height
+                Y: =cardAnswerValue.Y + cardAnswerValue.Height
                 ZIndex: =3
 
             StarVisible2 As label:
@@ -216,10 +216,17 @@ screenCanvas As screen:
         Y: =28
         ZIndex: =2
 
-    Icon2 As icon.CheckBadge:
-        Icon: =Icon.CheckBadge
+    Icon3 As icon.Save:
+        Icon: =Icon.Save
         OnSelect: =SubmitForm(formThema)
-        X: =1275
+        X: =1269
         Y: =28
-        ZIndex: =3
+        ZIndex: =4
+
+    Icon4 As icon.Help:
+        Icon: =Icon.Help
+        OnSelect: =Navigate(screenQuestion)
+        X: =1185
+        Y: =28
+        ZIndex: =5
 

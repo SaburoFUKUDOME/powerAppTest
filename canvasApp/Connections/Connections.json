@@ -13,12 +13,16 @@
         "dataSources": {
           "仮説構築支援ツール - テーマ": {
             "tableName": "d9efbd81-92b2-4e83-aaa7-bdd33702bc7f"
+          },
+          "仮想構築支援ツール - 問い": {
+            "tableName": "728e0aff-80b5-4778-9265-43ef0d48366b"
           }
         }
       }
     },
     "dataSources": [
-      "仮説構築支援ツール - テーマ"
+      "仮説構築支援ツール - テーマ",
+      "仮想構築支援ツール - 問い"
     ],
     "dependencies": {},
     "dependents": [],

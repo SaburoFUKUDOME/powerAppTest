@@ -31,15 +31,14 @@
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "Modified": "Modified",
-      "OData__x5217__xff11_": "列１",
-      "OData__x5217__xff12_": "列２",
+      "OData__x8a2d__x554f_": "設問",
       "Title": "Title"
     },
     "DatasetName": "https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "仮説構築支援ツール - テーマ",
+    "Name": "仮想構築支援ツール - 問い",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
