@@ -209,7 +209,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/01/2022 23:08:40",
+  "HeaderLastSavedDateTimeUTC": "09/01/2022 23:08:53",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/2147b0feee85489c82043d3e66c8e683\"",
@@ -238,8 +238,7 @@
     "CustomGallerySample": 1,
     "Office365Outlook": 0,
     "仮説構築支援ツール - テーマ": 3,
-    "仮説構築支援ツール - ナビゲーション": 4,
-    "仮説構築支援ツール - ナビゲーション_1": 5,
+    "仮説構築支援ツール - ナビゲーション_1": 4,
     "仮想構築支援ツール - 問い": 2
   },
   "OrderGroupControls": {
