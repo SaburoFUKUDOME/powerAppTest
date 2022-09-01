@@ -23041,7 +23041,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "id3_answer_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23201,7 +23201,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "id4_answer_DataCard1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31106,7 +31106,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "添付ファイル_DataCard1",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31261,7 +31261,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "列２_DataCard1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
