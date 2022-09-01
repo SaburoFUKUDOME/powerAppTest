@@ -1,14 +1,15 @@
 screenThema As screen:
 
     "galleryThema As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =505
+        Height: =419
         Items: ='仮説構築支援ツール - テーマ'
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =0
         TemplateSize: =141
-        X: =40
-        Y: =110
+        Width: =1084
+        X: =126
+        Y: =180
         ZIndex: =1
 
         Image1 As image:
@@ -71,26 +72,17 @@ screenThema As screen:
             ZIndex: =5
 
     Label2 As label:
-        Text: ="テーマ一覧"
-        X: =60
-        Y: =60
+        Color: =RGBA(100, 149, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        Size: =18
+        Text: ="担当テーマ"
+        Underline: =true
+        Width: =194
+        X: =140
+        Y: =120
         ZIndex: =2
 
-    Label7 As label:
-        Text: ="fukudome"
-        X: =963
-        Y: =100
-        ZIndex: =3
-
-    Button1 As button:
-        Text: ="ボタン"
-        X: =888
-        Y: =356
-        ZIndex: =4
-
-    Button2 As button:
-        Text: ="ボタン"
-        X: =888
-        Y: =440
-        ZIndex: =5
+    cmHeader_1 As cmHeader:
+        ZIndex: =6
 
