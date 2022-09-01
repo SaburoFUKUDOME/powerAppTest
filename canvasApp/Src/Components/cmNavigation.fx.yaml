@@ -30,6 +30,7 @@ cmNavigation As CanvasComponent:
                 Color: =If(ThisItem.IsSelected,White,RGBA(100, 149, 237, 1))
                 DisabledBorderColor: =RGBA(100, 149, 237, 100)
                 Fill: =RGBA(0, 0, 0, 0)
+                Height: =navigateGallery.TemplateHeight
                 HoverFill: =RGBA(100, 149, 237, 100)
                 OnSelect: |-
                     =Navigate(screenCanvas,ScreenTransition.Fade);
@@ -40,7 +41,7 @@ cmNavigation As CanvasComponent:
                 RadiusTopRight: =0
                 Size: =10
                 Text: =ThisItem.Title
-                Width: =166
+                Width: =navigateGallery.TemplateWidth
                 ZIndex: =6
 
         homeButton As button:
