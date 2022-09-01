@@ -65,7 +65,7 @@
         "Name": "headerLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 149,
+        "PublishOrderIndex": 151,
         "Rules": [
           {
             "Category": "Design",
@@ -105,7 +105,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "79",
+            "InvariantScript": "60",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -280,7 +280,7 @@
         "Name": "addressLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 150,
+        "PublishOrderIndex": 152,
         "Rules": [
           {
             "Category": "Data",
@@ -302,7 +302,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "17",
+            "InvariantScript": "12",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -350,7 +350,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "71",
+            "InvariantScript": "55",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -368,13 +368,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "25",
+            "InvariantScript": "5",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "5",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -386,7 +386,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "432",
+            "InvariantScript": "459",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -650,7 +650,7 @@
         "Name": "userIcon",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 151,
+        "PublishOrderIndex": 153,
         "Rules": [
           {
             "Category": "Data",
@@ -762,25 +762,25 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "62",
+            "InvariantScript": "40",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "62",
+            "InvariantScript": "40",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "9",
+            "InvariantScript": "10",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "1263",
+            "InvariantScript": "1277",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -886,7 +886,14 @@
           "X",
           "Y",
           "Width",
-          "Height",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "61",
+            "InvariantPropertyName": "Height",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisplayMode",
           "ZIndex",
           "LineHeight",
@@ -921,7 +928,7 @@
         "Name": "titleLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 152,
+        "PublishOrderIndex": 154,
         "Rules": [
           {
             "Category": "Data",
@@ -943,7 +950,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "27",
+            "InvariantScript": "20",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -991,7 +998,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "61",
+            "InvariantScript": "55",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -1015,7 +1022,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "10",
+            "InvariantScript": "1",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -1027,7 +1034,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "30",
+            "InvariantScript": "32",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1197,7 +1204,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637976141604207829",
+    "LastModifiedTimestamp": "637976144736334050",
     "Name": "cmHeader",
     "Rules": [
       {
@@ -1226,9 +1233,9 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "100",
+        "InvariantScript": "70",
         "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -1256,7 +1263,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976141604207829",
+  "LastModifiedTimestamp": "637976144736334050",
   "Name": "74380d984ce148eca4423ee6f2d35989",
   "OverridableProperties": {},
   "TemplateOriginalName": "48a811cd834d494084536b41f327a27e",
