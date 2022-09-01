@@ -230,3 +230,9 @@ screenCanvas As screen:
         Y: =28
         ZIndex: =5
 
+    Label8 As label:
+        Text: ="fukudome"
+        X: =432
+        Y: =588
+        ZIndex: =6
+
