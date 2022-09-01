@@ -144,6 +144,7 @@ scrennQuestion As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
+            Size: =14
             Text: ="◀ 解説"
             Visible: =exampleGroupVisible
             Width: =113
@@ -189,6 +190,7 @@ scrennQuestion As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
+            Size: =14
             Text: ="例 ▶"
             Visible: =commentaryGroupVisible
             Width: =113
@@ -209,6 +211,7 @@ scrennQuestion As screen:
             DisabledColor: =baseColor
             DisabledFill: =baseColor
             Fill: =baseColor
+            Height: =38
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             RadiusBottomLeft: =20
@@ -217,9 +220,9 @@ scrennQuestion As screen:
             RadiusTopRight: =20
             Text: ="　↑　戻る"
             Visible: =buckVisible
-            Width: =213
-            X: =467
-            Y: =696
+            Width: =175
+            X: =502
+            Y: =697
             ZIndex: =15
 
         nextButton As button:
