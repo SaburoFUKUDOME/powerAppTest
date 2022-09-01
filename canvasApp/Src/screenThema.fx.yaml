@@ -76,3 +76,9 @@ screenThema As screen:
         Y: =60
         ZIndex: =2
 
+    Label7 As label:
+        Text: ="福田テキスト"
+        X: =796
+        Y: =88
+        ZIndex: =3
+
