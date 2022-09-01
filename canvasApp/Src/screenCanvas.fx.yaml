@@ -1593,3 +1593,7 @@ screenCanvas As screen:
     cmHeader_2 As cmHeader:
         ZIndex: =7
 
+    cmNavigationHome_1 As cmNavigationHome:
+        X: =1150
+        ZIndex: =8
+
