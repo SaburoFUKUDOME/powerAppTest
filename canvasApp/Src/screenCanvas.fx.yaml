@@ -1573,28 +1573,22 @@ screenCanvas As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Back()
         X: =40
-        Y: =28
+        Y: =668
         ZIndex: =2
 
     Icon3 As icon.Save:
         Icon: =Icon.Save
         OnSelect: =SubmitForm(formThema)
-        X: =1269
-        Y: =28
+        X: =879
+        Y: =668
         ZIndex: =4
 
     Icon4 As icon.Help:
         Icon: =Icon.Help
         OnSelect: =Navigate(screenQuestion)
-        X: =1185
-        Y: =28
+        X: =975
+        Y: =668
         ZIndex: =5
-
-    Label8 As label:
-        Text: ="fukudome"
-        X: =432
-        Y: =588
-        ZIndex: =6
 
     cmHeader_2 As cmHeader:
         ZIndex: =7

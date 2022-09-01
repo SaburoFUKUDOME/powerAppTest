@@ -305,7 +305,7 @@
       "Type": "ControlInfo"
     },
     "cmHeader": {
-      "AllowAccessToGlobals": true,
+      "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
         {
