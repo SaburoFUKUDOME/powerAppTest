@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "cmQuestion",
-    "TemplateGuid": "2a28f6a0470946c18f9a252357de2cb8"
+    "Name": "Component1",
+    "TemplateGuid": "5d4db020091349f189b94303a97a5b41"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976704139734049",
-  "Name": "2a28f6a0470946c18f9a252357de2cb8",
+  "LastModifiedTimestamp": "637976704811372927",
+  "Name": "5d4db020091349f189b94303a97a5b41",
   "OverridableProperties": {},
-  "Version": "637974310099676722"
+  "Version": "637976704811177069"
 }

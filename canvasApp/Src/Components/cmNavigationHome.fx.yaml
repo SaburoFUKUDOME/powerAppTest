@@ -15,7 +15,7 @@ cmNavigationHome As CanvasComponent:
 
         "navigateGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             Height: =360
-            Items: ='仮説構築支援ツール - ナビゲーション'
+            Items: ='仮説構築支援ツール - ナビゲーション_1'
             Layout: =Layout.Vertical
             TemplateFill: =
             TemplatePadding: =0
