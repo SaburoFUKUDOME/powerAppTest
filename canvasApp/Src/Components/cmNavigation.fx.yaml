@@ -1,33 +1,33 @@
-Component2 As CanvasComponent:
+cmNavigation As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
-    Width: =640
+    Width: =200
     X: =0
     Y: =0
     ZIndex: =1
 
-    Group2_2 As group:
+    Group2_1 As group:
         Height: =5
         Width: =5
         X: =-658
         Y: =-16
-        ZIndex: =3
+        ZIndex: =4
 
-        "navigateGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             Height: =360
             Items: ='仮説構築支援ツール - ナビゲーション'
             Layout: =Layout.Vertical
-            TemplateFill: =
+            TemplateFill: =If(ThisItem.IsSelected,RGBA(100, 149, 237, 100),White)
             TemplatePadding: =0
             TemplateSize: =40
             Width: =166
-            X: =395
+            X: =10
             Y: =169
             ZIndex: =1
 
-            navigateButton_1 As button:
+            navigateButton As button:
                 BorderColor: =RGBA(100, 149, 237, 100)
-                Color: =RGBA(100, 149, 237, 1)
+                Color: =If(ThisItem.IsSelected,White,RGBA(100, 149, 237, 1))
                 DisabledBorderColor: =RGBA(100, 149, 237, 100)
                 Fill: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(100, 149, 237, 100)
@@ -43,18 +43,18 @@ Component2 As CanvasComponent:
                 Width: =166
                 ZIndex: =6
 
-        homeButton_2 As button:
+        homeButton As button:
             BorderColor: =RGBA(100, 149, 237, 100)
             BorderThickness: =3
-            Color: =White
+            Color: =RGBA(100, 149, 237, 1)
             DisabledBorderColor: =RGBA(100, 149, 237, 100)
             DisabledColor: =RGBA(100, 149, 237, 100)
             DisabledFill: =RGBA(100, 149, 237, 100)
-            Fill: =RGBA(100, 149, 237, 100)
+            Fill: =RGBA(0, 0, 0, 0)
             FontWeight: =FontWeight.Bold
             Height: =46
             HoverFill: =RGBA(100, 149, 237, 100)
-            OnSelect: =
+            OnSelect: =Navigate(screenCanvas,ScreenTransition.Fade)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -62,7 +62,7 @@ Component2 As CanvasComponent:
             Size: =16
             Text: ="Home"
             Width: =166
-            X: =395
+            X: =10
             Y: =101
             ZIndex: =2
 

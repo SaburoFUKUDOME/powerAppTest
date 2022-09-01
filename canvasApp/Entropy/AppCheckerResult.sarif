@@ -1334,19 +1334,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Component1.navigateGallery.AccessibleLabel"
+                  "fullyQualifiedName": "cmNavigation.navigateGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Component1.navigateGallery.AccessibleLabel",
+                  "fullyQualifiedName": "cmNavigation.navigateGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Component1",
-                "type": "Component1.navigateGallery"
+                "module": "cmNavigation",
+                "type": "cmNavigation.navigateGallery"
               }
             }
           ],
@@ -1364,19 +1364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Component1.navigateGallery.TabIndex"
+                  "fullyQualifiedName": "cmNavigation.navigateGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Component1.navigateGallery.TabIndex",
+                  "fullyQualifiedName": "cmNavigation.navigateGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Component1",
-                "type": "Component1.navigateGallery"
+                "module": "cmNavigation",
+                "type": "cmNavigation.navigateGallery"
               }
             }
           ],
@@ -1394,19 +1394,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Component2.navigateGallery_1.AccessibleLabel"
+                  "fullyQualifiedName": "cmNavigationHome.navigateGallery_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Component2.navigateGallery_1.AccessibleLabel",
+                  "fullyQualifiedName": "cmNavigationHome.navigateGallery_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "cmNavigationHome",
+                "type": "cmNavigationHome.navigateGallery_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigationHome.navigateGallery_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigationHome.navigateGallery_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Component2",
-                "type": "Component2.navigateGallery_1"
+                "module": "cmNavigationHome",
+                "type": "cmNavigationHome.navigateGallery_1"
               }
             }
           ],
@@ -1418,36 +1448,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Component2.navigateGallery_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Component2.navigateGallery_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Component2",
-                "type": "Component2.navigateGallery_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
         }
       ],
       "tool": {

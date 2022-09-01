@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component1",
-    "TemplateGuid": "a6c1d2c4db2d45a68b6caa267a8082ff"
+    "Name": "cmNavigationHome",
+    "TemplateGuid": "ea654233b1d14d539124bc63fb8586a4"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,9 +19,9 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976025924961797",
-  "Name": "a6c1d2c4db2d45a68b6caa267a8082ff",
+  "LastModifiedTimestamp": "637976028875898007",
+  "Name": "ea654233b1d14d539124bc63fb8586a4",
   "OverridableProperties": {},
-  "TemplateOriginalName": "edd088a052d74b07b97c0da5ab0e2e07",
-  "Version": "637975285127382863"
+  "TemplateOriginalName": "b3b19aa090c24ca2ad4456baaa0c916e",
+  "Version": "637975977088928977"
 }
