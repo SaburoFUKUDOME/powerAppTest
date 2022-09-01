@@ -35,6 +35,7 @@ cmNavigation As CanvasComponent:
                 OnSelect: |-
                     =Navigate(screenCanvas,ScreenTransition.Fade);
                     // 問IDを変数にセットする
+                    Set(questionKey,ThisItem.question_id);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
