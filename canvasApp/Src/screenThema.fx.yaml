@@ -88,3 +88,9 @@ screenThema As screen:
         Y: =356
         ZIndex: =4
 
+    Button2 As button:
+        Text: ="ボタン"
+        X: =888
+        Y: =440
+        ZIndex: =5
+
