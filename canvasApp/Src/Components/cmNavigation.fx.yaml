@@ -17,7 +17,7 @@ cmNavigation As CanvasComponent:
             Height: =360
             Items: ='仮説構築支援ツール - ナビゲーション'
             Layout: =Layout.Vertical
-            TemplateFill: =If(ThisItem.IsSelected,RGBA(100, 149, 237, 100),White)
+            TemplateFill: =If(ThisItem.IsSelected,baseColor,White)
             TemplatePadding: =0
             TemplateSize: =40
             Width: =166
@@ -26,12 +26,12 @@ cmNavigation As CanvasComponent:
             ZIndex: =1
 
             navigateButton As button:
-                BorderColor: =RGBA(100, 149, 237, 100)
-                Color: =If(ThisItem.IsSelected,White,RGBA(100, 149, 237, 1))
-                DisabledBorderColor: =RGBA(100, 149, 237, 100)
+                BorderColor: =baseColor
+                Color: =If(ThisItem.IsSelected,White,baseColor)
+                DisabledBorderColor: =baseColor
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =navigateGallery.TemplateHeight
-                HoverFill: =RGBA(100, 149, 237, 100)
+                HoverFill: =baseColor
                 OnSelect: |-
                     =Navigate(screenCanvas,ScreenTransition.Fade);
                     // 問IDを変数にセットする
@@ -46,16 +46,16 @@ cmNavigation As CanvasComponent:
                 ZIndex: =6
 
         homeButton As button:
-            BorderColor: =RGBA(100, 149, 237, 100)
+            BorderColor: =baseColor
             BorderThickness: =3
-            Color: =RGBA(100, 149, 237, 1)
-            DisabledBorderColor: =RGBA(100, 149, 237, 100)
-            DisabledColor: =RGBA(100, 149, 237, 100)
-            DisabledFill: =RGBA(100, 149, 237, 100)
+            Color: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
             Fill: =RGBA(0, 0, 0, 0)
             FontWeight: =FontWeight.Bold
             Height: =46
-            HoverFill: =RGBA(100, 149, 237, 100)
+            HoverFill: =baseColor
             OnSelect: =Navigate(screenCanvas,ScreenTransition.Fade)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
