@@ -199,7 +199,7 @@
         "Name": "homeButton",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 174,
+        "PublishOrderIndex": 178,
         "Rules": [
           {
             "Category": "Data",
@@ -464,7 +464,7 @@
             "Name": "galleryTemplate1_1",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 177,
+            "PublishOrderIndex": 181,
             "Rules": [
               {
                 "Category": "Data",
@@ -660,7 +660,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 178,
+            "PublishOrderIndex": 182,
             "Rules": [
               {
                 "Category": "Data",
@@ -972,7 +972,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 176,
+        "PublishOrderIndex": 180,
         "Rules": [
           {
             "Category": "Data",
@@ -1174,7 +1174,7 @@
         "Name": "Group2_1",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 175,
+        "PublishOrderIndex": 179,
         "Rules": [
           {
             "Category": "Design",
