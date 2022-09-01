@@ -1,4 +1,21 @@
 scrennQuestion As screen:
+    OnVisible: |+
+        =Set(currentNo, 1);
+        Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=3).設問);
+        //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title=questionKey).設問);
+        Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=3).Title);
+        //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
+        Set(currentAnswer, galleryThema.Selected.列１);
+        Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=3).current_question_number);
+        Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=3).question_totalnumber);
+        Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=3).commentary);
+        Set(example, LookUp('仮想構築支援ツール - 問い', ID=3).example);
+        
+        Set(nextVisible, true);
+        Set(buckVisible, false);
+        Set(commentaryGroupVisible, true);
+        Set(exampleGroupVisible, false);
+        
 
     cmHeader_3 As cmHeader:
 
@@ -32,4 +49,233 @@ scrennQuestion As screen:
             X: =40
             Y: =68
             ZIndex: =4
+
+    questionLabel As label:
+        Align: =Left
+        Color: =baseColor
+        FontWeight: =Semibold
+        Size: =14
+        Text: =currentQuestion
+        Width: =996
+        X: =92
+        Y: =197
+        ZIndex: =7
+
+    questionTitleGroup As group:
+        Height: =5
+        Width: =5
+        X: =4
+        Y: =-91
+        ZIndex: =7
+
+        infoIcon As icon.Information:
+            Color: =baseColor
+            DisabledColor: =baseColor
+            DisplayMode: =DisplayMode.View
+            Height: =49
+            HoverColor: =baseColor
+            Icon: =Icon.Information
+            PressedColor: =baseColor
+            Width: =41
+            X: =60
+            Y: =139
+            ZIndex: =5
+
+        questionTitleLabel As label:
+            FontWeight: =Semibold
+            Size: =15
+            Text: =currentTitle
+            X: =101
+            Y: =144
+            ZIndex: =6
+
+    textAnswer As text:
+        BorderColor: =baseColor
+        BorderStyle: =BorderStyle.None
+        Default: =currentAnswer
+        DisabledBorderColor: =baseColor
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =125
+        HoverFill: =RGBA(237, 237, 237, 1)
+        PaddingBottom: =0
+        PaddingLeft: |
+            =10
+        PaddingRight: =0
+        PaddingTop: =0
+        Width: =936
+        X: =92
+        Y: =250
+        ZIndex: =8
+
+    exampleGroup As group:
+        Height: =5
+        Width: =5
+        X: =-2
+        Y: =-330
+        ZIndex: =13
+
+        exampleLabel As label:
+            BorderColor: =RGBA(163, 216, 246, 10)
+            DisabledColor: =RGBA(163, 216, 246, 5)
+            Fill: =RGBA(163, 216, 246, 5)
+            FontWeight: =Normal
+            Height: =206
+            Overflow: =Overflow.Scroll
+            Text: ="例：" & Char(10)&Char(10)&example
+            Visible: =exampleGroupVisible
+            Width: =936
+            X: =88
+            Y: =441
+            ZIndex: =11
+
+        exampleButton As button:
+            BorderColor: =White
+            Color: =baseColor
+            Fill: =White
+            Height: =36
+            HoverBorderColor: =ColorFade(White, -5%)
+            HoverFill: =baseColor
+            OnSelect: |
+                =Set(exampleGroupVisible,false);
+                Set(commentaryGroupVisible,true);
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =baseColor
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="◀ 解説"
+            Visible: =exampleGroupVisible
+            Width: =113
+            X: =870
+            Y: =593
+            ZIndex: =12
+
+    commentaryGroup As group:
+        Height: =5
+        Width: =5
+        X: =-2
+        Y: =-330
+        ZIndex: =15
+
+        commentaryLabel As label:
+            BorderColor: =RGBA(163, 216, 246, 10)
+            DisabledColor: =RGBA(163, 216, 246, 5)
+            Fill: =RGBA(163, 216, 246, 5)
+            FontWeight: =Normal
+            Height: =206
+            Overflow: =Overflow.Scroll
+            Text: ="解説：" & Char(10)&Char(10)&commentary
+            Visible: =commentaryGroupVisible
+            Width: =936
+            X: =88
+            Y: =441
+            ZIndex: =13
+
+        commentaryButton As button:
+            BorderColor: =White
+            Color: =baseColor
+            DisabledFill: =baseColor
+            Fill: =White
+            Height: =36
+            HoverBorderColor: =ColorFade(White, -5%)
+            HoverFill: =baseColor
+            OnSelect: |
+                =Set(exampleGroupVisible,true);
+                Set(commentaryGroupVisible,false);
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =baseColor
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="例 ▶"
+            Visible: =commentaryGroupVisible
+            Width: =113
+            X: =870
+            Y: =593
+            ZIndex: =14
+
+    buckNextButtonGroup As group:
+        Height: =5
+        Width: =5
+        X: =-367
+        Y: =-596
+        ZIndex: =17
+
+        buckButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↑　戻る"
+            Visible: =buckVisible
+            Width: =213
+            X: =467
+            Y: =696
+            ZIndex: =15
+
+        nextButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↓　次へ"
+            Visible: =nextVisible
+            Width: =buckButton.Width
+            X: =728
+            Y: =696
+            ZIndex: =16
+
+    pagingGroup As group:
+        Height: =5
+        Width: =5
+        X: =-871
+        Y: =-595
+        ZIndex: =20
+
+        currentPageLabel As label:
+            Color: =baseColor
+            FontWeight: =Bold
+            Height: =35
+            Text: =currentPage
+            Width: =35
+            X: =963
+            Y: =699
+            ZIndex: =17
+
+        totalPageLabel As label:
+            Color: =baseColor
+            FontWeight: =Bold
+            Text: |
+                =totalPage
+            Width: =48
+            X: =1002
+            Y: =696
+            ZIndex: =18
+
+        Icon5 As icon.VerticalLine:
+            Color: =baseColor
+            Height: =30
+            Icon: =Icon.VerticalLine
+            Rotation: |
+                =40
+            Width: =42
+            X: =974
+            Y: =701
+            ZIndex: =19
 
