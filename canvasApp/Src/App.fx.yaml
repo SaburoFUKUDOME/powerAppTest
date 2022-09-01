@@ -1,4 +1,4 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(baceColor,RGBA(100, 149, 237, 1))
+    OnStart: =Set(baseColor,RGBA(100, 149, 237, 1))
 
