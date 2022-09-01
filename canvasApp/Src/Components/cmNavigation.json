@@ -1,12 +1,12 @@
 {
   "ComponentAllowCustomization": true,
-  "ComponentChangedSinceFileImport": true,
+  "ComponentChangedSinceFileImport": false,
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "cmQuestion",
-    "TemplateGuid": "2a28f6a0470946c18f9a252357de2cb8"
+    "Name": "cmNavigation",
+    "TemplateGuid": "a6c1d2c4db2d45a68b6caa267a8082ff"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,9 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637975971454526627",
-  "Name": "2a28f6a0470946c18f9a252357de2cb8",
+  "LastModifiedTimestamp": "637976028291646880",
+  "Name": "a6c1d2c4db2d45a68b6caa267a8082ff",
   "OverridableProperties": {},
-  "Version": "637974310099676722"
+  "TemplateOriginalName": "edd088a052d74b07b97c0da5ab0e2e07",
+  "Version": "637975285127382863"
 }
