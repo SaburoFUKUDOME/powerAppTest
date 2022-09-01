@@ -53,7 +53,8 @@ screenThema As screen:
             ZIndex: =5
 
     Label2 As label:
-        Color: =RGBA(100, 149, 237, 1)
+        Color: =baceColor
+        DisabledColor: =baceColor
         FontWeight: =FontWeight.Bold
         Height: =44
         Size: =18
@@ -96,7 +97,7 @@ screenThema As screen:
         ZIndex: =9
 
     Label2_1 As label:
-        Color: =RGBA(100, 149, 237, 1)
+        Color: =baceColor
         FontWeight: =FontWeight.Bold
         Height: =44
         Size: =18
