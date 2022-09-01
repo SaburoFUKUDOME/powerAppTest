@@ -143,7 +143,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "buckButton",
-      "ParentIndex": 14,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -456,7 +456,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
@@ -499,7 +499,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmNavigation_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -699,7 +699,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commentaryButton",
-      "ParentIndex": 11,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1045,7 +1045,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commentaryLabel",
-      "ParentIndex": 9,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1326,7 +1326,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "currentPageLabel",
-      "ParentIndex": 15,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1684,7 +1684,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "exampleButton",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2030,7 +2030,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "exampleLabel",
-      "ParentIndex": 8,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2294,7 +2294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "headerLabel_1",
-      "ParentIndex": 3,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2428,7 +2428,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon5",
-      "ParentIndex": 16,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2627,7 +2627,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "infoIcon",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2899,7 +2899,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "nextButton",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3286,7 +3286,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "questionLabel",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3613,7 +3613,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "questionTitleLabel",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4029,7 +4029,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "textAnswer",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4320,7 +4320,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "titleLabel_1",
-      "ParentIndex": 1,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4596,7 +4596,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "totalPageLabel",
-      "ParentIndex": 13,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
