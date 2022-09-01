@@ -4,8 +4,9 @@ screenCanvas As screen:
         DataSource: ='仮説構築支援ツール - テーマ'
         Height: =423
         Item: =galleryThema.Selected
-        X: =40
-        Y: =117
+        Width: =1026
+        X: =63
+        Y: =217
         ZIndex: =1
 
         列２_DataCard1 As typedDataCard.textualEditCard:
@@ -19,7 +20,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "OData__x5217__xff12_")
             Required: =false
             Update: =DataCardValue2.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =0
             ZIndex: =1
@@ -87,7 +88,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id3_answer")
             Required: =false
             Update: =DataCardValue4.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =1
             ZIndex: =1
@@ -155,7 +156,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id4_answer")
             Required: =false
             Update: =DataCardValue5.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =1
             ZIndex: =1
@@ -223,7 +224,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id5_answer")
             Required: =false
             Update: =DataCardValue6.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =1
             ZIndex: =1
@@ -291,7 +292,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id6_answer")
             Required: =false
             Update: =DataCardValue7.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =2
             ZIndex: =1
@@ -359,7 +360,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id7_answer")
             Required: =false
             Update: =DataCardValue8.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =2
             ZIndex: =1
@@ -427,7 +428,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id8_answer")
             Required: =false
             Update: =DataCardValue9.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =2
             ZIndex: =1
@@ -495,7 +496,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id9_answer")
             Required: =false
             Update: =DataCardValue10.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =3
             ZIndex: =1
@@ -563,7 +564,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id10_answer")
             Required: =false
             Update: =DataCardValue11.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =3
             ZIndex: =1
@@ -631,7 +632,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id11_answer")
             Required: =false
             Update: =DataCardValue12.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =3
             ZIndex: =1
@@ -699,7 +700,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id12_answer")
             Required: =false
             Update: =DataCardValue13.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =4
             ZIndex: =1
@@ -767,7 +768,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id13_answer")
             Required: =false
             Update: =DataCardValue14.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =4
             ZIndex: =1
@@ -835,7 +836,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id14_answer")
             Required: =false
             Update: =DataCardValue15.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =4
             ZIndex: =1
@@ -903,7 +904,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id15_answer")
             Required: =false
             Update: =DataCardValue16.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =5
             ZIndex: =1
@@ -971,7 +972,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id16_answer")
             Required: =false
             Update: =DataCardValue17.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =5
             ZIndex: =1
@@ -1039,7 +1040,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id17_answer")
             Required: =false
             Update: =DataCardValue18.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =5
             ZIndex: =1
@@ -1107,7 +1108,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id18_answer")
             Required: =false
             Update: =DataCardValue19.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =6
             ZIndex: =1
@@ -1175,7 +1176,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id19_answer")
             Required: =false
             Update: =DataCardValue20.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =6
             ZIndex: =1
@@ -1243,7 +1244,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id20_answer")
             Required: =false
             Update: =DataCardValue21.Text
-            Width: =266
+            Width: =342
             X: =2
             Y: =6
             ZIndex: =1
@@ -1311,7 +1312,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "id21_answer")
             Required: =false
             Update: =DataCardValue22.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =7
             ZIndex: =1
@@ -1379,7 +1380,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue1.Text
-            Width: =266
+            Width: =342
             X: =0
             Y: =0
             ZIndex: =2
@@ -1447,7 +1448,7 @@ screenCanvas As screen:
             MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "OData__x5217__xff11_")
             Required: =false
             Update: =cardAnswerValue.Text
-            Width: =266
+            Width: =342
             X: =1
             Y: =0
             ZIndex: =2
@@ -1514,7 +1515,7 @@ screenCanvas As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue3.Attachments
-            Width: =266
+            Width: =342
             X: =1
             Y: =7
             ZIndex: =2

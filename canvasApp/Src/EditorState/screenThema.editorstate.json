@@ -163,7 +163,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryThema",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1271,7 +1271,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle3",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
