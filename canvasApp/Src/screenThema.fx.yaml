@@ -76,3 +76,9 @@ screenThema As screen:
         Y: =60
         ZIndex: =2
 
+    Label7 As label:
+        Text: ="fukudome"
+        X: =963
+        Y: =100
+        ZIndex: =3
+
