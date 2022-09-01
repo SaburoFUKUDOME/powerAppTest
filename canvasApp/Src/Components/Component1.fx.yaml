@@ -1,0 +1,68 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Group2_1 As group:
+        Height: =5
+        Width: =5
+        X: =-658
+        Y: =-16
+        ZIndex: =4
+
+        "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =360
+            Items: ='仮説構築支援ツール - ナビゲーション'
+            Layout: =Layout.Vertical
+            TemplateFill: =If(ThisItem.IsSelected,RGBA(100, 149, 237, 100),White)
+            TemplatePadding: =0
+            TemplateSize: =40
+            Width: =166
+            X: =395
+            Y: =169
+            ZIndex: =1
+
+            navigateButton As button:
+                BorderColor: =RGBA(100, 149, 237, 100)
+                Color: =If(ThisItem.IsSelected,White,RGBA(100, 149, 237, 1))
+                DisabledBorderColor: =RGBA(100, 149, 237, 100)
+                Fill: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(100, 149, 237, 100)
+                OnSelect: |-
+                    =Navigate(screenCanvas,ScreenTransition.Fade);
+                    // 問IDを変数にセットする
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =10
+                Text: =ThisItem.Title
+                Width: =166
+                ZIndex: =6
+
+        homeButton As button:
+            BorderColor: =RGBA(100, 149, 237, 100)
+            BorderThickness: =3
+            Color: =RGBA(100, 149, 237, 1)
+            DisabledBorderColor: =RGBA(100, 149, 237, 100)
+            DisabledColor: =RGBA(100, 149, 237, 100)
+            DisabledFill: =RGBA(100, 149, 237, 100)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =RGBA(100, 149, 237, 100)
+            OnSelect: =Navigate(screenCanvas,ScreenTransition.Fade)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =16
+            Text: ="Home"
+            Width: =166
+            X: =395
+            Y: =101
+            ZIndex: =2
+
