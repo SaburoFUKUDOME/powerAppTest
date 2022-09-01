@@ -1586,7 +1586,7 @@ screenCanvas As screen:
 
     Icon4 As icon.Help:
         Icon: =Icon.Help
-        OnSelect: =Navigate(screenQuestion)
+        OnSelect: =Navigate(scrennQuestion)
         X: =975
         Y: =668
         ZIndex: =5
@@ -1595,6 +1595,33 @@ screenCanvas As screen:
         ZIndex: =7
 
     cmNavigationHome_1 As cmNavigationHome:
-        X: =1150
+        X: =1096
+        Y: =84
         ZIndex: =8
+
+    questionHeaderGroup_1 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =11
+
+        headerLabel_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =baseColor
+            Height: =7
+            Width: =Max(App.Width-100, App.MinScreenWidth-100)
+            X: =40
+            Y: =139
+            ZIndex: =9
+
+        titleLabel_2 As label:
+            FontWeight: =Bold
+            Height: =61
+            Size: =14
+            Text: ="Q＆Aフローシステム"
+            Width: =427
+            X: =40
+            Y: =88
+            ZIndex: =10
 
