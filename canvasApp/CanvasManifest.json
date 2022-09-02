@@ -106,7 +106,7 @@
     "UserLocale": "ja-JP"
   },
   "ScreenOrder": [
-    "screenThema",
+    "screenTheme",
     "screenCanvas",
     "screenCanvas_1",
     "screenQuestion_2",

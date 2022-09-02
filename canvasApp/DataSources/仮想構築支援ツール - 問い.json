@@ -30,7 +30,7 @@
       "choice": "choice",
       "commentary": "commentary",
       "ComplianceAssetId": "Compliance Asset Id",
-      "control_type": "controlType",
+      "control_type": "control_type",
       "Created": "Created",
       "current_question_number": "current_question_number",
       "Editor": "Modified By",
@@ -40,7 +40,7 @@
       "id0": "id",
       "Modified": "Modified",
       "next_question_id": "next_question_id",
-      "OData__x8a2d__x554f_": "question",
+      "OData__x8a2d__x554f_": "question_content",
       "question_totalnumber": "question_totalnumber",
       "required": "required",
       "Title": "Title"

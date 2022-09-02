@@ -2,7 +2,7 @@ screenQuestion_2 As screen:
     OnVisible: |
         =Set(currentNo, 1);
         Set(currentAnswer, galleryThema.Selected.id1_answer);
-        Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question);
+        Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question_content);
 
     Label1_2 As label:
         Color: =RGBA(0, 18, 107, 1)
@@ -55,7 +55,7 @@ screenQuestion_2 As screen:
         OnSelect: |
             =Set(currentNo, 1);
             Set(currentAnswer, galleryThema.Selected.id1_answer);
-            Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question);
+            Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question_content);
         Visible: =If(currentNo=1,false,true)
         X: =160
         Y: =28
@@ -66,7 +66,7 @@ screenQuestion_2 As screen:
         OnSelect: |
             =Set(currentNo, 2);
             Set(currentAnswer, galleryThema.Selected.id2_answer);
-            Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="2").question);
+            Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="2").question_content);
         Visible: =If(currentNo=2,false,true)
         X: =256
         Y: =28
@@ -110,7 +110,7 @@ screenQuestion_2 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.question
+            Text: =ThisItem.question_content
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2_2.Width
             X: =Title2_2.X
