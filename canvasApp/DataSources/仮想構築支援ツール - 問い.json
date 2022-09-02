@@ -40,7 +40,7 @@
       "id0": "id",
       "Modified": "Modified",
       "next_question_id": "next_question_id",
-      "OData__x8a2d__x554f_": "設問",
+      "OData__x8a2d__x554f_": "question",
       "question_totalnumber": "question_totalnumber",
       "required": "required",
       "Title": "Title"

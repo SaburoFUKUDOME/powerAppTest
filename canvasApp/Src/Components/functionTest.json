@@ -15,7 +15,7 @@
       "addition_param2",
       "addition"
     ],
-    "LastModifiedTimestamp": "637976783612530202",
+    "LastModifiedTimestamp": "637976805369005010",
     "Name": "functionTest",
     "Rules": [
       {
@@ -137,7 +137,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976783612530202",
+  "LastModifiedTimestamp": "637976805369005010",
   "Name": "3ec6fa9577ca4e37a10aa5118c9072e0",
   "OverridableProperties": {},
   "Version": "637975115257887409"
