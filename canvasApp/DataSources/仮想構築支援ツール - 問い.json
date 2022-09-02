@@ -28,7 +28,6 @@
       "back_question_id": "back_question_id",
       "category": "category",
       "choice": "choice",
-      "choice#Id": "choice Id",
       "commentary": "commentary",
       "ComplianceAssetId": "Compliance Asset Id",
       "control_type": "control_type",
