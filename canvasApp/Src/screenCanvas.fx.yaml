@@ -1560,3 +1560,9 @@ screenCanvas As screen:
             Y: =88
             ZIndex: =10
 
+    Label1 As label:
+        Text: ="テキスト"
+        X: =350
+        Y: =692
+        ZIndex: =11
+
