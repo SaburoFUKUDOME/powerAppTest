@@ -54,7 +54,10 @@ cmNavigation As CanvasComponent:
                     currentQuestion,
                     qRecord.question_content
                 );
-                
+                Set(
+                    controlType,
+                    qRecord.control_type
+                );
                 Set(
                     currentPage,
                     qRecord.current_question_number

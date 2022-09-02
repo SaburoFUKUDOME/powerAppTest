@@ -445,7 +445,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(\n    scrennQuestion,\n    ScreenTransition.Fade\n);\nSet(\n    navigationKey,\n    ThisItem.question_id\n);\nSet(\n    questionKey,\n    ThisItem.question_id\n);\nSet(\n    // 回答の取得方法は検討する★★\n    currentAnswer,\n    galleryTheme.Selected.id1_answer\n);\n\nWith({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},\nSet(\n    currentTitle,\n    qRecord.Title\n);\nSet(\n    currentQuestion,\n    qRecord.question_content\n);\n\nSet(\n    currentPage,\n    qRecord.current_question_number\n);\nSet(\n    totalPage,\n    qRecord.question_totalnumber\n);\nSet(\n    commentary,\n    qRecord.commentary\n);\nSet(\n    example,\n    qRecord.example\n);\nSet(\n    nextVisible,\n    If(qRecord.next_question_id=0,false,true)\n\n);\n);\nSet(\n    buckVisible,\n    false\n);\nSet(\n    commentaryGroupVisible,\n    true\n);\nSet(\n    exampleGroupVisible,\n    false\n);",
+                "InvariantScript": "Navigate(\n    scrennQuestion,\n    ScreenTransition.Fade\n);\nSet(\n    navigationKey,\n    ThisItem.question_id\n);\nSet(\n    questionKey,\n    ThisItem.question_id\n);\nSet(\n    // 回答の取得方法は検討する★★\n    currentAnswer,\n    galleryTheme.Selected.id1_answer\n);\n\nWith({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},\nSet(\n    currentTitle,\n    qRecord.Title\n);\nSet(\n    currentQuestion,\n    qRecord.question_content\n);\nSet(\n    controlType,\n    qRecord.control_type\n);\nSet(\n    currentPage,\n    qRecord.current_question_number\n);\nSet(\n    totalPage,\n    qRecord.question_totalnumber\n);\nSet(\n    commentary,\n    qRecord.commentary\n);\nSet(\n    example,\n    qRecord.example\n);\nSet(\n    nextVisible,\n    If(qRecord.next_question_id=0,false,true)\n\n);\n);\nSet(\n    buckVisible,\n    false\n);\nSet(\n    commentaryGroupVisible,\n    true\n);\nSet(\n    exampleGroupVisible,\n    false\n);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -734,7 +734,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637977018701285959",
+    "LastModifiedTimestamp": "637977025241899728",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -793,7 +793,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637977018701285959",
+  "LastModifiedTimestamp": "637977025241899728",
   "Name": "e88d8fa5810f418a94473be296e5e99e",
   "OverridableProperties": {},
   "TemplateOriginalName": "49a806b6dd7341998728f06c4447a6bc",

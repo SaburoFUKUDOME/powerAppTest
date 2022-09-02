@@ -102,7 +102,7 @@ scrennQuestion As screen:
             =10
         PaddingRight: =0
         PaddingTop: =0
-        Visible: =//If(controlType="text",true,false)
+        Visible: =If(controlType="text",true,false)
         Width: =936
         X: =88
         Y: =269
@@ -165,13 +165,13 @@ scrennQuestion As screen:
             DisabledColor: =RGBA(163, 216, 246, 5)
             Fill: =RGBA(163, 216, 246, 5)
             FontWeight: =Normal
-            Height: =206
+            Height: =253
             Overflow: =Overflow.Scroll
-            Text: ="解説：" & Char(10)&Char(10)&commentary
+            Text: ="解説：" & Char(10)&Char(10) & commentary & Char(10)&Char(10)
             Visible: =commentaryGroupVisible
             Width: =936
             X: =88
-            Y: =441
+            Y: =394
             ZIndex: =13
 
         commentaryButton As button:
@@ -179,7 +179,7 @@ scrennQuestion As screen:
             Color: =baseColor
             DisabledFill: =baseColor
             Fill: =White
-            Height: =36
+            Height: =44
             HoverBorderColor: =ColorFade(White, -5%)
             HoverFill: =baseColor
             OnSelect: |
@@ -196,58 +196,12 @@ scrennQuestion As screen:
             Visible: =commentaryGroupVisible
             Width: =113
             X: =870
-            Y: =593
+            Y: =581
             ZIndex: =14
-
-    buckNextButtonGroup As group:
-        Height: =5
-        Width: =5
-        X: =-367
-        Y: =-596
-        ZIndex: =17
-
-        buckButton As button:
-            BorderColor: =baseColor
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
-            Fill: =baseColor
-            Height: =38
-            HoverBorderColor: =ColorFade(baseColor, 20%)
-            HoverFill: =ColorFade(baseColor,-20%)
-            RadiusBottomLeft: =20
-            RadiusBottomRight: =20
-            RadiusTopLeft: =20
-            RadiusTopRight: =20
-            Text: ="　↑　戻る"
-            Visible: =buckVisible
-            Width: =175
-            X: =502
-            Y: =697
-            ZIndex: =15
-
-        nextButton As button:
-            BorderColor: =baseColor
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
-            Fill: =baseColor
-            HoverBorderColor: =ColorFade(baseColor, 20%)
-            HoverFill: =ColorFade(baseColor,-20%)
-            RadiusBottomLeft: =20
-            RadiusBottomRight: =20
-            RadiusTopLeft: =20
-            RadiusTopRight: =20
-            Text: ="　↓　次へ"
-            Visible: =nextVisible
-            Width: =buckButton.Width
-            X: =728
-            Y: =696
-            ZIndex: =16
 
     Radio1 As radio:
         Items: ='仮想構築支援ツール - 問い'
-        Visible: =//If(controlType="radioButton",true,false)
+        Visible: =If(controlType="radioButton",true,false)
         X: =237
         Y: =294
         ZIndex: =20
@@ -299,4 +253,156 @@ scrennQuestion As screen:
         X: =1106
         Y: =149
         ZIndex: =22
+
+    buckNextButtonGroup As group:
+        Height: =5
+        Width: =5
+        X: =-422
+        Y: =-612
+        ZIndex: =25
+
+        buckButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            Height: =38
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            OnSelect: |
+                =
+                Set(backKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id);
+                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=backKey)},
+                
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                Set(
+                    // 次の回答はどうやって取得するか検討する
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                Set(
+                    nextVisible,
+                    true
+                );
+                Set(
+                    buckVisible,
+                     If(qRecord.back_question_id=0,false,true)
+                );
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
+                Set(questionKey,backKey);
+                )
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↑　戻る"
+            Visible: =buckVisible
+            Width: =175
+            X: =534
+            Y: =687
+            ZIndex: =23
+
+        nextButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            OnSelect: |+
+                =
+                Set(nextKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id);
+                
+                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=nextKey)},
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                Set(
+                    nextVisible,
+                    If(qRecord.next_question_id=0,false,true)
+                );
+                Set(
+                    buckVisible,
+                    true
+                );
+                Set(
+                    // 次の回答はどうやって取得するか検討する
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                Set(questionKey,nextKey);
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
+                )
+                
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↓　次へ"
+            Visible: =nextVisible
+            Width: =buckButton.Width
+            X: =760
+            Y: =691
+            ZIndex: =24
 
