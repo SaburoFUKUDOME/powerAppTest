@@ -5,7 +5,7 @@ scrennQuestion As screen:
         //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title=questionKey).設問);
         Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=3).Title);
         //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
-        Set(currentAnswer, galleryThema.Selected.列１);
+        Set(currentAnswer, galleryThema.Selected.id1_answer);
         Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=3).current_question_number);
         Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=3).question_totalnumber);
         Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=3).commentary);
