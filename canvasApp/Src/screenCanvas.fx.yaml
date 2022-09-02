@@ -9,7 +9,7 @@ screenCanvas As screen:
         ZIndex: =8
 
     answerLabel_1 As label:
-        Text: =galleryThema.Selected.id1_answer
+        Text: =galleryTheme.Selected.id1_answer
         X: =258
         Y: =228
         ZIndex: =11
@@ -41,121 +41,121 @@ screenCanvas As screen:
             ZIndex: =10
 
     answerLabel_2 As label:
-        Text: =galleryThema.Selected.id2_answer
+        Text: =galleryTheme.Selected.id2_answer
         X: =258
         Y: =267
         ZIndex: =12
 
     answerLabel_3 As label:
-        Text: =galleryThema.Selected.id3_answer
+        Text: =galleryTheme.Selected.id3_answer
         X: =258
         Y: =308
         ZIndex: =13
 
     answerLabel_4 As label:
-        Text: =galleryThema.Selected.id4_answer
+        Text: =galleryTheme.Selected.id4_answer
         X: =258
         Y: =348
         ZIndex: =14
 
     answerLabel_5 As label:
-        Text: =galleryThema.Selected.id5_answer
+        Text: =galleryTheme.Selected.id5_answer
         X: =258
         Y: =388
         ZIndex: =15
 
     answerLabel_6 As label:
-        Text: =galleryThema.Selected.id6_answer
+        Text: =galleryTheme.Selected.id6_answer
         X: =258
         Y: =427
         ZIndex: =16
 
     answerLabel_7 As label:
-        Text: =galleryThema.Selected.id7_answer
+        Text: =galleryTheme.Selected.id7_answer
         X: =258
         Y: =467
         ZIndex: =17
 
     answerLabel_8 As label:
-        Text: =galleryThema.Selected.id8_answer
+        Text: =galleryTheme.Selected.id8_answer
         X: =258
         Y: =507
         ZIndex: =18
 
     answerLabel_9 As label:
-        Text: =galleryThema.Selected.id9_answer
+        Text: =galleryTheme.Selected.id9_answer
         X: =258
         Y: =547
         ZIndex: =19
 
     answerLabel_10 As label:
-        Text: =galleryThema.Selected.id10_answer
+        Text: =galleryTheme.Selected.id10_answer
         X: =258
         Y: =588
         ZIndex: =20
 
     answerLabel_11 As label:
-        Text: =galleryThema.Selected.id11_answer
+        Text: =galleryTheme.Selected.id11_answer
         X: =482
         Y: =228
         ZIndex: =21
 
     answerLabel_12 As label:
-        Text: =galleryThema.Selected.id12_answer
+        Text: =galleryTheme.Selected.id12_answer
         X: =482
         Y: =268
         ZIndex: =22
 
     answerLabel_13 As label:
-        Text: =galleryThema.Selected.id13_answer
+        Text: =galleryTheme.Selected.id13_answer
         X: =482
         Y: =308
         ZIndex: =23
 
     answerLabel_14 As label:
-        Text: =galleryThema.Selected.id14_answer
+        Text: =galleryTheme.Selected.id14_answer
         X: =482
         Y: =348
         ZIndex: =24
 
     answerLabel_15 As label:
-        Text: =galleryThema.Selected.id15_answer
+        Text: =galleryTheme.Selected.id15_answer
         X: =482
         Y: =388
         ZIndex: =25
 
     answerLabel_16 As label:
-        Text: =galleryThema.Selected.id16_answer
+        Text: =galleryTheme.Selected.id16_answer
         X: =482
         Y: =428
         ZIndex: =26
 
     answerLabel_17 As label:
-        Text: =galleryThema.Selected.id17_answer
+        Text: =galleryTheme.Selected.id17_answer
         X: =482
         Y: =468
         ZIndex: =27
 
     answerLabel_18 As label:
-        Text: =galleryThema.Selected.id18_answer
+        Text: =galleryTheme.Selected.id18_answer
         X: =482
         Y: =508
         ZIndex: =28
 
     answerLabel_19 As label:
-        Text: =galleryThema.Selected.id19_answer
+        Text: =galleryTheme.Selected.id19_answer
         X: =482
         Y: =548
         ZIndex: =29
 
     answerLabel_20 As label:
-        Text: =galleryThema.Selected.id20_answer
+        Text: =galleryTheme.Selected.id20_answer
         X: =482
         Y: =588
         ZIndex: =30
 
     answerLabel_21 As label:
-        Text: =galleryThema.Selected.id21_answer
+        Text: =galleryTheme.Selected.id21_answer
         X: =716
         Y: =228
         ZIndex: =31

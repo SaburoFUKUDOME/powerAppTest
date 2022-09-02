@@ -5,11 +5,12 @@ scrennQuestion As screen:
         //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title=questionKey).設問);
         Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=3).Title);
         //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
-        Set(currentAnswer, galleryThema.Selected.id1_answer);
+        Set(currentAnswer, galleryTheme.Selected.id1_answer);
         Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=3).current_question_number);
         Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=3).question_totalnumber);
         Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=3).commentary);
         Set(example, LookUp('仮想構築支援ツール - 問い', ID=3).example);
+        Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=3).control_type);
         
         Set(nextVisible, true);
         Set(buckVisible, false);
@@ -102,6 +103,7 @@ scrennQuestion As screen:
             =10
         PaddingRight: =0
         PaddingTop: =0
+        Visible: =If(controlType="text",true,false)
         Width: =936
         X: =88
         Y: =269

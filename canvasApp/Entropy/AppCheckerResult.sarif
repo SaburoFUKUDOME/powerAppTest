@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryThema.AccessibleLabel"
+                  "fullyQualifiedName": "screenTheme.galleryTheme.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryThema.AccessibleLabel",
+                  "fullyQualifiedName": "screenTheme.galleryTheme.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryThema"
+                "type": "screenTheme.galleryTheme"
               }
             }
           ],
@@ -554,19 +554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryThema.TabIndex"
+                  "fullyQualifiedName": "screenTheme.galleryTheme.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryThema.TabIndex",
+                  "fullyQualifiedName": "screenTheme.galleryTheme.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryThema"
+                "type": "screenTheme.galleryTheme"
               }
             }
           ],

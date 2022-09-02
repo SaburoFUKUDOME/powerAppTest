@@ -1,7 +1,7 @@
 screenQuestion_2 As screen:
     OnVisible: |
         =Set(currentNo, 1);
-        Set(currentAnswer, galleryThema.Selected.id1_answer);
+        Set(currentAnswer, galleryTheme.Selected.id1_answer);
         Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question_content);
 
     Label1_2 As label:
@@ -54,7 +54,7 @@ screenQuestion_2 As screen:
         Icon: =Icon.ChevronLeft
         OnSelect: |
             =Set(currentNo, 1);
-            Set(currentAnswer, galleryThema.Selected.id1_answer);
+            Set(currentAnswer, galleryTheme.Selected.id1_answer);
             Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="1").question_content);
         Visible: =If(currentNo=1,false,true)
         X: =160
@@ -65,7 +65,7 @@ screenQuestion_2 As screen:
         Icon: =Icon.ChevronRight
         OnSelect: |
             =Set(currentNo, 2);
-            Set(currentAnswer, galleryThema.Selected.id2_answer);
+            Set(currentAnswer, galleryTheme.Selected.id2_answer);
             Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title="2").question_content);
         Visible: =If(currentNo=2,false,true)
         X: =256

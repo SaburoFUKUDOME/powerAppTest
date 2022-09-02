@@ -1,6 +1,6 @@
 screenTheme As screen:
 
-    "galleryThema As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(100, 149, 237, 1)
         Fill: =RGBA(245, 245, 245, 10)
         Height: =153
