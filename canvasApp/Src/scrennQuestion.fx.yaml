@@ -1,6 +1,7 @@
 scrennQuestion As screen:
-    OnVisible: |+
-        =Set(currentNo, 1);
+    OnVisible: |
+        =/*
+        Set(currentNo, 1);
         Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=3).question_content);
         //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title=questionKey).設問);
         Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=3).Title);
@@ -17,13 +18,11 @@ scrennQuestion As screen:
         Set(commentaryGroupVisible, true);
         Set(exampleGroupVisible, false);
         
+        */
+        
+        Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=3).control_type);
 
     cmHeader_3 As cmHeader:
-
-    cmNavigation_1 As cmNavigation:
-        X: =1096
-        Y: =84
-        ZIndex: =2
 
     questionHeaderGroup As group:
         Height: =5
@@ -248,7 +247,7 @@ scrennQuestion As screen:
 
     Radio1 As radio:
         Items: =LookUp('仮想構築支援ツール - 問い', ID=1)
-        X: =120
+        X: =237
         Y: =294
         ZIndex: =20
 
@@ -289,4 +288,9 @@ scrennQuestion As screen:
             X: =974
             Y: =701
             ZIndex: =19
+
+    cmNavigation_1 As cmNavigation:
+        X: =1132
+        Y: =119
+        ZIndex: =21
 

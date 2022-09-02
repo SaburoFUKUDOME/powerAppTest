@@ -6,52 +6,64 @@ cmNavigationHome As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    Group2_2 As group:
+    Group2_3 As group:
         Height: =5
         Width: =5
         X: =-658
         Y: =-16
         ZIndex: =3
 
-        "navigateGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        "navigateGallery_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             Height: =360
-            Items: ='仮説構築支援ツール - ナビゲーション_1'
+            Items: ='仮説構築支援ツール - ナビゲーション'
             Layout: =Layout.Vertical
             TemplateFill: =
             TemplatePadding: =0
             TemplateSize: =40
-            Width: =166
+            Width: =179
             X: =10
             Y: =169
             ZIndex: =1
 
-            navigateButton_1 As button:
+            navigateButton_2 As button:
                 BorderColor: =baseColor
                 Color: =baseColor
                 DisabledBorderColor: =baseColor
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =navigateGallery_1.TemplateHeight
+                Height: =navigateGallery_2.TemplateHeight
                 HoverFill: =baseColor
                 OnSelect: |-
-                    =Navigate(screenCanvas,ScreenTransition.Fade);
-                    // 問IDを変数にセットする
+                    =Navigate(scrennQuestion,ScreenTransition.Fade);
                     Set(questionKey,ThisItem.question_id);
+                    Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
+                    Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);
+                    Set(currentAnswer, galleryTheme.Selected.id1_answer);
+                    Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);
+                    Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);
+                    Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);
+                    Set(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);
+                    
+                    Set(nextVisible, true);
+                    Set(buckVisible, false);
+                    Set(commentaryGroupVisible, true);
+                    Set(exampleGroupVisible, false);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =10
+                Size: =11
                 Text: =ThisItem.Title
-                Width: =navigateGallery_1.TemplateWidth
+                Width: =navigateGallery_2.TemplateWidth
                 ZIndex: =6
 
-        homeButton_2 As button:
+        homeButton_3 As button:
             BorderColor: =baseColor
             BorderThickness: =3
             Color: =White
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
             DisabledFill: =baseColor
+            DisplayMode: =DisplayMode.View
             Fill: =baseColor
             FontWeight: =FontWeight.Bold
             Height: =46
@@ -63,7 +75,7 @@ cmNavigationHome As CanvasComponent:
             RadiusTopRight: =0
             Size: =16
             Text: ="Home"
-            Width: =166
+            Width: =179
             X: =10
             Y: =101
             ZIndex: =2

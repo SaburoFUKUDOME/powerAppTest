@@ -1529,11 +1529,6 @@ screenCanvas_1 As screen:
     cmHeader_4 As cmHeader:
         ZIndex: =7
 
-    cmNavigationHome_2 As cmNavigationHome:
-        X: =1096
-        Y: =84
-        ZIndex: =8
-
     Label1_1 As label:
         Text: ="テキスト"
         X: =350

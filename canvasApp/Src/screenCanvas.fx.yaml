@@ -3,11 +3,6 @@ screenCanvas As screen:
     cmHeader_2 As cmHeader:
         ZIndex: =7
 
-    cmNavigationHome_1 As cmNavigationHome:
-        X: =1096
-        Y: =84
-        ZIndex: =8
-
     answerLabel_1 As label:
         Text: =galleryTheme.Selected.id1_answer
         X: =258
@@ -159,4 +154,9 @@ screenCanvas As screen:
         X: =716
         Y: =228
         ZIndex: =31
+
+    cmNavigationHome_1 As cmNavigationHome:
+        X: =1106
+        Y: =128
+        ZIndex: =32
 

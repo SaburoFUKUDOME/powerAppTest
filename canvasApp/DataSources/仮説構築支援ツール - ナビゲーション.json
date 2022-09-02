@@ -38,7 +38,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "仮説構築支援ツール - ナビゲーション_1",
+    "Name": "仮説構築支援ツール - ナビゲーション",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
