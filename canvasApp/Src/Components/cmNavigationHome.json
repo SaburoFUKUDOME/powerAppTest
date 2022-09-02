@@ -206,7 +206,7 @@
         "Name": "homeButton_3",
         "Parent": "cmNavigationHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 204,
+        "PublishOrderIndex": 203,
         "Rules": [
           {
             "Category": "Data",
@@ -881,7 +881,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrennQuestion,ScreenTransition.Fade);\r\nSet(questionKey,ThisItem.question_id);\r\nSet(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);\r\nSet(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);\r\nSet(currentAnswer, galleryTheme.Selected.id1_answer);\r\nSet(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);\r\nSet(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);\r\nSet(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);\r\nSet(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);\r\n\r\nSet(nextVisible, true);\r\nSet(buckVisible, false);\r\nSet(commentaryGroupVisible, true);\r\nSet(exampleGroupVisible, false);",
+                "InvariantScript": "Navigate(scrennQuestion,ScreenTransition.Fade);\r\nSet(questionKey,ThisItem.question_id);\r\nSet(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);\r\nSet(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);\r\nSet(currentAnswer, galleryTheme.Selected.id1_answer);\r\nSet(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);\r\nSet(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);\r\nSet(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);\r\nSet(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);\r\nSet(controlType, LookUp('仮想構築支援ツール - 問い', ID=questionKey).control_type);\r\n\r\nSet(nextVisible, true);\r\nSet(buckVisible, false);\r\nSet(commentaryGroupVisible, true);\r\nSet(exampleGroupVisible, false);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1181,7 +1181,7 @@
         "Name": "Group2_3",
         "Parent": "cmNavigationHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 203,
+        "PublishOrderIndex": 204,
         "Rules": [
           {
             "Category": "Design",
@@ -1246,7 +1246,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637976938209180288",
+    "LastModifiedTimestamp": "637976982689479544",
     "Name": "cmNavigationHome",
     "Rules": [
       {
@@ -1305,7 +1305,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976938209180288",
+  "LastModifiedTimestamp": "637976982689479544",
   "Name": "4648189799d9432bbb502df9439c0c55",
   "OverridableProperties": {},
   "TemplateOriginalName": "ea654233b1d14d539124bc63fb8586a4",

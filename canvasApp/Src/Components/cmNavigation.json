@@ -881,7 +881,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrennQuestion,ScreenTransition.Fade);\r\nSet(questionKey,ThisItem.question_id);\r\nSet(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);\r\nSet(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);\r\nSet(currentAnswer, galleryTheme.Selected.id1_answer);\r\nSet(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);\r\nSet(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);\r\nSet(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);\r\nSet(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);\r\n\r\nSet(nextVisible, true);\r\nSet(buckVisible, false);\r\nSet(commentaryGroupVisible, true);\r\nSet(exampleGroupVisible, false);",
+                "InvariantScript": "Navigate(scrennQuestion,ScreenTransition.Fade);\r\nSet(questionKey,ThisItem.question_id);\r\nSet(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);\r\nSet(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);\r\nSet(currentAnswer, galleryTheme.Selected.id1_answer);\r\nSet(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);\r\nSet(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);\r\nSet(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);\r\nSet(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);\r\nSet(controlType, LookUp('仮想構築支援ツール - 問い', ID=questionKey).control_type);\r\n\r\nSet(nextVisible, true);\r\nSet(buckVisible, false);\r\nSet(commentaryGroupVisible, true);\r\nSet(exampleGroupVisible, false);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1246,7 +1246,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637976938209183869",
+    "LastModifiedTimestamp": "637976978325339752",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -1305,7 +1305,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976938209183869",
+  "LastModifiedTimestamp": "637976978325339752",
   "Name": "24304efba4fd4d89960c7672deb41b89",
   "OverridableProperties": {},
   "TemplateOriginalName": "a6c1d2c4db2d45a68b6caa267a8082ff",

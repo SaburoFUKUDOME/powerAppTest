@@ -42,6 +42,7 @@ cmNavigationHome As CanvasComponent:
                     Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);
                     Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);
                     Set(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);
+                    Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=questionKey).control_type);
                     
                     Set(nextVisible, true);
                     Set(buckVisible, false);
