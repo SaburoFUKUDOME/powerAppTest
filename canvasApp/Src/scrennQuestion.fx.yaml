@@ -246,7 +246,7 @@ scrennQuestion As screen:
             ZIndex: =16
 
     Radio1 As radio:
-        Items: =LookUp('仮想構築支援ツール - 問い',ID=1).choice
+        Items: =LookUp('仮想構築支援ツール - 問い',ID=1)
         Visible: =If(controlType="radioButton",true,false)
         X: =237
         Y: =294
