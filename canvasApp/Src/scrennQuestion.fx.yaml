@@ -102,7 +102,7 @@ scrennQuestion As screen:
             =10
         PaddingRight: =0
         PaddingTop: =0
-        Visible: =If(controlType="text",true,false)
+        Visible: =//If(controlType="text",true,false)
         Width: =936
         X: =88
         Y: =269
@@ -247,7 +247,7 @@ scrennQuestion As screen:
 
     Radio1 As radio:
         Items: ='仮想構築支援ツール - 問い'
-        Visible: =If(controlType="radioButton",true,false)
+        Visible: =//If(controlType="radioButton",true,false)
         X: =237
         Y: =294
         ZIndex: =20
@@ -290,8 +290,13 @@ scrennQuestion As screen:
             Y: =701
             ZIndex: =19
 
-    cmNavigation_1 As cmNavigation:
-        X: =1132
-        Y: =119
+    cmHomeButtonEdit_1 As cmHomeButtonEdit:
+        X: =1106
+        Y: =128
         ZIndex: =21
+
+    cmNavigation_2 As cmNavigation:
+        X: =1106
+        Y: =149
+        ZIndex: =22
 

@@ -1,0 +1,33 @@
+cmHomeButtonEdit As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =200
+    X: =0
+    Y: =0
+    ZIndex: =4
+
+    homeButton_1 As button:
+        BorderColor: =baseColor
+        BorderThickness: =3
+        Color: =baseColor
+        DisabledBorderColor: =baseColor
+        DisabledColor: =baseColor
+        DisabledFill: =baseColor
+        Fill: =RGBA(0, 0, 0, 0)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =baseColor
+        OnSelect: |-
+            =Set(navigationKey,0);
+            Navigate(screenCanvas,ScreenTransition.Fade)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =16
+        Text: ="Home"
+        Width: =179
+        X: =10
+        Y: =101
+        ZIndex: =2
+

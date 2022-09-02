@@ -4,80 +4,97 @@ cmNavigation As CanvasComponent:
     Width: =200
     X: =0
     Y: =0
-    ZIndex: =4
+    ZIndex: =5
 
-    Group2_4 As group:
-        Height: =5
-        Width: =5
-        X: =-658
-        Y: =-16
-        ZIndex: =4
+    "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =360
+        Items: ='仮説構築支援ツール - ナビゲーション'
+        Layout: =Layout.Vertical
+        TemplateFill: |
+            =If(ThisItem.question_id = navigationKey,baseColor,White)
+        TemplatePadding: =0
+        TemplateSize: =40
+        Width: =179
+        X: =10
+        Y: =155
+        ZIndex: =3
 
-        "navigateGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-            Height: =360
-            Items: ='仮説構築支援ツール - ナビゲーション'
-            Layout: =Layout.Vertical
-            TemplateFill: |
-                =If(ThisItem.question_id = questionKey,baseColor,White)
-            TemplatePadding: =0
-            TemplateSize: =40
-            Width: =179
-            X: =10
-            Y: =169
-            ZIndex: =1
-
-            navigateButton_3 As button:
-                BorderColor: =baseColor
-                Color: =If(ThisItem.question_id = questionKey,White,baseColor)
-                DisabledBorderColor: =baseColor
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =navigateGallery_3.TemplateHeight
-                HoverFill: =baseColor
-                OnSelect: |-
-                    =Navigate(scrennQuestion,ScreenTransition.Fade);
-                    Set(questionKey,ThisItem.question_id);
-                    Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
-                    Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);
-                    Set(currentAnswer, galleryTheme.Selected.id1_answer);
-                    Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);
-                    Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);
-                    Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);
-                    Set(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);
-                    Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=questionKey).control_type);
-                    
-                    Set(nextVisible, true);
-                    Set(buckVisible, false);
-                    Set(commentaryGroupVisible, true);
-                    Set(exampleGroupVisible, false);
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =11
-                Text: =ThisItem.Title
-                Width: =navigateGallery_3.TemplateWidth
-                ZIndex: =6
-
-        homeButton_1 As button:
+        navigateButton As button:
             BorderColor: =baseColor
-            BorderThickness: =3
-            Color: =baseColor
+            Color: =If(ThisItem.question_id = navigationKey,White,baseColor)
             DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
             Fill: =RGBA(0, 0, 0, 0)
-            FontWeight: =FontWeight.Bold
-            Height: =46
+            Height: =navigateGallery.TemplateHeight
             HoverFill: =baseColor
-            OnSelect: =Navigate(screenCanvas,ScreenTransition.Fade)
+            OnSelect: |-
+                =Navigate(
+                    scrennQuestion,
+                    ScreenTransition.Fade
+                );
+                Set(
+                    navigationKey,
+                    ThisItem.question_id
+                );
+                Set(
+                    questionKey,
+                    ThisItem.question_id
+                );
+                Set(
+                    // 回答の取得方法は検討する★★
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                
+                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                Set(
+                    nextVisible,
+                    If(qRecord.next_question_id=0,false,true)
+                
+                );
+                );
+                Set(
+                    buckVisible,
+                    false
+                );
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =16
-            Text: ="Home"
-            Width: =179
-            X: =10
-            Y: =101
-            ZIndex: =2
+            Size: =11
+            Text: =ThisItem.Title
+            Width: =navigateGallery.TemplateWidth
+            ZIndex: =6
 

@@ -155,8 +155,14 @@ screenCanvas As screen:
         Y: =228
         ZIndex: =31
 
-    cmNavigationHome_1 As cmNavigationHome:
+    cmHomeButtonView_1 As cmHomeButtonView:
         X: =1106
         Y: =128
         ZIndex: =32
+
+    cmNavigation_1 As cmNavigation:
+        Height: =547
+        X: =1106
+        Y: =149
+        ZIndex: =33
 

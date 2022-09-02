@@ -6,442 +6,6 @@
     "Children": [
       {
         "AllowAccessToGlobals": true,
-        "Children": [],
-        "ControlPropertyState": [
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Text",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "ColorFade(Self.Fill, -15%)",
-            "InvariantPropertyName": "BorderColor",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "RGBA(166, 166, 166, 1)",
-            "InvariantPropertyName": "DisabledBorderColor",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "PressedBorderColor",
-          "HoverBorderColor",
-          "BorderStyle",
-          "FocusedBorderColor",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Color",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "RGBA(166, 166, 166, 1)",
-            "InvariantPropertyName": "DisabledColor",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "PressedColor",
-          "HoverColor",
-          "DisplayMode",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
-            "InvariantPropertyName": "Fill",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "RGBA(244, 244, 244, 1)",
-            "InvariantPropertyName": "DisabledFill",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "PressedFill",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "ColorFade(RGBA(56, 96, 178, 1), -20%)",
-            "InvariantPropertyName": "HoverFill",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Font",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "FontWeight",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Align",
-          "VerticalAlign",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "395",
-            "InvariantPropertyName": "X",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Y",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Width",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Height",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "ZIndex",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "10",
-            "InvariantPropertyName": "RadiusTopLeft",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "10",
-            "InvariantPropertyName": "RadiusTopRight",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "10",
-            "InvariantPropertyName": "RadiusBottomLeft",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "10",
-            "InvariantPropertyName": "RadiusBottomRight",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "BorderThickness",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "FocusedBorderThickness",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Size",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Italic",
-          "Underline",
-          "Strikethrough",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "Visible",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "false",
-            "InvariantPropertyName": "OnSelect",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          }
-        ],
-        "ControlUniqueId": "11",
-        "HasDynamicProperties": false,
-        "Index": 0,
-        "IsAutoGenerated": false,
-        "IsDataControl": false,
-        "IsFromScreenLayout": false,
-        "IsGroupControl": false,
-        "IsLocked": false,
-        "LayoutName": "",
-        "MetaDataIDKey": "",
-        "Name": "homeButton_1",
-        "Parent": "cmNavigation",
-        "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 208,
-        "Rules": [
-          {
-            "Category": "Data",
-            "InvariantScript": "\"Home\"",
-            "Property": "Text",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "101",
-            "Property": "Y",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "RadiusTopRight",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "3",
-            "Property": "BorderThickness",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "BorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.Color",
-            "Property": "PressedFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "4",
-            "Property": "FocusedBorderThickness",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.Fill",
-            "Property": "PressedBorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "RGBA(255, 255, 255, 1)",
-            "Property": "HoverColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "DisplayMode.Edit",
-            "Property": "DisplayMode",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "RadiusTopLeft",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
-            "Property": "Fill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "DisabledFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "HoverFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Font.'Open Sans'",
-            "Property": "Font",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.Fill",
-            "Property": "PressedColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "16",
-            "Property": "Size",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "FontWeight.Bold",
-            "Property": "FontWeight",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "false",
-            "Property": "Underline",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "179",
-            "Property": "Width",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "46",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "10",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "2",
-            "Property": "ZIndex",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "true",
-            "Property": "Visible",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "RadiusBottomLeft",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "RadiusBottomRight",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "DisabledBorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "BorderStyle.Solid",
-            "Property": "BorderStyle",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "Color",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "baseColor",
-            "Property": "DisabledColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "false",
-            "Property": "Italic",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "false",
-            "Property": "Strikethrough",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Align.Center",
-            "Property": "Align",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "VerticalAlign.Middle",
-            "Property": "VerticalAlign",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "FocusedBorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-            "Property": "HoverBorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Behavior",
-            "InvariantScript": "Navigate(screenCanvas,ScreenTransition.Fade)",
-            "Property": "OnSelect",
-            "RuleProviderType": "Unknown"
-          }
-        ],
-        "StyleName": "defaultButtonStyle",
-        "Template": {
-          "CustomGroupControlTemplateName": "",
-          "FirstParty": true,
-          "Id": "http://microsoft.com/appmagic/button",
-          "IsComponentDefinition": false,
-          "IsCustomGroupControlTemplate": false,
-          "IsPremiumPcfControl": false,
-          "LastModifiedTimestamp": "0",
-          "Name": "button",
-          "OverridableProperties": {},
-          "Version": "2.2.0"
-        },
-        "Type": "ControlInfo",
-        "VariantName": ""
-      },
-      {
-        "AllowAccessToGlobals": true,
         "Children": [
           {
             "AllowAccessToGlobals": true,
@@ -458,7 +22,7 @@
               },
               "OnSelect"
             ],
-            "ControlUniqueId": "13",
+            "ControlUniqueId": "240",
             "HasDynamicProperties": false,
             "Index": 0,
             "IsAutoGenerated": false,
@@ -468,10 +32,10 @@
             "IsLocked": false,
             "LayoutName": "",
             "MetaDataIDKey": "",
-            "Name": "galleryTemplate1_4",
-            "Parent": "navigateGallery_3",
+            "Name": "galleryTemplate1_6",
+            "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 211,
+            "PublishOrderIndex": 208,
             "Rules": [
               {
                 "Category": "Data",
@@ -481,7 +45,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(ThisItem.question_id = questionKey,baseColor,White)\r\n",
+                "InvariantScript": "If(ThisItem.question_id = navigationKey,baseColor,White)\r\n",
                 "Property": "TemplateFill",
                 "RuleProviderType": "Unknown"
               },
@@ -654,7 +218,7 @@
               "Underline",
               "Strikethrough"
             ],
-            "ControlUniqueId": "14",
+            "ControlUniqueId": "241",
             "HasDynamicProperties": false,
             "Index": 0,
             "IsAutoGenerated": false,
@@ -664,15 +228,51 @@
             "IsLocked": false,
             "LayoutName": "",
             "MetaDataIDKey": "",
-            "Name": "navigateButton_3",
-            "Parent": "navigateGallery_3",
+            "Name": "navigateButton",
+            "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 212,
+            "PublishOrderIndex": 209,
             "Rules": [
               {
                 "Category": "Data",
                 "InvariantScript": "ThisItem.Title",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "DisplayMode.Edit",
+                "Property": "DisplayMode",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "baseColor",
+                "Property": "HoverFill",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "RGBA(166, 166, 166, 1)",
+                "Property": "DisabledColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "VerticalAlign.Middle",
+                "Property": "VerticalAlign",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "false",
+                "Property": "Italic",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "RGBA(255, 255, 255, 1)",
+                "Property": "HoverColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -683,19 +283,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "false",
-                "Property": "Strikethrough",
+                "InvariantScript": "RGBA(244, 244, 244, 1)",
+                "Property": "DisabledFill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Font.'Open Sans'",
-                "Property": "Font",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "navigateGallery_3.TemplateHeight",
+                "InvariantScript": "navigateGallery.TemplateHeight",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -707,62 +301,26 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "baseColor",
-                "Property": "HoverFill",
+                "InvariantScript": "FontWeight.Semibold",
+                "Property": "FontWeight",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "0",
-                "Property": "Y",
+                "InvariantScript": "false",
+                "Property": "Strikethrough",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "DisplayMode.Edit",
-                "Property": "DisplayMode",
+                "InvariantScript": "RGBA(0, 0, 0, 0)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(255, 255, 255, 1)",
-                "Property": "HoverColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Align.Center",
-                "Property": "Align",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "RGBA(166, 166, 166, 1)",
-                "Property": "DisabledColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "If(ThisItem.question_id = questionKey,White,baseColor)",
+                "InvariantScript": "If(ThisItem.question_id = navigationKey,White,baseColor)",
                 "Property": "Color",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "4",
-                "Property": "FocusedBorderThickness",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "2",
-                "Property": "BorderThickness",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "VerticalAlign.Middle",
-                "Property": "VerticalAlign",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -773,8 +331,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "baseColor",
-                "Property": "DisabledBorderColor",
+                "InvariantScript": "Font.'Open Sans'",
+                "Property": "Font",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "2",
+                "Property": "BorderThickness",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -785,8 +349,44 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "PressedColor",
+                "InvariantScript": "baseColor",
+                "Property": "DisabledBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "0",
+                "Property": "RadiusTopLeft",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "0",
+                "Property": "RadiusTopRight",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "11",
+                "Property": "Size",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "baseColor",
+                "Property": "BorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Align.Center",
+                "Property": "Align",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -797,14 +397,26 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Color",
-                "Property": "PressedFill",
+                "InvariantScript": "0",
+                "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
+                "InvariantScript": "navigateGallery.TemplateWidth",
+                "Property": "Width",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.Fill",
+                "Property": "PressedColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.Color",
+                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -821,32 +433,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "false",
-                "Property": "Italic",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "FontWeight.Semibold",
-                "Property": "FontWeight",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "11",
-                "Property": "Size",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "RGBA(244, 244, 244, 1)",
-                "Property": "DisabledFill",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 0)",
-                "Property": "Fill",
+                "InvariantScript": "4",
+                "Property": "FocusedBorderThickness",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -856,32 +444,8 @@
                 "RuleProviderType": "Unknown"
               },
               {
-                "Category": "Design",
-                "InvariantScript": "0",
-                "Property": "RadiusTopRight",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "0",
-                "Property": "RadiusTopLeft",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "baseColor",
-                "Property": "BorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "navigateGallery_3.TemplateWidth",
-                "Property": "Width",
-                "RuleProviderType": "Unknown"
-              },
-              {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrennQuestion,ScreenTransition.Fade);\r\nSet(questionKey,ThisItem.question_id);\r\nSet(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);\r\nSet(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_content);\r\nSet(currentAnswer, galleryTheme.Selected.id1_answer);\r\nSet(currentPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).current_question_number);\r\nSet(totalPage, LookUp('仮想構築支援ツール - 問い', ID=questionKey).question_totalnumber);\r\nSet(commentary, LookUp('仮想構築支援ツール - 問い', ID=questionKey).commentary);\r\nSet(example, LookUp('仮想構築支援ツール - 問い', ID=questionKey).example);\r\nSet(controlType, LookUp('仮想構築支援ツール - 問い', ID=questionKey).control_type);\r\n\r\nSet(nextVisible, true);\r\nSet(buckVisible, false);\r\nSet(commentaryGroupVisible, true);\r\nSet(exampleGroupVisible, false);",
+                "InvariantScript": "Navigate(\n    scrennQuestion,\n    ScreenTransition.Fade\n);\nSet(\n    navigationKey,\n    ThisItem.question_id\n);\nSet(\n    questionKey,\n    ThisItem.question_id\n);\nSet(\n    // 回答の取得方法は検討する★★\n    currentAnswer,\n    galleryTheme.Selected.id1_answer\n);\n\nWith({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},\nSet(\n    currentTitle,\n    qRecord.Title\n);\nSet(\n    currentQuestion,\n    qRecord.question_content\n);\n\nSet(\n    currentPage,\n    qRecord.current_question_number\n);\nSet(\n    totalPage,\n    qRecord.question_totalnumber\n);\nSet(\n    commentary,\n    qRecord.commentary\n);\nSet(\n    example,\n    qRecord.example\n);\nSet(\n    nextVisible,\n    If(qRecord.next_question_id=0,false,true)\n\n);\n);\nSet(\n    buckVisible,\n    false\n);\nSet(\n    commentaryGroupVisible,\n    true\n);\nSet(\n    exampleGroupVisible,\n    false\n);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -966,7 +530,7 @@
             "NameMapSourceSchema": "?"
           }
         ],
-        "ControlUniqueId": "12",
+        "ControlUniqueId": "239",
         "HasDynamicProperties": false,
         "Index": 0,
         "IsAutoGenerated": false,
@@ -976,17 +540,11 @@
         "IsLocked": false,
         "LayoutName": "",
         "MetaDataIDKey": "",
-        "Name": "navigateGallery_3",
+        "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 210,
+        "PublishOrderIndex": 207,
         "Rules": [
-          {
-            "Category": "Data",
-            "InvariantScript": "1",
-            "Property": "WrapCount",
-            "RuleProviderType": "Unknown"
-          },
           {
             "Category": "Data",
             "InvariantScript": "'仮説構築支援ツール - ナビゲーション'",
@@ -994,15 +552,27 @@
             "RuleProviderType": "Unknown"
           },
           {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "BorderThickness",
+            "Category": "Data",
+            "InvariantScript": "1",
+            "Property": "WrapCount",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 18, 107, 1)",
-            "Property": "BorderColor",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "LoadingSpinnerColor",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "155",
+            "Property": "Y",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "DisabledBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
@@ -1013,86 +583,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "LoadingSpinner.None",
-            "Property": "LoadingSpinner",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Transition.None",
-            "Property": "Transition",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Layout.Vertical",
-            "Property": "Layout",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "0",
-            "Property": "TemplatePadding",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "true",
-            "Property": "Visible",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "40",
-            "Property": "TemplateSize",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "1",
-            "Property": "ZIndex",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "360",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "179",
-            "Property": "Width",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.Fill",
-            "Property": "HoverFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "169",
-            "Property": "Y",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.Fill",
-            "Property": "PressedFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "10",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
-            "Property": "Fill",
+            "InvariantScript": "RGBA(0, 18, 107, 1)",
+            "Property": "BorderColor",
             "RuleProviderType": "Unknown"
           },
           {
@@ -1103,20 +595,14 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Self.Fill",
-            "Property": "DisabledFill",
+            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "FocusedBorderColor",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "HoverBorderColor",
+            "InvariantScript": "10",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
@@ -1128,13 +614,91 @@
           {
             "Category": "Design",
             "InvariantScript": "Self.BorderColor",
-            "Property": "DisabledBorderColor",
+            "Property": "HoverBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
             "InvariantScript": "Self.BorderColor",
-            "Property": "LoadingSpinnerColor",
+            "Property": "FocusedBorderColor",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Self.Fill",
+            "Property": "HoverFill",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Self.Fill",
+            "Property": "PressedFill",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Self.Fill",
+            "Property": "DisabledFill",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3",
+            "Property": "ZIndex",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "360",
+            "Property": "Height",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Layout.Vertical",
+            "Property": "Layout",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Transition.None",
+            "Property": "Transition",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "LoadingSpinner.None",
+            "Property": "LoadingSpinner",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "179",
+            "Property": "Width",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "40",
+            "Property": "TemplateSize",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "true",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0",
+            "Property": "TemplatePadding",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0",
+            "Property": "BorderThickness",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1153,82 +717,6 @@
         },
         "Type": "ControlInfo",
         "VariantName": "BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0"
-      },
-      {
-        "AllowAccessToGlobals": true,
-        "Children": [],
-        "ControlPropertyState": [
-          "X",
-          "Y",
-          "Width",
-          "Height",
-          "ZIndex"
-        ],
-        "ControlUniqueId": "15",
-        "GroupedControlsKey": [
-          "navigateGallery_3",
-          "homeButton_1"
-        ],
-        "HasDynamicProperties": false,
-        "Index": 0,
-        "IsAutoGenerated": false,
-        "IsDataControl": false,
-        "IsFromScreenLayout": false,
-        "IsGroupControl": true,
-        "IsLocked": false,
-        "LayoutName": "",
-        "MetaDataIDKey": "",
-        "Name": "Group2_4",
-        "Parent": "cmNavigation",
-        "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 209,
-        "Rules": [
-          {
-            "Category": "Design",
-            "InvariantScript": "-658",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "-16",
-            "Property": "Y",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "5",
-            "Property": "Width",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "5",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "4",
-            "Property": "ZIndex",
-            "RuleProviderType": "Unknown"
-          }
-        ],
-        "StyleName": "",
-        "Template": {
-          "CustomGroupControlTemplateName": "",
-          "FirstParty": true,
-          "Id": "http://microsoft.com/appmagic/group",
-          "IsComponentDefinition": false,
-          "IsCustomGroupControlTemplate": false,
-          "IsPremiumPcfControl": false,
-          "LastModifiedTimestamp": "0",
-          "Name": "group",
-          "OverridableProperties": {},
-          "Version": "1"
-        },
-        "Type": "ControlInfo",
-        "VariantName": ""
       }
     ],
     "ControlPropertyState": [
@@ -1246,43 +734,43 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637976978325339752",
+    "LastModifiedTimestamp": "637977018701285959",
     "Name": "cmNavigation",
     "Rules": [
       {
         "Category": "Design",
-        "InvariantScript": "4",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "200",
-        "Property": "Width",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
         "InvariantScript": "640",
         "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
+        "InvariantScript": "200",
+        "Property": "Width",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "5",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       }
     ]
@@ -1292,7 +780,7 @@
     "AllowCustomization": true,
     "Description": "",
     "Name": "cmNavigation",
-    "TemplateGuid": "24304efba4fd4d89960c7672deb41b89"
+    "TemplateGuid": "e88d8fa5810f418a94473be296e5e99e"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -1305,9 +793,9 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637976978325339752",
-  "Name": "24304efba4fd4d89960c7672deb41b89",
+  "LastModifiedTimestamp": "637977018701285959",
+  "Name": "e88d8fa5810f418a94473be296e5e99e",
   "OverridableProperties": {},
-  "TemplateOriginalName": "a6c1d2c4db2d45a68b6caa267a8082ff",
+  "TemplateOriginalName": "49a806b6dd7341998728f06c4447a6bc",
   "Version": "637975285127382863"
 }
