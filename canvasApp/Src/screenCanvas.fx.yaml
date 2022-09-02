@@ -1534,6 +1534,12 @@ screenCanvas As screen:
         Y: =84
         ZIndex: =8
 
+    Label1 As label:
+        Text: ="テキスト"
+        X: =350
+        Y: =692
+        ZIndex: =11
+
     questionHeaderGroup_1 As group:
         Height: =5
         Width: =5
