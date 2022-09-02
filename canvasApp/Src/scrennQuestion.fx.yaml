@@ -246,6 +246,12 @@ scrennQuestion As screen:
             Y: =696
             ZIndex: =16
 
+    Radio1 As radio:
+        Items: =LookUp('仮想構築支援ツール - 問い', ID=1)
+        X: =120
+        Y: =294
+        ZIndex: =20
+
     pagingGroup As group:
         Height: =5
         Width: =5
