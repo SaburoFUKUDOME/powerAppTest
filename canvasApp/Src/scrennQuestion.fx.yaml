@@ -199,6 +199,10 @@ scrennQuestion As screen:
                 example,
                 qRecord.example
             );
+            Set(
+                controlType,
+                qRecord.control_type
+            );
             If(buttonKey="next",
             //次へボタンの場合
             Set(
