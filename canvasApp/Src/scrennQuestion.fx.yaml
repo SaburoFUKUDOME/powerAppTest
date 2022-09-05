@@ -110,15 +110,15 @@ scrennQuestion As screen:
 
     Radio1 As radio:
         FontWeight: =FontWeight.Semibold
-        Height: =125
+        Height: =168
         Items: =Split(Substitute(LookUp('仮想構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
         Layout: =Layout.Horizontal
         RadioBorderColor: =baseColor
         RadioSelectionFill: =baseColor
         Visible: =If(controlType="radioButton",true,false)
-        Width: =616
-        X: =88
-        Y: =269
+        Width: =591
+        X: =92
+        Y: =279
         ZIndex: =20
 
     pagingGroup As group:
