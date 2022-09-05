@@ -1,4 +1,5 @@
 screenCanvas As screen:
+    OnVisible: =Set(themeId,galleryTheme.Selected.ID)
 
     cmHeader_2 As cmHeader:
         ZIndex: =7
@@ -161,9 +162,9 @@ screenCanvas As screen:
         ZIndex: =32
 
     cmNavigation_1 As cmNavigation:
-        Height: =547
-        X: =1106
-        Y: =149
+        Height: =366
+        X: =cmHomeButtonView_1.X
+        Y: =308
         ZIndex: =33
 
     Icon1 As icon.BackArrow:

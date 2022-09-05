@@ -168,8 +168,8 @@ scrennQuestion As screen:
         ZIndex: =21
 
     cmNavigation_2 As cmNavigation:
-        X: =1106
-        Y: =149
+        X: =cmHomeButtonEdit_1.X
+        Y: =301
         ZIndex: =22
 
     questionButtonComponent_1 As questionButtonComponent:

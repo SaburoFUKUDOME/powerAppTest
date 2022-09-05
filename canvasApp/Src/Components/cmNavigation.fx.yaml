@@ -1,6 +1,6 @@
 cmNavigation As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
+    Height: =350
     Width: =200
     X: =0
     Y: =0
@@ -16,7 +16,7 @@ cmNavigation As CanvasComponent:
         TemplateSize: =40
         Width: =179
         X: =10
-        Y: =155
+        Y: =10
         ZIndex: =3
 
         navigateButton As button:
@@ -40,9 +40,8 @@ cmNavigation As CanvasComponent:
                     ThisItem.question_id
                 );
                 Set(
-                    // 回答の取得方法は検討する★★
                     currentAnswer,
-                    galleryTheme.Selected.id1_answer
+                    LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey)).answer
                 );
                 
                 With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},
