@@ -17,9 +17,7 @@ cmHomeButtonEdit As CanvasComponent:
         FontWeight: =FontWeight.Bold
         Height: =46
         HoverFill: =baseColor
-        OnSelect: |-
-            =Set(navigationKey,0);
-            Navigate(screenCanvas,ScreenTransition.Fade)
+        OnSelect: =Navigate(screenCanvas,ScreenTransition.Fade)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

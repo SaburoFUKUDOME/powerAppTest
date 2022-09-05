@@ -84,6 +84,15 @@ questionButtonComponent As CanvasComponent:
                 
     Fill: =RGBA(0, 0, 0, 0)
     Height: =50
+    updateAnswer: |-
+        =// ラジオボタンの場合の値を取得する処理を追加する必要有★★
+        If(Not(textAnswer.Text=currentAnswer),
+        With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
+        //Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★
+        If(IsBlank(getAnswerRecord),
+        Patch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: textAnswer.Text });,
+        Patch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: textAnswer.Text });
+        )));
     Width: =640
     X: =0
     Y: =0
@@ -107,7 +116,8 @@ questionButtonComponent As CanvasComponent:
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
-                =questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
+                =questionButtonComponent.updateAnswer();
+                questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
                 /**
                 Set(backKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id);
                 With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=backKey)},
@@ -182,7 +192,8 @@ questionButtonComponent As CanvasComponent:
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
-                =questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
+                =questionButtonComponent.updateAnswer();
+                questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
                 /**
                 Set(nextKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id);
                 
@@ -259,7 +270,10 @@ questionButtonComponent As CanvasComponent:
             Height: =nextButton.Height
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
-            OnSelect: =//　更新処理する
+            OnSelect: |-
+                =//　更新処理する
+                questionButtonComponent.updateAnswer();
+                Navigate(screenCanvas,ScreenTransition.Fade);
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20

@@ -1,5 +1,7 @@
 screenCanvas As screen:
-    OnVisible: =Set(themeId,galleryTheme.Selected.ID)
+    OnVisible: |
+        =Set(themeId,galleryTheme.Selected.ID);
+        Set(navigationKey,0);
 
     cmHeader_2 As cmHeader:
         ZIndex: =7
