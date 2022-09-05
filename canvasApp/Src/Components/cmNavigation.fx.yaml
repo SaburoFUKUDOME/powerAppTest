@@ -39,13 +39,11 @@ cmNavigation As CanvasComponent:
                     questionKey,
                     ThisItem.question_id
                 );
+                With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
                 Set(
                     currentAnswer,
-                    LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey)).answer
-                );
-                Set(
-                    backupAnswer,
-                    currentAnswer
+                    If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                    );
                 );
                 
                 With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},

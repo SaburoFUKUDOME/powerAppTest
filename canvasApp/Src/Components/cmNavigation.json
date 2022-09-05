@@ -445,7 +445,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);\r\nSet(\r\n    navigationKey,\r\n    ThisItem.question_id\r\n);\r\nSet(\r\n    questionKey,\r\n    ThisItem.question_id\r\n);\r\nSet(\r\n    currentAnswer,\r\n    LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey)).answer\r\n);\r\nSet(\r\n    backupAnswer,\r\n    currentAnswer\r\n);\r\n\r\nWith({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    buckVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);",
+                "InvariantScript": "Navigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);\r\nSet(\r\n    navigationKey,\r\n    ThisItem.question_id\r\n);\r\nSet(\r\n    questionKey,\r\n    ThisItem.question_id\r\n);\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\n);\r\n\r\nWith({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    buckVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -748,7 +748,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637979633257588004",
+    "LastModifiedTimestamp": "637979652656548238",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -807,7 +807,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637979633257588004",
+  "LastModifiedTimestamp": "637979652656548238",
   "Name": "e88d8fa5810f418a94473be296e5e99e",
   "OverridableProperties": {},
   "TemplateOriginalName": "49a806b6dd7341998728f06c4447a6bc",

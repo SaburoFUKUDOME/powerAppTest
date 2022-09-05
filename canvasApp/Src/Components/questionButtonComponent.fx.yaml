@@ -61,14 +61,13 @@ questionButtonComponent As CanvasComponent:
                     If(qRecord.next_question_id=0,true,false)
                 );
                 
+                With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
                 Set(
                     currentAnswer,
-                    LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId)).answer
+                    If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                    );
                 );
-                Set(
-                    backupAnswer,
-                    currentAnswer
-                );
+                 
                 
                 
                 Set(questionKey,qId);
