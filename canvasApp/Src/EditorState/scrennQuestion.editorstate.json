@@ -3592,10 +3592,31 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "RadioSelectionFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "RadioSelectionFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "RadioBackgroundFill",
-        "RadioBorderColor",
-        "Layout",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "InvariantPropertyName": "RadioBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Layout.Vertical",
+          "InvariantPropertyName": "Layout",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "DisabledBorderColor",
         "BorderStyle",

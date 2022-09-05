@@ -111,8 +111,11 @@ scrennQuestion As screen:
     Radio1 As radio:
         Height: =125
         Items: =Split(Substitute(LookUp('仮想構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
+        Layout: =Layout.Horizontal
+        RadioBorderColor: =baseColor
+        RadioSelectionFill: =baseColor
         Visible: =If(controlType="radioButton",true,false)
-        Width: =936
+        Width: =616
         X: =88
         Y: =269
         ZIndex: =20
