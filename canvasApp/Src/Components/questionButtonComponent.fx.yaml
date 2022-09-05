@@ -62,10 +62,14 @@ questionButtonComponent As CanvasComponent:
                 );
                 
                 Set(
-                    // 次の回答はどうやって取得するか検討する
                     currentAnswer,
-                    galleryTheme.Selected.id1_answer
+                    LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId)).answer
                 );
+                Set(
+                    backupAnswer,
+                    currentAnswer
+                );
+                
                 
                 Set(questionKey,qId);
                 Set(
