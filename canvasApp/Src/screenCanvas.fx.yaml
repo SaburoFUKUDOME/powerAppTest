@@ -166,3 +166,13 @@ screenCanvas As screen:
         Y: =149
         ZIndex: =33
 
+    Icon1 As icon.BackArrow:
+        Color: =baseColor
+        Height: =40
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =40
+        X: =40
+        Y: =696
+        ZIndex: =34
+

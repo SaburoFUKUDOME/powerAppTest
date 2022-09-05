@@ -199,7 +199,7 @@
         "Name": "homeButton_1",
         "Parent": "cmHomeButtonEdit",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 204,
+        "PublishOrderIndex": 205,
         "Rules": [
           {
             "Category": "Data",
