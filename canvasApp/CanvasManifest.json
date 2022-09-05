@@ -88,14 +88,14 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "df69e975-5576-4c52-9911-fc1b4bbeb6b6",
-    "Id": "e6e15e34-6210-4a01-b19a-2b2f8a3ff4b1",
+    "Id": "843dfaee-21e7-4535-9d9a-2bb73a8575a8",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール",
+    "Name": "%25e4%25bb%25ae%25e8%25aa%25ac%25e6%25a7%258b%25e7%25af%2589%25e6%2594%25af%25e6%258f%25b4%25e3%2583%2584%25e3%2583%25bc%25e3%2583%25ab_fukuda.msapp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール",
+    "AppName": "仮説構築支援ツール_fukuda",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

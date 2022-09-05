@@ -249,10 +249,10 @@ scrennQuestion As screen:
             DisabledColor: =RGBA(163, 216, 246, 5)
             Fill: =RGBA(163, 216, 246, 5)
             FontWeight: =Normal
-            Height: =60
+            Height: =55
             Overflow: =Overflow.Scroll
             Text: =
-            Width: =exampleLabel.Width
+            Width: =936
             X: =80
             Y: =607
             ZIndex: =24
@@ -266,7 +266,7 @@ scrennQuestion As screen:
             Overflow: =Overflow.Scroll
             Text: ="例：" & Char(10)&Char(10) & example
             Visible: =exampleGroupVisible
-            Width: =936
+            Width: =buttonLabel.Width
             X: =buttonLabel.X
             Y: =426
             ZIndex: =25
@@ -275,7 +275,7 @@ scrennQuestion As screen:
             BorderColor: =White
             Color: =baseColor
             Fill: =White
-            Height: =39
+            Height: =35
             HoverBorderColor: =ColorFade(White, -5%)
             HoverFill: =baseColor
             OnSelect: |
@@ -287,10 +287,10 @@ scrennQuestion As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =14
+            Size: =13
             Text: ="◀ 解説"
             Visible: =exampleGroupVisible
-            Width: =113
+            Width: =100
             X: =865
             Y: =617
             ZIndex: =26
@@ -331,6 +331,6 @@ scrennQuestion As screen:
             Visible: =commentaryGroupVisible
             Width: =exampleButton.Width
             X: =exampleButton.X
-            Y: =617
+            Y: =exampleButton.Y
             ZIndex: =28
 

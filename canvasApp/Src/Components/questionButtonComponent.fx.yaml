@@ -94,7 +94,7 @@ questionButtonComponent As CanvasComponent:
             DisabledColor: =baseColor
             DisabledFill: =baseColor
             Fill: =baseColor
-            Height: =38
+            Height: =35
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
@@ -155,19 +155,20 @@ questionButtonComponent As CanvasComponent:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
+            Size: =14
             Text: ="　↑　戻る"
             Visible: =buckVisible
-            Width: =175
-            X: =210
-            Y: =6
+            X: =230
+            Y: =8
             ZIndex: =1
 
-        nextButton_1 As button:
+        nextButton As button:
             BorderColor: =baseColor
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
             DisabledFill: =baseColor
             Fill: =baseColor
+            Height: =backButton.Height
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
@@ -230,11 +231,12 @@ questionButtonComponent As CanvasComponent:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
+            Size: =14
             Text: ="　↓　次へ"
             Visible: =nextVisible
             Width: =backButton.Width
             X: =436
-            Y: =5
+            Y: =7
             ZIndex: =2
 
         confirmButton As button:
@@ -243,7 +245,7 @@ questionButtonComponent As CanvasComponent:
             DisabledColor: =baseColor
             DisabledFill: =baseColor
             Fill: =baseColor
-            Height: =nextButton_1.Height
+            Height: =nextButton.Height
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: =//　更新処理する
@@ -251,10 +253,11 @@ questionButtonComponent As CanvasComponent:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
+            Size: =14
             Text: ="確定"
             Visible: =confirmVisible
-            Width: =nextButton_1.Width
-            X: =nextButton_1.X
-            Y: =nextButton_1.Y
+            Width: =nextButton.Width
+            X: =nextButton.X
+            Y: =7
             ZIndex: =3
 
