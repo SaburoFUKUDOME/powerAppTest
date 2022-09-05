@@ -109,10 +109,12 @@ scrennQuestion As screen:
         ZIndex: =8
 
     Radio1 As radio:
-        Items: ='仮想構築支援ツール - 問い'
+        Height: =125
+        Items: =Split(Substitute(LookUp('仮想構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
         Visible: =If(controlType="radioButton",true,false)
-        X: =237
-        Y: =294
+        Width: =936
+        X: =88
+        Y: =269
         ZIndex: =20
 
     pagingGroup As group:

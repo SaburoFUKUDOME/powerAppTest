@@ -91,11 +91,11 @@
     "Id": "843dfaee-21e7-4535-9d9a-2bb73a8575a8",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール_fukuda",
+    "Name": "仮説構築支援ツール",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール_fukuda",
+    "AppName": "仮説構築支援ツール",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
