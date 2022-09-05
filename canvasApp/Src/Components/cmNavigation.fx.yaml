@@ -79,6 +79,10 @@ cmNavigation As CanvasComponent:
                     If(qRecord.next_question_id=0,false,true)
                 
                 );
+                Set(
+                    confirmVisible,
+                    If(qRecord.next_question_id=0,true,false)
+                );
                 );
                 Set(
                     buckVisible,

@@ -1,0 +1,260 @@
+questionButtonComponent As CanvasComponent:
+    setQuestionValue(qId As Number, buttonKey As String):
+        qId:
+            Default: =100
+        buttonKey:
+            Default: ="テキスト"
+        ThisProperty:
+            Default: |+
+                =With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=qId)},
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                If(buttonKey="next",
+                //次へボタンの場合
+                Set(
+                    nextVisible,
+                    If(qRecord.next_question_id=0,false,true)
+                );
+                Set(
+                    buckVisible,
+                    true
+                );,
+                //戻るボタンの場合
+                Set(
+                    nextVisible,
+                    true
+                );
+                Set(
+                    buckVisible,
+                     If(qRecord.back_question_id=0,false,true)
+                ););
+                
+                Set(
+                    confirmVisible,
+                    If(qRecord.next_question_id=0,true,false)
+                );
+                
+                Set(
+                    // 次の回答はどうやって取得するか検討する
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                
+                Set(questionKey,qId);
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
+                )
+                
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =50
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =2
+
+    qButtonGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        backButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            Height: =38
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            OnSelect: |-
+                =questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
+                /**
+                Set(backKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id);
+                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=backKey)},
+                
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                Set(
+                    // 次の回答はどうやって取得するか検討する
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                Set(
+                    nextVisible,
+                    true
+                );
+                Set(
+                    buckVisible,
+                     If(qRecord.back_question_id=0,false,true)
+                );
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
+                Set(questionKey,backKey);
+                )
+                */
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↑　戻る"
+            Visible: =buckVisible
+            Width: =175
+            X: =210
+            Y: =6
+            ZIndex: =1
+
+        nextButton_1 As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            OnSelect: |-
+                =questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
+                /**
+                Set(nextKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id);
+                
+                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=nextKey)},
+                Set(
+                    currentTitle,
+                    qRecord.Title
+                );
+                Set(
+                    currentQuestion,
+                    qRecord.question_content
+                );
+                
+                Set(
+                    currentPage,
+                    qRecord.current_question_number
+                );
+                Set(
+                    totalPage,
+                    qRecord.question_totalnumber
+                );
+                Set(
+                    commentary,
+                    qRecord.commentary
+                );
+                Set(
+                    example,
+                    qRecord.example
+                );
+                Set(
+                    nextVisible,
+                    If(qRecord.next_question_id=0,false,true)
+                );
+                Set(
+                    buckVisible,
+                    true
+                );
+                Set(
+                    // 次の回答はどうやって取得するか検討する
+                    currentAnswer,
+                    galleryTheme.Selected.id1_answer
+                );
+                Set(questionKey,nextKey);
+                Set(
+                    commentaryGroupVisible,
+                    true
+                );
+                Set(
+                    exampleGroupVisible,
+                    false
+                );
+                )
+                
+                */
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="　↓　次へ"
+            Visible: =nextVisible
+            Width: =backButton.Width
+            X: =436
+            Y: =5
+            ZIndex: =2
+
+        confirmButton As button:
+            BorderColor: =baseColor
+            DisabledBorderColor: =baseColor
+            DisabledColor: =baseColor
+            DisabledFill: =baseColor
+            Fill: =baseColor
+            Height: =nextButton_1.Height
+            HoverBorderColor: =ColorFade(baseColor, 20%)
+            HoverFill: =ColorFade(baseColor,-20%)
+            OnSelect: =//　更新処理する
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="確定"
+            Visible: =confirmVisible
+            Width: =nextButton_1.Width
+            X: =nextButton_1.X
+            Y: =nextButton_1.Y
+            ZIndex: =3
+
