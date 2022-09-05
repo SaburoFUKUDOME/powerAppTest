@@ -124,6 +124,7 @@ scrennQuestion As screen:
 
         currentPageLabel As label:
             Color: =baseColor
+            DisplayMode: =DisplayMode.View
             FontWeight: =Bold
             Height: =35
             Text: =currentPage
@@ -134,6 +135,7 @@ scrennQuestion As screen:
 
         totalPageLabel As label:
             Color: =baseColor
+            DisplayMode: =DisplayMode.View
             FontWeight: =Bold
             Text: |
                 =totalPage
@@ -144,6 +146,7 @@ scrennQuestion As screen:
 
         Icon5 As icon.VerticalLine:
             Color: =baseColor
+            DisplayMode: =DisplayMode.View
             Height: =30
             Icon: =Icon.VerticalLine
             Rotation: |

@@ -90,6 +90,7 @@ questionButtonComponent As CanvasComponent:
 
         backButton As button:
             BorderColor: =baseColor
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
             DisabledFill: =baseColor
@@ -164,6 +165,7 @@ questionButtonComponent As CanvasComponent:
 
         nextButton As button:
             BorderColor: =baseColor
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
             DisabledFill: =baseColor
@@ -241,6 +243,7 @@ questionButtonComponent As CanvasComponent:
 
         confirmButton As button:
             BorderColor: =baseColor
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
             DisabledFill: =baseColor

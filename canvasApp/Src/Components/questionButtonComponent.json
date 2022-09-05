@@ -41,7 +41,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "BorderStyle",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "BorderStyle",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "FocusedBorderColor",
           "Color",
           {
@@ -180,7 +187,7 @@
         "Name": "nextButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 209,
+        "PublishOrderIndex": 210,
         "Rules": [
           {
             "Category": "Data",
@@ -286,7 +293,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "BorderStyle.Solid",
+            "InvariantScript": "BorderStyle.None",
             "Property": "BorderStyle",
             "RuleProviderType": "Unknown"
           },
@@ -470,7 +477,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "BorderStyle",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "BorderStyle",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "FocusedBorderColor",
           "Color",
           {
@@ -623,7 +637,7 @@
         "Name": "confirmButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 210,
+        "PublishOrderIndex": 211,
         "Rules": [
           {
             "Category": "Data",
@@ -669,7 +683,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "BorderStyle.Solid",
+            "InvariantScript": "BorderStyle.None",
             "Property": "BorderStyle",
             "RuleProviderType": "Unknown"
           },
@@ -913,7 +927,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "BorderStyle",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "BorderStyle",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "FocusedBorderColor",
           "Color",
           {
@@ -1059,7 +1080,7 @@
         "Name": "backButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 211,
+        "PublishOrderIndex": 212,
         "Rules": [
           {
             "Category": "Data",
@@ -1219,7 +1240,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "BorderStyle.Solid",
+            "InvariantScript": "BorderStyle.None",
             "Property": "BorderStyle",
             "RuleProviderType": "Unknown"
           },
@@ -1340,7 +1361,7 @@
         "Name": "qButtonGroup",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 212,
+        "PublishOrderIndex": 209,
         "Rules": [
           {
             "Category": "Design",
@@ -1415,7 +1436,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637979491234389796",
+    "LastModifiedTimestamp": "637979493423447969",
     "Name": "questionButtonComponent",
     "Rules": [
       {
@@ -1537,7 +1558,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637979491234389796",
+  "LastModifiedTimestamp": "637979493423447969",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",
