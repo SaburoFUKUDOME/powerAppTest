@@ -43,6 +43,10 @@ cmNavigation As CanvasComponent:
                     currentAnswer,
                     LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey)).answer
                 );
+                Set(
+                    backupAnswer,
+                    currentAnswer
+                );
                 
                 With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},
                 Set(
