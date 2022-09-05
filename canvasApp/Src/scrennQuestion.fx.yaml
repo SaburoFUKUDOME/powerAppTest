@@ -109,6 +109,7 @@ scrennQuestion As screen:
         ZIndex: =8
 
     Radio1 As radio:
+        FontWeight: =FontWeight.Semibold
         Height: =125
         Items: =Split(Substitute(LookUp('仮想構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
         Layout: =Layout.Horizontal
