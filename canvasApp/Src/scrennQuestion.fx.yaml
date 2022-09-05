@@ -256,7 +256,7 @@ scrennQuestion As screen:
             Overflow: =Overflow.Scroll
             Text: =
             Width: =936
-            X: =80
+            X: =87
             Y: =607
             ZIndex: =24
 
@@ -270,7 +270,7 @@ scrennQuestion As screen:
             Text: ="例：" & Char(10)&Char(10) & example
             Visible: =exampleGroupVisible
             Width: =buttonLabel.Width
-            X: =buttonLabel.X
+            X: =87
             Y: =426
             ZIndex: =25
 
@@ -294,7 +294,7 @@ scrennQuestion As screen:
             Text: ="◀ 解説"
             Visible: =exampleGroupVisible
             Width: =100
-            X: =865
+            X: =872
             Y: =617
             ZIndex: =26
 
@@ -308,7 +308,7 @@ scrennQuestion As screen:
             Text: ="解説：" & Char(10)&Char(10) & commentary
             Visible: =commentaryGroupVisible
             Width: =936
-            X: =buttonLabel.X
+            X: =87
             Y: =exampleLabel.Y
             ZIndex: =27
 
@@ -333,7 +333,7 @@ scrennQuestion As screen:
             Text: ="例 ▶"
             Visible: =commentaryGroupVisible
             Width: =exampleButton.Width
-            X: =exampleButton.X
+            X: =872
             Y: =exampleButton.Y
             ZIndex: =28
 
