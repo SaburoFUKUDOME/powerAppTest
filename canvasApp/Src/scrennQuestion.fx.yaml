@@ -83,10 +83,12 @@ scrennQuestion As screen:
 
         questionTitleLabel As label:
             FontWeight: =Semibold
+            Height: =44
             Size: =15
             Text: =currentTitle
+            Width: =897
             X: =101
-            Y: =144
+            Y: =142
             ZIndex: =6
 
     textAnswer As text:
