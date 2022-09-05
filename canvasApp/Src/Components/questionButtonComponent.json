@@ -1444,7 +1444,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637979652821706537",
+    "LastModifiedTimestamp": "637979654768939397",
     "Name": "questionButtonComponent",
     "Rules": [
       {
@@ -1497,7 +1497,7 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=qId)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\n\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nIf(buttonKey=\"next\",\r\n//次へボタンの場合\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n);\r\nSet(\r\n    buckVisible,\r\n    true\r\n);,\r\n//戻るボタンの場合\r\nSet(\r\n    nextVisible,\r\n    true\r\n);\r\nSet(\r\n    buckVisible,\r\n     If(qRecord.back_question_id=0,false,true)\r\n););\r\n\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\n);\r\n \r\n\r\n\r\nSet(questionKey,qId);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\n)\r\n\r\n",
+        "InvariantScript": "With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=qId)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\n\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nIf(buttonKey=\"next\",\r\n//次へボタンの場合\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n);\r\nSet(\r\n    buckVisible,\r\n    true\r\n);,\r\n//戻るボタンの場合\r\nSet(\r\n    nextVisible,\r\n    true\r\n);\r\nSet(\r\n    buckVisible,\r\n     If(qRecord.back_question_id=0,false,true)\r\n););\r\n\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\n);\r\n \r\n\r\nSet(questionKey,qId);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\n)\r\n\r\n",
         "Property": "setQuestionValue",
         "RuleProviderType": "System"
       },
@@ -1581,7 +1581,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637979652821706537",
+  "LastModifiedTimestamp": "637979654768939397",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",
