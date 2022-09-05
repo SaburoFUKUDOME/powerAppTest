@@ -130,7 +130,7 @@ scrennQuestion As screen:
             Text: =currentPage
             Width: =35
             X: =963
-            Y: =699
+            Y: =713
             ZIndex: =17
 
         totalPageLabel As label:
@@ -141,7 +141,7 @@ scrennQuestion As screen:
                 =totalPage
             Width: =48
             X: =1002
-            Y: =696
+            Y: =710
             ZIndex: =18
 
         Icon5 As icon.VerticalLine:
@@ -153,7 +153,7 @@ scrennQuestion As screen:
                 =40
             Width: =42
             X: =974
-            Y: =701
+            Y: =715
             ZIndex: =19
 
     cmHomeButtonEdit_1 As cmHomeButtonEdit:
@@ -237,7 +237,7 @@ scrennQuestion As screen:
             )
             
         X: =323
-        Y: =691
+        Y: =705
         ZIndex: =23
 
     supplementGroups As group:
@@ -257,7 +257,7 @@ scrennQuestion As screen:
             Text: =
             Width: =936
             X: =87
-            Y: =607
+            Y: =628
             ZIndex: =24
 
         exampleLabel As label:
@@ -271,7 +271,7 @@ scrennQuestion As screen:
             Visible: =exampleGroupVisible
             Width: =buttonLabel.Width
             X: =87
-            Y: =426
+            Y: =447
             ZIndex: =25
 
         exampleButton As button:
@@ -295,7 +295,7 @@ scrennQuestion As screen:
             Visible: =exampleGroupVisible
             Width: =100
             X: =872
-            Y: =617
+            Y: =638
             ZIndex: =26
 
         commentaryLabel As label:
@@ -309,7 +309,7 @@ scrennQuestion As screen:
             Visible: =commentaryGroupVisible
             Width: =936
             X: =87
-            Y: =exampleLabel.Y
+            Y: =447
             ZIndex: =27
 
         commentaryButton As button:
@@ -333,7 +333,7 @@ scrennQuestion As screen:
             Text: ="例 ▶"
             Visible: =commentaryGroupVisible
             Width: =exampleButton.Width
-            X: =872
-            Y: =exampleButton.Y
+            X: =886
+            Y: =638
             ZIndex: =28
 
