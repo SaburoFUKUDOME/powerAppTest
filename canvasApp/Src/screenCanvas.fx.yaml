@@ -75,85 +75,85 @@ screenCanvas As screen:
         ZIndex: =17
 
     answerLabel_8 As label:
-        Text: =galleryTheme.Selected.id8_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=8)).answer
         X: =258
         Y: =507
         ZIndex: =18
 
     answerLabel_9 As label:
-        Text: =galleryTheme.Selected.id9_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=9)).answer
         X: =258
         Y: =547
         ZIndex: =19
 
     answerLabel_10 As label:
-        Text: =galleryTheme.Selected.id10_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=10)).answer
         X: =258
         Y: =588
         ZIndex: =20
 
     answerLabel_11 As label:
-        Text: =galleryTheme.Selected.id11_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=11)).answer
         X: =482
         Y: =228
         ZIndex: =21
 
     answerLabel_12 As label:
-        Text: =galleryTheme.Selected.id12_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=12)).answer
         X: =482
         Y: =268
         ZIndex: =22
 
     answerLabel_13 As label:
-        Text: =galleryTheme.Selected.id13_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=13)).answer
         X: =482
         Y: =308
         ZIndex: =23
 
     answerLabel_14 As label:
-        Text: =galleryTheme.Selected.id14_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=14)).answer
         X: =482
         Y: =348
         ZIndex: =24
 
     answerLabel_15 As label:
-        Text: =galleryTheme.Selected.id15_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=15)).answer
         X: =482
         Y: =388
         ZIndex: =25
 
     answerLabel_16 As label:
-        Text: =galleryTheme.Selected.id16_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=16)).answer
         X: =482
         Y: =428
         ZIndex: =26
 
     answerLabel_17 As label:
-        Text: =galleryTheme.Selected.id17_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=17)).answer
         X: =482
         Y: =468
         ZIndex: =27
 
     answerLabel_18 As label:
-        Text: =galleryTheme.Selected.id18_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=18)).answer
         X: =482
         Y: =508
         ZIndex: =28
 
     answerLabel_19 As label:
-        Text: =galleryTheme.Selected.id19_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=19)).answer
         X: =482
         Y: =548
         ZIndex: =29
 
     answerLabel_20 As label:
-        Text: =galleryTheme.Selected.id20_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=20)).answer
         X: =482
         Y: =588
         ZIndex: =30
 
     answerLabel_21 As label:
-        Text: =galleryTheme.Selected.id21_answer
+        Text: =LookUp('仮説構築支援ツール - 回答',And(themeID=galleryTheme.Selected.ID,questionID=21)).answer
         X: =716
         Y: =228
         ZIndex: =31
