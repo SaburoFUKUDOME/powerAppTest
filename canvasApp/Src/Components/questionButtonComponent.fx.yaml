@@ -6,7 +6,7 @@ questionButtonComponent As CanvasComponent:
             Default: ="テキスト"
         ThisProperty:
             Default: |+
-                =With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=qId)},
+                =With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=qId)},
                 Set(
                     currentTitle,
                     qRecord.Title
@@ -115,10 +115,10 @@ questionButtonComponent As CanvasComponent:
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
                 =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
+                questionButtonComponent.setQuestionValue(LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
                 /**
-                Set(backKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).back_question_id);
-                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=backKey)},
+                Set(backKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id);
+                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=backKey)},
                 
                 Set(
                     currentTitle,
@@ -191,11 +191,11 @@ questionButtonComponent As CanvasComponent:
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
                 =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
+                questionButtonComponent.setQuestionValue(LookUp('仮説構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
                 /**
-                Set(nextKey,LookUp('仮想構築支援ツール - 問い', ID=questionKey).next_question_id);
+                Set(nextKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).next_question_id);
                 
-                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=nextKey)},
+                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=nextKey)},
                 Set(
                     currentTitle,
                     qRecord.Title

@@ -114,7 +114,7 @@ scrennQuestion As screen:
         Default: =currentAnswer
         FontWeight: =FontWeight.Semibold
         Height: =168
-        Items: =Split(Substitute(LookUp('仮想構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
+        Items: =Split(Substitute(LookUp('仮説構築支援ツール - 問い',ID=questionKey).choice,Char(13),""),Char(10))
         Layout: =Layout.Horizontal
         RadioBorderColor: =baseColor
         RadioSelectionFill: =baseColor
@@ -177,7 +177,7 @@ scrennQuestion As screen:
 
     questionButtonComponent_1 As questionButtonComponent:
         setQuestionValue: |+
-            =With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=qId)},
+            =With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=qId)},
             Set(
                 currentTitle,
                 qRecord.Title

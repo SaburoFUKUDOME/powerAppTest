@@ -49,7 +49,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "仮想構築支援ツール - 問い",
+    "Name": "仮説構築支援ツール - 問い",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

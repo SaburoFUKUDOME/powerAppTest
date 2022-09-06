@@ -46,7 +46,7 @@ cmNavigation As CanvasComponent:
                     );
                 );
                 
-                With({qRecord:LookUp('仮想構築支援ツール - 問い', ID=questionKey)},
+                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=questionKey)},
                 Set(
                     currentTitle,
                     qRecord.Title
