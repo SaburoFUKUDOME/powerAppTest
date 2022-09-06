@@ -164,9 +164,8 @@ screenCanvas As screen:
         ZIndex: =32
 
     cmNavigation_1 As cmNavigation:
-        Height: =366
         X: =cmHomeButtonView_1.X
-        Y: =308
+        Y: =301
         ZIndex: =33
 
     Icon1 As icon.BackArrow:
