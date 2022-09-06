@@ -233,6 +233,7 @@ scrennQuestion As screen:
             );
             
             With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
+            Reset(textAnswer);
             Set(
                 currentAnswer,
                 If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)

@@ -62,6 +62,7 @@ questionButtonComponent As CanvasComponent:
                 );
                 
                 With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
+                Reset(textAnswer);
                 Set(
                     currentAnswer,
                     If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
@@ -84,12 +85,13 @@ questionButtonComponent As CanvasComponent:
     Height: =50
     updateAnswer: |-
         =// ラジオボタンの場合の値を取得する処理を追加する必要有★★
-        If(Not(textAnswer.Text=currentAnswer),
+        If(controlType="text",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));
+        If(Not(answerContent=currentAnswer),
         With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
         //Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★
         If(IsBlank(getAnswerRecord),
-        Patch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: textAnswer.Text });,
-        Patch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: textAnswer.Text });
+        Patch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: answerContent });,
+        Patch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: answerContent });
         )));
     Width: =640
     X: =0
