@@ -43,7 +43,7 @@ questionButtonComponent As CanvasComponent:
                     If(qRecord.next_question_id=0,false,true)
                 );
                 Set(
-                    buckVisible,
+                    backVisible,
                     true
                 );,
                 //戻るボタンの場合
@@ -52,7 +52,7 @@ questionButtonComponent As CanvasComponent:
                     true
                 );
                 Set(
-                    buckVisible,
+                    backVisible,
                      If(qRecord.back_question_id=0,false,true)
                 ););
                 
@@ -176,7 +176,7 @@ questionButtonComponent As CanvasComponent:
             RadiusTopRight: =20
             Size: =14
             Text: ="　↑　戻る"
-            Visible: =buckVisible
+            Visible: =backVisible
             X: =230
             Y: =8
             ZIndex: =1

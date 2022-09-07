@@ -87,7 +87,7 @@ cmNavigation As CanvasComponent:
                 );
                 );
                 Set(
-                    buckVisible,
+                    backVisible,
                     false
                 );
                 Set(

@@ -1,4 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(baseColor,RGBA(100, 149, 237, 1))
+    OnStart: |-
+        =Set(baseColor,RGBA(100, 149, 237, 1));
+        // データベース名を変数に持たせる
 
