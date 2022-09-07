@@ -6,7 +6,7 @@ questionButtonComponent As CanvasComponent:
             Default: ="テキスト"
         ThisProperty:
             Default: |+
-                =With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=qId)},
+                =With({qRecord:LookUp(questionList, ID=qId)},
                 Set(
                     currentTitle,
                     qRecord.Title
@@ -117,7 +117,7 @@ questionButtonComponent As CanvasComponent:
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
                 =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id,"back");
+                questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,"back");
                 /**
                 Set(backKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id);
                 With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=backKey)},
@@ -193,7 +193,7 @@ questionButtonComponent As CanvasComponent:
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
                 =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp('仮説構築支援ツール - 問い', ID=questionKey).next_question_id,"next");
+                questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).next_question_id,"next");
                 /**
                 Set(nextKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).next_question_id);
                 

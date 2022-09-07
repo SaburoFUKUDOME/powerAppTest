@@ -3,4 +3,6 @@ App As appinfo:
     OnStart: |-
         =Set(baseColor,RGBA(100, 149, 237, 1));
         // データベース名を変数に持たせる
+        Set(questionList,'仮説構築支援ツール - 問い');
+        Set(navigationList,'仮説構築支援ツール - ナビゲーション');
 

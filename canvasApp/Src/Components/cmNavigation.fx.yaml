@@ -8,7 +8,7 @@ cmNavigation As CanvasComponent:
 
     "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =360
-        Items: ='仮説構築支援ツール - ナビゲーション'
+        Items: =navigationList
         Layout: =Layout.Vertical
         TemplateFill: |
             =If(ThisItem.question_id = navigationKey,baseColor,White)
@@ -47,7 +47,7 @@ cmNavigation As CanvasComponent:
                     );
                 );
                 
-                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=questionKey)},
+                With({qRecord:LookUp(questionList, ID=questionKey)},
                 Set(
                     currentTitle,
                     qRecord.Title

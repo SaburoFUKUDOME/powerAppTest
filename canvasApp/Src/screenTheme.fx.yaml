@@ -1,10 +1,11 @@
 screenTheme As screen:
+    OnVisible: =Set(themeList,'仮説構築支援ツール - テーマ');
 
     "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(100, 149, 237, 1)
         Fill: =RGBA(245, 245, 245, 10)
         Height: =153
-        Items: ='仮説構築支援ツール - テーマ'
+        Items: =themeList
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =
