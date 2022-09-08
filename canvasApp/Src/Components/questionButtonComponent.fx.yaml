@@ -84,8 +84,7 @@ questionButtonComponent As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =50
     updateAnswer: |-
-        =// ラジオボタンの場合の値を取得する処理を追加する必要有★★
-        If(controlType="text",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));
+        =If(controlType="text",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));
         If(Not(answerContent=currentAnswer),
         With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
         //Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★

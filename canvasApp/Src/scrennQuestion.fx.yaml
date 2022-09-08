@@ -99,6 +99,7 @@ scrennQuestion As screen:
         Fill: =RGBA(237, 237, 237, 1)
         Height: =125
         HoverFill: =RGBA(237, 237, 237, 1)
+        Mode: =TextMode.MultiLine
         PaddingBottom: =0
         PaddingLeft: |
             =10
