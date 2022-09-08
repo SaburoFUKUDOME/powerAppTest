@@ -112,6 +112,7 @@ scrennQuestion As screen:
 
     Radio1 As radio:
         Default: =currentAnswer
+        FocusedBorderThickness: =0
         FontWeight: =FontWeight.Semibold
         Height: =168
         Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
