@@ -5,7 +5,7 @@ screenTheme As screen:
         BorderColor: =RGBA(100, 149, 237, 1)
         Fill: =RGBA(245, 245, 245, 10)
         Height: =153
-        Items: =themeList
+        Items: =Filter(themeList,author=User().Email)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =

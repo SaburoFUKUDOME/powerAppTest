@@ -80,7 +80,7 @@ screenCanvas_1 As screen:
         列２_DataCard1_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="OData__x5217__xff12_"
-            Default: =ThisItem.id2_answer
+            Default: =ThisItem.OData__x5217__xff12_
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'仮説構築支援ツール - テーマ'],DataSourceInfo.DisplayName,"OData__x5217__xff12_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1440,7 +1440,7 @@ screenCanvas_1 As screen:
         cardAnswer_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="OData__x5217__xff11_"
-            Default: =ThisItem.id1_answer
+            Default: =ThisItem.OData__x5217__xff11_
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'仮説構築支援ツール - テーマ'],DataSourceInfo.DisplayName,"OData__x5217__xff11_")
             Fill: =RGBA(0, 0, 0, 0)
