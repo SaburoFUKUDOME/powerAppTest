@@ -48,12 +48,12 @@ screenTheme As screen:
             ZIndex: =2
 
         Label1 As label:
-            FontWeight: =Bold
+            FontWeight: =Semibold
             Height: =55
             OnSelect: =Select(Parent)
             Size: =14
             Text: =ThisItem.Title
-            Width: =1092
+            Width: =552
             X: =5
             Y: =4
             ZIndex: =3
