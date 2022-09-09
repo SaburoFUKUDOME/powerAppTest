@@ -77,7 +77,7 @@ screenTheme As screen:
             Size: =10
             Text: ="最終更新日：" & ThisItem.Modified
             Width: =295
-            X: =5
+            X: =10
             Y: =59
             ZIndex: =5
 
