@@ -15,7 +15,7 @@
       "addition_param2",
       "addition"
     ],
-    "LastModifiedTimestamp": "637982087094279405",
+    "LastModifiedTimestamp": "637983033650193787",
     "Name": "functionTest",
     "Rules": [
       {
@@ -91,7 +91,7 @@
       "Name": "addition",
       "PropertyDataTypeKey": "Number",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "15",
+        "PropertyScopeRuleNamespaceKey": "18",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "addition_param1",
@@ -137,7 +137,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637982087094279405",
+  "LastModifiedTimestamp": "637983033650193787",
   "Name": "3ec6fa9577ca4e37a10aa5118c9072e0",
   "OverridableProperties": {},
   "Version": "637975115257887409"

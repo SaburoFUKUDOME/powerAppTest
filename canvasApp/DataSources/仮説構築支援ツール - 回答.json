@@ -32,7 +32,9 @@
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "Modified": "Modified",
+      "no_answer_flag": "no_answer_flag",
       "questionID": "questionID",
+      "skip_flag": "skip_flag",
       "themeID": "themeID",
       "Title": "Title"
     },
