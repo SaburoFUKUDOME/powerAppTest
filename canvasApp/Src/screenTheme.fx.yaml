@@ -30,23 +30,13 @@ screenTheme As screen:
             Width: =60
             X: =1097
             Y: =23
-            ZIndex: =4
-
-        Label1 As label:
-            FontWeight: =Bold
-            Height: =55
-            OnSelect: =Select(Parent)
-            Size: =14
-            Text: =ThisItem.Title
-            Width: =1125
-            X: =5
-            Y: =4
-            ZIndex: =6
+            ZIndex: =1
 
         Label3 As label:
             BorderColor: =baseColor
             BorderThickness: =3
             DisabledBorderColor: =baseColor
+            Fill: =RGBA(242, 242, 242, 1)
             FocusedBorderThickness: =3
             Height: =98
             HoverBorderColor: =baseColor
@@ -55,7 +45,18 @@ screenTheme As screen:
             Text: =
             Width: =galleryTheme.Width-25
             Y: =4
-            ZIndex: =7
+            ZIndex: =2
+
+        Label1 As label:
+            FontWeight: =Bold
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: =ThisItem.Title
+            Width: =1092
+            X: =5
+            Y: =4
+            ZIndex: =3
 
     Label2 As label:
         Color: =baseColor
