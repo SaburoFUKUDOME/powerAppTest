@@ -36,6 +36,7 @@ screenTheme As screen:
             FontWeight: =Bold
             Height: =55
             OnSelect: =Select(Parent)
+            Size: =14
             Text: =ThisItem.Title
             Width: =1125
             X: =5
