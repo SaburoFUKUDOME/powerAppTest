@@ -10,9 +10,9 @@ screenTheme As screen:
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =
         TemplateSize: =120
-        Width: =1195
-        X: =89
-        Y: =187
+        Width: =1231
+        X: =65
+        Y: =186
         ZIndex: =1
 
         Label3 As label:
@@ -26,7 +26,7 @@ screenTheme As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =baseColor
             Text: =
-            Width: =galleryTheme.Width-25
+            Width: =galleryTheme.Width-30
             Y: =4
             ZIndex: =1
 
@@ -43,7 +43,7 @@ screenTheme As screen:
             TabIndex: =0
             Tooltip: ="項目の詳細の表示"
             Width: =60
-            X: =1097
+            X: =1123
             Y: =23
             ZIndex: =2
 
@@ -76,8 +76,7 @@ screenTheme As screen:
     Rectangle3 As rectangle:
         BorderColor: =baseColor
         Fill: =baseColor
-        Height: |
-            =8
+        Height: =4
         Width: =Max(App.Width-100, App.MinScreenWidth-100)
         X: =50
         Y: =152
@@ -86,7 +85,7 @@ screenTheme As screen:
     Rectangle3_1 As rectangle:
         BorderColor: =baseColor
         Fill: =baseColor
-        Height: =8
+        Height: =4
         Width: =Max(App.Width-100, App.MinScreenWidth-100)
         X: =50
         Y: =505
