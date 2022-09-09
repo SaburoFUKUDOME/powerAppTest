@@ -88,14 +88,14 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "df69e975-5576-4c52-9911-fc1b4bbeb6b6",
-    "Id": "79444ad7-12bc-4381-8c45-9848593086fe",
+    "Id": "ef8df4de-7a74-41d0-af06-4ed866724dc4",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール",
+    "Name": "仮説構築支援ツール_themestyle",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール",
+    "AppName": "仮説構築支援ツール_themestyle",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
