@@ -35,7 +35,7 @@
             "Name": "galleryTemplate1_6",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 12,
+            "PublishOrderIndex": 208,
             "Rules": [
               {
                 "Category": "Data",
@@ -231,7 +231,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 13,
+            "PublishOrderIndex": 209,
             "Rules": [
               {
                 "Category": "Data",
@@ -550,7 +550,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 11,
+        "PublishOrderIndex": 207,
         "Rules": [
           {
             "Category": "Data",

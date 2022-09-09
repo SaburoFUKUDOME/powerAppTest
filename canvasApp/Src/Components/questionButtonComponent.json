@@ -187,7 +187,7 @@
         "Name": "nextButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 18,
+        "PublishOrderIndex": 210,
         "Rules": [
           {
             "Category": "Data",
@@ -637,7 +637,7 @@
         "Name": "confirmButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 19,
+        "PublishOrderIndex": 211,
         "Rules": [
           {
             "Category": "Data",
@@ -1080,7 +1080,7 @@
         "Name": "backButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 20,
+        "PublishOrderIndex": 212,
         "Rules": [
           {
             "Category": "Data",
@@ -1361,7 +1361,7 @@
         "Name": "qButtonGroup",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 21,
+        "PublishOrderIndex": 213,
         "Rules": [
           {
             "Category": "Design",
