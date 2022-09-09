@@ -15,6 +15,21 @@ screenTheme As screen:
         Y: =187
         ZIndex: =1
 
+        Label3 As label:
+            BorderColor: =baseColor
+            BorderThickness: =2
+            DisabledBorderColor: =baseColor
+            Fill: =RGBA(242, 242, 242, 1)
+            FocusedBorderThickness: =2
+            Height: =98
+            HoverBorderColor: =baseColor
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =baseColor
+            Text: =
+            Width: =galleryTheme.Width-25
+            Y: =4
+            ZIndex: =1
+
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(100, 149, 237, 1)
@@ -30,21 +45,6 @@ screenTheme As screen:
             Width: =60
             X: =1097
             Y: =23
-            ZIndex: =1
-
-        Label3 As label:
-            BorderColor: =baseColor
-            BorderThickness: =3
-            DisabledBorderColor: =baseColor
-            Fill: =RGBA(242, 242, 242, 1)
-            FocusedBorderThickness: =3
-            Height: =98
-            HoverBorderColor: =baseColor
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =baseColor
-            Text: =
-            Width: =galleryTheme.Width-25
-            Y: =4
             ZIndex: =2
 
         Label1 As label:
