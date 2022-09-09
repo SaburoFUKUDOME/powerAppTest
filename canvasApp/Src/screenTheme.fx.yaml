@@ -4,7 +4,7 @@ screenTheme As screen:
     "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(100, 149, 237, 1)
         Fill: =White
-        Height: =241
+        Height: =237
         Items: =Filter(themeList,author=User().Email)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
