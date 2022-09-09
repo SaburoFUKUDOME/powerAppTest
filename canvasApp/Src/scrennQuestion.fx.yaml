@@ -258,6 +258,16 @@ scrennQuestion As screen:
         Y: =705
         ZIndex: =23
 
+    Checkbox1 As checkbox:
+        CheckboxBorderColor: =baseColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Semibold
+        Text: ="後で答える"
+        Visible: =If(Not(questionKey=1),true,false)
+        X: =80
+        Y: =390
+        ZIndex: =29
+
     supplementGroups As group:
         Height: =5
         Width: =5
@@ -354,4 +364,14 @@ scrennQuestion As screen:
             X: =exampleButton.X
             Y: =exampleButton.Y
             ZIndex: =28
+
+    Checkbox3 As checkbox:
+        CheckboxBorderColor: =baseColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Semibold
+        Text: ="回答しない"
+        Visible: =If(Not(questionKey=1),true,false)
+        X: =240
+        Y: =390
+        ZIndex: =30
 

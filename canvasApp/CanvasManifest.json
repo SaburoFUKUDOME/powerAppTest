@@ -91,11 +91,11 @@
     "Id": "ef8df4de-7a74-41d0-af06-4ed866724dc4",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール_themestyle",
+    "Name": "仮説構築支援ツール",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール_themestyle",
+    "AppName": "仮説構築支援ツール",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
