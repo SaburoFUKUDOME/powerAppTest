@@ -3,32 +3,17 @@ screenTheme As screen:
 
     "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(100, 149, 237, 1)
-        Fill: =RGBA(245, 245, 245, 10)
-        Height: =153
+        Fill: =White
+        Height: =241
         Items: =Filter(themeList,author=User().Email)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(screenCanvas)
         TemplatePadding: =
-        TemplateSize: =73
+        TemplateSize: =120
         Width: =1089
         X: =121
         Y: =194
         ZIndex: =1
-
-        Title1 As label:
-            Height: =58
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =16
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =991
-            X: =49
-            Y: =14
-            ZIndex: =2
 
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -53,6 +38,15 @@ screenTheme As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Label1 As label:
+            FontWeight: =Bold
+            Height: =72
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =952
+            X: =40
+            ZIndex: =6
 
     Label2 As label:
         Color: =baseColor
