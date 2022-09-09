@@ -108,3 +108,9 @@ screenTheme As screen:
         Y: =461
         ZIndex: =10
 
+    Label1 As label:
+        Text: ="テストテスト"
+        X: =440
+        Y: =674
+        ZIndex: =11
+
