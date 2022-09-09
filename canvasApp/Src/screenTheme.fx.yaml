@@ -71,6 +71,16 @@ screenTheme As screen:
             Y: =15
             ZIndex: =4
 
+        Label4 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="最終更新日：" & ThisItem.Modified
+            Width: =295
+            X: =5
+            Y: =59
+            ZIndex: =5
+
     Label2 As label:
         Color: =baseColor
         DisabledColor: =baseColor
