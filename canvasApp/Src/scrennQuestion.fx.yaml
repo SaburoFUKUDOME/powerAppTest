@@ -258,12 +258,6 @@ scrennQuestion As screen:
         Y: =705
         ZIndex: =23
 
-    Checkbox1 As checkbox:
-        Text: ="オプション"
-        X: =137
-        Y: =352
-        ZIndex: =29
-
     supplementGroups As group:
         Height: =5
         Width: =5

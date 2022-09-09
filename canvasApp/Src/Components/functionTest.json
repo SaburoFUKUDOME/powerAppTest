@@ -1,79 +1,6 @@
 {
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
-  "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
-    "Children": [],
-    "ControlPropertyState": [
-      "Fill",
-      "Height",
-      "Width",
-      "X",
-      "Y",
-      "ZIndex",
-      "addition_param1",
-      "addition_param2",
-      "addition"
-    ],
-    "LastModifiedTimestamp": "637983040460099036",
-    "Name": "functionTest",
-    "Rules": [
-      {
-        "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "addition_param1",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "addition_param2",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "param1+param2",
-        "Property": "addition",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "640",
-        "Property": "Width",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "640",
-        "Property": "Height",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
-        "RuleProviderType": "System"
-      }
-    ]
-  },
   "ComponentManifest": {
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
@@ -137,7 +64,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637983040460099036",
+  "LastModifiedTimestamp": "637983042169878921",
   "Name": "3ec6fa9577ca4e37a10aa5118c9072e0",
   "OverridableProperties": {},
   "Version": "637975115257887409"
