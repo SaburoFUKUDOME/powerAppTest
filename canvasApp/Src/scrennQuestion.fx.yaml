@@ -209,6 +209,10 @@ scrennQuestion As screen:
                 controlType,
                 qRecord.control_type
             );
+            Set(
+                currentRequired,
+                qRecord.required
+            );
             If(buttonKey="next",
             //次へボタンの場合
             Set(
@@ -236,9 +240,19 @@ scrennQuestion As screen:
             
             With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
             Reset(textAnswer);
+            Reset(Checkbox1);
+            Reset(Checkbox3);
             Set(
                 currentAnswer,
                 If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                );
+            Set(
+                skipFlag,
+                getAnswerRecord.skip_flag
+                );
+            Set(
+                noAnswerFlag,
+                getAnswerRecord.no_answer_flag
                 );
             );
              
@@ -260,6 +274,7 @@ scrennQuestion As screen:
 
     Checkbox1 As checkbox:
         CheckboxBorderColor: =baseColor
+        Default: =skipFlag
         FocusedBorderThickness: =0
         FontWeight: =FontWeight.Semibold
         Text: ="後で答える"
@@ -367,10 +382,11 @@ scrennQuestion As screen:
 
     Checkbox3 As checkbox:
         CheckboxBorderColor: =baseColor
+        Default: =noAnswerFlag
         FocusedBorderThickness: =0
         FontWeight: =FontWeight.Semibold
         Text: ="回答しない"
-        Visible: =If(Not(questionKey=1),true,false)
+        Visible: =If(Not(Or(questionKey=1,currentRequired="2")),true,false)
         X: =240
         Y: =390
         ZIndex: =30

@@ -187,7 +187,7 @@
         "Name": "nextButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 74,
+        "PublishOrderIndex": 75,
         "Rules": [
           {
             "Category": "Data",
@@ -637,7 +637,7 @@
         "Name": "confirmButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 75,
+        "PublishOrderIndex": 76,
         "Rules": [
           {
             "Category": "Data",
@@ -1080,7 +1080,7 @@
         "Name": "backButton",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 76,
+        "PublishOrderIndex": 77,
         "Rules": [
           {
             "Category": "Data",
@@ -1361,7 +1361,7 @@
         "Name": "qButtonGroup",
         "Parent": "questionButtonComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 77,
+        "PublishOrderIndex": 74,
         "Rules": [
           {
             "Category": "Design",
@@ -1444,7 +1444,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637985420696725300",
+    "LastModifiedTimestamp": "637985483090197411",
     "Name": "questionButtonComponent",
     "Rules": [
       {
@@ -1497,13 +1497,13 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "With({qRecord:LookUp(questionList, ID=qId)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\n\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nIf(buttonKey=\"next\",\r\n//次へボタンの場合\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n);\r\nSet(\r\n    backVisible,\r\n    true\r\n);,\r\n//戻るボタンの場合\r\nSet(\r\n    nextVisible,\r\n    true\r\n);\r\nSet(\r\n    backVisible,\r\n     If(qRecord.back_question_id=0,false,true)\r\n););\r\n\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},\r\nReset(textAnswer);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\n);\r\n \r\n\r\nSet(questionKey,qId);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\n)\r\n\r\n",
+        "InvariantScript": "With({qRecord:LookUp(questionList, ID=qId)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\n\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentRequired,\r\n    qRecord.required\r\n);\r\nIf(buttonKey=\"next\",\r\n//次へボタンの場合\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n);\r\nSet(\r\n    backVisible,\r\n    true\r\n);,\r\n//戻るボタンの場合\r\nSet(\r\n    nextVisible,\r\n    true\r\n);\r\nSet(\r\n    backVisible,\r\n     If(qRecord.back_question_id=0,false,true)\r\n););\r\n\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},\r\nReset(textAnswer);\r\nReset(Checkbox1);\r\nReset(Checkbox3);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\nSet(\r\n    skipFlag,\r\n    getAnswerRecord.skip_flag\r\n    );\r\nSet(\r\n    noAnswerFlag,\r\n    getAnswerRecord.no_answer_flag\r\n    );\r\n);\r\n \r\n\r\nSet(questionKey,qId);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\n)\r\n\r\n",
         "Property": "setQuestionValue",
         "RuleProviderType": "System"
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "If(controlType=\"text\",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));\r\nIf(Not(answerContent=currentAnswer),\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},\r\n//Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★\r\nIf(IsBlank(getAnswerRecord),\r\nPatch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: answerContent });,\r\nPatch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: answerContent });\r\n)));",
+        "InvariantScript": "If(controlType=\"text\",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));\r\nIf(Not(And(answerContent=currentAnswer,skipFlag=Checkbox1.Value,noAnswerFlag=Checkbox3.Value)),\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},\r\n//Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★\r\nIf(IsBlank(getAnswerRecord),\r\nPatch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: answerContent,skip_flag:Checkbox1.Value,no_answer_flag:Checkbox3.Value });,\r\nPatch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: answerContent,skip_flag:Checkbox1.Value,no_answer_flag:Checkbox3.Value });\r\n)));",
         "Property": "updateAnswer",
         "RuleProviderType": "System"
       }
@@ -1581,7 +1581,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637985420696725300",
+  "LastModifiedTimestamp": "637985483090197411",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",

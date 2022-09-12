@@ -36,6 +36,10 @@ questionButtonComponent As CanvasComponent:
                     controlType,
                     qRecord.control_type
                 );
+                Set(
+                    currentRequired,
+                    qRecord.required
+                );
                 If(buttonKey="next",
                 //次へボタンの場合
                 Set(
@@ -63,9 +67,19 @@ questionButtonComponent As CanvasComponent:
                 
                 With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
                 Reset(textAnswer);
+                Reset(Checkbox1);
+                Reset(Checkbox3);
                 Set(
                     currentAnswer,
                     If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                    );
+                Set(
+                    skipFlag,
+                    getAnswerRecord.skip_flag
+                    );
+                Set(
+                    noAnswerFlag,
+                    getAnswerRecord.no_answer_flag
                     );
                 );
                  
@@ -85,12 +99,12 @@ questionButtonComponent As CanvasComponent:
     Height: =50
     updateAnswer: |-
         =If(controlType="text",Set(answerContent,textAnswer.Text),Set(answerContent,Radio1.Selected.Result));
-        If(Not(answerContent=currentAnswer),
+        If(Not(And(answerContent=currentAnswer,skipFlag=Checkbox1.Value,noAnswerFlag=Checkbox3.Value)),
         With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
         //Set(getAnswerRecord,getAnswerRecord); ビューの変数から値が確認できる★★
         If(IsBlank(getAnswerRecord),
-        Patch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: answerContent });,
-        Patch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: answerContent });
+        Patch('仮説構築支援ツール - 回答', Defaults('仮説構築支援ツール - 回答'),{themeID:themeId,questionID:questionKey, answer: answerContent,skip_flag:Checkbox1.Value,no_answer_flag:Checkbox3.Value });,
+        Patch('仮説構築支援ツール - 回答', getAnswerRecord,{ answer: answerContent,skip_flag:Checkbox1.Value,no_answer_flag:Checkbox3.Value });
         )));
     Width: =640
     X: =0
