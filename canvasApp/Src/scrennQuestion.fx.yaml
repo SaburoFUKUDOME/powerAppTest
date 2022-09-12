@@ -386,8 +386,17 @@ scrennQuestion As screen:
         FocusedBorderThickness: =0
         FontWeight: =FontWeight.Semibold
         Text: ="回答しない"
-        Visible: =If(Not(Or(questionKey=1,currentRequired="2")),true,false)
+        Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
         X: =240
         Y: =390
         ZIndex: =30
+
+    Label5 As label:
+        Color: =baseColor
+        FontWeight: =FontWeight.Semibold
+        Text: ="*入力必須"
+        Visible: =If(Not(currentRequired="2"),true,false)
+        X: =90
+        Y: =230
+        ZIndex: =31
 
