@@ -206,7 +206,7 @@
         "Name": "homeButton",
         "Parent": "cmHomeButtonView",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 71,
+        "PublishOrderIndex": 73,
         "Rules": [
           {
             "Category": "Data",

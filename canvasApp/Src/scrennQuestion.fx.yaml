@@ -59,8 +59,8 @@ scrennQuestion As screen:
         Size: =14
         Text: =currentQuestion
         Width: =996
-        X: =92
-        Y: =197
+        X: =62
+        Y: =189
         ZIndex: =7
 
     questionTitleGroup As group:
@@ -94,26 +94,6 @@ scrennQuestion As screen:
             Y: =142
             ZIndex: =6
 
-    textAnswer As text:
-        BorderColor: =baseColor
-        BorderStyle: =BorderStyle.None
-        Default: =currentAnswer
-        DisabledBorderColor: =baseColor
-        Fill: =RGBA(237, 237, 237, 1)
-        Height: =125
-        HoverFill: =RGBA(237, 237, 237, 1)
-        Mode: =TextMode.MultiLine
-        PaddingBottom: =0
-        PaddingLeft: |
-            =10
-        PaddingRight: =0
-        PaddingTop: =0
-        Visible: =If(controlType="text",true,false)
-        Width: =936
-        X: =88
-        Y: =269
-        ZIndex: =8
-
     Radio1 As radio:
         Default: =currentAnswer
         FocusedBorderThickness: =0
@@ -125,8 +105,8 @@ scrennQuestion As screen:
         RadioSelectionFill: =baseColor
         Visible: =If(controlType="radioButton",true,false)
         Width: =591
-        X: =92
-        Y: =301
+        X: =questionLabel.X
+        Y: =237
         ZIndex: =20
 
     pagingGroup As group:
@@ -283,8 +263,8 @@ scrennQuestion As screen:
         FontWeight: =FontWeight.Semibold
         Text: ="後で答える"
         Visible: =If(Not(questionKey=1),true,false)
-        X: =80
-        Y: =390
+        X: =questionLabel.X
+        Y: =379
         ZIndex: =29
 
     supplementGroups As group:
@@ -303,7 +283,7 @@ scrennQuestion As screen:
             Overflow: =Overflow.Scroll
             Text: =
             Width: =936
-            X: =87
+            X: =questionLabel.X
             Y: =628
             ZIndex: =24
 
@@ -317,7 +297,7 @@ scrennQuestion As screen:
             Text: ="例：" & Char(10)&Char(10) & example
             Visible: =exampleGroupVisible
             Width: =buttonLabel.Width
-            X: =87
+            X: =questionLabel.X
             Y: =447
             ZIndex: =25
 
@@ -355,7 +335,7 @@ scrennQuestion As screen:
             Text: ="解説：" & Char(10)&Char(10) & commentary
             Visible: =commentaryGroupVisible
             Width: =936
-            X: =87
+            X: =questionLabel.X
             Y: =447
             ZIndex: =27
 
@@ -391,8 +371,8 @@ scrennQuestion As screen:
         FontWeight: =FontWeight.Semibold
         Text: ="回答しない"
         Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
-        X: =240
-        Y: =390
+        X: =212
+        Y: =383
         ZIndex: =30
 
     Label5 As label:
@@ -400,7 +380,48 @@ scrennQuestion As screen:
         FontWeight: =FontWeight.Semibold
         Text: ="*入力必須"
         Visible: =If(Not(currentRequired="2"),true,false)
-        X: =90
+        X: =questionLabel.X
         Y: =680
         ZIndex: =31
+
+    textGroup As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =33
+
+        textAnswer As text:
+            BorderColor: =baseColor
+            BorderStyle: =BorderStyle.None
+            Default: =currentAnswer
+            DisabledBorderColor: =baseColor
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =125
+            HoverFill: =RGBA(237, 237, 237, 1)
+            Mode: =TextMode.MultiLine
+            PaddingBottom: =0
+            PaddingLeft: |
+                =10
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Visible: =If(controlType="text",true,false)
+            Width: =936
+            X: =questionLabel.X
+            Y: =240
+            ZIndex: =8
+
+        underFrame As rectangle:
+            BorderColor: =baseColor
+            Fill: =baseColor
+            Height: =3
+            Visible: =If(controlType="text",true,false)
+            Width: =textAnswer.Width
+            X: =textAnswer.X
+            Y: =textAnswer.Y+textAnswer.Height
+            ZIndex: =32
 
