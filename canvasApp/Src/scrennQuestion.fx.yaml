@@ -60,7 +60,7 @@ scrennQuestion As screen:
         Text: =currentQuestion
         Width: =996
         X: =62
-        Y: =189
+        Y: =194
         ZIndex: =7
 
     questionTitleGroup As group:
@@ -106,7 +106,7 @@ scrennQuestion As screen:
         Visible: =If(controlType="radioButton",true,false)
         Width: =591
         X: =questionLabel.X
-        Y: =237
+        Y: =258
         ZIndex: =20
 
     pagingGroup As group:
@@ -412,7 +412,7 @@ scrennQuestion As screen:
             Visible: =If(controlType="text",true,false)
             Width: =936
             X: =questionLabel.X
-            Y: =240
+            Y: =247
             ZIndex: =8
 
         underFrame As rectangle:
@@ -422,6 +422,6 @@ scrennQuestion As screen:
             Visible: =If(controlType="text",true,false)
             Width: =textAnswer.Width
             X: =textAnswer.X
-            Y: =textAnswer.Y+textAnswer.Height
+            Y: =372
             ZIndex: =32
 
