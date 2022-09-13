@@ -366,8 +366,8 @@ scrennQuestion As screen:
         FontWeight: =FontWeight.Semibold
         Text: ="回答しない"
         Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
-        X: =212
-        Y: =383
+        X: =Checkbox1.X+Checkbox1.Width
+        Y: =Checkbox1.Y
         ZIndex: =30
 
     Label5 As label:
