@@ -18,7 +18,7 @@ cmHeader As CanvasComponent:
         Color: =RGBA(255, 255, 255, 1)
         Height: =55
         Size: =12
-        Text: =User().Email
+        Text: =loginUserAddres
         Width: =818
         X: =459
         Y: =5

@@ -6,6 +6,7 @@
     "cmNavigation": 6,
     "cmQuestion": 7,
     "Component1": 8,
+    "Component2": 11,
     "functionTest": 9,
     "questionButtonComponent": 10
   },
@@ -53,6 +54,7 @@
     "commentaryButton": 55,
     "commentaryLabel": 51,
     "Component1": 10,
+    "Component2": 93,
     "confirmButton": 14,
     "currentPageLabel": 58,
     "exampleButton": 54,
@@ -105,7 +107,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/13/2022 05:00:49",
+  "HeaderLastSavedDateTimeUTC": "09/13/2022 05:15:57",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/727c8fe29941409ea4cf566a7fd7299f\"",
@@ -122,7 +124,8 @@
     "5d4db020091349f189b94303a97a5b41": 3,
     "74380d984ce148eca4423ee6f2d35989": 6,
     "b90ffcc701d54f8dbd1cc640fb7333c6": 0,
-    "e88d8fa5810f418a94473be296e5e99e": 1
+    "e88d8fa5810f418a94473be296e5e99e": 1,
+    "fadf05589b994538944f909fcefa5bb4": 8
   },
   "OrderComponentTemplate": {
     "112c12e16d4c4b8580bec211c2e97d8d": 7,
@@ -132,7 +135,8 @@
     "5d4db020091349f189b94303a97a5b41": 3,
     "74380d984ce148eca4423ee6f2d35989": 6,
     "b90ffcc701d54f8dbd1cc640fb7333c6": 0,
-    "e88d8fa5810f418a94473be296e5e99e": 1
+    "e88d8fa5810f418a94473be296e5e99e": 1,
+    "fadf05589b994538944f909fcefa5bb4": 8
   },
   "OrderDataSource": {
     "CustomGallerySample": 1,
@@ -141,6 +145,7 @@
     "仮説構築支援ツール - テーマ": 3,
     "仮説構築支援ツール - ナビゲーション": 4,
     "仮説構築支援ツール - 回答": 6,
+    "仮説構築支援ツール - 管理者リスト": 7,
     "仮説構築支援ツール - 問い": 5
   },
   "OrderGroupControls": {
@@ -211,7 +216,7 @@
     "answerLabel_8": 33,
     "answerLabel_9": 35,
     "App": 0,
-    "backButton": 77,
+    "backButton": 78,
     "buttonLabel": 58,
     "Checkbox1": 54,
     "Checkbox3": 55,
@@ -230,7 +235,8 @@
     "commentaryButton": 60,
     "commentaryLabel": 57,
     "Component1": 15,
-    "confirmButton": 76,
+    "Component2": 0,
+    "confirmButton": 77,
     "currentPageLabel": 64,
     "exampleButton": 59,
     "exampleLabel": 56,
@@ -255,9 +261,9 @@
     "navigateButton": 74,
     "navigateGallery": 72,
     "NextArrow1": 8,
-    "nextButton": 75,
+    "nextButton": 76,
     "pagingGroup": 40,
-    "qButtonGroup": 78,
+    "qButtonGroup": 75,
     "questionButtonComponent": 17,
     "questionButtonComponent_1": 62,
     "questionHeaderGroup": 44,

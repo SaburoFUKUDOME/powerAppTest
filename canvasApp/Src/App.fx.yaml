@@ -6,4 +6,7 @@ App As appinfo:
         Set(questionList,'仮説構築支援ツール - 問い');
         Set(navigationList,'仮説構築支援ツール - ナビゲーション');
         Set(themeList,'仮説構築支援ツール - テーマ');
+        Set(adminList,'仮説構築支援ツール - 管理者リスト');
+        Set(loginUserAddres,User().Email);
+        //If(Fillter(adminList,adminList.admin_address = loginUserAddres),Set(admin,true),Set(admin,false))
 
