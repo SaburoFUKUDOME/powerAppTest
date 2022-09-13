@@ -5,4 +5,5 @@ App As appinfo:
         // データベース名を変数に持たせる
         Set(questionList,'仮説構築支援ツール - 問い');
         Set(navigationList,'仮説構築支援ツール - ナビゲーション');
+        Set(themeList,'仮説構築支援ツール - テーマ');
 

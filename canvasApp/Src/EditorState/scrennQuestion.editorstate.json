@@ -110,7 +110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "buttonLabel",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1372,7 +1372,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commentaryButton",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2355,7 +2355,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "exampleButton",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3472,7 +3472,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5",
-      "ParentIndex": 14,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

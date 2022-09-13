@@ -1,5 +1,5 @@
 screenTheme As screen:
-    OnVisible: =Set(themeList,'仮説構築支援ツール - テーマ');
+    OnVisible: =
 
     "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(100, 149, 237, 1)
@@ -15,7 +15,7 @@ screenTheme As screen:
         Y: =186
         ZIndex: =1
 
-        Label3 As label:
+        frameLabel As label:
             BorderColor: =baseColor
             BorderThickness: =2
             DisabledBorderColor: =baseColor
@@ -47,7 +47,7 @@ screenTheme As screen:
             Y: =23
             ZIndex: =2
 
-        Label1 As label:
+        themeTitleLabel As label:
             FontWeight: =Semibold
             Height: =55
             OnSelect: =Select(Parent)
@@ -58,7 +58,7 @@ screenTheme As screen:
             Y: =4
             ZIndex: =3
 
-        Icon3 As icon.Settings:
+        gearIcon As icon.Settings:
             BorderColor: =baseColor
             Color: =baseColor
             DisabledBorderColor: =baseColor
@@ -67,11 +67,11 @@ screenTheme As screen:
             Icon: =Icon.Settings
             OnSelect: =Select(Parent)
             Width: =42
-            X: =Label1.Width
+            X: =themeTitleLabel.Width
             Y: =15
             ZIndex: =4
 
-        Label4 As label:
+        lastModifiedLabel As label:
             Height: =38
             OnSelect: =Select(Parent)
             Size: =10
