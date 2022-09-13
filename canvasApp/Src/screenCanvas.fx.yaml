@@ -7,12 +7,6 @@ screenCanvas As screen:
     cmHeader_2 As cmHeader:
         ZIndex: =7
 
-    answerLabel_1 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=1)).answer
-        X: =274
-        Y: =205
-        ZIndex: =11
-
     questionHeaderGroup_1 As group:
         Height: =5
         Width: =5
@@ -39,126 +33,6 @@ screenCanvas As screen:
             Y: =88
             ZIndex: =10
 
-    answerLabel_2 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=2)).answer
-        X: =258
-        Y: =267
-        ZIndex: =12
-
-    answerLabel_3 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=3)).answer
-        X: =258
-        Y: =308
-        ZIndex: =13
-
-    answerLabel_4 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=4)).answer
-        X: =258
-        Y: =348
-        ZIndex: =14
-
-    answerLabel_5 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=5)).answer
-        X: =258
-        Y: =388
-        ZIndex: =15
-
-    answerLabel_6 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=6)).answer
-        X: =258
-        Y: =427
-        ZIndex: =16
-
-    answerLabel_7 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=7)).answer
-        X: =258
-        Y: =467
-        ZIndex: =17
-
-    answerLabel_8 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=8)).answer
-        X: =258
-        Y: =507
-        ZIndex: =18
-
-    answerLabel_9 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=9)).answer
-        X: =258
-        Y: =547
-        ZIndex: =19
-
-    answerLabel_10 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=10)).answer
-        X: =258
-        Y: =588
-        ZIndex: =20
-
-    answerLabel_11 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=11)).answer
-        X: =482
-        Y: =228
-        ZIndex: =21
-
-    answerLabel_12 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=12)).answer
-        X: =482
-        Y: =268
-        ZIndex: =22
-
-    answerLabel_13 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=13)).answer
-        X: =482
-        Y: =308
-        ZIndex: =23
-
-    answerLabel_14 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=14)).answer
-        X: =482
-        Y: =348
-        ZIndex: =24
-
-    answerLabel_15 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=15)).answer
-        X: =482
-        Y: =388
-        ZIndex: =25
-
-    answerLabel_16 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=16)).answer
-        X: =482
-        Y: =428
-        ZIndex: =26
-
-    answerLabel_17 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=17)).answer
-        X: =482
-        Y: =468
-        ZIndex: =27
-
-    answerLabel_18 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=18)).answer
-        X: =482
-        Y: =508
-        ZIndex: =28
-
-    answerLabel_19 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=19)).answer
-        X: =482
-        Y: =548
-        ZIndex: =29
-
-    answerLabel_20 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=20)).answer
-        X: =482
-        Y: =588
-        ZIndex: =30
-
-    answerLabel_21 As label:
-        Text: =LookUp(answerList,And(themeID=galleryTheme.Selected.ID,questionID=21)).answer
-        X: =716
-        Y: =228
-        ZIndex: =31
-
     cmHomeButtonView_1 As cmHomeButtonView:
         X: =1106
         Y: =128
@@ -178,4 +52,50 @@ screenCanvas As screen:
         X: =40
         Y: =696
         ZIndex: =34
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =536
+        Items: =Sort(Filter(answerList,And(themeID=galleryTheme.Selected.ID)),questionID)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(110, Self.Height - 60)
+        Width: =998
+        X: =108
+        Y: =160
+        ZIndex: =35
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label1 As label:
+            Height: =49
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.answer
+            Width: =998
+            ZIndex: =6
+
+        Label3 As label:
+            OnSelect: =Select(Parent)
+            Text: =If(Not(LookUp(questionList,ThisItem.questionID=ID).required="2"),"必須")
+            X: =4
+            Y: =59
+            ZIndex: =7
+
+        Label4 As label:
+            OnSelect: =Select(Parent)
+            Text: =If(ThisItem.skip_flag,"後で答える")
+            X: =120
+            Y: =59
+            ZIndex: =8
+
+        Label6 As label:
+            OnSelect: =Select(Parent)
+            Text: =If(ThisItem.no_answer_flag,"回答しない")
+            X: =330
+            Y: =59
+            ZIndex: =9
 
