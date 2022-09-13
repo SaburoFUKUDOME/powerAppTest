@@ -52,8 +52,9 @@ screenTheme As screen:
             Height: =55
             OnSelect: =Select(Parent)
             Size: =14
-            Text: =ThisItem.Title
-            Width: =295
+            Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
+            Tooltip: =ThisItem.Title
+            Width: =Len(themeTitleLabel.Text)*20.5
             X: =5
             Y: =4
             ZIndex: =3
@@ -63,12 +64,12 @@ screenTheme As screen:
             Color: =baseColor
             DisabledBorderColor: =baseColor
             DisabledColor: =baseColor
-            Height: =30
+            Height: =25
             Icon: =Icon.Settings
             OnSelect: =Select(Parent)
             Width: =42
             X: =themeTitleLabel.Width
-            Y: =15
+            Y: =17
             ZIndex: =4
 
         lastModifiedLabel As label:
@@ -76,7 +77,7 @@ screenTheme As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: ="最終更新日：" & ThisItem.Modified
-            Width: =295
+            Width: =Len(lastModifiedLabel.Text)*12
             X: =10
             Y: =59
             ZIndex: =5
