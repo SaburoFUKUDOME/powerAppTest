@@ -54,7 +54,7 @@ screenCanvas As screen:
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(110, Self.Height - 60)
-        Width: =998
+        Width: =978
         X: =108
         Y: =160
         ZIndex: =35
@@ -70,7 +70,7 @@ screenCanvas As screen:
             Height: =49
             OnSelect: =Select(Parent)
             Text: =ThisItem.answer
-            Width: =998
+            Width: =978
             ZIndex: =6
 
         Label3 As label:
@@ -83,7 +83,7 @@ screenCanvas As screen:
         Label4 As label:
             OnSelect: =Select(Parent)
             Text: =If(ThisItem.skip_flag,"後で答える")
-            X: =120
+            X: =150
             Y: =59
             ZIndex: =8
 

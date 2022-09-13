@@ -433,7 +433,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox1",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -751,7 +751,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox3",
-      "ParentIndex": 1,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1075,7 +1075,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmHomeButtonEdit_1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1168,7 +1168,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmNavigation_2",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1194,7 +1194,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -2974,7 +2974,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "headerLabel_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3314,7 +3314,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "infoIcon",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4029,7 +4029,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "questionLabel",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4363,7 +4363,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "questionTitleLabel",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4701,7 +4701,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Radio1",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5221,7 +5221,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "textAnswer",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5568,7 +5568,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "titleLabel_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6132,7 +6132,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "underFrame",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
