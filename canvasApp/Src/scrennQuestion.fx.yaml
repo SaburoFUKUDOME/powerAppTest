@@ -54,6 +54,8 @@ scrennQuestion As screen:
         Align: =Left
         Color: =baseColor
         FontWeight: =Semibold
+        Height: =51
+        Overflow: =Overflow.Scroll
         Size: =14
         Text: =currentQuestion
         Width: =996
@@ -84,6 +86,7 @@ scrennQuestion As screen:
         questionTitleLabel As label:
             FontWeight: =Semibold
             Height: =44
+            Overflow: =Overflow.Scroll
             Size: =15
             Text: =currentTitle
             Width: =897
@@ -115,7 +118,7 @@ scrennQuestion As screen:
         Default: =currentAnswer
         FocusedBorderThickness: =0
         FontWeight: =FontWeight.Semibold
-        Height: =168
+        Height: =146
         Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
         Layout: =Layout.Horizontal
         RadioBorderColor: =baseColor
@@ -123,7 +126,7 @@ scrennQuestion As screen:
         Visible: =If(controlType="radioButton",true,false)
         Width: =591
         X: =92
-        Y: =279
+        Y: =301
         ZIndex: =20
 
     pagingGroup As group:
