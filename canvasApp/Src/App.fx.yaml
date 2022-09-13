@@ -2,7 +2,7 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |-
         =Set(baseColor,RGBA(100, 149, 237, 1));
-        // データベース名を変数に持たせる
+        // 変更しないデータベースをセットする
         Set(questionList,'仮説構築支援ツール - 問い');
         Set(navigationList,'仮説構築支援ツール - ナビゲーション');
         Set(themeList,'仮説構築支援ツール - テーマ');
