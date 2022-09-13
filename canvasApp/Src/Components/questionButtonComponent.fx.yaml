@@ -93,6 +93,7 @@ questionButtonComponent As CanvasComponent:
                     exampleGroupVisible,
                     false
                 );
+                If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 )
                 
     Fill: =RGBA(0, 0, 0, 0)

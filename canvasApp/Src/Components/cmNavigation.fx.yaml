@@ -112,6 +112,7 @@ cmNavigation As CanvasComponent:
                     exampleGroupVisible,
                     false
                 );
+                If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

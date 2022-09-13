@@ -266,6 +266,7 @@ scrennQuestion As screen:
                 exampleGroupVisible,
                 false
             );
+            If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
             )
             
         X: =323
@@ -397,6 +398,6 @@ scrennQuestion As screen:
         Text: ="*入力必須"
         Visible: =If(Not(currentRequired="2"),true,false)
         X: =90
-        Y: =230
+        Y: =680
         ZIndex: =31
 

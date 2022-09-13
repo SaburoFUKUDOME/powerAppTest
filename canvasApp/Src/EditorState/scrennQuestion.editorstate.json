@@ -419,7 +419,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox1",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -737,7 +737,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox3",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1144,7 +1144,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmNavigation_2",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1681,7 +1681,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commentaryLabel",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2664,7 +2664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "exampleLabel",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3472,7 +3472,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5",
-      "ParentIndex": 7,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4634,7 +4634,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Radio1",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5119,7 +5119,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "textAnswer",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
