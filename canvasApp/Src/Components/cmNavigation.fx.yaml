@@ -1,43 +1,16 @@
 cmNavigation As CanvasComponent:
-    Fill: =RGBA(0, 0, 0, 0)
-    Height: =350
-    Width: =200
-    X: =0
-    Y: =0
-    ZIndex: =5
-
-    "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =360
-        Items: =navigationList
-        Layout: =Layout.Vertical
-        TemplateFill: |
-            =If(ThisItem.question_id = navigationKey,baseColor,White)
-        TemplatePadding: =0
-        TemplateSize: =40
-        Width: =179
-        X: =10
-        Y: =10
-        ZIndex: =3
-
-        navigateButton As button:
-            BorderColor: =baseColor
-            Color: =If(ThisItem.question_id = navigationKey,White,baseColor)
-            DisabledBorderColor: =baseColor
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =navigateGallery.TemplateHeight
-            HoverFill: =baseColor
-            OnSelect: |-
-                =Navigate(
-                    scrennQuestion,
-                    ScreenTransition.Fade
-                );
-                Set(
+    setQuestionValue(qId As Number):
+        qId:
+            Default: =100
+        ThisProperty:
+            Default: |-
+                =Set(
                     navigationKey,
-                    ThisItem.question_id
+                    qId
                 );
                 Set(
                     questionKey,
-                    ThisItem.question_id
+                    qId
                 );
                 With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
                 Reset(textAnswer);
@@ -113,6 +86,96 @@ cmNavigation As CanvasComponent:
                     false
                 );
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =350
+    updateAnswer: |
+        =If(
+            controlType = "text",
+            Set(
+                answerContent,
+                textAnswer.Text
+            ),
+            Set(
+                answerContent,
+                Radio1.Selected.Result
+            )
+        );
+        If(
+            Not(
+                And(
+                    answerContent = currentAnswer,
+                    skipFlag = Checkbox1.Value,
+                    noAnswerFlag = Checkbox3.Value
+                )
+            ),
+            With(
+                {
+                    getAnswerRecord: LookUp(
+                        '仮説構築支援ツール - 回答',
+                        And(
+                            themeID = themeId,
+                            questionID = questionKey
+                        )
+                    )
+                },
+                If(
+                    IsBlank(getAnswerRecord),
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        Defaults('仮説構築支援ツール - 回答'),
+                        {
+                            themeID: themeId,
+                            questionID: questionKey,
+                            answer: answerContent,
+                            skip_flag: Checkbox1.Value,
+                            no_answer_flag: Checkbox3.Value
+                        }
+                    );
+                    ,
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        getAnswerRecord,
+                        {
+                            answer: answerContent,
+                            skip_flag: Checkbox1.Value,
+                            no_answer_flag: Checkbox3.Value
+                        }
+                    );
+                )
+            )
+        );
+    Width: =200
+    X: =0
+    Y: =0
+    ZIndex: =5
+
+    "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =360
+        Items: =navigationList
+        Layout: =Layout.Vertical
+        TemplateFill: |
+            =If(ThisItem.question_id = navigationKey,baseColor,White)
+        TemplatePadding: =0
+        TemplateSize: =40
+        Width: =179
+        X: =10
+        Y: =10
+        ZIndex: =3
+
+        navigateButton As button:
+            BorderColor: =baseColor
+            Color: =If(ThisItem.question_id = navigationKey,White,baseColor)
+            DisabledBorderColor: =baseColor
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =navigateGallery.TemplateHeight
+            HoverFill: =baseColor
+            OnSelect: |
+                =cmNavigation.updateAnswer();
+                Navigate(
+                    scrennQuestion,
+                    ScreenTransition.Fade
+                );
+                cmNavigation.setQuestionValue(ThisItem.question_id);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
