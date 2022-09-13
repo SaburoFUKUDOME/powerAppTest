@@ -6,7 +6,6 @@
     "cmNavigation": 6,
     "cmQuestion": 7,
     "Component1": 8,
-    "Component2": 11,
     "functionTest": 9,
     "questionButtonComponent": 10
   },
@@ -54,7 +53,6 @@
     "commentaryButton": 55,
     "commentaryLabel": 52,
     "Component1": 3,
-    "Component2": 24,
     "confirmButton": 7,
     "currentPageLabel": 59,
     "exampleButton": 54,
@@ -109,7 +107,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/13/2022 07:14:36",
+  "HeaderLastSavedDateTimeUTC": "09/13/2022 07:22:35",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/727c8fe29941409ea4cf566a7fd7299f\"",
@@ -126,8 +124,7 @@
     "5d4db020091349f189b94303a97a5b41": 0,
     "74380d984ce148eca4423ee6f2d35989": 3,
     "b90ffcc701d54f8dbd1cc640fb7333c6": 5,
-    "e88d8fa5810f418a94473be296e5e99e": 6,
-    "fadf05589b994538944f909fcefa5bb4": 8
+    "e88d8fa5810f418a94473be296e5e99e": 6
   },
   "OrderComponentTemplate": {
     "112c12e16d4c4b8580bec211c2e97d8d": 4,
@@ -137,8 +134,7 @@
     "5d4db020091349f189b94303a97a5b41": 0,
     "74380d984ce148eca4423ee6f2d35989": 3,
     "b90ffcc701d54f8dbd1cc640fb7333c6": 5,
-    "e88d8fa5810f418a94473be296e5e99e": 6,
-    "fadf05589b994538944f909fcefa5bb4": 8
+    "e88d8fa5810f418a94473be296e5e99e": 6
   },
   "OrderDataSource": {
     "CustomGallerySample": 1,
@@ -241,7 +237,6 @@
     "commentaryButton": 61,
     "commentaryLabel": 57,
     "Component1": 15,
-    "Component2": 0,
     "confirmButton": 79,
     "currentPageLabel": 66,
     "exampleButton": 60,
@@ -303,19 +298,21 @@
     "AnalysisLoadTime": 0.8296521,
     "ControlCount": {
       "112c12e16d4c4b8580bec211c2e97d8d": 2,
+      "1cdf536d12494a668879e9623f33493d": 1,
       "2a28f6a0470946c18f9a252357de2cb8": 1,
       "3286880be74343259c8a1f5cd07e5c0c": 2,
       "3ec6fa9577ca4e37a10aa5118c9072e0": 1,
       "5d4db020091349f189b94303a97a5b41": 1,
       "74380d984ce148eca4423ee6f2d35989": 4,
       "b90ffcc701d54f8dbd1cc640fb7333c6": 2,
-      "button": 8,
+      "bd4b2374f6364ca1837cd3f73d22377d": 1,
+      "button": 17,
       "checkbox": 2,
       "e88d8fa5810f418a94473be296e5e99e": 3,
       "fadf05589b994538944f909fcefa5bb4": 1,
       "gallery": 2,
       "galleryTemplate": 2,
-      "group": 6,
+      "group": 9,
       "icon": 5,
       "image": 1,
       "label": 38,
