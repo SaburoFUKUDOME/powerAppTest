@@ -107,11 +107,11 @@ screenCanvas As screen:
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(220, 153, 153, 1)
             FontWeight: =Semibold
-            Height: =34
+            Height: =26
             OnSelect: =Select(Parent)
             Size: =10
-            Text: ="※必須"
-            Width: =60
+            Text: ="必須"
+            Width: =46
             X: =16
             Y: =4
             ZIndex: =11
