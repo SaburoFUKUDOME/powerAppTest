@@ -1455,7 +1455,7 @@
       "getStatus_nowNoAnswerFlag",
       "getStatus"
     ],
-    "LastModifiedTimestamp": "637987362620954877",
+    "LastModifiedTimestamp": "637987365677933318",
     "Name": "questionButtonComponent",
     "Rules": [
       {
@@ -1532,7 +1532,7 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category,\n        status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired=\"2\",Checkbox1.Value),10,0)\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag:Checkbox3.Value,\n                status:status\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value,\n                status:status\n            }\n        );\n    )\n);)\n",
+        "InvariantScript": "\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category,\n        status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired=\"2\",Checkbox3.Value),10,0)\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag:Checkbox3.Value,\n                status:status\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value,\n                status:status\n            }\n        );\n    )\n);)\n",
         "Property": "updateAnswer",
         "RuleProviderType": "System"
       },
@@ -1675,7 +1675,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637987362620954877",
+  "LastModifiedTimestamp": "637987365677933318",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",

@@ -141,7 +141,7 @@ questionButtonComponent As CanvasComponent:
                     questionList,
                     ID = questionKey
                 ).category,
-                status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",Checkbox1.Value),10,0)
+                status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",Checkbox3.Value),10,0)
             },
             If(
                 IsBlank(getAnswerRecord),
