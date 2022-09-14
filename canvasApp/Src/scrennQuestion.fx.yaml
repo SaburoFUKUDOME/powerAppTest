@@ -54,13 +54,13 @@ scrennQuestion As screen:
         Align: =Left
         Color: =baseColor
         FontWeight: =Semibold
-        Height: =51
+        Height: =60
         Overflow: =Overflow.Scroll
         Size: =14
         Text: =currentQuestion
         Width: =996
-        X: =62
-        Y: =194
+        X: =87
+        Y: =185
         ZIndex: =7
 
     questionTitleGroup As group:
@@ -259,7 +259,7 @@ scrennQuestion As screen:
         Text: ="後で答える"
         Visible: =If(Not(questionKey=1),true,false)
         X: =questionLabel.X
-        Y: =379
+        Y: =386
         ZIndex: =29
 
     supplementGroups As group:
@@ -376,7 +376,7 @@ scrennQuestion As screen:
         Text: ="*入力必須"
         Visible: =If(Not(currentRequired="2"),true,false)
         X: =questionLabel.X
-        Y: =680
+        Y: =683
         ZIndex: =31
 
     cmNavigation_2 As cmNavigation:
@@ -496,7 +496,7 @@ scrennQuestion As screen:
             Visible: =If(controlType="text",true,false)
             Width: =936
             X: =questionLabel.X
-            Y: =247
+            Y: =254
             ZIndex: =8
 
         underFrame As rectangle:
@@ -506,6 +506,6 @@ scrennQuestion As screen:
             Visible: =If(controlType="text",true,false)
             Width: =textAnswer.Width
             X: =textAnswer.X
-            Y: =372
+            Y: =379
             ZIndex: =32
 
