@@ -53,7 +53,7 @@ screenCanvas As screen:
         Items: =Sort(Filter(answerList,And(themeID=galleryTheme.Selected.ID)),questionID)
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(110, Self.Height - 60)
+        TemplateSize: =Min(130, Self.Height - 60)
         Width: =978
         X: =108
         Y: =160
@@ -71,28 +71,36 @@ screenCanvas As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.answer
             Width: =978
+            Y: =41
             ZIndex: =6
 
         Label3 As label:
             OnSelect: =Select(Parent)
-            Text: =If(Not(LookUp(questionList,ThisItem.questionID=ID).required="2"),"必須")
-            X: =4
-            Y: =59
+            Text: =Concatenate("必須：",If(Not(LookUp(questionList,ThisItem.questionID=ID).required="2"),"✔"))
+            X: =Label1.X
+            Y: =89
             ZIndex: =7
 
         Label4 As label:
             OnSelect: =Select(Parent)
-            Text: =If(ThisItem.skip_flag,"後で答える")
+            Text: =Concatenate("後で答える：",If(ThisItem.skip_flag,"✔"))
             X: =150
-            Y: =59
+            Y: =Label3.Y
             ZIndex: =8
 
         Label6 As label:
             OnSelect: =Select(Parent)
-            Text: =If(ThisItem.no_answer_flag,"回答しない")
-            X: =330
-            Y: =59
+            Text: =Concatenate("回答しない：",If(ThisItem.no_answer_flag,"✔"))
+            X: =350
+            Y: =Label3.Y
             ZIndex: =9
+
+        Label7 As label:
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Text: =Concatenate(LookUp(questionList,ID=ThisItem.questionID).category,LookUp(questionList,ID=ThisItem.questionID).current_question_number)
+            X: =828
+            ZIndex: =10
 
     cmNavigation_1 As cmNavigation:
         Height: =455
