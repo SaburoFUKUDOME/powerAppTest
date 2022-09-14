@@ -17,39 +17,11 @@ statusBar As CanvasComponent:
             BorderColor: =baseColor
             BorderThickness: =2
             Fill: |-
-                =With(
-                    {
-                        categoryCount: CountIf(
-                            questionList,
-                            category = ThisItem.Title
-                        ),
-                        answerTable: Filter(
-                            '仮説構築支援ツール - 回答',
-                            And(
-                            category = ThisItem.Title,
-                            themeID = themeId
-                            )
-                        )
-                    },
-                    If(
-                        CountIf(
-                            answerTable,
-                            status = 10
-                        ) = categoryCount,
-                        baseColor,
-                        CountIf(
-                            answerTable,
-                            (status = 2)||(status = 10)
-                        ) > 0,
-                        RGBA(
-                            200,
-                            220,
-                            255,
-                            1
-                        ),
-                        White
-                    )
-                )
+                =With({categoryCount:CountIf(questionList,category=ThisItem.Title),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
+                If(CountIf(answerTable,status=10)=categoryCount,baseColor,
+                CountIf(answerTable,(status=2)||(status=10))>0,
+                RGBA(200,220,255,1),White))
             Height: =100
             OnSelect: =Select(Parent)
             Text: =ThisItem.Title
