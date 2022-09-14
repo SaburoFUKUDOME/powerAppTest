@@ -92,7 +92,14 @@
           "Align",
           "VerticalAlign",
           "X",
-          "Y",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "2",
+            "InvariantPropertyName": "Y",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -287,7 +294,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "7",
+            "InvariantScript": "backButton.Y",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -767,7 +774,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "7",
+            "InvariantScript": "nextButton.Y",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -869,7 +876,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "With(\n    {\n        answerContent: If(\n            controlType = \"text\",\n            textAnswer.Text,\n            Radio1.Selected.Result\n        ),\n        nowSkipFlag: Checkbox1.Value,\n        nowNoAnswerFlag: Checkbox3.Value\n    },\n    If(\n        Not(\n            And(\n                currentAnswer = answerContent,\n                skipFlag = nowSkipFlag,\n                noAnswerFlag = nowNoAnswerFlag\n            )\n        ),\n        \n//\u3000更新処理する\nquestionButtonComponent.updateAnswer(\n            answerContent,\n            nowSkipFlag,\n            nowNoAnswerFlag,\n            questionButtonComponent.getStatus(answerContent,nowSkipFlag,nowNoAnswerFlag)\n        );\n        Navigate(\n            screenCanvas,\n            ScreenTransition.Fade\n        );\n    )\n);\n",
+            "InvariantScript": "\n//\u3000更新処理する\nquestionButtonComponent.updateAnswer();\nNavigate(\n    screenCanvas,\n    ScreenTransition.Fade\n);\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -1312,7 +1319,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "questionButtonComponent.updateAnswer();\r\nquestionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,\"back\");\r\n/**\r\nSet(backKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id);\r\nWith({qRecord:LookUp('仮説構築支援ツール - 問い', ID=backKey)},\r\n\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(\r\n    // 次の回答はどうやって取得するか検討する\r\n    currentAnswer,\r\n    galleryTheme.Selected.id1_answer\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    nextVisible,\r\n    true\r\n);\r\nSet(\r\n    buckVisible,\r\n     If(qRecord.back_question_id=0,false,true)\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\nSet(questionKey,backKey);\r\n)\r\n*/",
+            "InvariantScript": "questionButtonComponent.updateAnswer();\r\nquestionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,\"back\");\r\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -1435,23 +1442,20 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "updateAnswer_nowSkipFlag",
       "getStatus_answerContent",
-      "updateAnswer_nowNoAnswerFlag",
-      "updateAnswer_status",
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "/**\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\n    */\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: skipFlag,\n                no_answer_flag: noAnswerFlag\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value\n            }\n        );\n    )\n);\n",
+        "AutoRuleBindingString": "\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category,\n        status:0\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag:Checkbox3.Value,\n                status:status\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value,\n                status:status\n            }\n        );\n    )\n);)\n",
         "InvariantPropertyName": "updateAnswer",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "updateAnswer_answerContent",
       "getStatus_nowSkipFlag",
-      "getStatus_nowNoAnswerFlag"
+      "getStatus_nowNoAnswerFlag",
+      "getStatus"
     ],
-    "LastModifiedTimestamp": "637987344252166398",
+    "LastModifiedTimestamp": "637987362620954877",
     "Name": "questionButtonComponent",
     "Rules": [
       {
@@ -1468,32 +1472,8 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "true",
-        "Property": "updateAnswer_nowSkipFlag",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
         "InvariantScript": "\"テキスト\"",
         "Property": "getStatus_answerContent",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "true",
-        "Property": "updateAnswer_nowNoAnswerFlag",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "updateAnswer_status",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"テキスト\"",
-        "Property": "updateAnswer_answerContent",
         "RuleProviderType": "System"
       },
       {
@@ -1552,8 +1532,14 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "/**\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\n    */\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: nowSkipFlag,\n                no_answer_flag: nowNoAnswerFlag,\n                status:status\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value,\n                status:status\n            }\n        );\n    )\n);\n",
+        "InvariantScript": "\nIf(\n    controlType = \"text\",\n    Set(\n        answerContent,\n        textAnswer.Text\n    ),\n    Set(\n        answerContent,\n        Radio1.Selected.Result\n    )\n);\nIf(\n    Not(\n        And(\n            answerContent = currentAnswer,\n            skipFlag = Checkbox1.Value,\n            noAnswerFlag = Checkbox3.Value\n        )\n    ),\nWith(\n    {\n        getAnswerRecord: LookUp(\n            '仮説構築支援ツール - 回答',\n            And(\n                themeID = themeId,\n                questionID = questionKey\n            )\n        ),\n        categoryItem: LookUp(\n            questionList,\n            ID = questionKey\n        ).category,\n        status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired=\"2\",Checkbox1.Value),10,0)\n    },\n    If(\n        IsBlank(getAnswerRecord),\n        Patch(\n            '仮説構築支援ツール - 回答',\n            Defaults('仮説構築支援ツール - 回答'),\n            {\n                themeID: themeId,\n                questionID: questionKey,\n                category: categoryItem,\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag:Checkbox3.Value,\n                status:status\n            }\n        );\n        ,\n        Patch(\n            '仮説構築支援ツール - 回答',\n            getAnswerRecord,\n            {\n                answer: answerContent,\n                skip_flag: Checkbox1.Value,\n                no_answer_flag: Checkbox3.Value,\n                status:status\n            }\n        );\n    )\n);)\n",
         "Property": "updateAnswer",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Behavior",
+        "InvariantScript": "",
+        "Property": "getStatus",
         "RuleProviderType": "System"
       }
     ]
@@ -1618,71 +1604,6 @@
       "Hidden": false,
       "Name": "updateAnswer",
       "PropertyDataTypeKey": "Boolean",
-      "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "13",
-        "PropertyScopeRulesKey": [
-          {
-            "DisplayName": "updateAnswer_answerContent",
-            "Name": "updateAnswer_answerContent",
-            "PropertyDataTypeKey": "String",
-            "ScopeVariableInfo": {
-              "DependencyType": "New",
-              "Description": "answerContent",
-              "IsRequired": true,
-              "ResolveExpands": false,
-              "ResolveSelects": false,
-              "ScopeVariableName": "answerContent"
-            },
-            "Tooltip": "answerContent",
-            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
-          },
-          {
-            "DisplayName": "updateAnswer_nowSkipFlag",
-            "Name": "updateAnswer_nowSkipFlag",
-            "PropertyDataTypeKey": "Boolean",
-            "ScopeVariableInfo": {
-              "DependencyType": "New",
-              "Description": "skipFlag",
-              "IsRequired": true,
-              "ResolveExpands": false,
-              "ResolveSelects": false,
-              "ScopeVariableName": "nowSkipFlag"
-            },
-            "Tooltip": "skipFlag",
-            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
-          },
-          {
-            "DisplayName": "updateAnswer_nowNoAnswerFlag",
-            "Name": "updateAnswer_nowNoAnswerFlag",
-            "PropertyDataTypeKey": "Boolean",
-            "ScopeVariableInfo": {
-              "DependencyType": "New",
-              "Description": "noAnswerFlag",
-              "IsRequired": true,
-              "ResolveExpands": false,
-              "ResolveSelects": false,
-              "ScopeVariableName": "nowNoAnswerFlag"
-            },
-            "Tooltip": "noAnswerFlag",
-            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
-          },
-          {
-            "DisplayName": "updateAnswer_status",
-            "Name": "updateAnswer_status",
-            "PropertyDataTypeKey": "Number",
-            "ScopeVariableInfo": {
-              "DependencyType": "New",
-              "Description": "status",
-              "IsRequired": true,
-              "ResolveExpands": false,
-              "ResolveSelects": false,
-              "ScopeVariableName": "status"
-            },
-            "Tooltip": "status",
-            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
-          }
-        ]
-      },
       "Tooltip": "回答を更新する",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
     },
@@ -1700,15 +1621,11 @@
             "Name": "getStatus_answerContent",
             "PropertyDataTypeKey": "String",
             "ScopeVariableInfo": {
-              "DefaultRule": "\"テキスト\"",
               "DependencyType": "New",
               "Description": "answerContent",
               "IsRequired": true,
-              "ParameterIndex": 1,
-              "ParentPropertyName": "getStatus",
               "ResolveExpands": false,
               "ResolveSelects": false,
-              "ScopePropertyDataType": 6,
               "ScopeVariableName": "answerContent"
             },
             "Tooltip": "answerContent",
@@ -1719,15 +1636,11 @@
             "Name": "getStatus_nowSkipFlag",
             "PropertyDataTypeKey": "Boolean",
             "ScopeVariableInfo": {
-              "DefaultRule": "true",
               "DependencyType": "New",
               "Description": "nowSkipFlag",
               "IsRequired": true,
-              "ParameterIndex": 2,
-              "ParentPropertyName": "getStatus",
               "ResolveExpands": false,
               "ResolveSelects": false,
-              "ScopePropertyDataType": 4,
               "ScopeVariableName": "nowSkipFlag"
             },
             "Tooltip": "nowSkipFlag",
@@ -1738,15 +1651,11 @@
             "Name": "getStatus_nowNoAnswerFlag",
             "PropertyDataTypeKey": "Boolean",
             "ScopeVariableInfo": {
-              "DefaultRule": "true",
               "DependencyType": "New",
               "Description": "nowNoAnswerFlag",
               "IsRequired": true,
-              "ParameterIndex": 3,
-              "ParentPropertyName": "getStatus",
               "ResolveExpands": false,
               "ResolveSelects": false,
-              "ScopePropertyDataType": 4,
               "ScopeVariableName": "nowNoAnswerFlag"
             },
             "Tooltip": "nowNoAnswerFlag",
@@ -1766,7 +1675,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637987344252166398",
+  "LastModifiedTimestamp": "637987362620954877",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",

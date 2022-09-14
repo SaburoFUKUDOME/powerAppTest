@@ -1,4 +1,13 @@
 questionButtonComponent As CanvasComponent:
+    getStatus(answerContent As String, nowSkipFlag As Boolean, nowNoAnswerFlag As Boolean):
+        answerContent:
+            Default: ="テキスト"
+        nowSkipFlag:
+            Default: =true
+        nowNoAnswerFlag:
+            Default: =true
+        ThisProperty:
+            Default: =
     setQuestionValue(qId As Number, buttonKey As String):
         qId:
             Default: =100
@@ -96,85 +105,72 @@ questionButtonComponent As CanvasComponent:
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 )
                 
-    updateAnswer(answerContent As String, nowSkipFlag As Boolean, nowNoAnswerFlag As Boolean, status As Number):
-        answerContent:
-            Default: ="テキスト"
-        nowSkipFlag:
-            Default: =true
-        nowNoAnswerFlag:
-            Default: =true
-        status:
-            Default: =100
-        ThisProperty:
-            Default: |
-                =/**
-                If(
-                    controlType = "text",
-                    Set(
-                        answerContent,
-                        textAnswer.Text
-                    ),
-                    Set(
-                        answerContent,
-                        Radio1.Selected.Result
-                    )
-                );
-                If(
-                    Not(
-                        And(
-                            answerContent = currentAnswer,
-                            skipFlag = Checkbox1.Value,
-                            noAnswerFlag = Checkbox3.Value
-                        )
-                    ),
-                    */
-                With(
-                    {
-                        getAnswerRecord: LookUp(
-                            '仮説構築支援ツール - 回答',
-                            And(
-                                themeID = themeId,
-                                questionID = questionKey
-                            )
-                        ),
-                        categoryItem: LookUp(
-                            questionList,
-                            ID = questionKey
-                        ).category
-                    },
-                    If(
-                        IsBlank(getAnswerRecord),
-                        Patch(
-                            '仮説構築支援ツール - 回答',
-                            Defaults('仮説構築支援ツール - 回答'),
-                            {
-                                themeID: themeId,
-                                questionID: questionKey,
-                                category: categoryItem,
-                                answer: answerContent,
-                                skip_flag: nowSkipFlag,
-                                no_answer_flag: nowNoAnswerFlag,
-                                status:status
-                            }
-                        );
-                        ,
-                        Patch(
-                            '仮説構築支援ツール - 回答',
-                            getAnswerRecord,
-                            {
-                                answer: answerContent,
-                                skip_flag: Checkbox1.Value,
-                                no_answer_flag: Checkbox3.Value,
-                                status:status
-                            }
-                        );
-                    )
-                );
     Fill: =RGBA(0, 0, 0, 0)
-    getStatus_answerContent: ="テキスト"
-    getStatus_nowNoAnswerFlag: =true
-    getStatus_nowSkipFlag: =true
     Height: =50
+    updateAnswer: |
+        =
+        If(
+            controlType = "text",
+            Set(
+                answerContent,
+                textAnswer.Text
+            ),
+            Set(
+                answerContent,
+                Radio1.Selected.Result
+            )
+        );
+        If(
+            Not(
+                And(
+                    answerContent = currentAnswer,
+                    skipFlag = Checkbox1.Value,
+                    noAnswerFlag = Checkbox3.Value
+                )
+            ),
+        With(
+            {
+                getAnswerRecord: LookUp(
+                    '仮説構築支援ツール - 回答',
+                    And(
+                        themeID = themeId,
+                        questionID = questionKey
+                    )
+                ),
+                categoryItem: LookUp(
+                    questionList,
+                    ID = questionKey
+                ).category,
+                status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",Checkbox1.Value),10,0)
+            },
+            If(
+                IsBlank(getAnswerRecord),
+                Patch(
+                    '仮説構築支援ツール - 回答',
+                    Defaults('仮説構築支援ツール - 回答'),
+                    {
+                        themeID: themeId,
+                        questionID: questionKey,
+                        category: categoryItem,
+                        answer: answerContent,
+                        skip_flag: Checkbox1.Value,
+                        no_answer_flag:Checkbox3.Value,
+                        status:status
+                    }
+                );
+                ,
+                Patch(
+                    '仮説構築支援ツール - 回答',
+                    getAnswerRecord,
+                    {
+                        answer: answerContent,
+                        skip_flag: Checkbox1.Value,
+                        no_answer_flag: Checkbox3.Value,
+                        status:status
+                    }
+                );
+            )
+        );)
     Width: =640
     X: =0
     Y: =0
@@ -197,61 +193,9 @@ questionButtonComponent As CanvasComponent:
             Height: =35
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
-            OnSelect: |-
+            OnSelect: |
                 =questionButtonComponent.updateAnswer();
                 questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,"back");
-                /**
-                Set(backKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).back_question_id);
-                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=backKey)},
-                
-                Set(
-                    currentTitle,
-                    qRecord.Title
-                );
-                Set(
-                    currentQuestion,
-                    qRecord.question_content
-                );
-                Set(
-                    // 次の回答はどうやって取得するか検討する
-                    currentAnswer,
-                    galleryTheme.Selected.id1_answer
-                );
-                Set(
-                    currentPage,
-                    qRecord.current_question_number
-                );
-                Set(
-                    totalPage,
-                    qRecord.question_totalnumber
-                );
-                Set(
-                    commentary,
-                    qRecord.commentary
-                );
-                Set(
-                    example,
-                    qRecord.example
-                );
-                Set(
-                    nextVisible,
-                    true
-                );
-                Set(
-                    buckVisible,
-                     If(qRecord.back_question_id=0,false,true)
-                );
-                Set(
-                    commentaryGroupVisible,
-                    true
-                );
-                Set(
-                    exampleGroupVisible,
-                    false
-                );
-                Set(questionKey,backKey);
-                )
-                */
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -285,7 +229,7 @@ questionButtonComponent As CanvasComponent:
             Visible: =nextVisible
             Width: =backButton.Width
             X: =436
-            Y: =7
+            Y: =backButton.Y
             ZIndex: =2
 
         confirmButton As button:
@@ -299,37 +243,12 @@ questionButtonComponent As CanvasComponent:
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |
-                =With(
-                    {
-                        answerContent: If(
-                            controlType = "text",
-                            textAnswer.Text,
-                            Radio1.Selected.Result
-                        ),
-                        nowSkipFlag: Checkbox1.Value,
-                        nowNoAnswerFlag: Checkbox3.Value
-                    },
-                    If(
-                        Not(
-                            And(
-                                currentAnswer = answerContent,
-                                skipFlag = nowSkipFlag,
-                                noAnswerFlag = nowNoAnswerFlag
-                            )
-                        ),
-                        
+                =
                 //　更新処理する
-                questionButtonComponent.updateAnswer(
-                            answerContent,
-                            nowSkipFlag,
-                            nowNoAnswerFlag,
-                            questionButtonComponent.getStatus(answerContent,nowSkipFlag,nowNoAnswerFlag)
-                        );
-                        Navigate(
-                            screenCanvas,
-                            ScreenTransition.Fade
-                        );
-                    )
+                questionButtonComponent.updateAnswer();
+                Navigate(
+                    screenCanvas,
+                    ScreenTransition.Fade
                 );
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
@@ -340,6 +259,6 @@ questionButtonComponent As CanvasComponent:
             Visible: =confirmVisible
             Width: =nextButton.Width
             X: =nextButton.X
-            Y: =7
+            Y: =nextButton.Y
             ZIndex: =3
 

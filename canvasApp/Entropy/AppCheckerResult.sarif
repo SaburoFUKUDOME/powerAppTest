@@ -14,88 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "questionButtonComponent.nextButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "questionButtonComponent.nextButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 38,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "questionButtonComponent.updateAnswer()"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "questionButtonComponent",
-                "type": "questionButtonComponent.nextButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "0",
-              "4"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadArity",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "questionButtonComponent.backButton.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "questionButtonComponent.backButton.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 38,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "questionButtonComponent.updateAnswer()"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "questionButtonComponent",
-                "type": "questionButtonComponent.backButton"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "0",
-              "4"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadArity",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "cmNavigation.navigateGallery.AccessibleLabel"
                 }
               ],
@@ -119,7 +37,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -149,7 +67,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -179,7 +97,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -209,7 +127,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -239,7 +157,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -269,7 +187,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -299,7 +217,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -329,7 +247,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -359,7 +277,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -389,7 +307,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -419,7 +337,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -449,7 +367,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -479,7 +397,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 1
         }
       ],
       "tool": {
@@ -487,20 +405,6 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
-            {
-              "id": "app-ErrBadArity",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid number of arguments: received {0}, expected {1}."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
