@@ -53,7 +53,7 @@ screenCanvas As screen:
         Items: =Sort(Filter(answerList,And(themeID=galleryTheme.Selected.ID)),questionID)
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(130, Self.Height - 60)
+        TemplateSize: =156
         Width: =968
         X: =108
         Y: =160
@@ -67,18 +67,20 @@ screenCanvas As screen:
             ZIndex: =5
 
         Label1 As label:
-            Height: =49
+            Height: =51
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             Text: =ThisItem.answer
-            Width: =978
-            Y: =41
+            Width: =961
+            X: =7
+            Y: =67
             ZIndex: =6
 
         Label4 As label:
             OnSelect: =Select(Parent)
             Text: =Concatenate("後で答える：",If(ThisItem.skip_flag,"✔"))
             X: =Label1.X
-            Y: =90
+            Y: =118
             ZIndex: =8
 
         Label6 As label:
@@ -93,8 +95,7 @@ screenCanvas As screen:
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Text: =Concatenate(LookUp(questionList,ID=ThisItem.questionID).category,LookUp(questionList,ID=ThisItem.questionID).current_question_number)
-            Width: =447
-            X: =76
+            Width: =487
             Y: =1
             ZIndex: =10
 
@@ -108,9 +109,23 @@ screenCanvas As screen:
             Text: ="必須"
             Visible: =If(Not(LookUp(questionList,ID=ThisItem.questionID).required="2"),true)
             Width: =46
-            X: =16
-            Y: =4
+            X: =7
+            Y: =41
             ZIndex: =11
+
+        statusLabel As label:
+            Align: =Center
+            BorderColor: =baseColor
+            BorderThickness: =2
+            Fill: |
+                =If(ThisItem.status = 10,baseColor,ThisItem.status = 2,RGBA(200, 220, 255, 1),White)
+                //Set(baseColor,RGBA(100, 149, 237, 1));
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.status
+            Width: =40
+            X: =900
+            Y: =20
+            ZIndex: =12
 
     cmNavigation_1 As cmNavigation:
         Height: =455

@@ -1,0 +1,29 @@
+statusBar As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery2 As gallery.galleryHorizontal:
+        Height: =116
+        Items: ='仮説構築支援ツール - ナビゲーション'
+        TemplateSize: =35
+        Y: =40
+        ZIndex: =1
+
+        Label10 As label:
+            BorderColor: =baseColor
+            BorderThickness: =2
+            Fill: |-
+                =With({categoryCount:CountIf(questionList,category = ThisItem.Title)},
+                If(categoryCount = 0,Red,White)
+                )
+            Height: =30
+            OnSelect: =Select(Parent)
+            Text: =
+            Width: =30
+            Y: =40
+            ZIndex: =1
+

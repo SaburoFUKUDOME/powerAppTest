@@ -2,11 +2,11 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "cmQuestion",
-    "TemplateGuid": "2a28f6a0470946c18f9a252357de2cb8"
+    "Name": "statusBar",
+    "TemplateGuid": "8fef180aebaa45dc9a14f69838b127c5"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637987405219366113",
-  "Name": "2a28f6a0470946c18f9a252357de2cb8",
+  "LastModifiedTimestamp": "637987407831525875",
+  "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
-  "Version": "637974310099676722"
+  "Version": "637987405467998392"
 }
