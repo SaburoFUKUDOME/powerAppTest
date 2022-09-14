@@ -84,6 +84,7 @@ screenCanvas As screen:
         Label6 As label:
             OnSelect: =Select(Parent)
             Text: =Concatenate("回答しない：",If(ThisItem.no_answer_flag,"✔"))
+            Visible: =If(LookUp(questionList,ID=ThisItem.questionID).required="2",true)
             X: =180
             Y: =Label4.Y
             ZIndex: =9
@@ -105,6 +106,7 @@ screenCanvas As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: ="必須"
+            Visible: =If(Not(LookUp(questionList,ID=ThisItem.questionID).required="2"),true)
             Width: =46
             X: =16
             Y: =4
