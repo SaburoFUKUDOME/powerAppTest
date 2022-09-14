@@ -247,6 +247,70 @@ scrennQuestion As screen:
             If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
             )
             
+        updateAnswer: |
+            =/**
+            If(
+                controlType = "text",
+                Set(
+                    answerContent,
+                    textAnswer.Text
+                ),
+                Set(
+                    answerContent,
+                    Radio1.Selected.Result
+                )
+            );
+            If(
+                Not(
+                    And(
+                        answerContent = currentAnswer,
+                        skipFlag = Checkbox1.Value,
+                        noAnswerFlag = Checkbox3.Value
+                    )
+                ),
+                */
+            With(
+                {
+                    getAnswerRecord: LookUp(
+                        '仮説構築支援ツール - 回答',
+                        And(
+                            themeID = themeId,
+                            questionID = questionKey
+                        )
+                    ),
+                    categoryItem: LookUp(
+                        questionList,
+                        ID = questionKey
+                    ).category
+                },
+                If(
+                    IsBlank(getAnswerRecord),
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        Defaults('仮説構築支援ツール - 回答'),
+                        {
+                            themeID: themeId,
+                            questionID: questionKey,
+                            category: categoryItem,
+                            answer: answerContent,
+                            skip_flag: nowSkipFlag,
+                            no_answer_flag: nowNoAnswerFlag,
+                            status:status
+                        }
+                    );
+                    ,
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        getAnswerRecord,
+                        {
+                            answer: answerContent,
+                            skip_flag: Checkbox1.Value,
+                            no_answer_flag: Checkbox3.Value,
+                            status:status
+                        }
+                    );
+                )
+            );
         X: =323
         Y: =705
         ZIndex: =23

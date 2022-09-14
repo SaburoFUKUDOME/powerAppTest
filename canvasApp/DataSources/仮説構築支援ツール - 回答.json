@@ -26,6 +26,7 @@
       "answer": "answer",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
+      "category": "category",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Editor": "Modified By",
@@ -35,6 +36,7 @@
       "no_answer_flag": "no_answer_flag",
       "questionID": "questionID",
       "skip_flag": "skip_flag",
+      "status": "status",
       "themeID": "themeID",
       "Title": "Title"
     },

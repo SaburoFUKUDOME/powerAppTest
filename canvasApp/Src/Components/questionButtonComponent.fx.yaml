@@ -96,64 +96,85 @@ questionButtonComponent As CanvasComponent:
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 )
                 
-    Fill: =RGBA(0, 0, 0, 0)
-    Height: =50
-    updateAnswer: |
-        =If(
-            controlType = "text",
-            Set(
-                answerContent,
-                textAnswer.Text
-            ),
-            Set(
-                answerContent,
-                Radio1.Selected.Result
-            )
-        );
-        If(
-            Not(
-                And(
-                    answerContent = currentAnswer,
-                    skipFlag = Checkbox1.Value,
-                    noAnswerFlag = Checkbox3.Value
-                )
-            ),
-            With(
-                {
-                    getAnswerRecord: LookUp(
-                        '仮説構築支援ツール - 回答',
-                        And(
-                            themeID = themeId,
-                            questionID = questionKey
-                        )
-                    )
-                },
+    updateAnswer(answerContent As String, nowSkipFlag As Boolean, nowNoAnswerFlag As Boolean, status As Number):
+        answerContent:
+            Default: ="テキスト"
+        nowSkipFlag:
+            Default: =true
+        nowNoAnswerFlag:
+            Default: =true
+        status:
+            Default: =100
+        ThisProperty:
+            Default: |
+                =/**
                 If(
-                    IsBlank(getAnswerRecord),
-                    Patch(
-                        '仮説構築支援ツール - 回答',
-                        Defaults('仮説構築支援ツール - 回答'),
-                        {
-                            themeID: themeId,
-                            questionID: questionKey,
-                            answer: answerContent,
-                            skip_flag: Checkbox1.Value,
-                            no_answer_flag: Checkbox3.Value
-                        }
-                    );
-                    ,
-                    Patch(
-                        '仮説構築支援ツール - 回答',
-                        getAnswerRecord,
-                        {
-                            answer: answerContent,
-                            skip_flag: Checkbox1.Value,
-                            no_answer_flag: Checkbox3.Value
-                        }
-                    );
-                )
-            )
-        );
+                    controlType = "text",
+                    Set(
+                        answerContent,
+                        textAnswer.Text
+                    ),
+                    Set(
+                        answerContent,
+                        Radio1.Selected.Result
+                    )
+                );
+                If(
+                    Not(
+                        And(
+                            answerContent = currentAnswer,
+                            skipFlag = Checkbox1.Value,
+                            noAnswerFlag = Checkbox3.Value
+                        )
+                    ),
+                    */
+                With(
+                    {
+                        getAnswerRecord: LookUp(
+                            '仮説構築支援ツール - 回答',
+                            And(
+                                themeID = themeId,
+                                questionID = questionKey
+                            )
+                        ),
+                        categoryItem: LookUp(
+                            questionList,
+                            ID = questionKey
+                        ).category
+                    },
+                    If(
+                        IsBlank(getAnswerRecord),
+                        Patch(
+                            '仮説構築支援ツール - 回答',
+                            Defaults('仮説構築支援ツール - 回答'),
+                            {
+                                themeID: themeId,
+                                questionID: questionKey,
+                                category: categoryItem,
+                                answer: answerContent,
+                                skip_flag: nowSkipFlag,
+                                no_answer_flag: nowNoAnswerFlag,
+                                status:status
+                            }
+                        );
+                        ,
+                        Patch(
+                            '仮説構築支援ツール - 回答',
+                            getAnswerRecord,
+                            {
+                                answer: answerContent,
+                                skip_flag: Checkbox1.Value,
+                                no_answer_flag: Checkbox3.Value,
+                                status:status
+                            }
+                        );
+                    )
+                );
+    Fill: =RGBA(0, 0, 0, 0)
+    getStatus_answerContent: ="テキスト"
+    getStatus_nowNoAnswerFlag: =true
+    getStatus_nowSkipFlag: =true
+    Height: =50
     Width: =640
     X: =0
     Y: =0
@@ -255,60 +276,6 @@ questionButtonComponent As CanvasComponent:
             OnSelect: |-
                 =questionButtonComponent.updateAnswer();
                 questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).next_question_id,"next");
-                /**
-                Set(nextKey,LookUp('仮説構築支援ツール - 問い', ID=questionKey).next_question_id);
-                
-                With({qRecord:LookUp('仮説構築支援ツール - 問い', ID=nextKey)},
-                Set(
-                    currentTitle,
-                    qRecord.Title
-                );
-                Set(
-                    currentQuestion,
-                    qRecord.question_content
-                );
-                
-                Set(
-                    currentPage,
-                    qRecord.current_question_number
-                );
-                Set(
-                    totalPage,
-                    qRecord.question_totalnumber
-                );
-                Set(
-                    commentary,
-                    qRecord.commentary
-                );
-                Set(
-                    example,
-                    qRecord.example
-                );
-                Set(
-                    nextVisible,
-                    If(qRecord.next_question_id=0,false,true)
-                );
-                Set(
-                    buckVisible,
-                    true
-                );
-                Set(
-                    // 次の回答はどうやって取得するか検討する
-                    currentAnswer,
-                    galleryTheme.Selected.id1_answer
-                );
-                Set(questionKey,nextKey);
-                Set(
-                    commentaryGroupVisible,
-                    true
-                );
-                Set(
-                    exampleGroupVisible,
-                    false
-                );
-                )
-                
-                */
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -331,10 +298,39 @@ questionButtonComponent As CanvasComponent:
             Height: =nextButton.Height
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
-            OnSelect: |-
-                =//　更新処理する
-                questionButtonComponent.updateAnswer();
-                Navigate(screenCanvas,ScreenTransition.Fade);
+            OnSelect: |
+                =With(
+                    {
+                        answerContent: If(
+                            controlType = "text",
+                            textAnswer.Text,
+                            Radio1.Selected.Result
+                        ),
+                        nowSkipFlag: Checkbox1.Value,
+                        nowNoAnswerFlag: Checkbox3.Value
+                    },
+                    If(
+                        Not(
+                            And(
+                                currentAnswer = answerContent,
+                                skipFlag = nowSkipFlag,
+                                noAnswerFlag = nowNoAnswerFlag
+                            )
+                        ),
+                        
+                //　更新処理する
+                questionButtonComponent.updateAnswer(
+                            answerContent,
+                            nowSkipFlag,
+                            nowNoAnswerFlag,
+                            questionButtonComponent.getStatus(answerContent,nowSkipFlag,nowNoAnswerFlag)
+                        );
+                        Navigate(
+                            screenCanvas,
+                            ScreenTransition.Fade
+                        );
+                    )
+                );
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
