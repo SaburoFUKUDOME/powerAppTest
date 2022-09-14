@@ -54,7 +54,7 @@ screenCanvas As screen:
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(130, Self.Height - 60)
-        Width: =978
+        Width: =968
         X: =108
         Y: =160
         ZIndex: =35
@@ -99,7 +99,7 @@ screenCanvas As screen:
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Text: =Concatenate(LookUp(questionList,ID=ThisItem.questionID).category,LookUp(questionList,ID=ThisItem.questionID).current_question_number)
-            X: =828
+            X: =818
             ZIndex: =10
 
     cmNavigation_1 As cmNavigation:
