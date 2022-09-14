@@ -74,24 +74,18 @@ screenCanvas As screen:
             Y: =41
             ZIndex: =6
 
-        Label3 As label:
-            OnSelect: =Select(Parent)
-            Text: =Concatenate("必須：",If(Not(LookUp(questionList,ThisItem.questionID=ID).required="2"),"✔"))
-            Y: =89
-            ZIndex: =7
-
         Label4 As label:
             OnSelect: =Select(Parent)
             Text: =Concatenate("後で答える：",If(ThisItem.skip_flag,"✔"))
-            X: =150
-            Y: =Label3.Y
+            X: =Label1.X
+            Y: =90
             ZIndex: =8
 
         Label6 As label:
             OnSelect: =Select(Parent)
             Text: =Concatenate("回答しない：",If(ThisItem.no_answer_flag,"✔"))
-            X: =350
-            Y: =Label3.Y
+            X: =180
+            Y: =Label4.Y
             ZIndex: =9
 
         Label7 As label:
