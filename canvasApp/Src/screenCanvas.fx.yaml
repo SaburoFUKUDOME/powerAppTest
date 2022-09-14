@@ -77,7 +77,6 @@ screenCanvas As screen:
         Label3 As label:
             OnSelect: =Select(Parent)
             Text: =Concatenate("必須：",If(Not(LookUp(questionList,ThisItem.questionID=ID).required="2"),"✔"))
-            X: =Label1.X
             Y: =89
             ZIndex: =7
 
@@ -99,8 +98,23 @@ screenCanvas As screen:
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Text: =Concatenate(LookUp(questionList,ID=ThisItem.questionID).category,LookUp(questionList,ID=ThisItem.questionID).current_question_number)
-            X: =818
+            Width: =447
+            X: =76
+            Y: =1
             ZIndex: =10
+
+        Label3_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(220, 153, 153, 1)
+            FontWeight: =Semibold
+            Height: =34
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="※必須"
+            Width: =60
+            X: =16
+            Y: =4
+            ZIndex: =11
 
     cmNavigation_1 As cmNavigation:
         Height: =455
