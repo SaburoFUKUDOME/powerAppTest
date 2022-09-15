@@ -42,7 +42,8 @@ screenCanvas As screen:
         Color: =baseColor
         Height: =40
         Icon: =Icon.BackArrow
-        OnSelect: =Back()
+        OnSelect: =Navigate(screenTheme,Fade)
+        Tooltip: ="テーマ一覧へ戻る"
         Width: =40
         X: =40
         Y: =696

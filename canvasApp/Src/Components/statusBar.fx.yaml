@@ -1,54 +1,31 @@
 statusBar As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
-    Width: =640
+    Height: =50
+    Width: =300
     X: =0
     Y: =0
     ZIndex: =1
 
-    Gallery2 As gallery.galleryHorizontal:
-        Height: =116
+    statusGallery As gallery.galleryHorizontal:
+        Height: =50
         Items: ='仮説構築支援ツール - ナビゲーション'
-        TemplateSize: =35
-        Y: =40
-        ZIndex: =1
-
-        Label10 As label:
-            BorderColor: =baseColor
-            BorderThickness: =2
-            Fill: |-
-                =With({categoryCount:CountIf(questionList,category=ThisItem.Title),
-                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
-                If(CountIf(answerTable,status=10)=categoryCount,baseColor,
-                CountIf(answerTable,(status=2)||(status=10))>0,
-                RGBA(200,220,255,1),White))
-            Height: =100
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Title
-            Width: =35
-            Y: =5
-            ZIndex: =1
-
-    Gallery2_1 As gallery.galleryHorizontal:
-        Height: =60
-        Items: ='仮説構築支援ツール - ナビゲーション'
-        TemplateSize: =35
-        Y: =405
+        TemplateSize: =25
+        Width: =298
         ZIndex: =2
 
-        Label10_1 As label:
+        statusBarLabel As label:
             BorderColor: =baseColor
             BorderThickness: =2
             Fill: |-
-                =With({categoryCount:CountIf(questionList,category=ThisItem.Title),
-                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
-                If(CountIf(answerTable,status=10)=categoryCount,baseColor,
+                =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=2))},
+                If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
                 CountIf(answerTable,(status=2)||(status=10))>0,
                 RGBA(200,220,255,1),White))
-            Height: =32
+            Height: =25
             OnSelect: =Select(Parent)
             Text: =
-            Width: =35
+            Width: =25
             Y: =5
             ZIndex: =1
 
