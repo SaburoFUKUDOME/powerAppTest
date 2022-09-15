@@ -26,7 +26,7 @@ screenCanvas As screen:
         titleLabel_2 As label:
             FontWeight: =Bold
             Height: =61
-            Size: =14
+            Size: =16
             Text: ="Q＆Aフローシステム"
             Width: =427
             X: =40
@@ -216,4 +216,9 @@ screenCanvas As screen:
         X: =1106
         Y: =300
         ZIndex: =36
+
+    statusBar_1 As statusBar:
+        X: =443
+        Y: =93
+        ZIndex: =37
 
