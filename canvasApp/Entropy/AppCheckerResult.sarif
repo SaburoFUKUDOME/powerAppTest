@@ -14,6 +14,2050 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "cmNavigation.setQuestionValue"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.setQuestionValue",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 196,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "setQuestionValue",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.setQuestionValue"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.setQuestionValue",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 215,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "setQuestionValue",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 274,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 283,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 272,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 319,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 328,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 317,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 575,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 584,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 644,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 653,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 40,
+                  "charOffset": 620,
+                  "snippet": {
+                    "text": "And(currentRequired=\"2\",Checkbox3.Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "And"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 94,
+                  "charOffset": 572,
+                  "snippet": {
+                    "text": "If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired=\"2\",Checkbox3.Value),10,0)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1011,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1020,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1060,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1069,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 405,
+                  "charOffset": 728,
+                  "snippet": {
+                    "text": "Patch(\r\n            '仮説構築支援ツール - 回答',\r\n            Defaults('仮説構築支援ツール - 回答'),\r\n            {\r\n                themeID: themeId,\r\n                questionID: questionKey,\r\n                category: currentCategory,\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag:Checkbox3.Value,\r\n                status:status\r\n            }\r\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 302,
+                  "charOffset": 820,
+                  "snippet": {
+                    "text": "{\r\n                themeID: themeId,\r\n                questionID: questionKey,\r\n                category: currentCategory,\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag:Checkbox3.Value,\r\n                status:status\r\n            }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "no_answer_flag",
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1306,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1315,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1356,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1365,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 274,
+                  "charOffset": 1155,
+                  "snippet": {
+                    "text": "Patch(\r\n            '仮説構築支援ツール - 回答',\r\n            getAnswerRecord,\r\n            {\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag: Checkbox3.Value,\r\n                status:status\r\n            }\r\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmNavigation.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 182,
+                  "charOffset": 1236,
+                  "snippet": {
+                    "text": "{\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag: Checkbox3.Value,\r\n                status:status\r\n            }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmNavigation",
+                "type": "cmNavigation"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "no_answer_flag",
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.setQuestionValue"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.setQuestionValue",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 999,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "setQuestionValue",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.setQuestionValue"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.setQuestionValue",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1018,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "setQuestionValue",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 274,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 283,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 272,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 319,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 328,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 317,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 575,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 584,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 644,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 653,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 40,
+                  "charOffset": 620,
+                  "snippet": {
+                    "text": "And(currentRequired=\"2\",Checkbox3.Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "And"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 94,
+                  "charOffset": 572,
+                  "snippet": {
+                    "text": "If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired=\"2\",Checkbox3.Value),10,0)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1011,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1020,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1060,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1069,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 405,
+                  "charOffset": 728,
+                  "snippet": {
+                    "text": "Patch(\r\n            '仮説構築支援ツール - 回答',\r\n            Defaults('仮説構築支援ツール - 回答'),\r\n            {\r\n                themeID: themeId,\r\n                questionID: questionKey,\r\n                category: currentCategory,\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag:Checkbox3.Value,\r\n                status:status\r\n            }\r\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 302,
+                  "charOffset": 820,
+                  "snippet": {
+                    "text": "{\r\n                themeID: themeId,\r\n                questionID: questionKey,\r\n                category: currentCategory,\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag:Checkbox3.Value,\r\n                status:status\r\n            }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "no_answer_flag",
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1306,
+                  "snippet": {
+                    "text": "Checkbox1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1315,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 1356,
+                  "snippet": {
+                    "text": "Checkbox3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Checkbox3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1365,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 274,
+                  "charOffset": 1155,
+                  "snippet": {
+                    "text": "Patch(\r\n            '仮説構築支援ツール - 回答',\r\n            getAnswerRecord,\r\n            {\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag: Checkbox3.Value,\r\n                status:status\r\n            }\r\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmQuestionButton.updateAnswer",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 182,
+                  "charOffset": 1236,
+                  "snippet": {
+                    "text": "{\r\n                answer: answerContent,\r\n                skip_flag: Checkbox1.Value,\r\n                no_answer_flag: Checkbox3.Value,\r\n                status:status\r\n            }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "updateAnswer",
+                "module": "cmQuestionButton",
+                "type": "cmQuestionButton"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "no_answer_flag",
+              "Boolean",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "cmNavigation.navigateGallery.AccessibleLabel"
                 }
               ],
@@ -37,7 +2081,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -67,7 +2111,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -97,7 +2141,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -127,7 +2171,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -157,7 +2201,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -187,7 +2231,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -217,7 +2261,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -247,86 +2291,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrennQuestion.textAnswer.AccessibleLabel"
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrennQuestion.textAnswer.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrennQuestion",
-                "type": "scrennQuestion.textAnswer"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrennQuestion.Radio1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrennQuestion.Radio1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrennQuestion",
-                "type": "scrennQuestion.Radio1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrennQuestion.Radio1.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrennQuestion.Radio1.FocusedBorderThickness",
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "scrennQuestion",
-                "type": "scrennQuestion.Radio1"
+                "type": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1"
               }
             }
           ],
@@ -337,86 +2321,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
+          "ruleIndex": 7
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrennQuestion.Checkbox1.FocusedBorderThickness"
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrennQuestion.Checkbox1.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "scrennQuestion",
-                "type": "scrennQuestion.Checkbox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrennQuestion.Checkbox3.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrennQuestion.Checkbox3.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "scrennQuestion",
-                "type": "scrennQuestion.Checkbox3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "screenCanvas.Gallery1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "screenCanvas.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "screenCanvas",
-                "type": "screenCanvas.Gallery1"
+                "module": "scrennQuestion",
+                "type": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.Radio1"
               }
             }
           ],
@@ -427,26 +2351,116 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenCanvas.Gallery1.TabIndex"
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.textAnswer.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenCanvas.Gallery1.TabIndex",
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.textAnswer.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrennQuestion",
+                "type": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.textAnswer"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.skipAnswerCheckbox.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.skipAnswerCheckbox.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "scrennQuestion",
+                "type": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.skipAnswerCheckbox"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.noAnswerCheckbox.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.noAnswerCheckbox.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "scrennQuestion",
+                "type": "scrennQuestion.MainContainer3.BodyContainer1_1.questionContainer.checkBoxContainer.noAnswerCheckbox"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "screenCanvas",
-                "type": "screenCanvas.Gallery1"
+                "type": "screenCanvas.MainContainer2.BodyContainer1.Gallery1"
               }
             }
           ],
@@ -457,56 +2471,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenCanvas.Icon1.TabIndex"
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenCanvas.Icon1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "screenCanvas",
-                "type": "screenCanvas.Icon1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "screenCanvas.Icon1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "screenCanvas.Icon1.AccessibleLabel",
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "screenCanvas",
-                "type": "screenCanvas.Icon1"
+                "type": "screenCanvas.MainContainer2.BodyContainer1.Gallery1"
               }
             }
           ],
@@ -517,7 +2501,67 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Icon1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Icon1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screenCanvas",
+                "type": "screenCanvas.MainContainer2.BodyContainer1.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Icon1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "screenCanvas.MainContainer2.BodyContainer1.Icon1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "screenCanvas",
+                "type": "screenCanvas.MainContainer2.BodyContainer1.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
         }
       ],
       "tool": {
@@ -525,6 +2569,83 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrTypeError-Arg-Expected-Found",
+              "messageStrings": {
+                "issue": {
+                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {

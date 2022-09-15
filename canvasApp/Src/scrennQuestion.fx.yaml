@@ -22,93 +22,6 @@ scrennQuestion As screen:
         
         //Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=1).control_type);
 
-    cmHeader_3 As cmHeader:
-
-    questionHeaderGroup As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =5
-
-        headerLabel_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =baseColor
-            Height: =7
-            Width: =Max(App.Width-100, App.MinScreenWidth-100)
-            X: =40
-            Y: =119
-            ZIndex: =3
-
-        titleLabel_1 As label:
-            FontWeight: =Bold
-            Height: =61
-            Size: =14
-            Text: ="Q＆Aフローシステム"
-            Width: =427
-            X: =40
-            Y: =68
-            ZIndex: =4
-
-    questionLabel As label:
-        Align: =Left
-        Color: =baseColor
-        FontWeight: =Semibold
-        Height: =60
-        Overflow: =Overflow.Scroll
-        Size: =14
-        Text: =currentQuestion
-        Width: =996
-        X: =87
-        Y: =185
-        ZIndex: =7
-
-    questionTitleGroup As group:
-        Height: =5
-        Width: =5
-        X: =4
-        Y: =-91
-        ZIndex: =7
-
-        infoIcon As icon.Information:
-            Color: =baseColor
-            DisabledColor: =baseColor
-            DisplayMode: =DisplayMode.View
-            Height: =49
-            HoverColor: =baseColor
-            Icon: =Icon.Information
-            PressedColor: =baseColor
-            Width: =41
-            X: =60
-            Y: =139
-            ZIndex: =5
-
-        questionTitleLabel As label:
-            FontWeight: =Semibold
-            Height: =44
-            Overflow: =Overflow.Scroll
-            Size: =15
-            Text: =currentTitle
-            Width: =897
-            X: =101
-            Y: =142
-            ZIndex: =6
-
-    Radio1 As radio:
-        Default: =currentAnswer
-        FocusedBorderThickness: =0
-        FontWeight: =FontWeight.Semibold
-        Height: =146
-        Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
-        Layout: =Layout.Horizontal
-        RadioBorderColor: =baseColor
-        RadioSelectionFill: =baseColor
-        Visible: =If(controlType="radioButton",true,false)
-        Width: =591
-        X: =questionLabel.X
-        Y: =258
-        ZIndex: =20
-
     pagingGroup As group:
         Height: =5
         Width: =5
@@ -150,121 +63,6 @@ scrennQuestion As screen:
             Y: =715
             ZIndex: =19
 
-    cmHomeButtonEdit_1 As cmHomeButtonEdit:
-        X: =1106
-        Y: =128
-        ZIndex: =21
-
-    questionButtonComponent_1 As cmQuestionButton:
-        getStatus: =
-        setQuestionValue: |+
-            =With({qRecord:LookUp(questionList, ID=qId)},
-            Set(
-                currentTitle,
-                qRecord.Title
-            );
-            Set(
-                currentQuestion,
-                qRecord.question_content
-            );
-            
-            Set(
-                currentPage,
-                qRecord.current_question_number
-            );
-            Set(
-                totalPage,
-                qRecord.question_totalnumber
-            );
-            Set(
-                commentary,
-                qRecord.commentary
-            );
-            Set(
-                example,
-                qRecord.example
-            );
-            Set(
-                controlType,
-                qRecord.control_type
-            );
-            Set(
-                currentRequired,
-                qRecord.required
-            );
-            Set(currentCategory,qRecord.category);
-            
-            If(buttonKey="next",
-            //次へボタンの場合
-            Set(
-                nextVisible,
-                If(qRecord.next_question_id=0,false,true)
-            );
-            Set(
-                backVisible,
-                true
-            );,
-            //戻るボタンの場合
-            Set(
-                nextVisible,
-                true
-            );
-            Set(
-                backVisible,
-                 If(qRecord.back_question_id=0,false,true)
-            ););
-            
-            Set(
-                confirmVisible,
-                If(qRecord.next_question_id=0,true,false)
-            );
-            
-            With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
-            Reset(textAnswer);
-            Reset(Checkbox1);
-            Reset(Checkbox3);
-            Set(
-                currentAnswer,
-                If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
-                );
-            Set(
-                skipFlag,
-                getAnswerRecord.skip_flag
-                );
-            Set(
-                noAnswerFlag,
-                getAnswerRecord.no_answer_flag
-                );
-            );
-             
-            
-            Set(questionKey,qId);
-            Set(
-                commentaryGroupVisible,
-                true
-            );
-            Set(
-                exampleGroupVisible,
-                false
-            );
-            If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-            )
-            
-        X: =323
-        Y: =705
-        ZIndex: =23
-
-    Checkbox1 As checkbox:
-        CheckboxBorderColor: =baseColor
-        Default: =skipFlag
-        FocusedBorderThickness: =0
-        FontWeight: =FontWeight.Bold
-        Text: ="後で答える"
-        Visible: =If(Not(questionKey=1),true,false)
-        X: =questionLabel.X
-        Y: =386
-        ZIndex: =29
-
     supplementGroups As group:
         Height: =5
         Width: =5
@@ -280,8 +78,8 @@ scrennQuestion As screen:
             Height: =55
             Overflow: =Overflow.Scroll
             Text: =
+            Visible: =false
             Width: =936
-            X: =questionLabel.X
             Y: =628
             ZIndex: =24
 
@@ -293,9 +91,8 @@ scrennQuestion As screen:
             Height: =182
             Overflow: =Overflow.Scroll
             Text: ="例：" & Char(10)&Char(10) & example
-            Visible: =exampleGroupVisible
+            Visible: =false
             Width: =buttonLabel.Width
-            X: =questionLabel.X
             Y: =447
             ZIndex: =25
 
@@ -317,9 +114,8 @@ scrennQuestion As screen:
             RadiusTopRight: =20
             Size: =13
             Text: ="◀ 解説"
-            Visible: =exampleGroupVisible
+            Visible: =false
             Width: =100
-            X: =880
             Y: =640
             ZIndex: =26
 
@@ -331,9 +127,8 @@ scrennQuestion As screen:
             Height: =185
             Overflow: =Overflow.Scroll
             Text: ="解説：" & Char(10)&Char(10) & commentary
-            Visible: =commentaryGroupVisible
+            Visible: =false
             Width: =936
-            X: =questionLabel.X
             Y: =447
             ZIndex: =27
 
@@ -356,165 +151,623 @@ scrennQuestion As screen:
             RadiusTopRight: =20
             Size: =13
             Text: ="例 ▶"
-            Visible: =commentaryGroupVisible
+            Visible: =false
             Width: =exampleButton.Width
-            X: =exampleButton.X
             Y: =exampleButton.Y
             ZIndex: =28
 
-    Checkbox3 As checkbox:
-        CheckboxBorderColor: =baseColor
-        Default: =noAnswerFlag
-        FocusedBorderThickness: =0
-        FontWeight: =FontWeight.Bold
-        Text: ="回答しない"
-        Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
-        X: =Checkbox1.X+Checkbox1.Width
-        Y: =Checkbox1.Y
-        ZIndex: =30
-
-    Label5 As label:
+    requiredLabel As label:
         Color: =baseColor
         FontWeight: =FontWeight.Semibold
         Text: ="*入力必須"
         Visible: =If(Not(currentRequired="2"),true,false)
-        X: =questionLabel.X
         Y: =683
         ZIndex: =31
 
-    cmNavigation_2 As cmNavigation:
-        Height: =445
-        setQuestionValue: |-
-            =Set(
-                navigationKey,
-                qId
-            );
-            Set(
-                questionKey,
-                qId
-            );
-            With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
-            Reset(textAnswer);
-            Reset(Checkbox1);
-            Reset(Checkbox3);
-            Set(
-                currentAnswer,
-                If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
-                );
-            Set(
-                skipFlag,
-                getAnswerRecord.skip_flag
-                );
-            Set(
-                noAnswerFlag,
-                getAnswerRecord.no_answer_flag
-                );
-            );
-            
-            With({qRecord:LookUp(questionList, ID=questionKey)},
-            Set(
-                currentTitle,
-                qRecord.Title
-            );
-            Set(
-                currentQuestion,
-                qRecord.question_content
-            );
-            Set(currentCategory,qRecord.category);
-            Set(
-                controlType,
-                qRecord.control_type
-            );
-            Set(
-                currentPage,
-                qRecord.current_question_number
-            );
-            Set(
-                totalPage,
-                qRecord.question_totalnumber
-            );
-            Set(
-                commentary,
-                qRecord.commentary
-            );
-            Set(
-                example,
-                qRecord.example
-            );
-            Set(
-                currentRequired,
-                qRecord.required
-            );
-            Set(
-                nextVisible,
-                If(qRecord.next_question_id=0,false,true)
-            
-            );
-            Set(
-                confirmVisible,
-                If(qRecord.next_question_id=0,true,false)
-            );
-            );
-            Set(
-                backVisible,
-                false
-            );
-            Set(
-                commentaryGroupVisible,
-                true
-            );
-            Set(
-                exampleGroupVisible,
-                false
-            );
-            If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-        X: =1106
-        Y: =300
-        ZIndex: =33
+    MainContainer3 As groupContainer.manualLayoutContainer:
+        Height: =Max(App.Height, App.MinScreenHeight)
+        Width: =Max(App.Width, App.MinScreenWidth)
+        ZIndex: =35
 
-    textGroup As group:
-        Height: =5
-        Width: =5
-        X: =80
-        Y: =80
-        ZIndex: =33
+        cmHeader_4 As cmHeader:
 
-        textAnswer As text:
-            BorderColor: =baseColor
-            BorderStyle: =BorderStyle.None
-            Default: =currentAnswer
-            DisabledBorderColor: =baseColor
-            Fill: =RGBA(237, 237, 237, 1)
-            Height: =125
-            HoverFill: =RGBA(237, 237, 237, 1)
-            Mode: =TextMode.MultiLine
-            PaddingBottom: =0
-            PaddingLeft: |
-                =10
-            PaddingRight: =0
-            PaddingTop: =0
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Visible: =If(controlType="text",true,false)
-            Width: =936
-            X: =questionLabel.X
-            Y: =254
-            ZIndex: =8
+        HeaderContainer_1 As groupContainer.manualLayoutContainer:
+            Height: =66
+            Width: =MainContainer3.Width
+            Y: =cmHeader_4.Height
+            ZIndex: =2
 
-        underFrame As rectangle:
-            BorderColor: =baseColor
-            Fill: =baseColor
-            Height: =3
-            Visible: =If(controlType="text",true,false)
-            Width: =textAnswer.Width
-            X: =textAnswer.X
-            Y: =379
-            ZIndex: =32
+            lineContainer2_2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =66
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =HeaderContainer_1.Width
+                X: =50
+                ZIndex: =1
 
-    cmStatusBar_1 As cmStatusBar:
-        X: =483
-        Y: =68
-        ZIndex: =34
+                Label2_4 As label:
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    Size: =16
+                    Text: ="Ｑ&Ａフローシステム"
+                    Width: =400
+                    X: =50
+                    Y: =461
+                    ZIndex: =1
+
+                Rectangle3_4 As rectangle:
+                    BorderColor: =baseColor
+                    Fill: =baseColor
+                    Height: =4
+                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    X: =50
+                    Y: =505
+                    ZIndex: =2
+
+            statusBar_3 As cmStatusBar:
+                Width: =600
+                X: =HeaderContainer_1.Width/3
+                ZIndex: =2
+
+        NavigateContainer_1 As groupContainer.manualLayoutContainer:
+            Height: =BodyContainer1.Height
+            Width: =MainContainer2.Width/6
+            X: =MainContainer2.Width-MainContainer2.Width/6
+            Y: =BodyContainer1.Y
+            ZIndex: =3
+
+            cmNavigation_3 As cmNavigation:
+                Height: =455
+                setQuestionValue: |-
+                    =Set(
+                        navigationKey,
+                        qId
+                    );
+                    Set(
+                        questionKey,
+                        qId
+                    );
+                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
+                    Reset(textAnswer);
+                    Reset(skipAnswerCheckbox);
+                    Reset(noAnswerCheckbox);
+                    Set(
+                        currentAnswer,
+                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                        );
+                    Set(
+                        skipFlag,
+                        getAnswerRecord.skip_flag
+                        );
+                    Set(
+                        noAnswerFlag,
+                        getAnswerRecord.no_answer_flag
+                        );
+                    );
+                    
+                    With({qRecord:LookUp(questionList, ID=questionKey)},
+                    Set(
+                        currentTitle,
+                        qRecord.Title
+                    );
+                    Set(
+                        currentQuestion,
+                        qRecord.question_content
+                    );
+                    Set(currentCategory,qRecord.category);
+                    Set(
+                        controlType,
+                        qRecord.control_type
+                    );
+                    Set(
+                        currentPage,
+                        qRecord.current_question_number
+                    );
+                    Set(
+                        totalPage,
+                        qRecord.question_totalnumber
+                    );
+                    Set(
+                        commentary,
+                        qRecord.commentary
+                    );
+                    Set(
+                        example,
+                        qRecord.example
+                    );
+                    Set(
+                        currentRequired,
+                        qRecord.required
+                    );
+                    Set(
+                        nextVisible,
+                        If(qRecord.next_question_id=0,false,true)
+                    
+                    );
+                    Set(
+                        confirmVisible,
+                        If(qRecord.next_question_id=0,true,false)
+                    );
+                    );
+                    Set(
+                        backVisible,
+                        false
+                    );
+                    Set(
+                        commentaryGroupVisible,
+                        true
+                    );
+                    Set(
+                        exampleGroupVisible,
+                        false
+                    );
+                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
+                updateAnswer: |
+                    =
+                    If(
+                        controlType = "text",
+                        Set(
+                            answerContent,
+                            textAnswer.Text
+                        ),
+                        Set(
+                            answerContent,
+                            Radio1.Selected.Result
+                        )
+                    );
+                    If(
+                        Not(
+                            And(
+                                answerContent = currentAnswer,
+                                skipFlag = skipAnswerCheckbox.Value,
+                                noAnswerFlag = noAnswerCheckbox.Value
+                            )
+                        ),
+                    With(
+                        {
+                            getAnswerRecord: LookUp(
+                                '仮説構築支援ツール - 回答',
+                                And(
+                                    themeID = themeId,
+                                    questionID = questionKey
+                                )
+                            ),
+                            status:If(skipAnswerCheckbox.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",noAnswerCheckbox.Value),10,0)
+                        },
+                        If(
+                            IsBlank(getAnswerRecord),
+                            Patch(
+                                '仮説構築支援ツール - 回答',
+                                Defaults('仮説構築支援ツール - 回答'),
+                                {
+                                    themeID: themeId,
+                                    questionID: questionKey,
+                                    category: currentCategory,
+                                    answer: answerContent,
+                                    skip_flag: skipAnswerCheckbox.Value,
+                                    no_answer_flag:noAnswerCheckbox.Value,
+                                    status:status
+                                }
+                            );
+                            ,
+                            Patch(
+                                '仮説構築支援ツール - 回答',
+                                getAnswerRecord,
+                                {
+                                    answer: answerContent,
+                                    skip_flag: skipAnswerCheckbox.Value,
+                                    no_answer_flag: noAnswerCheckbox.Value,
+                                    status:status
+                                }
+                            );
+                        )
+                    );)
+                Y: =177
+                ZIndex: =1
+
+            cmHomeButtonEdit_2 As cmHomeButtonEdit:
+                Height: =168
+                ZIndex: =3
+
+        BodyContainer1_1 As groupContainer.manualLayoutContainer:
+            Height: =MainContainer.Height-cmHeader_1.Height-HeaderContainer.Height-FooterContainer.Height
+            Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer.Width
+            Y: =cmHeader_1.Height+HeaderContainer.Height
+            ZIndex: =4
+
+            TitleContainer As groupContainer.horizontalAutoLayoutContainer:
+                Height: =50
+                LayoutMode: =LayoutMode.Auto
+                Width: =BodyContainer1_1.Width-TitleContainer.X
+                X: =50
+                ZIndex: =1
+
+                infoIcon_1 As icon.Information:
+                    Color: =baseColor
+                    DisabledColor: =baseColor
+                    DisplayMode: =DisplayMode.View
+                    Height: =40
+                    HoverColor: =baseColor
+                    Icon: =Icon.Information
+                    PressedColor: =baseColor
+                    Width: =41
+                    X: =60
+                    Y: =139
+                    ZIndex: =1
+
+                questionTitleLabel_1 As label:
+                    FontWeight: =Semibold
+                    LineHeight: =1
+                    Overflow: =Overflow.Scroll
+                    Size: =16
+                    Text: =currentTitle
+                    Width: =TitleContainer.Width - infoIcon_1.Width
+                    X: =41
+                    Y: =3
+                    ZIndex: =2
+
+            questionContainer As groupContainer.verticalAutoLayoutContainer:
+                Height: =BodyContainer1_1.Height-TitleContainer.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =BodyContainer1_1.Width-60
+                X: =60
+                Y: =TitleContainer.Height
+                ZIndex: =2
+
+                questionLabel_1 As label:
+                    Align: =Left
+                    Color: =baseColor
+                    FontWeight: =Semibold
+                    Height: =60
+                    Overflow: =Overflow.Scroll
+                    Size: =14
+                    Text: =currentQuestion
+                    Width: =996
+                    X: =87
+                    Y: =185
+                    ZIndex: =1
+
+                Radio1 As radio:
+                    Default: =currentAnswer
+                    FocusedBorderThickness: =0
+                    FontWeight: =FontWeight.Semibold
+                    Height: =146
+                    Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
+                    Layout: =Layout.Horizontal
+                    RadioBorderColor: =baseColor
+                    RadioSelectionFill: =baseColor
+                    Visible: =If(controlType="radioButton",true,false)
+                    Width: =591
+                    X: |-
+                        =
+                        0
+                    Y: =258
+                    ZIndex: =4
+
+                textGroup As group:
+                    Height: =5
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =5
+                    Width: =5
+                    X: =80
+                    Y: =-254
+                    ZIndex: =4
+
+                    textAnswer As text:
+                        BorderColor: =baseColor
+                        BorderStyle: =BorderStyle.None
+                        Default: =currentAnswer
+                        DisabledBorderColor: =baseColor
+                        Fill: =RGBA(237, 237, 237, 1)
+                        Height: =125
+                        HoverFill: =RGBA(237, 237, 237, 1)
+                        Mode: =TextMode.MultiLine
+                        PaddingBottom: =0
+                        PaddingLeft: |
+                            =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =If(controlType="text",true,false)
+                        Width: =936
+                        Y: =254
+                        ZIndex: =2
+
+                    underFrame As rectangle:
+                        BorderColor: =baseColor
+                        Fill: =baseColor
+                        Height: =3
+                        Visible: =If(controlType="text",true,false)
+                        Width: =textAnswer.Width
+                        X: =textAnswer.X
+                        Y: =125
+                        ZIndex: =3
+
+                checkBoxContainer As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =30
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =5
+
+                    skipAnswerCheckbox As checkbox:
+                        CheckboxBorderColor: =baseColor
+                        Default: =skipFlag
+                        FocusedBorderThickness: =0
+                        FontWeight: =FontWeight.Bold
+                        Text: ="後で答える"
+                        Visible: =If(Not(questionKey=1),true,false)
+                        Y: =386
+                        ZIndex: =1
+
+                    noAnswerCheckbox As checkbox:
+                        CheckboxBorderColor: =baseColor
+                        Default: =noAnswerFlag
+                        FocusedBorderThickness: =0
+                        FontWeight: =FontWeight.Bold
+                        Text: ="回答しない"
+                        Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
+                        X: =skipAnswerCheckbox.X+skipAnswerCheckbox.Width
+                        Y: =skipAnswerCheckbox.Y
+                        ZIndex: =2
+
+                supplementContainer As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =questionContainer.Width
+                    ZIndex: =11
+
+                    buttonLabel_2 As label:
+                        BorderColor: =RGBA(163, 216, 246, 10)
+                        DisabledColor: =RGBA(163, 216, 246, 5)
+                        Fill: =RGBA(163, 216, 246, 5)
+                        FontWeight: =Normal
+                        Height: =55
+                        Overflow: =Overflow.Scroll
+                        Text: =
+                        Width: =936
+                        X: =40
+                        ZIndex: =1
+
+                    exampleLabel_2 As label:
+                        BorderColor: =RGBA(163, 216, 246, 10)
+                        DisabledColor: =RGBA(163, 216, 246, 5)
+                        Fill: =RGBA(163, 216, 246, 5)
+                        FontWeight: =Normal
+                        Height: =100
+                        Overflow: =Overflow.Scroll
+                        Text: ="例：" & Char(10)&Char(10) & example
+                        Visible: =exampleGroupVisible
+                        Width: =buttonLabel_2.Width
+                        X: =40
+                        ZIndex: =2
+
+                    exampleButton_2 As button:
+                        BorderColor: =White
+                        Color: =baseColor
+                        Fill: =White
+                        Height: =35
+                        HoverBorderColor: =ColorFade(White, -5%)
+                        HoverFill: =baseColor
+                        OnSelect: |
+                            =Set(exampleGroupVisible,false);
+                            Set(commentaryGroupVisible,true);
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =baseColor
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Size: =13
+                        Text: ="◀ 解説"
+                        Visible: =exampleGroupVisible
+                        Width: =100
+                        X: =40
+                        ZIndex: =3
+
+                    commentaryLabel_2 As label:
+                        BorderColor: =RGBA(163, 216, 246, 10)
+                        DisabledColor: =RGBA(163, 216, 246, 5)
+                        Fill: =RGBA(163, 216, 246, 5)
+                        FontWeight: =Normal
+                        Height: =100
+                        Overflow: =Overflow.Scroll
+                        Text: ="解説：" & Char(10)&Char(10) & commentary
+                        Visible: =commentaryGroupVisible
+                        Width: =936
+                        X: =40
+                        ZIndex: =4
+
+                    commentaryButton_2 As button:
+                        BorderColor: =White
+                        Color: =baseColor
+                        DisabledFill: =baseColor
+                        Fill: =White
+                        Height: =exampleButton_2.Height
+                        HoverBorderColor: =ColorFade(White, -5%)
+                        HoverFill: =baseColor
+                        OnSelect: |
+                            =Set(exampleGroupVisible,true);
+                            Set(commentaryGroupVisible,false);
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =baseColor
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Size: =13
+                        Text: ="例 ▶"
+                        Visible: =commentaryGroupVisible
+                        Width: =exampleButton_2.Width
+                        X: =40
+                        ZIndex: =5
+
+        FooterContainer As groupContainer.manualLayoutContainer:
+            Height: =70
+            Width: =BodyContainer1_1.Width
+            Y: =MainContainer.Height-70
+            ZIndex: =5
+
+            questionButtonComponent As cmQuestionButton:
+                getStatus: =
+                setQuestionValue: |+
+                    =With({qRecord:LookUp(questionList, ID=qId)},
+                    Set(
+                        currentTitle,
+                        qRecord.Title
+                    );
+                    Set(
+                        currentQuestion,
+                        qRecord.question_content
+                    );
+                    
+                    Set(
+                        currentPage,
+                        qRecord.current_question_number
+                    );
+                    Set(
+                        totalPage,
+                        qRecord.question_totalnumber
+                    );
+                    Set(
+                        commentary,
+                        qRecord.commentary
+                    );
+                    Set(
+                        example,
+                        qRecord.example
+                    );
+                    Set(
+                        controlType,
+                        qRecord.control_type
+                    );
+                    Set(
+                        currentRequired,
+                        qRecord.required
+                    );
+                    Set(currentCategory,qRecord.category);
+                    
+                    If(buttonKey="next",
+                    //次へボタンの場合
+                    Set(
+                        nextVisible,
+                        If(qRecord.next_question_id=0,false,true)
+                    );
+                    Set(
+                        backVisible,
+                        true
+                    );,
+                    //戻るボタンの場合
+                    Set(
+                        nextVisible,
+                        true
+                    );
+                    Set(
+                        backVisible,
+                         If(qRecord.back_question_id=0,false,true)
+                    ););
+                    
+                    Set(
+                        confirmVisible,
+                        If(qRecord.next_question_id=0,true,false)
+                    );
+                    
+                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
+                    Reset(textAnswer);
+                    Reset(skipAnswerCheckbox);
+                    Reset(noAnswerCheckbox);
+                    Set(
+                        currentAnswer,
+                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                        );
+                    Set(
+                        skipFlag,
+                        getAnswerRecord.skip_flag
+                        );
+                    Set(
+                        noAnswerFlag,
+                        getAnswerRecord.no_answer_flag
+                        );
+                    );
+                     
+                    
+                    Set(questionKey,qId);
+                    Set(
+                        commentaryGroupVisible,
+                        true
+                    );
+                    Set(
+                        exampleGroupVisible,
+                        false
+                    );
+                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
+                    )
+                    
+                updateAnswer: |
+                    =
+                    If(
+                        controlType = "text",
+                        Set(
+                            answerContent,
+                            textAnswer.Text
+                        ),
+                        Set(
+                            answerContent,
+                            Radio1.Selected.Result
+                        )
+                    );
+                    If(
+                        Not(
+                            And(
+                                answerContent = currentAnswer,
+                                skipFlag = skipAnswerCheckbox.Value,
+                                noAnswerFlag = noAnswerCheckbox.Value
+                            )
+                        ),
+                    With(
+                        {
+                            getAnswerRecord: LookUp(
+                                '仮説構築支援ツール - 回答',
+                                And(
+                                    themeID = themeId,
+                                    questionID = questionKey
+                                )
+                            ),
+                            status:If(skipAnswerCheckbox.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",noAnswerCheckbox.Value),10,0)
+                        },
+                        If(
+                            IsBlank(getAnswerRecord),
+                            Patch(
+                                '仮説構築支援ツール - 回答',
+                                Defaults('仮説構築支援ツール - 回答'),
+                                {
+                                    themeID: themeId,
+                                    questionID: questionKey,
+                                    category: currentCategory,
+                                    answer: answerContent,
+                                    skip_flag: skipAnswerCheckbox.Value,
+                                    no_answer_flag:noAnswerCheckbox.Value,
+                                    status:status
+                                }
+                            );
+                            ,
+                            Patch(
+                                '仮説構築支援ツール - 回答',
+                                getAnswerRecord,
+                                {
+                                    answer: answerContent,
+                                    skip_flag: skipAnswerCheckbox.Value,
+                                    no_answer_flag: noAnswerCheckbox.Value,
+                                    status:status
+                                }
+                            );
+                        )
+                    );)
+                X: =323
+                ZIndex: =1
 

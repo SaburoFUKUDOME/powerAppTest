@@ -61,7 +61,7 @@ screenTheme As screen:
                     Color: =baseColor
                     FontWeight: =FontWeight.Bold
                     Height: =44
-                    Size: =18
+                    Size: =16
                     Text: ="担当テーマ"
                     Width: =194
                     X: =50
