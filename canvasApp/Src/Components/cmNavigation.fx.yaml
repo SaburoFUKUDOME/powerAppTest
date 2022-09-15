@@ -14,8 +14,8 @@ cmNavigation As CanvasComponent:
                 );
                 With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
                 Reset(textAnswer);
-                Reset(Checkbox1);
-                Reset(Checkbox3);
+                Reset(skipAnswerCheckbox);
+                Reset(noAnswerCheckbox);
                 Set(
                     currentAnswer,
                     If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
@@ -106,8 +106,8 @@ cmNavigation As CanvasComponent:
             Not(
                 And(
                     answerContent = currentAnswer,
-                    skipFlag = Checkbox1.Value,
-                    noAnswerFlag = Checkbox3.Value
+                    skipFlag = skipAnswerCheckbox.Value,
+                    noAnswerFlag = noAnswerCheckbox.Value
                 )
             ),
         With(
@@ -119,7 +119,7 @@ cmNavigation As CanvasComponent:
                         questionID = questionKey
                     )
                 ),
-                status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",Checkbox3.Value),10,0)
+                status:If(skipAnswerCheckbox.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",noAnswerCheckbox.Value),10,0)
             },
             If(
                 IsBlank(getAnswerRecord),
@@ -131,8 +131,8 @@ cmNavigation As CanvasComponent:
                         questionID: questionKey,
                         category: currentCategory,
                         answer: answerContent,
-                        skip_flag: Checkbox1.Value,
-                        no_answer_flag:Checkbox3.Value,
+                        skip_flag: skipAnswerCheckbox.Value,
+                        no_answer_flag:noAnswerCheckbox.Value,
                         status:status
                     }
                 );
@@ -142,8 +142,8 @@ cmNavigation As CanvasComponent:
                     getAnswerRecord,
                     {
                         answer: answerContent,
-                        skip_flag: Checkbox1.Value,
-                        no_answer_flag: Checkbox3.Value,
+                        skip_flag: skipAnswerCheckbox.Value,
+                        no_answer_flag: noAnswerCheckbox.Value,
                         status:status
                     }
                 );
