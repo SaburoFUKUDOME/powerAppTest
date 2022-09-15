@@ -264,13 +264,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "19",
+                "InvariantScript": "25",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),\r\nanswerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},\r\nIf(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,\r\nCountIf(answerTable,(status=2)||(status=10))>0,\r\nRGBA(200,220,255,1),White))",
+                "InvariantScript": "With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),\r\nanswerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},\r\nIf(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,\r\nCountIf(answerTable,(status=2)||(status=10))>0,\r\nRGBA(200,220,255,1),RGBA(245,245,245,1)))",
                 "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
@@ -366,7 +366,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "\r\nIf(currentCategory = ThisItem.Title,Yellow,baseColor)",
+                "InvariantScript": "If(currentCategory = ThisItem.Title,Yellow,baseColor)",
                 "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
@@ -657,7 +657,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637988054387928445",
+    "LastModifiedTimestamp": "637988068690771313",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -716,7 +716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988054387928445",
+  "LastModifiedTimestamp": "637988068690771313",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"
