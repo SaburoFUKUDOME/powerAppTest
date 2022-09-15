@@ -82,6 +82,40 @@ screenTheme As screen:
             Y: =59
             ZIndex: =5
 
+        statusThemeGallery As gallery.galleryHorizontal:
+            Height: =60
+            Items: ='仮説構築支援ツール - ナビゲーション'
+            TemplateSize: =25
+            Width: =500
+            X: =651
+            Y: =23
+            ZIndex: =6
+
+            statusBarLabel2 As label:
+                BorderColor: =baseColor
+                BorderThickness: =2
+                Fill: |-
+                    =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
+                    answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=Value(themeIdLabel.Text)))},
+                    If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
+                    CountIf(answerTable,(status=2)||(status=10))>0,
+                    RGBA(200,220,255,1),White))
+                Height: =25
+                OnSelect: =Select(Parent)
+                Text: =
+                Width: =25
+                Y: =10
+                ZIndex: =1
+
+        themeIdLabel As label:
+            Height: =26
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.ID
+            Width: =22
+            X: =1179
+            Y: =71
+            ZIndex: =7
+
     Label2 As label:
         Color: =baseColor
         DisabledColor: =baseColor
@@ -125,4 +159,10 @@ screenTheme As screen:
         X: =50
         Y: =461
         ZIndex: =10
+
+    Label12 As label:
+        Text: ="テキスト"
+        X: =40
+        Y: =40
+        ZIndex: =11
 

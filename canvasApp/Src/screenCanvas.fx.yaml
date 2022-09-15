@@ -30,7 +30,7 @@ screenCanvas As screen:
             Text: ="Q＆Aフローシステム"
             Width: =427
             X: =40
-            Y: =88
+            Y: =78
             ZIndex: =10
 
     cmHomeButtonView_1 As cmHomeButtonView:
@@ -219,6 +219,6 @@ screenCanvas As screen:
 
     statusBar_1 As statusBar:
         X: =443
-        Y: =93
+        Y: =87
         ZIndex: =37
 

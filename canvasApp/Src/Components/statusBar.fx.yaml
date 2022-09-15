@@ -18,7 +18,7 @@ statusBar As CanvasComponent:
             BorderThickness: =2
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
-                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=2))},
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
                 If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
                 CountIf(answerTable,(status=2)||(status=10))>0,
                 RGBA(200,220,255,1),White))
