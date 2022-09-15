@@ -162,8 +162,7 @@ cmNavigation As CanvasComponent:
             =If(ThisItem.question_id = navigationKey,baseColor,White)
         TemplatePadding: =0
         TemplateSize: =40
-        Width: =179
-        X: =10
+        Width: =200
         Y: =10
         ZIndex: =3
 
@@ -185,7 +184,7 @@ cmNavigation As CanvasComponent:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =11
+            Size: =12
             Text: =ThisItem.Title
             Width: =navigateGallery.TemplateWidth
             ZIndex: =6

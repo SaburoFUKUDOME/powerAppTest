@@ -63,99 +63,6 @@ scrennQuestion As screen:
             Y: =715
             ZIndex: =19
 
-    supplementGroups As group:
-        Height: =5
-        Width: =5
-        X: =-8
-        Y: =-365
-        ZIndex: =29
-
-        buttonLabel As label:
-            BorderColor: =RGBA(163, 216, 246, 10)
-            DisabledColor: =RGBA(163, 216, 246, 5)
-            Fill: =RGBA(163, 216, 246, 5)
-            FontWeight: =Normal
-            Height: =55
-            Overflow: =Overflow.Scroll
-            Text: =
-            Visible: =false
-            Width: =936
-            Y: =628
-            ZIndex: =24
-
-        exampleLabel As label:
-            BorderColor: =RGBA(163, 216, 246, 10)
-            DisabledColor: =RGBA(163, 216, 246, 5)
-            Fill: =RGBA(163, 216, 246, 5)
-            FontWeight: =Normal
-            Height: =182
-            Overflow: =Overflow.Scroll
-            Text: ="例：" & Char(10)&Char(10) & example
-            Visible: =false
-            Width: =buttonLabel.Width
-            Y: =447
-            ZIndex: =25
-
-        exampleButton As button:
-            BorderColor: =White
-            Color: =baseColor
-            Fill: =White
-            Height: =35
-            HoverBorderColor: =ColorFade(White, -5%)
-            HoverFill: =baseColor
-            OnSelect: |
-                =Set(exampleGroupVisible,false);
-                Set(commentaryGroupVisible,true);
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =baseColor
-            RadiusBottomLeft: =20
-            RadiusBottomRight: =20
-            RadiusTopLeft: =20
-            RadiusTopRight: =20
-            Size: =13
-            Text: ="◀ 解説"
-            Visible: =false
-            Width: =100
-            Y: =640
-            ZIndex: =26
-
-        commentaryLabel As label:
-            BorderColor: =RGBA(163, 216, 246, 10)
-            DisabledColor: =RGBA(163, 216, 246, 5)
-            Fill: =RGBA(163, 216, 246, 5)
-            FontWeight: =Normal
-            Height: =185
-            Overflow: =Overflow.Scroll
-            Text: ="解説：" & Char(10)&Char(10) & commentary
-            Visible: =false
-            Width: =936
-            Y: =447
-            ZIndex: =27
-
-        commentaryButton As button:
-            BorderColor: =White
-            Color: =baseColor
-            DisabledFill: =baseColor
-            Fill: =White
-            Height: =exampleButton.Height
-            HoverBorderColor: =ColorFade(White, -5%)
-            HoverFill: =baseColor
-            OnSelect: |
-                =Set(exampleGroupVisible,true);
-                Set(commentaryGroupVisible,false);
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =baseColor
-            RadiusBottomLeft: =20
-            RadiusBottomRight: =20
-            RadiusTopLeft: =20
-            RadiusTopRight: =20
-            Size: =13
-            Text: ="例 ▶"
-            Visible: =false
-            Width: =exampleButton.Width
-            Y: =exampleButton.Y
-            ZIndex: =28
-
     requiredLabel As label:
         Color: =baseColor
         FontWeight: =FontWeight.Semibold
@@ -406,94 +313,18 @@ scrennQuestion As screen:
                     Y: =3
                     ZIndex: =2
 
-            questionContainer As groupContainer.verticalAutoLayoutContainer:
+            questionContainer As groupContainer.manualLayoutContainer:
                 Height: =BodyContainer1_1.Height-TitleContainer.Height
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMode: =LayoutMode.Auto
                 Width: =BodyContainer1_1.Width-60
-                X: =60
+                X: =TitleContainer.X+5
                 Y: =TitleContainer.Height
-                ZIndex: =2
-
-                questionLabel_1 As label:
-                    Align: =Left
-                    Color: =baseColor
-                    FontWeight: =Semibold
-                    Height: =60
-                    Overflow: =Overflow.Scroll
-                    Size: =14
-                    Text: =currentQuestion
-                    Width: =996
-                    X: =87
-                    Y: =185
-                    ZIndex: =1
-
-                Radio1 As radio:
-                    Default: =currentAnswer
-                    FocusedBorderThickness: =0
-                    FontWeight: =FontWeight.Semibold
-                    Height: =146
-                    Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
-                    Layout: =Layout.Horizontal
-                    RadioBorderColor: =baseColor
-                    RadioSelectionFill: =baseColor
-                    Visible: =If(controlType="radioButton",true,false)
-                    Width: =591
-                    X: |-
-                        =
-                        0
-                    Y: =258
-                    ZIndex: =4
-
-                textGroup As group:
-                    Height: =5
-                    LayoutMinHeight: =5
-                    LayoutMinWidth: =5
-                    Width: =5
-                    X: =80
-                    Y: =-254
-                    ZIndex: =4
-
-                    textAnswer As text:
-                        BorderColor: =baseColor
-                        BorderStyle: =BorderStyle.None
-                        Default: =currentAnswer
-                        DisabledBorderColor: =baseColor
-                        Fill: =RGBA(237, 237, 237, 1)
-                        Height: =125
-                        HoverFill: =RGBA(237, 237, 237, 1)
-                        Mode: =TextMode.MultiLine
-                        PaddingBottom: =0
-                        PaddingLeft: |
-                            =10
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Visible: =If(controlType="text",true,false)
-                        Width: =936
-                        Y: =254
-                        ZIndex: =2
-
-                    underFrame As rectangle:
-                        BorderColor: =baseColor
-                        Fill: =baseColor
-                        Height: =3
-                        Visible: =If(controlType="text",true,false)
-                        Width: =textAnswer.Width
-                        X: =textAnswer.X
-                        Y: =125
-                        ZIndex: =3
+                ZIndex: =4
 
                 checkBoxContainer As groupContainer.horizontalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     Height: =50
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =5
+                    Y: =textAnswer.Height + underFrame.Height+questionLabel_1.Height
+                    ZIndex: =1
 
                     skipAnswerCheckbox As checkbox:
                         CheckboxBorderColor: =baseColor
@@ -513,11 +344,78 @@ scrennQuestion As screen:
                         Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
                         ZIndex: =2
 
+                questionLabel_1 As label:
+                    Align: =Left
+                    Color: =baseColor
+                    FontWeight: =Semibold
+                    Height: =60
+                    Overflow: =Overflow.Scroll
+                    Size: =14
+                    Text: =currentQuestion
+                    Width: =996
+                    X: =
+                    Y: =
+                    ZIndex: =2
+
+                Radio1 As radio:
+                    Default: =currentAnswer
+                    FocusedBorderThickness: =0
+                    FontWeight: =FontWeight.Semibold
+                    Height: =146
+                    Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
+                    Layout: =Layout.Horizontal
+                    RadioBorderColor: =baseColor
+                    RadioSelectionFill: =baseColor
+                    Visible: =If(controlType="radioButton",true,false)
+                    Width: =591
+                    X: =
+                    Y: =questionLabel_1.Height
+                    ZIndex: =5
+
+                textGroup As group:
+                    Height: =5
+                    Width: =5
+                    X: =50.33333333333326
+                    Y: =-45
+                    ZIndex: =5
+
+                    textAnswer As text:
+                        BorderColor: =baseColor
+                        BorderStyle: =BorderStyle.None
+                        Default: =currentAnswer
+                        DisabledBorderColor: =baseColor
+                        Fill: =RGBA(237, 237, 237, 1)
+                        Height: =100
+                        HoverFill: =RGBA(237, 237, 237, 1)
+                        Mode: =TextMode.MultiLine
+                        PaddingBottom: =0
+                        PaddingLeft: |
+                            =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =If(controlType="text",true,false)
+                        Width: =questionContainer.Width-50
+                        Y: =questionLabel_1.Height
+                        ZIndex: =3
+
+                    underFrame As rectangle:
+                        BorderColor: =baseColor
+                        Fill: =baseColor
+                        Height: =2
+                        Visible: =If(controlType="text",true,false)
+                        Width: =questionContainer.Width-50
+                        Y: =questionLabel_1.Height+textAnswer.Height
+                        ZIndex: =4
+
                 supplementContainer As groupContainer.manualLayoutContainer:
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
+                    Height: =questionContainer.Height/2
                     Width: =questionContainer.Width
-                    ZIndex: =11
+                    Y: =checkBoxContainer.Y+checkBoxContainer.Height+50
+                    ZIndex: =6
 
                     buttonLabel_2 As label:
                         BorderColor: =RGBA(163, 216, 246, 10)
@@ -527,8 +425,8 @@ scrennQuestion As screen:
                         Height: =55
                         Overflow: =Overflow.Scroll
                         Text: =
-                        Width: =936
-                        X: =40
+                        Width: =questionContainer.Width-50
+                        Y: =supplementContainer.Height-buttonLabel_2.Height
                         ZIndex: =1
 
                     exampleLabel_2 As label:
@@ -536,12 +434,11 @@ scrennQuestion As screen:
                         DisabledColor: =RGBA(163, 216, 246, 5)
                         Fill: =RGBA(163, 216, 246, 5)
                         FontWeight: =Normal
-                        Height: =100
+                        Height: =supplementContainer.Height-buttonLabel_2.Height
                         Overflow: =Overflow.Scroll
                         Text: ="例：" & Char(10)&Char(10) & example
                         Visible: =exampleGroupVisible
-                        Width: =buttonLabel_2.Width
-                        X: =40
+                        Width: =questionContainer.Width-50
                         ZIndex: =2
 
                     exampleButton_2 As button:
@@ -564,7 +461,8 @@ scrennQuestion As screen:
                         Text: ="◀ 解説"
                         Visible: =exampleGroupVisible
                         Width: =100
-                        X: =40
+                        X: =supplementContainer.Width-200
+                        Y: =supplementContainer.Height-buttonLabel_2.Height
                         ZIndex: =3
 
                     commentaryLabel_2 As label:
@@ -572,12 +470,11 @@ scrennQuestion As screen:
                         DisabledColor: =RGBA(163, 216, 246, 5)
                         Fill: =RGBA(163, 216, 246, 5)
                         FontWeight: =Normal
-                        Height: =100
+                        Height: =supplementContainer.Height-buttonLabel_2.Height
                         Overflow: =Overflow.Scroll
                         Text: ="解説：" & Char(10)&Char(10) & commentary
                         Visible: =commentaryGroupVisible
-                        Width: =936
-                        X: =40
+                        Width: =questionContainer.Width-50
                         ZIndex: =4
 
                     commentaryButton_2 As button:
@@ -601,7 +498,8 @@ scrennQuestion As screen:
                         Text: ="例 ▶"
                         Visible: =commentaryGroupVisible
                         Width: =exampleButton_2.Width
-                        X: =40
+                        X: =supplementContainer.Width-200
+                        Y: =supplementContainer.Height-buttonLabel_2.Height
                         ZIndex: =5
 
         FooterContainer As groupContainer.manualLayoutContainer:
