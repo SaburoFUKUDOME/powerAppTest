@@ -149,7 +149,7 @@ cmNavigation As CanvasComponent:
                 );
             )
         );)
-    Width: =200
+    Width: =205
     X: =0
     Y: =0
     ZIndex: =5

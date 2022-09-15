@@ -384,7 +384,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "179",
+            "InvariantScript": "195",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -463,7 +463,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637987974116436535",
+    "LastModifiedTimestamp": "637988256506307619",
     "Name": "cmHomeButtonView",
     "Rules": [
       {
@@ -486,9 +486,9 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "200",
+        "InvariantScript": "205",
         "Property": "Width",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -522,7 +522,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637987974116436535",
+  "LastModifiedTimestamp": "637988256506307619",
   "Name": "b90ffcc701d54f8dbd1cc640fb7333c6",
   "OverridableProperties": {},
   "TemplateOriginalName": "5783a19aea264226891a7d4fc0f5ce18",

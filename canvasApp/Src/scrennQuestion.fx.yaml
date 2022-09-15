@@ -426,7 +426,7 @@ scrennQuestion As screen:
                         Overflow: =Overflow.Scroll
                         Text: =
                         Width: =questionContainer.Width-50
-                        Y: =supplementContainer.Height-buttonLabel_2.Height
+                        Y: =supplementContainer.Height-buttonLabel_2.Height-1
                         ZIndex: =1
 
                     exampleLabel_2 As label:

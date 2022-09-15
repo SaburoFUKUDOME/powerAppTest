@@ -1,7 +1,7 @@
 cmHomeButtonEdit As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
-    Width: =200
+    Width: =205
     X: =0
     Y: =0
     ZIndex: =4
@@ -26,8 +26,7 @@ cmHomeButtonEdit As CanvasComponent:
         RadiusTopRight: =0
         Size: =16
         Text: ="Home"
-        Width: =179
-        X: =10
+        Width: =200
         Y: =101
         ZIndex: =2
 

@@ -1,7 +1,7 @@
 cmHomeButtonView As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
-    Width: =200
+    Width: =205
     X: =0
     Y: =0
     ZIndex: =3
@@ -25,7 +25,7 @@ cmHomeButtonView As CanvasComponent:
         RadiusTopRight: =0
         Size: =16
         Text: ="Home"
-        Width: =179
+        Width: =195
         X: =10
         Y: =101
         ZIndex: =2
