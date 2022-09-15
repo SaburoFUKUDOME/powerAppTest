@@ -489,7 +489,7 @@ scrennQuestion As screen:
 
                 checkBoxContainer As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
-                    Height: =30
+                    Height: =50
                     LayoutMinHeight: =50
                     LayoutMinWidth: =
                     LayoutMode: =LayoutMode.Auto
@@ -502,7 +502,6 @@ scrennQuestion As screen:
                         FontWeight: =FontWeight.Bold
                         Text: ="後で答える"
                         Visible: =If(Not(questionKey=1),true,false)
-                        Y: =386
                         ZIndex: =1
 
                     noAnswerCheckbox As checkbox:
@@ -512,8 +511,6 @@ scrennQuestion As screen:
                         FontWeight: =FontWeight.Bold
                         Text: ="回答しない"
                         Visible: =If(Not(questionKey=1) && currentRequired="2",true,false)
-                        X: =skipAnswerCheckbox.X+skipAnswerCheckbox.Width
-                        Y: =skipAnswerCheckbox.Y
                         ZIndex: =2
 
                 supplementContainer As groupContainer.manualLayoutContainer:
