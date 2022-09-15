@@ -22,55 +22,6 @@ scrennQuestion As screen:
         
         //Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=1).control_type);
 
-    pagingGroup As group:
-        Height: =5
-        Width: =5
-        X: =-871
-        Y: =-595
-        ZIndex: =20
-
-        currentPageLabel As label:
-            Color: =baseColor
-            DisplayMode: =DisplayMode.View
-            FontWeight: =Bold
-            Height: =35
-            Text: =currentPage
-            Width: =35
-            X: =963
-            Y: =713
-            ZIndex: =17
-
-        totalPageLabel As label:
-            Color: =baseColor
-            DisplayMode: =DisplayMode.View
-            FontWeight: =Bold
-            Text: |
-                =totalPage
-            Width: =48
-            X: =1002
-            Y: =710
-            ZIndex: =18
-
-        Icon5 As icon.VerticalLine:
-            Color: =baseColor
-            DisplayMode: =DisplayMode.View
-            Height: =30
-            Icon: =Icon.VerticalLine
-            Rotation: |
-                =40
-            Width: =42
-            X: =974
-            Y: =715
-            ZIndex: =19
-
-    requiredLabel As label:
-        Color: =baseColor
-        FontWeight: =FontWeight.Semibold
-        Text: ="*入力必須"
-        Visible: =If(Not(currentRequired="2"),true,false)
-        Y: =683
-        ZIndex: =31
-
     MainContainer3 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
         Width: =Max(App.Width, App.MinScreenWidth)
@@ -503,7 +454,7 @@ scrennQuestion As screen:
                         ZIndex: =5
 
         FooterContainer As groupContainer.manualLayoutContainer:
-            Height: =70
+            Height: =80
             Width: =BodyContainer1_1.Width
             Y: =MainContainer.Height-70
             ZIndex: =5
@@ -665,4 +616,55 @@ scrennQuestion As screen:
                     );)
                 X: =323
                 ZIndex: =1
+
+            requiredLabel As label:
+                Color: =baseColor
+                FontWeight: =FontWeight.Semibold
+                Text: ="*入力必須"
+                Visible: =If(Not(currentRequired="2"),true,false)
+                X: =40
+                Y: =
+                ZIndex: =2
+
+            pagingContainer As groupContainer.horizontalAutoLayoutContainer:
+                Height: =70
+                LayoutMode: =LayoutMode.Auto
+                Width: =123
+                X: =FooterContainer.Width-pagingContainer.Width
+                ZIndex: =3
+
+                currentPageLabel As label:
+                    Color: =baseColor
+                    DisplayMode: =DisplayMode.View
+                    FontWeight: =Bold
+                    Height: =30
+                    Text: =currentPage
+                    Width: =30
+                    X: =963
+                    Y: =713
+                    ZIndex: =1
+
+                Icon5_1 As icon.VerticalLine:
+                    Color: =baseColor
+                    DisplayMode: =DisplayMode.View
+                    Height: =30
+                    Icon: =Icon.VerticalLine
+                    Rotation: |
+                        =40
+                    Width: =30
+                    X: =974
+                    Y: =715
+                    ZIndex: =2
+
+                totalPageLabel As label:
+                    Color: =baseColor
+                    DisplayMode: =DisplayMode.View
+                    FontWeight: =Bold
+                    Height: =30
+                    Text: |
+                        =totalPage
+                    Width: =30
+                    X: =1002
+                    Y: =710
+                    ZIndex: =3
 
