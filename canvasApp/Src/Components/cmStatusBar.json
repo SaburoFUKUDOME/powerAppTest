@@ -366,7 +366,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If()",
+                "InvariantScript": "\r\nIf(currentCategory = ThisItem.Title,Yellow,baseColor)",
                 "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
@@ -475,7 +475,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "statusGallery",
-        "Parent": "statusBar",
+        "Parent": "cmStatusBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 79,
         "Rules": [
@@ -657,31 +657,13 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637988047782266373",
-    "Name": "statusBar",
+    "LastModifiedTimestamp": "637988054387928445",
+    "Name": "cmStatusBar",
     "Rules": [
       {
         "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "300",
-        "Property": "Width",
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
         "RuleProviderType": "System"
       },
       {
@@ -692,8 +674,26 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
+        "InvariantScript": "300",
+        "Property": "Width",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       }
     ]
@@ -702,7 +702,7 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "statusBar",
+    "Name": "cmStatusBar",
     "TemplateGuid": "8fef180aebaa45dc9a14f69838b127c5"
   },
   "ComponentType": "CanvasComponent",
@@ -716,7 +716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988047782266373",
+  "LastModifiedTimestamp": "637988054387928445",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"

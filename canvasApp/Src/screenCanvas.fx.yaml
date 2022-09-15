@@ -166,6 +166,7 @@ screenCanvas As screen:
                 currentQuestion,
                 qRecord.question_content
             );
+            Set(currentCategory,qRecord.category);
             Set(
                 controlType,
                 qRecord.control_type
@@ -217,7 +218,7 @@ screenCanvas As screen:
         Y: =300
         ZIndex: =36
 
-    statusBar_1 As statusBar:
+    statusBar_1 As cmStatusBar:
         X: =443
         Y: =87
         ZIndex: =37

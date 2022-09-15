@@ -1,4 +1,4 @@
-questionButtonComponent As CanvasComponent:
+cmQuestionButton As CanvasComponent:
     getStatus(answerContent As String, nowSkipFlag As Boolean, nowNoAnswerFlag As Boolean):
         answerContent:
             Default: ="テキスト"
@@ -49,6 +49,8 @@ questionButtonComponent As CanvasComponent:
                     currentRequired,
                     qRecord.required
                 );
+                Set(currentCategory,qRecord.category);
+                
                 If(buttonKey="next",
                 //次へボタンの場合
                 Set(
@@ -137,10 +139,6 @@ questionButtonComponent As CanvasComponent:
                         questionID = questionKey
                     )
                 ),
-                categoryItem: LookUp(
-                    questionList,
-                    ID = questionKey
-                ).category,
                 status:If(Checkbox1.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",Checkbox3.Value),10,0)
             },
             If(
@@ -151,7 +149,7 @@ questionButtonComponent As CanvasComponent:
                     {
                         themeID: themeId,
                         questionID: questionKey,
-                        category: categoryItem,
+                        category: currentCategory,
                         answer: answerContent,
                         skip_flag: Checkbox1.Value,
                         no_answer_flag:Checkbox3.Value,
@@ -194,8 +192,8 @@ questionButtonComponent As CanvasComponent:
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |
-                =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,"back");
+                =cmQuestionButton.updateAnswer();
+                cmQuestionButton.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,"back");
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -218,8 +216,8 @@ questionButtonComponent As CanvasComponent:
             HoverBorderColor: =ColorFade(baseColor, 20%)
             HoverFill: =ColorFade(baseColor,-20%)
             OnSelect: |-
-                =questionButtonComponent.updateAnswer();
-                questionButtonComponent.setQuestionValue(LookUp(questionList, ID=questionKey).next_question_id,"next");
+                =cmQuestionButton.updateAnswer();
+                cmQuestionButton.setQuestionValue(LookUp(questionList, ID=questionKey).next_question_id,"next");
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -245,7 +243,7 @@ questionButtonComponent As CanvasComponent:
             OnSelect: |
                 =
                 //　更新処理する
-                questionButtonComponent.updateAnswer();
+                cmQuestionButton.updateAnswer();
                 Navigate(
                     screenCanvas,
                     ScreenTransition.Fade

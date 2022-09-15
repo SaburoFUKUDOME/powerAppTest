@@ -39,6 +39,7 @@ cmNavigation As CanvasComponent:
                     currentQuestion,
                     qRecord.question_content
                 );
+                Set(currentCategory,qRecord.category);
                 Set(
                     controlType,
                     qRecord.control_type

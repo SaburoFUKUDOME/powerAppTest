@@ -1,4 +1,4 @@
-statusBar As CanvasComponent:
+cmStatusBar As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =50
     Width: =300
@@ -14,7 +14,9 @@ statusBar As CanvasComponent:
         ZIndex: =2
 
         statusBarLabel As label:
-            BorderColor: =If()
+            BorderColor: |-
+                =
+                If(currentCategory = ThisItem.Title,Yellow,baseColor)
             BorderThickness: =2
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
