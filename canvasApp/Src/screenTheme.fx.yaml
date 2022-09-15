@@ -1,168 +1,194 @@
 screenTheme As screen:
     OnVisible: =
 
-    "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        BorderColor: =RGBA(100, 149, 237, 1)
-        Fill: =White
-        Height: =237
-        Items: =If(!admin,Filter(themeList,author=loginUserAddres),themeList)
-        Layout: =Layout.Vertical
-        OnSelect: =Navigate(screenCanvas)
-        TemplatePadding: =
-        TemplateSize: =120
-        Width: =1231
-        X: =65
-        Y: =186
-        ZIndex: =1
+    MainContainer As groupContainer.manualLayoutContainer:
+        Height: =Max(App.Height, App.MinScreenHeight)
+        Width: =Max(App.Width, App.MinScreenWidth)
+        ZIndex: =14
 
-        frameLabel As label:
-            BorderColor: =baseColor
-            BorderThickness: =2
-            DisabledBorderColor: =baseColor
-            Fill: =RGBA(242, 242, 242, 1)
-            FocusedBorderThickness: =2
-            Height: =98
-            HoverBorderColor: =baseColor
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =baseColor
-            Text: =
-            Width: =galleryTheme.Width-30
-            Y: =4
-            ZIndex: =1
-
-        NextArrow1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(100, 149, 237, 1)
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="項目の詳細の表示"
-            Width: =60
-            X: =1123
-            Y: =23
-            ZIndex: =2
-
-        themeTitleLabel As label:
-            FontWeight: =Semibold
-            Height: =55
-            OnSelect: =Select(Parent)
-            Size: =14
-            Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
-            Tooltip: =ThisItem.Title
-            Width: =Len(themeTitleLabel.Text)*20.5
-            X: =5
-            Y: =4
+        cmHeader_1 As cmHeader:
             ZIndex: =3
 
-        gearIcon As icon.Settings:
-            BorderColor: =baseColor
-            Color: =baseColor
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            Height: =25
-            Icon: =Icon.Settings
-            OnSelect: =Select(Parent)
-            Width: =42
-            X: =themeTitleLabel.Width
-            Y: =17
+        VIsibleOnlyThemeContainer As groupContainer.manualLayoutContainer:
+            Height: =(MainContainer.Height-cmHeader_1.Height)/2
+            Width: =MainContainer.Width
+            Y: =cmHeader_1.Height+ThemeContainer.Height
             ZIndex: =4
 
-        lastModifiedLabel As label:
-            Height: =38
-            OnSelect: =Select(Parent)
-            Size: =10
-            Text: ="最終更新日：" & ThisItem.Modified
-            Width: =Len(lastModifiedLabel.Text)*12
-            X: =10
-            Y: =59
-            ZIndex: =5
-
-        statusThemeGallery As gallery.galleryHorizontal:
-            Height: =60
-            Items: ='仮説構築支援ツール - ナビゲーション'
-            TemplateSize: =25
-            Width: =500
-            X: =651
-            Y: =23
-            ZIndex: =6
-
-            statusBarLabel2 As label:
-                BorderColor: =baseColor
-                BorderThickness: =2
-                Fill: |-
-                    =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
-                    answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=Value(themeIdLabel.Text)))},
-                    If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
-                    CountIf(answerTable,(status=2)||(status=10))>0,
-                    RGBA(200,220,255,1),White))
-                Height: =25
-                OnSelect: =Select(Parent)
-                Text: =
-                Width: =25
-                Y: =10
+            lineContainer2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =66
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =MainContainer.Width
+                X: =50
                 ZIndex: =1
 
-        themeIdLabel As label:
-            Height: =26
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.ID
-            Width: =22
-            X: =1179
-            Y: =71
-            ZIndex: =7
+                Label2_1 As label:
+                    Color: =baseColor
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    Size: =18
+                    Text: ="閲覧のみテーマ"
+                    Width: =194
+                    X: =50
+                    Y: =461
+                    ZIndex: =1
 
-    Label2 As label:
-        Color: =baseColor
-        DisabledColor: =baseColor
-        FontWeight: =FontWeight.Bold
-        Height: =44
-        Size: =18
-        Text: ="担当テーマ"
-        Width: =194
-        X: =50
-        Y: =108
-        ZIndex: =2
+                Rectangle3_1 As rectangle:
+                    BorderColor: =baseColor
+                    Fill: =baseColor
+                    Height: =4
+                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    X: =50
+                    Y: =505
+                    ZIndex: =2
 
-    cmHeader_1 As cmHeader:
-        ZIndex: =6
+        ThemeContainer As groupContainer.manualLayoutContainer:
+            Height: =(MainContainer.Height-cmHeader_1.Height)/2
+            Width: =MainContainer.Width
+            Y: =cmHeader_1.Height
+            ZIndex: =5
 
-    Rectangle3 As rectangle:
-        BorderColor: =baseColor
-        Fill: =baseColor
-        Height: =4
-        Width: =Max(App.Width-100, App.MinScreenWidth-100)
-        X: =50
-        Y: =152
-        ZIndex: =8
+            lineContainer1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =60
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =1316
+                X: =50
+                ZIndex: =1
 
-    Rectangle3_1 As rectangle:
-        BorderColor: =baseColor
-        Fill: =baseColor
-        Height: =4
-        Width: =Max(App.Width-100, App.MinScreenWidth-100)
-        X: =50
-        Y: =505
-        ZIndex: =9
+                Label2_2 As label:
+                    Color: =baseColor
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    Size: =18
+                    Text: ="担当テーマ"
+                    Width: =194
+                    X: =50
+                    Y: =461
+                    ZIndex: =1
 
-    Label2_1 As label:
-        Color: =baseColor
-        FontWeight: =FontWeight.Bold
-        Height: =44
-        Size: =18
-        Text: ="閲覧のみテーマ"
-        Width: =194
-        X: =50
-        Y: =461
-        ZIndex: =10
+                Rectangle3_2 As rectangle:
+                    BorderColor: =baseColor
+                    Fill: =baseColor
+                    Height: =4
+                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    X: =50
+                    Y: =505
+                    ZIndex: =2
 
-    Label12 As label:
-        Text: ="テキスト"
-        X: =40
-        Y: =40
-        ZIndex: =11
+            "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                BorderColor: =RGBA(100, 149, 237, 1)
+                Fill: =White
+                Height: =262
+                Items: =If(!admin,Filter(themeList,author=loginUserAddres),themeList)
+                Layout: =Layout.Vertical
+                OnSelect: =Navigate(screenCanvas)
+                TemplatePadding: =
+                TemplateSize: =120
+                Width: =1231
+                X: =69
+                Y: =60
+                ZIndex: =2
+
+                frameLabel As label:
+                    BorderColor: =baseColor
+                    BorderThickness: =2
+                    DisabledBorderColor: =baseColor
+                    Fill: =RGBA(242, 242, 242, 1)
+                    FocusedBorderThickness: =2
+                    Height: =98
+                    HoverBorderColor: =baseColor
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =baseColor
+                    Text: =
+                    Width: =galleryTheme.Width-30
+                    Y: =4
+                    ZIndex: =1
+
+                NextArrow1 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    Color: =RGBA(100, 149, 237, 1)
+                    Height: =60
+                    Icon: =Icon.ChevronRight
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    TabIndex: =0
+                    Tooltip: ="項目の詳細の表示"
+                    Width: =60
+                    X: =galleryTheme.Width -100
+                    Y: =23
+                    ZIndex: =2
+
+                themeTitleLabel As label:
+                    FontWeight: =Semibold
+                    Height: =55
+                    OnSelect: =Select(Parent)
+                    Size: =14
+                    Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
+                    Tooltip: =ThisItem.Title
+                    Width: =Len(themeTitleLabel.Text)*20.5
+                    X: =5
+                    Y: =4
+                    ZIndex: =3
+
+                gearIcon As icon.Settings:
+                    BorderColor: =baseColor
+                    Color: =baseColor
+                    DisabledBorderColor: =baseColor
+                    DisabledColor: =baseColor
+                    Height: =25
+                    Icon: =Icon.Settings
+                    OnSelect: =Select(Parent)
+                    Width: =42
+                    X: =themeTitleLabel.Width
+                    Y: =17
+                    ZIndex: =4
+
+                lastModifiedLabel As label:
+                    Height: =38
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: ="最終更新日：" & ThisItem.Modified
+                    Width: =Len(lastModifiedLabel.Text)*12
+                    X: =10
+                    Y: =59
+                    ZIndex: =5
+
+                statusThemeGallery As gallery.galleryHorizontal:
+                    Height: =60
+                    Items: ='仮説構築支援ツール - ナビゲーション'
+                    TemplateSize: =25
+                    Width: =500
+                    X: =651
+                    Y: =23
+                    ZIndex: =6
+
+                    statusBarLabel2 As label:
+                        BorderColor: =baseColor
+                        BorderThickness: =2
+                        Fill: |-
+                            =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
+                            answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=Value(themeIdLabel.Text)))},
+                            If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
+                            CountIf(answerTable,(status=2)||(status=10))>0,
+                            RGBA(200,220,255,1),White))
+                        Height: =25
+                        OnSelect: =Select(Parent)
+                        Text: =
+                        Width: =25
+                        Y: =10
+                        ZIndex: =1
+
+                themeIdLabel As label:
+                    Height: =26
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.ID
+                    Width: =22
+                    X: =1179
+                    Y: =71
+                    ZIndex: =7
 

@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.statusThemeGallery.TabIndex"
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.statusThemeGallery.TabIndex",
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryTheme.statusThemeGallery"
+                "type": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.statusThemeGallery.AccessibleLabel"
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.statusThemeGallery.AccessibleLabel",
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryTheme.statusThemeGallery"
+                "type": "screenTheme.MainContainer.ThemeContainer.galleryTheme.statusThemeGallery"
               }
             }
           ],
@@ -194,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.AccessibleLabel"
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.AccessibleLabel",
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryTheme"
+                "type": "screenTheme.MainContainer.ThemeContainer.galleryTheme"
               }
             }
           ],
@@ -224,19 +224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.TabIndex"
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "screenTheme.galleryTheme.TabIndex",
+                  "fullyQualifiedName": "screenTheme.MainContainer.ThemeContainer.galleryTheme.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "screenTheme",
-                "type": "screenTheme.galleryTheme"
+                "type": "screenTheme.MainContainer.ThemeContainer.galleryTheme"
               }
             }
           ],
