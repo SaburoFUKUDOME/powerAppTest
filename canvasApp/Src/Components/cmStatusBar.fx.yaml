@@ -14,7 +14,7 @@ cmStatusBar As CanvasComponent:
         ZIndex: =2
 
         statusBarLabel As label:
-            BorderColor: =If(currentCategory = ThisItem.Title,Yellow,baseColor)
+            BorderColor: =If(currentCategory = ThisItem.Title,RGBA(255,215,0,1),baseColor)
             BorderThickness: =2
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),

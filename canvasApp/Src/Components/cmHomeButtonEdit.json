@@ -199,7 +199,7 @@
         "Name": "homeButton_1",
         "Parent": "cmHomeButtonEdit",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 70,
+        "PublishOrderIndex": 71,
         "Rules": [
           {
             "Category": "Data",
@@ -419,7 +419,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Navigate(screenCanvas,ScreenTransition.Fade)",
+            "InvariantScript": "Set(currentCategory,\"\");\r\nNavigate(screenCanvas,ScreenTransition.Fade)",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -456,7 +456,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637987974116434127",
+    "LastModifiedTimestamp": "637988070719678423",
     "Name": "cmHomeButtonEdit",
     "Rules": [
       {
@@ -515,7 +515,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637987974116434127",
+  "LastModifiedTimestamp": "637988070719678423",
   "Name": "112c12e16d4c4b8580bec211c2e97d8d",
   "OverridableProperties": {},
   "TemplateOriginalName": "e0d20a84fd614665a1156419497e90d8",

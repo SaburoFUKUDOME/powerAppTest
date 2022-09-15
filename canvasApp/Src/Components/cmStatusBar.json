@@ -26,7 +26,7 @@
             "Name": "galleryTemplate3_1",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 80,
+            "PublishOrderIndex": 81,
             "Rules": [
               {
                 "Category": "Design",
@@ -158,7 +158,7 @@
             "Name": "statusBarLabel",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 81,
+            "PublishOrderIndex": 82,
             "Rules": [
               {
                 "Category": "Data",
@@ -366,7 +366,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(currentCategory = ThisItem.Title,Yellow,baseColor)",
+                "InvariantScript": "If(currentCategory = ThisItem.Title,RGBA(255,215,0,1),baseColor)",
                 "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
@@ -477,7 +477,7 @@
         "Name": "statusGallery",
         "Parent": "cmStatusBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 79,
+        "PublishOrderIndex": 80,
         "Rules": [
           {
             "Category": "Data",
@@ -657,7 +657,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637988068690771313",
+    "LastModifiedTimestamp": "637988069517913887",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -716,7 +716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988068690771313",
+  "LastModifiedTimestamp": "637988069517913887",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"
