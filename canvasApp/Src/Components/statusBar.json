@@ -240,7 +240,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "5",
+                "InvariantScript": "8",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -264,7 +264,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "25",
+                "InvariantScript": "19",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -366,7 +366,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "baseColor",
+                "InvariantScript": "If()",
                 "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
@@ -657,7 +657,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637988011701683882",
+    "LastModifiedTimestamp": "637988047782266373",
     "Name": "statusBar",
     "Rules": [
       {
@@ -716,7 +716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988011701683882",
+  "LastModifiedTimestamp": "637988047782266373",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"

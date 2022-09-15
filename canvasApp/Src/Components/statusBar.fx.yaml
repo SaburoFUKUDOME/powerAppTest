@@ -14,7 +14,7 @@ statusBar As CanvasComponent:
         ZIndex: =2
 
         statusBarLabel As label:
-            BorderColor: =baseColor
+            BorderColor: =If()
             BorderThickness: =2
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
@@ -22,10 +22,10 @@ statusBar As CanvasComponent:
                 If(CountIf(answerTable,status=10)=categoryQuestionCount,baseColor,
                 CountIf(answerTable,(status=2)||(status=10))>0,
                 RGBA(200,220,255,1),White))
-            Height: =25
+            Height: =19
             OnSelect: =Select(Parent)
             Text: =
             Width: =25
-            Y: =5
+            Y: =8
             ZIndex: =1
 
