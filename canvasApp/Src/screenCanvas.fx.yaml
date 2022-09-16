@@ -1,8 +1,9 @@
 screenCanvas As screen:
-    OnVisible: |-
-        =Set(themeId,galleryTheme.Selected.ID);
-        Set(navigationKey,0);
+    OnVisible: |
+        =Set(navigationKey,0);
+        Set(currentCategory,"");
         Set(answerList,'仮説構築支援ツール - 回答');
+        Set(themeId,galleryTheme.Selected.ID);
 
     MainContainer2 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -30,7 +31,7 @@ screenCanvas As screen:
 
             "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 Height: =536
-                Items: =Sort(Filter(answerList,And(themeID=galleryTheme.Selected.ID)),questionID)
+                Items: =Sort(Filter(answerList,And(themeID=themeId)),questionID)
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
                 TemplateSize: =156

@@ -25,7 +25,7 @@ cmHomeButtonView As CanvasComponent:
         RadiusTopRight: =0
         Size: =16
         Text: ="Home"
-        Width: =195
+        Width: =200
         Y: =101
         ZIndex: =2
 

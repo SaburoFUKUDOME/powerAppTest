@@ -10,4 +10,5 @@ App As appinfo:
         Set(loginUserAddres,User().Email);
         // 管理者リストに存在するユーザーはadminにtrueをセット
         If(IsBlank(LookUp(adminList,admin_address = loginUserAddres)),Set(admin,false),Set(admin,true));
+    StartScreen: =screenTheme
 
