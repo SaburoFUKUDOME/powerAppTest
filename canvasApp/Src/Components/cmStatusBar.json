@@ -174,7 +174,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),\r\nanswerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},\r\nCountIf(answerTable,status=2))",
+                "InvariantScript": "",
                 "Property": "Text",
                 "RuleProviderType": "Unknown"
               },
@@ -264,7 +264,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "32",
+                "InvariantScript": "25",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -657,7 +657,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637988915509237951",
+    "LastModifiedTimestamp": "637988921398766168",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -716,7 +716,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637988915509237951",
+  "LastModifiedTimestamp": "637988921398766168",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"

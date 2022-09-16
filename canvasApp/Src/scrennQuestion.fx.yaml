@@ -184,17 +184,18 @@ scrennQuestion As screen:
                     Color: =baseColor
                     DisabledColor: =baseColor
                     DisplayMode: =DisplayMode.View
-                    Height: =40
+                    Height: =35
                     HoverColor: =baseColor
                     Icon: =Icon.Information
                     PressedColor: =baseColor
-                    Width: =41
+                    Width: =35
                     X: =60
                     Y: =139
                     ZIndex: =1
 
                 questionTitleLabel_1 As label:
                     FontWeight: =Semibold
+                    Height: =45
                     LineHeight: =1
                     Overflow: =Overflow.Scroll
                     Size: =16
@@ -206,8 +207,8 @@ scrennQuestion As screen:
 
             questionContainer As groupContainer.manualLayoutContainer:
                 Height: =BodyContainer1_1.Height-TitleContainer.Height
-                Width: =BodyContainer1_1.Width-60
-                X: =TitleContainer.X+5
+                Width: =BodyContainer1_1.Width-65
+                X: =TitleContainer.X+10
                 Y: =TitleContainer.Height
                 ZIndex: =4
 
@@ -506,7 +507,7 @@ scrennQuestion As screen:
                 FontWeight: =FontWeight.Semibold
                 Text: ="*入力必須"
                 Visible: =If(Not(currentRequired="2"),true,false)
-                X: =40
+                X: =50
                 Y: =
                 ZIndex: =2
 
@@ -515,6 +516,7 @@ scrennQuestion As screen:
                 LayoutMode: =LayoutMode.Auto
                 Width: =123
                 X: =FooterContainer.Width-pagingContainer.Width
+                Y: =10
                 ZIndex: =3
 
                 currentPageLabel As label:
