@@ -27,7 +27,7 @@ screenTheme As screen:
                     Color: =baseColor
                     FontWeight: =FontWeight.Bold
                     Height: =44
-                    Size: =18
+                    Size: =16
                     Text: ="閲覧のみテーマ"
                     Width: =194
                     X: =50
@@ -187,6 +187,7 @@ screenTheme As screen:
                     Height: =26
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.ID
+                    Visible: =false
                     Width: =22
                     X: =1179
                     Y: =71
