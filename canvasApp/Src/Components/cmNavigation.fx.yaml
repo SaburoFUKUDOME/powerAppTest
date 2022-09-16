@@ -109,18 +109,6 @@ cmNavigation As CanvasComponent:
                         themeID = themeId,
                         questionID = questionKey
                     )
-                ),
-                status: If(
-                    skipAnswerCheckbox.Value,
-                    2,
-                    !IsBlank(answerContent),
-                    10,
-                    And(
-                        currentRequired = "2",
-                        noAnswerCheckbox.Value
-                    ),
-                    10,
-                    0
                 )
             },
             If(
@@ -135,7 +123,18 @@ cmNavigation As CanvasComponent:
                         answer: answerContent,
                         skip_flag: skipAnswerCheckbox.Value,
                         no_answer_flag: noAnswerCheckbox.Value,
-                        status: status
+                        status: If(
+                            skipAnswerCheckbox.Value,
+                            2,
+                            !IsBlank(answerContent),
+                            10,
+                            And(
+                                currentRequired = "2",
+                                noAnswerCheckbox.Value
+                            ),
+                            10,
+                            0
+                        )
                     }
                 );
                 ,
@@ -154,11 +153,23 @@ cmNavigation As CanvasComponent:
                             answer: answerContent,
                             skip_flag: skipAnswerCheckbox.Value,
                             no_answer_flag: noAnswerCheckbox.Value,
-                            status: status
+                            status: If(
+                                skipAnswerCheckbox.Value,
+                                2,
+                                !IsBlank(answerContent),
+                                10,
+                                And(
+                                    currentRequired = "2",
+                                    noAnswerCheckbox.Value
+                                ),
+                                10,
+                                0
+                            )
                         }
                     );
                 )
             );
+            
         )
     Width: =205
     X: =0
