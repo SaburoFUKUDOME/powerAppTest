@@ -88,10 +88,9 @@ cmNavigation As CanvasComponent:
                 );
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =350
-    updateAnswer: |
-        =
-        If(
+    Height: =500
+    updateAnswer: |-
+        =If(
             controlType = "text",
             Set(
                 answerContent,
@@ -102,14 +101,6 @@ cmNavigation As CanvasComponent:
                 Radio1.Selected.Result
             )
         );
-        If(
-            Not(
-                And(
-                    answerContent = currentAnswer,
-                    skipFlag = skipAnswerCheckbox.Value,
-                    noAnswerFlag = noAnswerCheckbox.Value
-                )
-            ),
         With(
             {
                 getAnswerRecord: LookUp(
@@ -119,7 +110,18 @@ cmNavigation As CanvasComponent:
                         questionID = questionKey
                     )
                 ),
-                status:If(skipAnswerCheckbox.Value,2,!IsBlank(answerContent),10,And(currentRequired="2",noAnswerCheckbox.Value),10,0)
+                status: If(
+                    skipAnswerCheckbox.Value,
+                    2,
+                    !IsBlank(answerContent),
+                    10,
+                    And(
+                        currentRequired = "2",
+                        noAnswerCheckbox.Value
+                    ),
+                    10,
+                    0
+                )
             },
             If(
                 IsBlank(getAnswerRecord),
@@ -132,30 +134,39 @@ cmNavigation As CanvasComponent:
                         category: currentCategory,
                         answer: answerContent,
                         skip_flag: skipAnswerCheckbox.Value,
-                        no_answer_flag:noAnswerCheckbox.Value,
-                        status:status
+                        no_answer_flag: noAnswerCheckbox.Value,
+                        status: status
                     }
                 );
                 ,
-                Patch(
-                    '仮説構築支援ツール - 回答',
-                    getAnswerRecord,
-                    {
-                        answer: answerContent,
-                        skip_flag: skipAnswerCheckbox.Value,
-                        no_answer_flag: noAnswerCheckbox.Value,
-                        status:status
-                    }
-                );
-            )
-        );)
+                If(
+                    Not(
+                        And(
+                            answerContent = currentAnswer,
+                            skipFlag = skipAnswerCheckbox.Value,
+                            noAnswerFlag = noAnswerCheckbox.Value
+                        )
+                    ),
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        getAnswerRecord,
+                        {
+                            answer: answerContent,
+                            skip_flag: skipAnswerCheckbox.Value,
+                            no_answer_flag: noAnswerCheckbox.Value,
+                            status: status
+                        }
+                    );
+                )
+            );
+        )
     Width: =205
     X: =0
     Y: =0
     ZIndex: =5
 
     "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =360
+        Height: =380
         Items: =navigationList
         Layout: =Layout.Vertical
         TemplateFill: |
@@ -163,7 +174,7 @@ cmNavigation As CanvasComponent:
         TemplatePadding: =0
         TemplateSize: =40
         Width: =200
-        Y: =10
+        Y: =92
         ZIndex: =3
 
         navigateButton As button:
@@ -174,11 +185,11 @@ cmNavigation As CanvasComponent:
             Height: =navigateGallery.TemplateHeight
             HoverFill: =baseColor
             OnSelect: |
-                =cmNavigation.updateAnswer();
-                Navigate(
+                =//問画面の場合のみ、答えを更新する
+                If(pageKey ="question",cmNavigation.updateAnswer(),Navigate(
                     scrennQuestion,
                     ScreenTransition.Fade
-                );
+                );); 
                 cmNavigation.setQuestionValue(ThisItem.question_id);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -188,4 +199,51 @@ cmNavigation As CanvasComponent:
             Text: =ThisItem.Title
             Width: =navigateGallery.TemplateWidth
             ZIndex: =6
+
+    homeButton As button:
+        BorderColor: =baseColor
+        BorderThickness: =3
+        Color: =baseColor
+        DisabledBorderColor: =baseColor
+        DisabledColor: =baseColor
+        DisabledFill: =baseColor
+        Fill: =RGBA(0, 0, 0, 0)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =baseColor
+        OnSelect: |-
+            =cmNavigation.updateAnswer();
+            Navigate(screenCanvas,ScreenTransition.Fade)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =16
+        Text: ="Home"
+        Visible: =If(pageKey="question",true,false)
+        Width: =200
+        ZIndex: =4
+
+    homeButtonView As button:
+        BorderColor: =baseColor
+        BorderThickness: =3
+        Color: =White
+        DisabledBorderColor: =baseColor
+        DisabledColor: =baseColor
+        DisabledFill: =baseColor
+        DisplayMode: =DisplayMode.View
+        Fill: =baseColor
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =baseColor
+        OnSelect: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =16
+        Text: ="Home"
+        Visible: =If(pageKey="canvas",true,false)
+        Width: =200
+        ZIndex: =5
 

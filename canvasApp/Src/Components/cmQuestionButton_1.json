@@ -1,0 +1,140 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmQuestionButton_1",
+    "TemplateGuid": "a9e4eb82f6e5465aa3eab8581f997139"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 2,
+      "DisplayName": "setQuestionValue",
+      "Hidden": false,
+      "Name": "setQuestionValue",
+      "PropertyDataTypeKey": "Boolean",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "141",
+        "PropertyScopeRulesKey": [
+          {
+            "DisplayName": "setQuestionValue_qId",
+            "Name": "setQuestionValue_qId",
+            "PropertyDataTypeKey": "Number",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "問ＩＤ",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "qId"
+            },
+            "Tooltip": "問ＩＤ",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "setQuestionValue_buttonKey",
+            "Name": "setQuestionValue_buttonKey",
+            "PropertyDataTypeKey": "String",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "何のボタンか",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "buttonKey"
+            },
+            "Tooltip": "何のボタンか",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+          }
+        ]
+      },
+      "Tooltip": "質問画面に表示する値をセットする",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 2,
+      "DisplayName": "updateAnswer",
+      "Hidden": false,
+      "Name": "updateAnswer",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "回答を更新する",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 2,
+      "DisplayName": "getStatus",
+      "Hidden": false,
+      "Name": "getStatus",
+      "PropertyDataTypeKey": "Number",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "141",
+        "PropertyScopeRulesKey": [
+          {
+            "DisplayName": "getStatus_answerContent",
+            "Name": "getStatus_answerContent",
+            "PropertyDataTypeKey": "String",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "answerContent",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "answerContent"
+            },
+            "Tooltip": "answerContent",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "getStatus_nowSkipFlag",
+            "Name": "getStatus_nowSkipFlag",
+            "PropertyDataTypeKey": "Boolean",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "nowSkipFlag",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "nowSkipFlag"
+            },
+            "Tooltip": "nowSkipFlag",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "getStatus_nowNoAnswerFlag",
+            "Name": "getStatus_nowNoAnswerFlag",
+            "PropertyDataTypeKey": "Boolean",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "nowNoAnswerFlag",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "nowNoAnswerFlag"
+            },
+            "Tooltip": "nowNoAnswerFlag",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+          }
+        ]
+      },
+      "Tooltip": "回答の状態を取得する関数",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637989010090952644",
+  "Name": "a9e4eb82f6e5465aa3eab8581f997139",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "3286880be74343259c8a1f5cd07e5c0c",
+  "Version": "637979414131203342"
+}

@@ -4,6 +4,7 @@ screenCanvas As screen:
         Set(currentCategory,"");
         Set(answerList,'仮説構築支援ツール - 回答');
         Set(themeId,galleryTheme.Selected.ID);
+        Set(pageKey,"canvas");
 
     MainContainer2 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -201,13 +202,8 @@ screenCanvas As screen:
                         false
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                Y: =177
+                Y: =100
                 ZIndex: =1
-
-            cmHomeButtonView_1 As cmHomeButtonView:
-                Height: =168
-                Y: =8
-                ZIndex: =2
 
         HeaderContainer As groupContainer.manualLayoutContainer:
             Height: =66

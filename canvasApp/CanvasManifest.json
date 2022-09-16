@@ -110,6 +110,7 @@
   "ScreenOrder": [
     "screenTheme",
     "screenCanvas",
-    "scrennQuestion"
+    "scrennQuestion",
+    "Screen1"
   ]
 }

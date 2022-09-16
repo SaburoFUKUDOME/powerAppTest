@@ -1,26 +1,5 @@
 scrennQuestion As screen:
-    OnVisible: |
-        =/*
-        Set(currentNo, 1);
-        Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=3).question_content);
-        //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', Title=questionKey).設問);
-        Set(currentTitle, LookUp('仮想構築支援ツール - 問い', ID=3).Title);
-        //Set(currentQuestion, LookUp('仮想構築支援ツール - 問い', ID=questionKey).Title);
-        Set(currentAnswer, galleryTheme.Selected.id1_answer);
-        Set(currentPage, LookUp('仮想構築支援ツール - 問い', ID=3).current_question_number);
-        Set(totalPage, LookUp('仮想構築支援ツール - 問い', ID=3).question_totalnumber);
-        Set(commentary, LookUp('仮想構築支援ツール - 問い', ID=3).commentary);
-        Set(example, LookUp('仮想構築支援ツール - 問い', ID=3).example);
-        Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=3).control_type);
-        
-        Set(nextVisible, true);
-        Set(backVisible, false);
-        Set(commentaryGroupVisible, true);
-        Set(exampleGroupVisible, false);
-        
-        */
-        
-        //Set(controlType, LookUp('仮想構築支援ツール - 問い', ID=1).control_type);
+    OnVisible: =Set(pageKey,"question");
 
     MainContainer3 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -160,12 +139,8 @@ scrennQuestion As screen:
                         false
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                Y: =177
+                Y: =100
                 ZIndex: =1
-
-            cmHomeButtonEdit_2 As cmHomeButtonEdit:
-                Height: =168
-                ZIndex: =3
 
         BodyContainer1_1 As groupContainer.manualLayoutContainer:
             Height: =MainContainer.Height-cmHeader_1.Height-HeaderContainer.Height-FooterContainer.Height
@@ -399,7 +374,7 @@ scrennQuestion As screen:
                         ZIndex: =5
 
         FooterContainer As groupContainer.manualLayoutContainer:
-            Height: =80
+            Height: =70
             Width: =BodyContainer1_1.Width
             Y: =MainContainer.Height-70
             ZIndex: =5
