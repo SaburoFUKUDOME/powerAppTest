@@ -334,8 +334,10 @@ scrennQuestion As screen:
 
                     exampleButton_2 As button:
                         BorderColor: =White
+                        BorderThickness: =0
                         Color: =baseColor
                         Fill: =White
+                        FocusedBorderThickness: =0
                         Height: =35
                         HoverBorderColor: =ColorFade(White, -5%)
                         HoverFill: =baseColor
@@ -370,9 +372,11 @@ scrennQuestion As screen:
 
                     commentaryButton_2 As button:
                         BorderColor: =White
+                        BorderThickness: =0
                         Color: =baseColor
                         DisabledFill: =baseColor
                         Fill: =White
+                        FocusedBorderThickness: =0
                         Height: =exampleButton_2.Height
                         HoverBorderColor: =ColorFade(White, -5%)
                         HoverFill: =baseColor
