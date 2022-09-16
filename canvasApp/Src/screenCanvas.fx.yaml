@@ -202,7 +202,6 @@ screenCanvas As screen:
                         false
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                Y: =100
                 ZIndex: =1
 
         HeaderContainer As groupContainer.manualLayoutContainer:
@@ -216,7 +215,7 @@ screenCanvas As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =HeaderContainer.Width
-                X: =50
+                X: =30
                 ZIndex: =1
 
                 Label2_3 As label:
@@ -233,7 +232,7 @@ screenCanvas As screen:
                     BorderColor: =baseColor
                     Fill: =baseColor
                     Height: =4
-                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
                     Y: =505
                     ZIndex: =2

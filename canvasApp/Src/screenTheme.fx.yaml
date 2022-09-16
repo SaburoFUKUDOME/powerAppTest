@@ -10,7 +10,7 @@ screenTheme As screen:
             ZIndex: =3
 
         VIsibleOnlyThemeContainer As groupContainer.manualLayoutContainer:
-            Height: =(MainContainer.Height-cmHeader_1.Height)/2
+            Height: =(MainContainer.Height-cmHeader_1.Height)/3
             Width: =MainContainer.Width
             Y: =cmHeader_1.Height+ThemeContainer.Height
             ZIndex: =4
@@ -20,7 +20,7 @@ screenTheme As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =MainContainer.Width
-                X: =50
+                X: =30
                 ZIndex: =1
 
                 Label2_1 As label:
@@ -38,13 +38,13 @@ screenTheme As screen:
                     BorderColor: =baseColor
                     Fill: =baseColor
                     Height: =4
-                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
                     Y: =505
                     ZIndex: =2
 
         ThemeContainer As groupContainer.manualLayoutContainer:
-            Height: =(MainContainer.Height-cmHeader_1.Height)/2
+            Height: =(MainContainer.Height-cmHeader_1.Height-VIsibleOnlyThemeContainer.Height)
             Width: =MainContainer.Width
             Y: =cmHeader_1.Height
             ZIndex: =5
@@ -54,7 +54,7 @@ screenTheme As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =1316
-                X: =50
+                X: =30
                 ZIndex: =1
 
                 Label2_2 As label:
@@ -72,7 +72,7 @@ screenTheme As screen:
                     BorderColor: =baseColor
                     Fill: =baseColor
                     Height: =4
-                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
                     Y: =505
                     ZIndex: =2
@@ -80,7 +80,7 @@ screenTheme As screen:
             "galleryTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 BorderColor: =RGBA(100, 149, 237, 1)
                 Fill: =White
-                Height: =262
+                Height: =ThemeContainer.Height-100
                 Items: =If(!admin,Filter(themeList,author=loginUserAddres),themeList)
                 Layout: =Layout.Vertical
                 OnSelect: =Navigate(screenCanvas)

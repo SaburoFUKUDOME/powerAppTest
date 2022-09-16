@@ -19,7 +19,7 @@ scrennQuestion As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =HeaderContainer_1.Width
-                X: =50
+                X: =30
                 ZIndex: =1
 
                 Label2_4 As label:
@@ -36,7 +36,7 @@ scrennQuestion As screen:
                     BorderColor: =baseColor
                     Fill: =baseColor
                     Height: =4
-                    Width: =Max(App.Width-100, App.MinScreenWidth-100)
+                    Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
                     Y: =505
                     ZIndex: =2
@@ -139,7 +139,6 @@ scrennQuestion As screen:
                         false
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                Y: =100
                 ZIndex: =1
 
         BodyContainer1_1 As groupContainer.manualLayoutContainer:
