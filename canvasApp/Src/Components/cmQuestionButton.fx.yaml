@@ -132,40 +132,40 @@ cmQuestionButton As CanvasComponent:
                 )
             },
             If(
-                IsBlank(getAnswerRecord),
-                Patch(
-                    '仮説構築支援ツール - 回答',
-                    Defaults('仮説構築支援ツール - 回答'),
-                    {
-                        themeID: themeId,
-                        questionID: questionKey,
-                        category: currentCategory,
-                        answer: answerContent,
-                        skip_flag: skipAnswerCheckbox.Value,
-                        no_answer_flag: noAnswerCheckbox.Value,
-                        status: If(
-                            skipAnswerCheckbox.Value,
-                            2,
-                            !IsBlank(answerContent),
-                            10,
-                            And(
-                                currentRequired = "2",
-                                noAnswerCheckbox.Value
-                            ),
-                            10,
-                            0
-                        )
-                    }
-                );
-                ,
+                Not(
+                    And(
+                        answerContent = currentAnswer,
+                        skipFlag = skipAnswerCheckbox.Value,
+                        noAnswerFlag = noAnswerCheckbox.Value
+                    )
+                ),
                 If(
-                    Not(
-                        And(
-                            answerContent = currentAnswer,
-                            skipFlag = skipAnswerCheckbox.Value,
-                            noAnswerFlag = noAnswerCheckbox.Value
-                        )
-                    ),
+                    IsBlank(getAnswerRecord),
+                    Patch(
+                        '仮説構築支援ツール - 回答',
+                        Defaults('仮説構築支援ツール - 回答'),
+                        {
+                            themeID: themeId,
+                            questionID: questionKey,
+                            category: currentCategory,
+                            answer: answerContent,
+                            skip_flag: skipAnswerCheckbox.Value,
+                            no_answer_flag: noAnswerCheckbox.Value,
+                            status: If(
+                                skipAnswerCheckbox.Value,
+                                2,
+                                !IsBlank(answerContent),
+                                10,
+                                And(
+                                    currentRequired = "2",
+                                    noAnswerCheckbox.Value
+                                ),
+                                10,
+                                0
+                            )
+                        }
+                    );
+                    ,
                     Patch(
                         '仮説構築支援ツール - 回答',
                         getAnswerRecord,
@@ -189,7 +189,6 @@ cmQuestionButton As CanvasComponent:
                     );
                 )
             );
-            
         )
     Width: =640
     X: =0

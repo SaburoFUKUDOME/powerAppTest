@@ -18,7 +18,7 @@
       "Name": "setQuestionValue",
       "PropertyDataTypeKey": "Boolean",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "7",
+        "PropertyScopeRuleNamespaceKey": "24",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "setQuestionValue_qId",
@@ -71,7 +71,7 @@
       "Name": "getStatus",
       "PropertyDataTypeKey": "Number",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "7",
+        "PropertyScopeRuleNamespaceKey": "24",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "getStatus_answerContent",
@@ -132,7 +132,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637989029481176114",
+  "LastModifiedTimestamp": "637992319893568884",
   "Name": "a9e4eb82f6e5465aa3eab8581f997139",
   "OverridableProperties": {},
   "TemplateOriginalName": "3286880be74343259c8a1f5cd07e5c0c",

@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |
         =Set(baseColor,RGBA(100, 149, 237, 1));
         // 変更しないデータベースをセットする
         Set(questionList,'仮説構築支援ツール - 問い');
@@ -10,5 +10,9 @@ App As appinfo:
         Set(loginUserAddres,User().Email);
         // 管理者リストに存在するユーザーはadminにtrueをセット
         If(IsBlank(LookUp(adminList,admin_address = loginUserAddres)),Set(admin,false),Set(admin,true));
+        // ステータスの値をセット
+        Set(completeStatus,10);
+        Set(incompleteStatus,2);
+        Set(noneStatus,0);
     StartScreen: =screenTheme
 
