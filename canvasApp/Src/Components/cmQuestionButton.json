@@ -194,7 +194,7 @@
         "Name": "backButton",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 80,
+        "PublishOrderIndex": 88,
         "Rules": [
           {
             "Category": "Data",
@@ -637,7 +637,7 @@
         "Name": "nextButton",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 82,
+        "PublishOrderIndex": 90,
         "Rules": [
           {
             "Category": "Data",
@@ -1087,7 +1087,7 @@
         "Name": "confirmButton",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 83,
+        "PublishOrderIndex": 91,
         "Rules": [
           {
             "Category": "Data",
@@ -1368,7 +1368,7 @@
         "Name": "qButtonGroup",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 81,
+        "PublishOrderIndex": 89,
         "Rules": [
           {
             "Category": "Design",
@@ -1455,7 +1455,7 @@
       "getStatus_nowNoAnswerFlag",
       "getStatus"
     ],
-    "LastModifiedTimestamp": "637992337549551940",
+    "LastModifiedTimestamp": "637992353356993154",
     "Name": "cmQuestionButton",
     "Rules": [
       {
@@ -1675,7 +1675,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637992337549551940",
+  "LastModifiedTimestamp": "637992353356993154",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",

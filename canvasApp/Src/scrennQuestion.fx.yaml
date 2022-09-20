@@ -528,3 +528,15 @@ scrennQuestion As screen:
                     Y: =710
                     ZIndex: =3
 
+    Label3 As label:
+        Text: =Radio1.Selected.Result
+        X: =329
+        Y: =404
+        ZIndex: =41
+
+    Label3_2 As label:
+        Text: =textAnswer.Text
+        X: =502
+        Y: =404
+        ZIndex: =43
+
