@@ -133,15 +133,15 @@ cmNavigation As CanvasComponent:
                             no_answer_flag: noAnswerCheckbox.Value,
                             status: If(
                                 skipAnswerCheckbox.Value,
-                                2,
+                                incompleteStatus,
                                 !IsBlank(answerContent),
-                                10,
+                                completeStatus,
                                 And(
                                     currentRequired = "2",
                                     noAnswerCheckbox.Value
                                 ),
-                                10,
-                                0
+                                completeStatus,
+                                noneStatus
                             )
                         }
                     );
@@ -155,15 +155,15 @@ cmNavigation As CanvasComponent:
                             no_answer_flag: noAnswerCheckbox.Value,
                             status: If(
                                 skipAnswerCheckbox.Value,
-                                2,
+                                incompleteStatus,
                                 !IsBlank(answerContent),
-                                10,
+                                completeStatus,
                                 And(
                                     currentRequired = "2",
                                     noAnswerCheckbox.Value
                                 ),
-                                10,
-                                0
+                                completeStatus,
+                                noneStatus
                             )
                         }
                     );

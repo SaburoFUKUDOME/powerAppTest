@@ -99,8 +99,8 @@ screenCanvas As screen:
                     Align: =Center
                     BorderColor: =baseColor
                     BorderThickness: =2
-                    Fill: |
-                        =If(ThisItem.status = 10,baseColor,ThisItem.status = 2,RGBA(200, 220, 255, 1),White)
+                    Fill: |-
+                        =If(ThisItem.status = completeStatus,baseColor,ThisItem.status = incompleteStatus,RGBA(200, 220, 255, 1),White)
                         //Set(baseColor,RGBA(100, 149, 237, 1));
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.status
