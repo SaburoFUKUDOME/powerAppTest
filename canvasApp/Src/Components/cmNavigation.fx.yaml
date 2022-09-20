@@ -90,7 +90,7 @@ cmNavigation As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =500
     updateAnswer: |-
-        =If(
+        =If(//aaa
             controlType = "text",
             Set(
                 answerContent,
