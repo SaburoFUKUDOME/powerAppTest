@@ -109,6 +109,15 @@ screenCanvas As screen:
                     Y: =20
                     ZIndex: =12
 
+                Label2 As label:
+                    Height: =41
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Modified
+                    Width: =284
+                    X: =721
+                    Y: =114
+                    ZIndex: =13
+
         NavigateContainer As groupContainer.manualLayoutContainer:
             Height: =BodyContainer1.Height
             Width: =MainContainer2.Width/6
