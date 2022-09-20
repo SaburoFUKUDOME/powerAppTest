@@ -372,6 +372,14 @@ scrennQuestion As screen:
                         Y: =supplementContainer.Height-buttonLabel_2.Height
                         ZIndex: =5
 
+                Label9 As label:
+                    Height: =45
+                    Text: =currentAnswer
+                    Width: =160
+                    X: =45
+                    Y: =206
+                    ZIndex: =7
+
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =70
             Width: =BodyContainer1_1.Width
@@ -529,13 +537,13 @@ scrennQuestion As screen:
                     ZIndex: =3
 
     Label3 As label:
-        Text: =Radio1.Selected.Result
+        Text: ="radio"&Radio1.Selected.Result
         X: =329
         Y: =404
         ZIndex: =41
 
     Label3_2 As label:
-        Text: =textAnswer.Text
+        Text: ="text"&textAnswer.Text
         X: =502
         Y: =404
         ZIndex: =43

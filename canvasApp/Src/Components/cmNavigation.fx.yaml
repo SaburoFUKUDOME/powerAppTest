@@ -114,7 +114,7 @@ cmNavigation As CanvasComponent:
             If(
                 Not(
                     And(
-                        answerContent = currentAnswer,
+                        If(IsBlank(currentAnswer),IsBlank(answerContent)=IsBlank(currentAnswer),answerContent=currentAnswer),
                         skipFlag = skipAnswerCheckbox.Value,
                         noAnswerFlag = noAnswerCheckbox.Value
                     )
