@@ -8,7 +8,7 @@ cmHeader As CanvasComponent:
 
     headerLabel As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
-        Fill: =baseColor
+        Fill: =_cBaseColor
         Height: =60
         Width: =Max(App.Width, App.MinScreenWidth)
         ZIndex: =1

@@ -24,7 +24,7 @@ screenTheme As screen:
                 ZIndex: =1
 
                 Label2_1 As label:
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     FontWeight: =FontWeight.Bold
                     Height: =44
                     Size: =16
@@ -35,8 +35,8 @@ screenTheme As screen:
                     ZIndex: =1
 
                 Rectangle3_1 As rectangle:
-                    BorderColor: =baseColor
-                    Fill: =baseColor
+                    BorderColor: =_cBaseColor
+                    Fill: =_cBaseColor
                     Height: =4
                     Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
@@ -58,7 +58,7 @@ screenTheme As screen:
                 ZIndex: =1
 
                 Label2_2 As label:
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     FontWeight: =FontWeight.Bold
                     Height: =44
                     Size: =16
@@ -69,8 +69,8 @@ screenTheme As screen:
                     ZIndex: =1
 
                 Rectangle3_2 As rectangle:
-                    BorderColor: =baseColor
-                    Fill: =baseColor
+                    BorderColor: =_cBaseColor
+                    Fill: =_cBaseColor
                     Height: =4
                     Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
@@ -92,15 +92,15 @@ screenTheme As screen:
                 ZIndex: =2
 
                 frameLabel As label:
-                    BorderColor: =baseColor
+                    BorderColor: =_cBaseColor
                     BorderThickness: =2
-                    DisabledBorderColor: =baseColor
+                    DisabledBorderColor: =_cBaseColor
                     Fill: =RGBA(242, 242, 242, 1)
                     FocusedBorderThickness: =2
                     Height: =98
-                    HoverBorderColor: =baseColor
+                    HoverBorderColor: =_cBaseColor
                     OnSelect: =Select(Parent)
-                    PressedBorderColor: =baseColor
+                    PressedBorderColor: =_cBaseColor
                     Text: =
                     Width: =galleryTheme.Width-30
                     Y: =4
@@ -136,10 +136,10 @@ screenTheme As screen:
                     ZIndex: =3
 
                 gearIcon As icon.Settings:
-                    BorderColor: =baseColor
-                    Color: =baseColor
-                    DisabledBorderColor: =baseColor
-                    DisabledColor: =baseColor
+                    BorderColor: =_cBaseColor
+                    Color: =_cBaseColor
+                    DisabledBorderColor: =_cBaseColor
+                    DisabledColor: =_cBaseColor
                     Height: =25
                     Icon: =Icon.Settings
                     OnSelect: =Select(Parent)
@@ -168,12 +168,12 @@ screenTheme As screen:
                     ZIndex: =6
 
                     statusBarLabel2 As label:
-                        BorderColor: =baseColor
+                        BorderColor: =_cBaseColor
                         BorderThickness: =2
                         Fill: |-
                             =With({categoryQuestionCount:CountIf(questionList,category=ThisItem.Title),
                             answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=Value(themeIdLabel.Text)))},
-                            If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,baseColor,
+                            If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                             CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                             RGBA(200,220,255,1),RGBA(245,245,245,1)))
                         Height: =25

@@ -33,8 +33,8 @@ scrennQuestion As screen:
                     ZIndex: =1
 
                 Rectangle3_4 As rectangle:
-                    BorderColor: =baseColor
-                    Fill: =baseColor
+                    BorderColor: =_cBaseColor
+                    Fill: =_cBaseColor
                     Height: =4
                     Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
@@ -155,13 +155,13 @@ scrennQuestion As screen:
                 ZIndex: =1
 
                 infoIcon_1 As icon.Information:
-                    Color: =baseColor
-                    DisabledColor: =baseColor
+                    Color: =_cBaseColor
+                    DisabledColor: =_cBaseColor
                     DisplayMode: =DisplayMode.View
                     Height: =35
-                    HoverColor: =baseColor
+                    HoverColor: =_cBaseColor
                     Icon: =Icon.Information
-                    PressedColor: =baseColor
+                    PressedColor: =_cBaseColor
                     Width: =35
                     X: =60
                     Y: =139
@@ -193,7 +193,7 @@ scrennQuestion As screen:
                     ZIndex: =1
 
                     skipAnswerCheckbox As checkbox:
-                        CheckboxBorderColor: =baseColor
+                        CheckboxBorderColor: =_cBaseColor
                         Default: =skipFlag
                         FocusedBorderThickness: =0
                         FontWeight: =FontWeight.Bold
@@ -202,7 +202,7 @@ scrennQuestion As screen:
                         ZIndex: =1
 
                     noAnswerCheckbox As checkbox:
-                        CheckboxBorderColor: =baseColor
+                        CheckboxBorderColor: =_cBaseColor
                         Default: =noAnswerFlag
                         FocusedBorderThickness: =0
                         FontWeight: =FontWeight.Bold
@@ -212,7 +212,7 @@ scrennQuestion As screen:
 
                 questionLabel_1 As label:
                     Align: =Left
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     FontWeight: =Semibold
                     Height: =60
                     Overflow: =Overflow.Scroll
@@ -230,8 +230,8 @@ scrennQuestion As screen:
                     Height: =146
                     Items: =Split(Substitute(LookUp(questionList,ID=questionKey).choice,Char(13),""),Char(10))
                     Layout: =Layout.Horizontal
-                    RadioBorderColor: =baseColor
-                    RadioSelectionFill: =baseColor
+                    RadioBorderColor: =_cBaseColor
+                    RadioSelectionFill: =_cBaseColor
                     Visible: =If(controlType="radioButton",true,false)
                     Width: =591
                     X: =
@@ -246,10 +246,10 @@ scrennQuestion As screen:
                     ZIndex: =5
 
                     textAnswer As text:
-                        BorderColor: =baseColor
+                        BorderColor: =_cBaseColor
                         BorderStyle: =BorderStyle.None
                         Default: =currentAnswer
-                        DisabledBorderColor: =baseColor
+                        DisabledBorderColor: =_cBaseColor
                         Fill: =RGBA(237, 237, 237, 1)
                         Height: =100
                         HoverFill: =RGBA(237, 237, 237, 1)
@@ -269,8 +269,8 @@ scrennQuestion As screen:
                         ZIndex: =3
 
                     underFrame As rectangle:
-                        BorderColor: =baseColor
-                        Fill: =baseColor
+                        BorderColor: =_cBaseColor
+                        Fill: =_cBaseColor
                         Height: =2
                         Visible: =If(controlType="text",true,false)
                         Width: =questionContainer.Width-50
@@ -310,17 +310,17 @@ scrennQuestion As screen:
                     exampleButton_2 As button:
                         BorderColor: =White
                         BorderThickness: =0
-                        Color: =baseColor
+                        Color: =_cBaseColor
                         Fill: =White
                         FocusedBorderThickness: =0
                         Height: =35
                         HoverBorderColor: =ColorFade(White, -5%)
-                        HoverFill: =baseColor
+                        HoverFill: =_cBaseColor
                         OnSelect: |
                             =Set(exampleGroupVisible,false);
                             Set(commentaryGroupVisible,true);
                         PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =baseColor
+                        PressedFill: =_cBaseColor
                         RadiusBottomLeft: =20
                         RadiusBottomRight: =20
                         RadiusTopLeft: =20
@@ -348,18 +348,18 @@ scrennQuestion As screen:
                     commentaryButton_2 As button:
                         BorderColor: =White
                         BorderThickness: =0
-                        Color: =baseColor
-                        DisabledFill: =baseColor
+                        Color: =_cBaseColor
+                        DisabledFill: =_cBaseColor
                         Fill: =White
                         FocusedBorderThickness: =0
                         Height: =exampleButton_2.Height
                         HoverBorderColor: =ColorFade(White, -5%)
-                        HoverFill: =baseColor
+                        HoverFill: =_cBaseColor
                         OnSelect: |
                             =Set(exampleGroupVisible,true);
                             Set(commentaryGroupVisible,false);
                         PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =baseColor
+                        PressedFill: =_cBaseColor
                         RadiusBottomLeft: =20
                         RadiusBottomRight: =20
                         RadiusTopLeft: =20
@@ -477,7 +477,7 @@ scrennQuestion As screen:
                 ZIndex: =1
 
             requiredLabel As label:
-                Color: =baseColor
+                Color: =_cBaseColor
                 FontWeight: =FontWeight.Semibold
                 Text: ="*入力必須"
                 Visible: =If(Not(currentRequired="2"),true,false)
@@ -494,7 +494,7 @@ scrennQuestion As screen:
                 ZIndex: =3
 
                 currentPageLabel As label:
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     DisplayMode: =DisplayMode.View
                     FontWeight: =Bold
                     Height: =30
@@ -505,7 +505,7 @@ scrennQuestion As screen:
                     ZIndex: =1
 
                 Icon5_1 As icon.VerticalLine:
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     DisplayMode: =DisplayMode.View
                     Height: =30
                     Icon: =Icon.VerticalLine
@@ -517,7 +517,7 @@ scrennQuestion As screen:
                     ZIndex: =2
 
                 totalPageLabel As label:
-                    Color: =baseColor
+                    Color: =_cBaseColor
                     DisplayMode: =DisplayMode.View
                     FontWeight: =Bold
                     Height: =30

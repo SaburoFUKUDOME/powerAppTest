@@ -188,12 +188,12 @@ cmNavigation As CanvasComponent:
         ZIndex: =3
 
         navigateButton As button:
-            BorderColor: =baseColor
-            Color: =If(ThisItem.question_id = navigationKey,White,baseColor)
-            DisabledBorderColor: =baseColor
+            BorderColor: =_cBaseColor
+            Color: =If(ThisItem.question_id = navigationKey,White,_cBaseColor)
+            DisabledBorderColor: =_cBaseColor
             Fill: =RGBA(0, 0, 0, 0)
             Height: =navigateGallery.TemplateHeight
-            HoverFill: =baseColor
+            HoverFill: =_cBaseColor
             OnSelect: |
                 =//問画面の場合のみ、答えを更新する
                 If(pageKey ="question",cmNavigation.updateAnswer(),Navigate(
@@ -211,16 +211,16 @@ cmNavigation As CanvasComponent:
             ZIndex: =6
 
     homeButton As button:
-        BorderColor: =baseColor
+        BorderColor: =_cBaseColor
         BorderThickness: =3
-        Color: =baseColor
-        DisabledBorderColor: =baseColor
-        DisabledColor: =baseColor
-        DisabledFill: =baseColor
+        Color: =_cBaseColor
+        DisabledBorderColor: =_cBaseColor
+        DisabledColor: =_cBaseColor
+        DisabledFill: =_cBaseColor
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Bold
         Height: =46
-        HoverFill: =baseColor
+        HoverFill: =_cBaseColor
         OnSelect: |-
             =cmNavigation.updateAnswer();
             Navigate(screenCanvas,ScreenTransition.Fade)
@@ -235,17 +235,17 @@ cmNavigation As CanvasComponent:
         ZIndex: =4
 
     homeButtonView As button:
-        BorderColor: =baseColor
+        BorderColor: =_cBaseColor
         BorderThickness: =3
         Color: =White
-        DisabledBorderColor: =baseColor
-        DisabledColor: =baseColor
-        DisabledFill: =baseColor
+        DisabledBorderColor: =_cBaseColor
+        DisabledColor: =_cBaseColor
+        DisabledFill: =_cBaseColor
         DisplayMode: =DisplayMode.View
-        Fill: =baseColor
+        Fill: =_cBaseColor
         FontWeight: =FontWeight.Bold
         Height: =46
-        HoverFill: =baseColor
+        HoverFill: =_cBaseColor
         OnSelect: =
         RadiusBottomLeft: =0
         RadiusBottomRight: =0

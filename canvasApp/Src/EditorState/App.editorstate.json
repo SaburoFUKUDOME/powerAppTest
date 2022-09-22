@@ -11,7 +11,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Set(baseColor,RGBA(100, 149, 237, 1))",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "OnStart",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

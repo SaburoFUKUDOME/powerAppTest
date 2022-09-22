@@ -864,7 +864,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -891,7 +891,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(244, 244, 244, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "DisabledFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -899,7 +899,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Self.Color",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "PressedFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -907,7 +907,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(RGBA(56, 96, 178, 1), -20%)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "HoverFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -1582,7 +1582,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2070,7 +2070,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2098,7 +2098,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Self.Color",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "PressedFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2106,7 +2106,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(RGBA(56, 96, 178, 1), -20%)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "HoverFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2823,7 +2823,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FooterContainer",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2974,7 +2974,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HeaderContainer_1",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3073,7 +3073,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -3304,7 +3304,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -3312,7 +3312,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(244, 244, 244, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "DisabledColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -3320,7 +3320,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(Self.Color, -20%)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "PressedColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -3328,7 +3328,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(Self.Color, 20%)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "HoverColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -4781,7 +4781,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "NavigateContainer_1",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4888,7 +4888,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "CheckboxBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -5684,7 +5684,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -6334,7 +6334,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "RadioSelectionFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -6343,7 +6343,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "RadioBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -6653,7 +6653,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Fill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -6664,7 +6664,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "BorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -6841,7 +6841,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -7230,7 +7230,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "CheckboxBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -7823,7 +7823,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "BorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -7831,7 +7831,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(166, 166, 166, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "DisabledBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -8449,7 +8449,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -8773,7 +8773,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Fill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -8784,7 +8784,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "BorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

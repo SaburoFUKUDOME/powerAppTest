@@ -203,15 +203,15 @@ cmQuestionButton As CanvasComponent:
         ZIndex: =4
 
         backButton As button:
-            BorderColor: =baseColor
+            BorderColor: =_cBaseColor
             BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
-            Fill: =baseColor
+            DisabledBorderColor: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            DisabledFill: =_cBaseColor
+            Fill: =_cBaseColor
             Height: =35
-            HoverBorderColor: =ColorFade(baseColor, 20%)
-            HoverFill: =ColorFade(baseColor,-20%)
+            HoverBorderColor: =ColorFade(_cBaseColor, 20%)
+            HoverFill: =ColorFade(_cBaseColor,-20%)
             OnSelect: |
                 =cmQuestionButton.updateAnswer();
                 cmQuestionButton.setQuestionValue(LookUp(questionList, ID=questionKey).back_question_id,"back");
@@ -227,15 +227,15 @@ cmQuestionButton As CanvasComponent:
             ZIndex: =1
 
         nextButton As button:
-            BorderColor: =baseColor
+            BorderColor: =_cBaseColor
             BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
-            Fill: =baseColor
+            DisabledBorderColor: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            DisabledFill: =_cBaseColor
+            Fill: =_cBaseColor
             Height: =backButton.Height
-            HoverBorderColor: =ColorFade(baseColor, 20%)
-            HoverFill: =ColorFade(baseColor,-20%)
+            HoverBorderColor: =ColorFade(_cBaseColor, 20%)
+            HoverFill: =ColorFade(_cBaseColor,-20%)
             OnSelect: |-
                 =cmQuestionButton.updateAnswer();
                 cmQuestionButton.setQuestionValue(LookUp(questionList, ID=questionKey).next_question_id,"next");
@@ -252,15 +252,15 @@ cmQuestionButton As CanvasComponent:
             ZIndex: =2
 
         confirmButton As button:
-            BorderColor: =baseColor
+            BorderColor: =_cBaseColor
             BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =baseColor
-            DisabledColor: =baseColor
-            DisabledFill: =baseColor
-            Fill: =baseColor
+            DisabledBorderColor: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            DisabledFill: =_cBaseColor
+            Fill: =_cBaseColor
             Height: =nextButton.Height
-            HoverBorderColor: =ColorFade(baseColor, 20%)
-            HoverFill: =ColorFade(baseColor,-20%)
+            HoverBorderColor: =ColorFade(_cBaseColor, 20%)
+            HoverFill: =ColorFade(_cBaseColor,-20%)
             OnSelect: |
                 =
                 //　更新処理する

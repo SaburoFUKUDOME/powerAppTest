@@ -20,7 +20,7 @@ screenCanvas As screen:
             ZIndex: =2
 
             Icon1 As icon.BackArrow:
-                Color: =baseColor
+                Color: =_cBaseColor
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: =Navigate(screenTheme,Fade)
@@ -97,11 +97,11 @@ screenCanvas As screen:
 
                 statusLabel As label:
                     Align: =Center
-                    BorderColor: =baseColor
+                    BorderColor: =_cBaseColor
                     BorderThickness: =2
                     Fill: |-
-                        =If(ThisItem.status = completeStatus,baseColor,ThisItem.status = incompleteStatus,RGBA(200, 220, 255, 1),White)
-                        //Set(baseColor,RGBA(100, 149, 237, 1));
+                        =If(ThisItem.status = completeStatus,_cBaseColor,ThisItem.status = incompleteStatus,RGBA(200, 220, 255, 1),White)
+                        //Set(_cBaseColor,RGBA(100, 149, 237, 1));
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.status
                     Width: =40
@@ -238,8 +238,8 @@ screenCanvas As screen:
                     ZIndex: =1
 
                 Rectangle3_3 As rectangle:
-                    BorderColor: =baseColor
-                    Fill: =baseColor
+                    BorderColor: =_cBaseColor
+                    Fill: =_cBaseColor
                     Height: =4
                     Width: =Max(App.Width-60, App.MinScreenWidth-60)
                     X: =50
