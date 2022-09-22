@@ -277,3 +277,17 @@ screenCanvas As screen:
                     X: =111
                     ZIndex: =2
 
+                ButtonEntireDisplay_1 As button:
+                    BorderColor: =_cBaseColor
+                    BorderThickness: =0
+                    Fill: =_cBaseColor
+                    HoverFill: =ColorFade(_cBaseColor,-20%)
+                    OnSelect: =Navigate(ScreenEntireDisplay)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Text: ="全体表示"
+                    X: =111
+                    ZIndex: =3
+
