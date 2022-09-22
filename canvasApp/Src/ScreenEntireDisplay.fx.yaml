@@ -1,0 +1,293 @@
+ScreenEntireDisplay As screen:
+    OnVisible: |-
+        =UpdateContext({_lAnswerList:Filter('仮説構築支援ツール - 回答',And(themeID=themeId))});
+
+    ContainerHeader As groupContainer.manualLayoutContainer:
+        Height: =100
+        Width: =Max(App.Width, App.MinScreenWidth)
+        ZIndex: =5
+
+        TriangleVP As triangle:
+            BorderColor: =_cBaseColor
+            DisplayMode: =DisplayMode.View
+            Fill: =_cBaseColor
+            Height: =90
+            Width: =150
+            X: =267
+            Y: =LabelVP.Y
+            ZIndex: =1
+
+        LabelVP As label:
+            Align: =Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =_cBaseColor
+            Height: =90
+            Size: =20
+            Text: |-
+                ="VP : Value Proposition" & Char(10)　&"(提供価値)"
+            Width: =325
+            X: =17
+            Y: =10
+            ZIndex: =2
+
+        LabelCS As label:
+            Align: =Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =_cBaseColor
+            Height: =90
+            Size: =20
+            Text: |-
+                ="CS : Customer Segument" & Char(10)&"(提供価値)"
+            Width: =868
+            X: =490
+            Y: =10
+            ZIndex: =3
+
+        TriangleCS As triangle:
+            BorderColor: =_cBaseColor
+            DisplayMode: =DisplayMode.View
+            Fill: =_cBaseColor
+            Height: =90
+            Width: =150
+            X: =417
+            Y: =LabelCS.Y
+            ZIndex: =4
+
+    ContainerMain As groupContainer.manualLayoutContainer:
+        Height: =Max(App.Height-ContainerHeader.Height, App.MinScreenHeight-ContainerHeader.Height)
+        Width: =Max(App.Width, App.MinScreenWidth)
+        Y: =ContainerHeader.Height
+        ZIndex: =6
+
+        LabelBoxCustomer As label:
+            BorderThickness: =2
+            Height: =651
+            Text: =LookUp(_lAnswerList,And(questionID=3)).answer
+            Width: =175
+            X: =1181
+            Y: =8
+            ZIndex: =1
+
+        LabelTitleCustomer As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="属性・背景"
+            X: =LabelBoxCustomer.X
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =2
+
+        LabelBoxJTBD As label:
+            BorderThickness: =2
+            Height: =LabelBoxCustomer.Height
+            Text: ="製造ラインにおける生産性の向上"
+            Width: =LabelBoxCustomer.Width
+            X: =992
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =3
+
+        LabelTitleJTBD As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="JTBD"
+            X: =LabelBoxJTBD.X
+            Y: =LabelBoxJTBD.Y
+            ZIndex: =4
+
+        LabelBoxMVP As label:
+            BorderThickness: =2
+            Height: =LabelBoxCustomer.Height
+            Text: ="画像認識技術を用い、作業実施映像から各作業にかかった時間を自動計測"
+            Width: =LabelBoxCustomer.Width
+            X: =20
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =5
+
+        LabelTitleMVP As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="MVP"
+            X: =LabelBoxMVP.X
+            Y: =LabelBoxMVP.Y
+            ZIndex: =6
+
+        LabelBoxSogai As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="効率の悪い作業方法や、作業効率の悪い作業者を特定するのが難しい。"
+            Width: =LabelBoxCustomer.Width
+            X: =810
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =7
+
+        LabelBoxGenjou As label:
+            BorderThickness: =2
+            Height: =174
+            Text: =
+            Width: =LabelBoxCustomer.Width
+            X: =620
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =8
+
+        LabelBoxVP As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="作業時間の客観性を高め、効率の悪い作業方法の取りこぼしを低減"
+            Width: =LabelBoxCustomer.Width
+            X: =210
+            Y: =LabelBoxCustomer.Y
+            ZIndex: =9
+
+        Icon2_1 As icon.ChevronLeft:
+            Height: =96
+            Icon: =Icon.ChevronLeft
+            OnSelect: =
+            Width: =44
+            X: =385
+            Y: =56
+            ZIndex: =11
+
+        LabelTitleSogai As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="阻害要因"
+            X: =LabelBoxSogai.X
+            Y: =LabelBoxJTBD.Y
+            ZIndex: =12
+
+        LabelTitleGenjou As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="現状対策"
+            X: =LabelBoxGenjou.X
+            Y: =LabelBoxJTBD.Y
+            ZIndex: =13
+
+        LabelTitleManzoku As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="満足状況"
+            X: =LabelBoxManzoku.X
+            Y: =LabelBoxJTBD.Y
+            ZIndex: =14
+
+        LabelTitleVP As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="VP"
+            X: =LabelBoxVP.X
+            Y: =LabelBoxVP.Y
+            ZIndex: =15
+
+        LabelBoxManzoku As label:
+            BorderThickness: =2
+            Height: =174
+            Text: =
+            Width: =LabelBoxCustomer.Width
+            X: =429
+            Y: =8
+            ZIndex: =16
+
+        Label10 As label:
+            Height: =117
+            Overflow: =Overflow.Scroll
+            Text: ="ライン長の設定した標準時間と現実にGAPがある場合(経験者の勘が外れた場合)、効率の悪い作業方法を抽出し損ねる。"
+            X: =441
+            Y: =52
+            ZIndex: =17
+
+        Label10_1 As label:
+            Height: =117
+            Overflow: =Overflow.Scroll
+            Text: ="作業時間を自動計測するソリューションを導入。ライン長が設定した標準時間と比較し、効率の悪い作業方法を抽出。"
+            X: =632
+            Y: =52
+            ZIndex: =18
+
+        LabelBoxSogai_1 As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="効率の悪い作業方法や、作業効率の悪い作業者を特定するのが難しい。"
+            Width: =LabelBoxCustomer.Width
+            X: =806
+            Y: =208
+            ZIndex: =19
+
+        LabelTitleSogai_1 As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="阻害要因1.2"
+            X: =811
+            Y: =208
+            ZIndex: =20
+
+        LabelBoxSogai_2 As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="効率の悪い作業方法や、作業効率の悪い作業者を特定するのが難しい。"
+            Width: =LabelBoxCustomer.Width
+            X: =620
+            Y: =208
+            ZIndex: =21
+
+        LabelBoxSogai_3 As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="効率の悪い作業方法や、作業効率の悪い作業者を特定するのが難しい。"
+            Width: =LabelBoxCustomer.Width
+            X: =429
+            Y: =208
+            ZIndex: =22
+
+        Icon2_2 As icon.ChevronLeft:
+            Height: =96
+            Icon: =Icon.ChevronLeft
+            OnSelect: =
+            Width: =44
+            X: =391
+            Y: =252
+            ZIndex: =23
+
+        LabelBoxSogai_4 As label:
+            BorderThickness: =2
+            Height: =174
+            Text: ="効率の悪い作業方法や、作業効率の悪い作業者を特定するのが難しい。"
+            Width: =LabelBoxCustomer.Width
+            X: =210
+            Y: =208
+            ZIndex: =24
+
+        LabelTitleVP_1 As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="VP②"
+            X: =215
+            Y: =208
+            ZIndex: =25
+
+        LabelTitleGenjou_1 As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="現状対策1.2"
+            X: =620
+            Y: =208
+            ZIndex: =26
+
+        LabelTitleManzoku_1 As label:
+            FontWeight: =Semibold
+            Height: =44
+            Size: =16
+            Text: ="満足状況1.2"
+            X: =429
+            Y: =208
+            ZIndex: =27
+

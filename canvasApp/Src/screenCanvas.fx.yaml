@@ -268,6 +268,7 @@ screenCanvas As screen:
                     BorderThickness: =0
                     Fill: =_cBaseColor
                     HoverFill: =ColorFade(_cBaseColor,-20%)
+                    OnSelect: =Navigate(ScreenEntireDisplay)
                     RadiusBottomLeft: =20
                     RadiusBottomRight: =20
                     RadiusTopLeft: =20
