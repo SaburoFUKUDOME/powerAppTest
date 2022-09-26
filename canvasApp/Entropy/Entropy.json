@@ -50,7 +50,6 @@
     "exampleLabel_2": 100,
     "FooterContainer": 108,
     "FooterContainer_1": 136,
-    "Form1": 231,
     "frameLabel": 66,
     "functionTest": 3,
     "Gallery1": 124,
@@ -171,7 +170,7 @@
   "DoesTestStepsMetadataExist": false,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/26/2022 05:18:51",
+  "HeaderLastSavedDateTimeUTC": "09/26/2022 05:44:22",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/727c8fe29941409ea4cf566a7fd7299f\"",
@@ -225,7 +224,6 @@
   "OrderXMLTemplate": {
     "button": 6,
     "checkbox": 10,
-    "form": 11,
     "gallery": 7,
     "groupContainer": 0,
     "icon": 3,
@@ -275,7 +273,6 @@
     "exampleLabel_2": 68,
     "FooterContainer": 75,
     "FooterContainer_1": 43,
-    "Form1": 122,
     "frameLabel": 10,
     "functionTest": 16,
     "Gallery1": 31,

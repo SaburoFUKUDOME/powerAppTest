@@ -21,8 +21,8 @@ ScreenCreateTheme As screen:
                 BorderThickness: =0
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
-                OnSelect: |-
-                    =Navigate(ScreenCreateTheme,Fade,{_lButtonLabel:"＋　作成"})
+                OnSelect: |
+                    =//Validate('仮説構築支援ツール - テーマ', T, textAnswerThemeName.Text )
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20
@@ -54,13 +54,6 @@ ScreenCreateTheme As screen:
                     Size: =16
                     Text: ="テーマ名*"
                     ZIndex: =1
-
-                Form1 As form:
-                    DataSource: ='仮説構築支援ツール - テーマ'
-                    Height: =267
-                    LayoutMinHeight: =250
-                    LayoutMinWidth: =400
-                    ZIndex: =4
 
                 GroupThemeName As group:
                     Height: =5
