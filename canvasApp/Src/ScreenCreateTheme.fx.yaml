@@ -1,6 +1,6 @@
 ScreenCreateTheme As screen:
     Fill: =
-    OnVisible: =If(_lThemeKey=0,NewForm(Form3),EditForm(Form3))
+    OnVisible: =
 
     ContainerMain2 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -32,6 +32,19 @@ ScreenCreateTheme As screen:
                 Y: =40
                 ZIndex: =1
 
+            IconBackThemeScreen_1 As icon.BackArrow:
+                Color: =_cBaseColor
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: |-
+                    =ResetForm(Form3);
+                    Back();
+                Tooltip: ="テーマ一覧へ戻る"
+                Width: =40
+                X: =28
+                Y: =208
+                ZIndex: =2
+
         ContainerBody As groupContainer.manualLayoutContainer:
             Height: =(ContainerMain2.Height-cmHeader_3.Height-ContainerFooter2.Height)
             Width: =ContainerMain2.Width
@@ -55,6 +68,83 @@ ScreenCreateTheme As screen:
                     LayoutMinWidth: =400
                     OnSuccess: =Navigate(screenTheme, ScreenTransition.Fade) 
                     ZIndex: =4
+
+                    author_DataCard5 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="field_2"
+                        Default: =ThisItem.author
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'仮説構築支援ツール - テーマ'],DataSourceInfo.DisplayName,"field_2")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "field_2")
+                        Required: =false
+                        Update: =DataCardValue13.Text
+                        Visible: =false
+                        Width: =Parent.Width-100
+                        X: =1
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey13 As label:
+                            AutoHeight: =true
+                            Color: =_cBaseColor
+                            FontWeight: =Semibold
+                            Height: =34
+                            Size: =16
+                            Text: ="テーマ作成者（メールアドレス）"
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue13 As text:
+                            BorderColor: =_cBaseColor
+                            Default: =If(IsBlank(Parent.Default),loginUserAddres,Parent.Default)
+                            DelayOutput: =true
+                            DisabledFill: =White
+                            DisplayMode: =View
+                            Fill: =White
+                            HoverBorderColor: =_cBaseColor
+                            HoverFill: =RGBA(237, 237, 237, 1)
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            PressedFill: =White
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width-100
+                            X: =30
+                            Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage13 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue13.Y + DataCardValue13.Height
+                            ZIndex: =3
+
+                        StarVisible13 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey13.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey13.Y
+                            ZIndex: =4
 
                     Title_DataCard3 As typedDataCard.textualEditCard:
                         BorderColor: =_cBaseColor

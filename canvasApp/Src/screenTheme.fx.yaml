@@ -88,8 +88,8 @@ screenTheme As screen:
                 TemplatePadding: =
                 TemplateSize: =120
                 Width: =1231
-                X: =72
-                Y: =48
+                X: =56
+                Y: =80
                 ZIndex: =2
 
                 frameLabel As label:
@@ -144,8 +144,9 @@ screenTheme As screen:
                     Height: =25
                     Icon: =Icon.Settings
                     OnSelect: |-
-                        =Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID})
-                    Tooltip: ="テーマ情報を編集します"
+                        =EditForm(Form3);
+                        Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID})
+                    Tooltip: ="テーマを編集する"
                     Width: =42
                     X: =themeTitleLabel.Width
                     Y: =17
@@ -215,7 +216,7 @@ screenTheme As screen:
                 RadiusTopLeft: =20
                 RadiusTopRight: =20
                 Text: ="＋　新規作成"
-                Tooltip: ="テーマを新規作成します"
+                Tooltip: ="テーマを新規作成する"
                 Width: =300
                 X: =533
                 Y: =15
