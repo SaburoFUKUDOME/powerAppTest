@@ -5,8 +5,6 @@ App As appinfo:
         // 変更しないデータベースをセットする
         Set(questionList,'仮説構築支援ツール - 問い');
         Set(navigationList,'仮説構築支援ツール - ナビゲーション');
-        //Set(themeList,'仮説構築支援ツール - テーマ');
-        //Set(_cThemeList,'仮説構築支援ツール - テーマ');
         Set(adminList,'仮説構築支援ツール - 管理者リスト');
         Set(loginUserAddres,User().Email);
         // 管理者リストに存在するユーザーはadminにtrueをセット

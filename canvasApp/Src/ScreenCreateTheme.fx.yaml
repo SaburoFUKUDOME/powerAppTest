@@ -21,7 +21,7 @@ ScreenCreateTheme As screen:
                 BorderThickness: =0
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
-                OnSelect: =SubmitForm(Form3)
+                OnSelect: =SubmitForm(FormThemeCreate)
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20
@@ -37,7 +37,7 @@ ScreenCreateTheme As screen:
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: |-
-                    =ResetForm(Form3);
+                    =ResetForm(FormThemeCreate);
                     Back();
                 Tooltip: ="テーマ一覧へ戻る"
                 Width: =40
@@ -60,7 +60,7 @@ ScreenCreateTheme As screen:
                 Y: =40
                 ZIndex: =1
 
-                Form3 As form:
+                FormThemeCreate As form:
                     DataSource: ='仮説構築支援ツール - テーマ'
                     DefaultMode: =FormMode.New
                     Item: =LookUp('仮説構築支援ツール - テーマ',ID=_lThemeKey)
@@ -80,7 +80,7 @@ ScreenCreateTheme As screen:
                         MaxLength: =DataSourceInfo([@'仮説構築支援ツール - テーマ'], DataSourceInfo.MaxLength, "field_2")
                         Required: =false
                         Update: =DataCardValue13.Text
-                        Visible: =false
+                        Visible: =true
                         Width: =Parent.Width-100
                         X: =1
                         Y: =0

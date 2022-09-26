@@ -1,5 +1,5 @@
 screenTheme As screen:
-    OnVisible: =
+    OnVisible: =Set(_cThemeList,'仮説構築支援ツール - テーマ');
 
     MainContainer As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -82,7 +82,7 @@ screenTheme As screen:
                 BorderColor: =RGBA(100, 149, 237, 1)
                 Fill: =White
                 Height: =ThemeContainer.Height-100
-                Items: =If(!admin,Filter('仮説構築支援ツール - テーマ',author=loginUserAddres),'仮説構築支援ツール - テーマ')
+                Items: =If(!admin,Filter(_cThemeList,author=loginUserAddres),_cThemeList)
                 Layout: =Layout.Vertical
                 OnSelect: =Navigate(screenCanvas)
                 TemplatePadding: =
@@ -144,7 +144,7 @@ screenTheme As screen:
                     Height: =25
                     Icon: =Icon.Settings
                     OnSelect: |-
-                        =EditForm(Form3);
+                        =EditForm(FormThemeCreate);
                         Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID})
                     Tooltip: ="テーマを編集する"
                     Width: =42
@@ -209,7 +209,7 @@ screenTheme As screen:
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |-
-                    =NewForm(Form3);
+                    =NewForm(FormThemeCreate);
                     Navigate(ScreenCreateTheme,Fade,{_lThemeKey:0})
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
