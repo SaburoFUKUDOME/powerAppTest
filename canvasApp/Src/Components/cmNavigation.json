@@ -206,7 +206,7 @@
         "Name": "homeButton",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 134,
+        "PublishOrderIndex": 126,
         "Rules": [
           {
             "Category": "Data",
@@ -656,7 +656,7 @@
         "Name": "homeButtonView",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 135,
+        "PublishOrderIndex": 127,
         "Rules": [
           {
             "Category": "Data",
@@ -928,7 +928,7 @@
             "Name": "galleryTemplate1_7",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 137,
+            "PublishOrderIndex": 129,
             "Rules": [
               {
                 "Category": "Data",
@@ -1124,7 +1124,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 138,
+            "PublishOrderIndex": 130,
             "Rules": [
               {
                 "Category": "Data",
@@ -1443,7 +1443,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 136,
+        "PublishOrderIndex": 128,
         "Rules": [
           {
             "Category": "Data",

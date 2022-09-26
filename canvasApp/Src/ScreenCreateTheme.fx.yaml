@@ -11,8 +11,9 @@ ScreenCreateTheme As screen:
             ZIndex: =3
 
         ContainerFooter2 As groupContainer.manualLayoutContainer:
+            Height: =267
             Width: =ContainerMain2.Width
-            Y: =567
+            Y: =499
             ZIndex: =4
 
         ContainerBody As groupContainer.manualLayoutContainer:
@@ -20,4 +21,12 @@ ScreenCreateTheme As screen:
             Width: =ContainerMain2.Width
             Y: =cmHeader_3.Height
             ZIndex: =5
+
+            ContainerQuestion As groupContainer.verticalAutoLayoutContainer:
+                Height: =342
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =ContainerBody.Width
+                Y: =40
+                ZIndex: =1
 
