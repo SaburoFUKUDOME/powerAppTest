@@ -128,7 +128,6 @@ screenTheme As screen:
                     FontWeight: =Semibold
                     Height: =55
                     OnSelect: =Select(Parent)
-                    Size: =14
                     Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
                     Tooltip: =ThisItem.Title
                     Width: =Len(themeTitleLabel.Text)*23

@@ -19,12 +19,9 @@ ScreenCreateTheme As screen:
             ButtonCreateNewTheme_1 As button:
                 BorderColor: =_cBaseColor
                 BorderThickness: =0
-                DisplayMode: =If(IsBlank(FormThemeCreate.Error),DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
-                OnSelect: |-
-                    =SubmitForm(FormThemeCreate);
-                    Navigate(screenTheme,Fade);
+                OnSelect: =SubmitForm(FormThemeCreate);
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20
@@ -48,22 +45,6 @@ ScreenCreateTheme As screen:
                 Y: =208
                 ZIndex: =2
 
-            Label13 As label:
-                Height: =107
-                Text: =FormThemeCreate.Error
-                Width: =407
-                X: =60
-                Y: =60
-                ZIndex: =3
-
-            Label13_1 As label:
-                Height: =107
-                Text: =Title_DataCard3.Error
-                Width: =407
-                X: =84
-                Y: =141
-                ZIndex: =4
-
         ContainerBody As groupContainer.manualLayoutContainer:
             Height: =(ContainerMain2.Height-cmHeader_3.Height-ContainerFooter2.Height)
             Width: =ContainerMain2.Width
@@ -85,7 +66,7 @@ ScreenCreateTheme As screen:
                     Item: =LookUp(_cThemeList,ID=_lThemeKey)
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
-                    OnSuccess: =
+                    OnSuccess: =Navigate(screenTheme,Fade)
                     ZIndex: =4
 
                     author_DataCard5 As typedDataCard.textualEditCard:
