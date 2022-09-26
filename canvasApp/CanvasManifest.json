@@ -111,6 +111,7 @@
     "screenTheme",
     "screenCanvas",
     "scrennQuestion",
-    "ScreenEntireDisplay"
+    "ScreenEntireDisplay",
+    "ScreenCreateTheme"
   ]
 }

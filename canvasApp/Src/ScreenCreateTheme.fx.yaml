@@ -1,0 +1,23 @@
+ScreenCreateTheme As screen:
+    Fill: =
+    OnVisible: =
+
+    ContainerMain2 As groupContainer.manualLayoutContainer:
+        Height: =Max(App.Height, App.MinScreenHeight)
+        Width: =Max(App.Width, App.MinScreenWidth)
+        ZIndex: =1
+
+        cmHeader_3 As cmHeader:
+            ZIndex: =3
+
+        ContainerFooter2 As groupContainer.manualLayoutContainer:
+            Width: =ContainerMain2.Width
+            Y: =567
+            ZIndex: =4
+
+        ContainerBody As groupContainer.manualLayoutContainer:
+            Height: =(ContainerMain2.Height-cmHeader_3.Height-ContainerFooter2.Height)
+            Width: =ContainerMain2.Width
+            Y: =cmHeader_3.Height
+            ZIndex: =5
+

@@ -180,7 +180,7 @@ cmNavigation As CanvasComponent:
         Items: =navigationList
         Layout: =Layout.Vertical
         TemplateFill: |
-            =If(ThisItem.question_id = navigationKey,baseColor,White)
+            =If(ThisItem.question_id = navigationKey,_cBaseColor,White)
         TemplatePadding: =0
         TemplateSize: =40
         Width: =200

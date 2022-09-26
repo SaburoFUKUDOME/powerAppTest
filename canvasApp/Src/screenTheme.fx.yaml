@@ -10,9 +10,10 @@ screenTheme As screen:
             ZIndex: =3
 
         VIsibleOnlyThemeContainer As groupContainer.manualLayoutContainer:
-            Height: =(MainContainer.Height-cmHeader_1.Height)/3
+            Height: =70
+            Visible: =false
             Width: =MainContainer.Width
-            Y: =cmHeader_1.Height+ThemeContainer.Height
+            Y: =696
             ZIndex: =4
 
             lineContainer2 As groupContainer.verticalAutoLayoutContainer:
@@ -44,9 +45,9 @@ screenTheme As screen:
                     ZIndex: =2
 
         ThemeContainer As groupContainer.manualLayoutContainer:
-            Height: =(MainContainer.Height-cmHeader_1.Height-VIsibleOnlyThemeContainer.Height)
+            Height: =(MainContainer.Height-cmHeader_1.Height-VIsibleOnlyThemeContainer.Height-ContainerHeader2.Height)
             Width: =MainContainer.Width
-            Y: =cmHeader_1.Height
+            Y: =cmHeader_1.Height+ContainerHeader2.Height
             ZIndex: =5
 
             lineContainer1 As groupContainer.verticalAutoLayoutContainer:
@@ -192,4 +193,28 @@ screenTheme As screen:
                     X: =1179
                     Y: =71
                     ZIndex: =7
+
+        ContainerHeader2 As groupContainer.manualLayoutContainer:
+            Height: =70
+            Width: =MainContainer.Width
+            Y: =cmHeader_1.Height
+            ZIndex: =6
+
+            ButtonCreateNewTheme As button:
+                BorderColor: =_cBaseColor
+                BorderThickness: =0
+                Fill: =_cBaseColor
+                HoverFill: =ColorFade(_cBaseColor,-20%)
+                OnSelect: |-
+                    =Navigate(ScreenCreateTheme,Fade,{_lButtonLabel:"＋　作成"})
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: ="＋　新規作成"
+                Tooltip: ="テーマを新規作成します"
+                Width: =300
+                X: =533
+                Y: =15
+                ZIndex: =1
 
