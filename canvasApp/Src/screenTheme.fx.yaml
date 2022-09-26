@@ -208,7 +208,8 @@ screenTheme As screen:
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |-
-                    =NewForm(Form3),,Navigate(ScreenCreateTheme,Fade,{_lThemeKey:0})
+                    =NewForm(Form3);
+                    Navigate(ScreenCreateTheme,Fade,{_lThemeKey:0})
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20
