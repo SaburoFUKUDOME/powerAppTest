@@ -82,14 +82,14 @@ screenTheme As screen:
                 BorderColor: =RGBA(100, 149, 237, 1)
                 Fill: =White
                 Height: =ThemeContainer.Height-100
-                Items: =If(!admin,Filter(themeList,author=loginUserAddres),themeList)
+                Items: =If(!admin,Filter('仮説構築支援ツール - テーマ',author=loginUserAddres),'仮説構築支援ツール - テーマ')
                 Layout: =Layout.Vertical
                 OnSelect: =Navigate(screenCanvas)
                 TemplatePadding: =
                 TemplateSize: =120
                 Width: =1231
-                X: =69
-                Y: =60
+                X: =72
+                Y: =48
                 ZIndex: =2
 
                 frameLabel As label:
@@ -143,7 +143,9 @@ screenTheme As screen:
                     DisabledColor: =_cBaseColor
                     Height: =25
                     Icon: =Icon.Settings
-                    OnSelect: =Select(Parent)
+                    OnSelect: |-
+                        =Navigate(ScreenCreateTheme,Fade,{_lButtonLabel:"更新",_lThisItem:ThisItem})
+                    Tooltip: ="テーマ情報を編集します"
                     Width: =42
                     X: =themeTitleLabel.Width
                     Y: =17
@@ -161,7 +163,7 @@ screenTheme As screen:
 
                 statusThemeGallery As gallery.galleryHorizontal:
                     Height: =60
-                    Items: ='仮説構築支援ツール - ナビゲーション'
+                    Items: =navigationList
                     TemplateSize: =25
                     Width: =500
                     X: =651
@@ -206,7 +208,7 @@ screenTheme As screen:
                 Fill: =_cBaseColor
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |-
-                    =Navigate(ScreenCreateTheme,Fade,{_lButtonLabel:"＋　作成"})
+                    =Navigate(ScreenCreateTheme,Fade,{_lButtonLabel:"＋　作成",_lThisItem:{}})
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20

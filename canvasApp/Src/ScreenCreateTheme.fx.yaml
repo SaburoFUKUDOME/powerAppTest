@@ -55,6 +55,13 @@ ScreenCreateTheme As screen:
                     Text: ="テーマ名*"
                     ZIndex: =1
 
+                Form1 As form:
+                    DataSource: ='仮説構築支援ツール - テーマ'
+                    Height: =267
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =400
+                    ZIndex: =4
+
                 GroupThemeName As group:
                     Height: =5
                     LayoutMinHeight: =5
@@ -67,7 +74,7 @@ ScreenCreateTheme As screen:
                     textAnswerThemeName As text:
                         BorderColor: =_cBaseColor
                         BorderStyle: =BorderStyle.None
-                        Default: =currentAnswer
+                        Default: =If(IsBlank(_lThisItem),"",_lThisItem.Title)
                         DisabledBorderColor: =_cBaseColor
                         Fill: =RGBA(237, 237, 237, 1)
                         Height: =100
