@@ -131,7 +131,7 @@ screenTheme As screen:
                     Size: =14
                     Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
                     Tooltip: =ThisItem.Title
-                    Width: =Len(themeTitleLabel.Text)*20.5
+                    Width: =Len(themeTitleLabel.Text)*23
                     X: =5
                     Y: =4
                     ZIndex: =3
