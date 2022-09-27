@@ -144,7 +144,7 @@ screenTheme As screen:
                     Icon: =Icon.Settings
                     OnSelect: |-
                         =EditForm(FormThemeCreate);
-                        Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID})
+                        Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID,_lButtonLabel:"更新"})
                     Tooltip: ="テーマを編集する"
                     Width: =42
                     X: =themeTitleLabel.Width
@@ -209,7 +209,7 @@ screenTheme As screen:
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |-
                     =NewForm(FormThemeCreate);
-                    Navigate(ScreenCreateTheme,Fade,{_lThemeKey:0})
+                    Navigate(ScreenCreateTheme,Fade,{_lThemeKey:0,_lButtonLabel:"＋ 作成"})
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20

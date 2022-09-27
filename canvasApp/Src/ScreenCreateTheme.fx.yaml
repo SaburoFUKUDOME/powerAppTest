@@ -26,24 +26,11 @@ ScreenCreateTheme As screen:
                 RadiusBottomRight: =20
                 RadiusTopLeft: =20
                 RadiusTopRight: =20
-                Text: ="＋　作成"
-                Width: =300
+                Text: =_lButtonLabel
+                Width: =200
                 X: =533
                 Y: =40
                 ZIndex: =1
-
-            IconBackThemeScreen_1 As icon.BackArrow:
-                Color: =_cBaseColor
-                Height: =40
-                Icon: =Icon.BackArrow
-                OnSelect: |-
-                    =ResetForm(FormThemeCreate);
-                    Back();
-                Tooltip: ="テーマ一覧へ戻る"
-                Width: =40
-                X: =28
-                Y: =208
-                ZIndex: =2
 
         ContainerBody As groupContainer.manualLayoutContainer:
             Height: =(ContainerMain2.Height-cmHeader_3.Height-ContainerFooter2.Height)
@@ -225,4 +212,18 @@ ScreenCreateTheme As screen:
                             X: =112
                             Y: =DataCardKey7.Y
                             ZIndex: =4
+
+            Icon1 As icon.CancelBadge:
+                BorderColor: =_cBaseColor
+                Color: =_cBaseColor
+                Height: =28
+                Icon: =Icon.CancelBadge
+                OnSelect: |-
+                    =ResetForm(FormThemeCreate);
+                    Back();
+                Tooltip: ="保存せずに閉じる"
+                Width: =35
+                X: =1308
+                Y: =12
+                ZIndex: =3
 
