@@ -23,21 +23,15 @@
       "{TriggerWindowEndToken}": "ウィンドウ終了のトークンのトリガー",
       "{TriggerWindowStartToken}": "ウィンドウ開始のトークンのトリガー",
       "{VersionNumber}": "バージョン番号",
-      "add_answerID": "add_answerID",
-      "answer": "answer",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
-      "category": "category",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "Modified": "Modified",
-      "no_answer_flag": "no_answer_flag",
-      "questionID": "questionID",
-      "skip_flag": "skip_flag",
-      "status": "status",
+      "sort_order": "sort_order",
       "themeID": "themeID",
       "Title": "Title"
     },
@@ -45,7 +39,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "仮説構築支援ツール - 回答",
+    "Name": "仮説構築支援ツール - 追加の問い",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

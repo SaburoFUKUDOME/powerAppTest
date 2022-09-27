@@ -1,0 +1,102 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmHome",
+    "TemplateGuid": "0d0d37b6f28941bb91f899ea6b89f80d"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 2,
+      "DisplayName": "moveQuestion",
+      "Hidden": false,
+      "Name": "moveQuestion",
+      "PropertyDataTypeKey": "Boolean",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "184",
+        "PropertyScopeRulesKey": [
+          {
+            "DisplayName": "moveQuestion_qid",
+            "Name": "moveQuestion_qid",
+            "PropertyDataTypeKey": "Number",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "問いID",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "qid"
+            },
+            "Tooltip": "問いID",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "moveQuestion_addAnswerFlag",
+            "Name": "moveQuestion_addAnswerFlag",
+            "PropertyDataTypeKey": "Boolean",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "追加の問いフラグ",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "addAnswerFlag"
+            },
+            "Tooltip": "追加の問いフラグ",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "moveQuestion_addAnswerId",
+            "Name": "moveQuestion_addAnswerId",
+            "PropertyDataTypeKey": "Number",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "追加の問いID",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "addAnswerId"
+            },
+            "Tooltip": "追加の問いID",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+          },
+          {
+            "DisplayName": "moveQuestion_addCategory",
+            "Name": "moveQuestion_addCategory",
+            "PropertyDataTypeKey": "String",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "追加の問いのカテゴリ",
+              "IsRequired": false,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "addCategory"
+            },
+            "Tooltip": "追加の問いのカテゴリ",
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+          }
+        ]
+      },
+      "Tooltip": "問いへ遷移する",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637998665769436130",
+  "Name": "0d0d37b6f28941bb91f899ea6b89f80d",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "887e97a440ac4467b16b235a091a355d",
+  "Version": "637997638390261692"
+}
