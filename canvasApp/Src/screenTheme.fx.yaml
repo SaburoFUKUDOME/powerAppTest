@@ -85,10 +85,9 @@ screenTheme As screen:
                 Items: =If(!admin,Filter(_cThemeList,author=loginUserAddres),_cThemeList)
                 Layout: =Layout.Vertical
                 OnSelect: =Navigate(screenCanvas)
-                TemplatePadding: =
                 TemplateSize: =120
-                Width: =1231
-                X: =56
+                Width: =1302
+                X: =30
                 Y: =80
                 ZIndex: =2
 

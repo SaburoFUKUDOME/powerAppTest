@@ -285,11 +285,12 @@ screenCanvas As screen:
             ZIndex: =7
 
             ContainerFooter As groupContainer.horizontalAutoLayoutContainer:
-                Height: =FooterContainer_1.Height
+                Height: =FooterContainer_1.Height-20
                 LayoutGap: =50
                 LayoutMode: =LayoutMode.Auto
                 Width: =FooterContainer_1.Width
                 X: =50
+                Y: =20
                 ZIndex: =6
 
                 IconBackThemeScreen As icon.BackArrow:
@@ -313,5 +314,6 @@ screenCanvas As screen:
                     RadiusTopRight: =20
                     Text: ="全体表示"
                     X: =111
+                    Y: =
                     ZIndex: =2
 
