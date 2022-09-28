@@ -19,93 +19,131 @@ screenCanvas As screen:
             Y: =cmHeader_1.Height+HeaderContainer.Height
             ZIndex: =2
 
-            "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-                Height: =457
-                Items: =Sort(Filter(answerList,And(themeID=themeId)),questionID)
-                Layout: =Layout.Vertical
-                TemplatePadding: =0
-                TemplateSize: =156
-                Width: =1005
-                X: =84
-                Y: =40
-                ZIndex: =2
-
-                Separator1 As rectangle:
-                    Height: =1
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - 1
-                    ZIndex: =5
-
-                Label1 As label:
-                    Height: =51
-                    OnSelect: =Select(Parent)
-                    Overflow: =Overflow.Scroll
-                    Text: =ThisItem.answer
-                    Width: =961
-                    X: =7
-                    Y: =67
-                    ZIndex: =6
-
-                Label4 As label:
-                    OnSelect: =Select(Parent)
-                    Text: =Concatenate("後で答える：",If(ThisItem.skip_flag,"✔"))
-                    X: =Label1.X
-                    Y: =116
-                    ZIndex: =8
-
-                Label6 As label:
-                    OnSelect: =Select(Parent)
-                    Text: =Concatenate("回答しない：",If(ThisItem.no_answer_flag,"✔"))
-                    Visible: =If(LookUp(questionList,ID=ThisItem.questionID).required="2",true)
-                    X: =180
-                    Y: =116
-                    ZIndex: =9
-
-                Label7 As label:
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    Text: =Concatenate(LookUp(questionList,ID=ThisItem.questionID).category,LookUp(questionList,ID=ThisItem.questionID).current_question_number)
-                    Width: =487
-                    Y: =1
-                    ZIndex: =10
-
-                Label3_1 As label:
-                    Color: =RGBA(255, 255, 255, 1)
-                    Fill: =RGBA(220, 153, 153, 1)
-                    FontWeight: =Semibold
-                    Height: =26
-                    OnSelect: =Select(Parent)
-                    Size: =10
-                    Text: ="必須"
-                    Visible: =If(Not(LookUp(questionList,ID=ThisItem.questionID).required="2"),true)
-                    Width: =46
-                    X: =7
-                    Y: =41
-                    ZIndex: =11
-
-                statusLabel As label:
-                    Align: =Center
-                    BorderColor: =_cBaseColor
-                    BorderThickness: =2
-                    Fill: |-
-                        =If(ThisItem.status = completeStatus,_cBaseColor,ThisItem.status = incompleteStatus,RGBA(200, 220, 255, 1),White)
-                        //Set(_cBaseColor,RGBA(100, 149, 237, 1));
-                    OnSelect: =Select(Parent)
-                    Text: =ThisItem.status
-                    Width: =40
-                    X: =900
-                    Y: =20
-                    ZIndex: =12
-
-                Label2 As label:
-                    Height: =41
-                    OnSelect: =Select(Parent)
-                    Text: =ThisItem.Modified
-                    Width: =284
-                    X: =721
-                    Y: =114
-                    ZIndex: =13
+            cmHome_1 As cmHome:
+                Height: =562
+                moveQuestion: |-
+                    =If(addAnswerFlag,
+                    With(
+                        {
+                            getAnswerRecord: LookUp(
+                                '仮説構築支援ツール - 回答',
+                                And(
+                                    themeID = themeId,
+                                    questionID = questionKey,
+                                    add_answerID = addAnswerId
+                                )
+                            )
+                        },
+                        If(IsBlank(getAnswerRecord),
+                        Patch('仮説構築支援ツール - 回答',
+                        Defaults('仮説構築支援ツール - 回答'),
+                        {
+                            themeID: themeId,
+                            questionID: qid,
+                            category: addCategory,
+                            answer:"",
+                            skip_flag: false,
+                            no_answer_flag:false,
+                            status:0,
+                            add_answerID:addAnswerId
+                        }
+                        )
+                    
+                    ));
+                    Set(addAnswer,true);
+                    Set(addAnswerId,addAnswerId),
+                    Set(addAnswerId,0));
+                    
+                    
+                    //問いへ遷移
+                    Set(
+                        navigationKey,
+                        qid
+                    );
+                    Set(
+                        questionKey,
+                        qid
+                    );
+                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+                    Reset(textAnswer);
+                    Reset(skipAnswerCheckbox);
+                    Reset(noAnswerCheckbox);
+                    Set(
+                        currentAnswer,
+                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                        );
+                    Set(
+                        skipFlag,
+                        getAnswerRecord.skip_flag
+                        );
+                    Set(
+                        noAnswerFlag,
+                        getAnswerRecord.no_answer_flag
+                        );
+                    );
+                    
+                    With({qRecord:LookUp(questionList, ID=questionKey)},
+                    Set(
+                        currentTitle,
+                        qRecord.Title
+                    );
+                    Set(
+                        currentQuestion,
+                        qRecord.question_content
+                    );
+                    Set(currentCategory,qRecord.category);
+                    Set(
+                        controlType,
+                        qRecord.control_type
+                    );
+                    Set(
+                        currentPage,
+                        qRecord.current_question_number
+                    );
+                    Set(
+                        totalPage,
+                        qRecord.question_totalnumber
+                    );
+                    Set(
+                        commentary,
+                        qRecord.commentary
+                    );
+                    Set(
+                        example,
+                        qRecord.example
+                    );
+                    Set(
+                        currentRequired,
+                        qRecord.required
+                    );
+                    Set(
+                        nextVisible,
+                        If(qRecord.next_question_id=0,false,true)
+                    
+                    );
+                    Set(
+                        confirmVisible,
+                        If(qRecord.next_question_id=0,true,false)
+                    );
+                    );
+                    Set(
+                        backVisible,
+                        false
+                    );
+                    Set(
+                        commentaryGroupVisible,
+                        true
+                    );
+                    Set(
+                        exampleGroupVisible,
+                        false
+                    );
+                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
+                    Navigate(
+                        scrennQuestion,
+                        ScreenTransition.Fade
+                    );
+                ZIndex: =3
 
         NavigateContainer As groupContainer.manualLayoutContainer:
             Height: =BodyContainer1.Height

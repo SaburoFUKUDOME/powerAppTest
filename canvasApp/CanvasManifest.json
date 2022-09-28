@@ -110,6 +110,7 @@
   "ScreenOrder": [
     "screenTheme",
     "screenCanvas",
+    "screenCanvas_1",
     "scrennQuestion",
     "ScreenEntireDisplay",
     "ScreenCreateTheme"
