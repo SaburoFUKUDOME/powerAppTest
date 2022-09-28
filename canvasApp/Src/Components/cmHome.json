@@ -6,7 +6,7 @@
     "AllowCustomization": true,
     "Description": "",
     "Name": "cmHome",
-    "TemplateGuid": "0d0d37b6f28941bb91f899ea6b89f80d"
+    "TemplateGuid": "a0d3516f99e8436fbcf0b750d172662e"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -18,7 +18,7 @@
       "Name": "moveQuestion",
       "PropertyDataTypeKey": "Boolean",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "184",
+        "PropertyScopeRuleNamespaceKey": "186",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "moveQuestion_qid",
@@ -94,9 +94,9 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637998665769436130",
-  "Name": "0d0d37b6f28941bb91f899ea6b89f80d",
+  "LastModifiedTimestamp": "637999379861633920",
+  "Name": "a0d3516f99e8436fbcf0b750d172662e",
   "OverridableProperties": {},
-  "TemplateOriginalName": "887e97a440ac4467b16b235a091a355d",
+  "TemplateOriginalName": "0d0d37b6f28941bb91f899ea6b89f80d",
   "Version": "637997638390261692"
 }
