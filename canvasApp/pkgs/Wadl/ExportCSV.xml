@@ -9,10 +9,8 @@
         <property name="ファイルの作成_ファイルコンテンツ" type="string" />
       </object>
       <string name="ResponseActionOutput_filepath_def" />
-      <string name="ResponseActionOutput_lastmodiftime_def" />
       <object name="ResponseActionOutput">
         <property name="filepath" type="string" />
-        <property name="lastmodiftime" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
