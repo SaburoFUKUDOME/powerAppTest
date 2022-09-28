@@ -1,6 +1,6 @@
 ScreenEntireDisplay As screen:
     OnVisible: |-
-        =UpdateContext({_lAnswerList:Filter('仮説構築支援ツール - 回答',And(themeID=themeId)),_lNewLine:Char(10),_lIcon:"■"});
+        =UpdateContext({_lNewLine:Char(10),_lIcon:"■"});
 
     ContainerHeader As groupContainer.manualLayoutContainer:
         Height: =80
@@ -75,15 +75,15 @@ ScreenEntireDisplay As screen:
                         With({_startid:19},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid).answer
+                        LookUp(_gAnswerList,questionID=_startid).answer
                         &_lNewLine&_lNewLine&
                         _lIcon&LookUp(questionList,ID=_startid+1).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid+1).answer
+                        LookUp(_gAnswerList,questionID=_startid+1).answer
                         &_lNewLine&_lNewLine&
                         _lIcon&LookUp(questionList,ID=_startid+2).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid+2).answer
+                        LookUp(_gAnswerList,questionID=_startid+2).answer
                         )
                     Width: =Parent.Width-20
                     X: =10
@@ -146,7 +146,7 @@ ScreenEntireDisplay As screen:
                                 With({_startid:18},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
                                 )
                             Width: =Parent.Width-20
                             X: =10
@@ -195,19 +195,19 @@ ScreenEntireDisplay As screen:
                                 With({_startid:14},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+1).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+2).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+3).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
                                 )
                             Width: =Parent.Width-20
                             X: =10
@@ -249,15 +249,15 @@ ScreenEntireDisplay As screen:
                                 With({_startid:11},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+1).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+2).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
                                 )
                             Width: =Parent.Width-20
                             X: =10
@@ -299,19 +299,19 @@ ScreenEntireDisplay As screen:
                                 With({_startid:7},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+1).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+2).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
                                 &_lNewLine&_lNewLine&
                                 _lIcon&LookUp(questionList,ID=_startid+3).Title
                                 &_lNewLine&
-                                LookUp(_lAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
+                                LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
                                 )
                             Width: =Parent.Width-20
                             X: =10
@@ -354,7 +354,7 @@ ScreenEntireDisplay As screen:
                         With({_startid:6},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid).answer
+                        LookUp(_gAnswerList,questionID=_startid).answer
                         )
                     Width: =Parent.Width-20
                     X: =10
@@ -395,15 +395,15 @@ ScreenEntireDisplay As screen:
                         With({_startid:3},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid).answer
+                        LookUp(_gAnswerList,questionID=_startid).answer
                         &_lNewLine&_lNewLine&
                         _lIcon&LookUp(questionList,ID=_startid+1).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid+1).answer
+                        LookUp(_gAnswerList,questionID=_startid+1).answer
                         &_lNewLine&_lNewLine&
                         _lIcon&LookUp(questionList,ID=_startid+2).Title
                         &_lNewLine&
-                        LookUp(_lAnswerList,questionID=_startid+2).answer
+                        LookUp(_gAnswerList,questionID=_startid+2).answer
                         )
                     Width: =Parent.Width-20
                     X: =10

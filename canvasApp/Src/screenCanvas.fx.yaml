@@ -2,7 +2,7 @@ screenCanvas As screen:
     OnVisible: |
         =Set(navigationKey,0);
         Set(currentCategory,"");
-        Set(answerList,'仮説構築支援ツール - 回答');
+        Set(_gAnswerList,'仮説構築支援ツール - 回答');
         Set(themeId,galleryTheme.Selected.ID);
         Set(pageKey,"canvas");
 
@@ -308,8 +308,10 @@ screenCanvas As screen:
                     Fill: =_cBaseColor
                     FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
                     Height: =30
+                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
                     OnSelect: =Navigate(ScreenEntireDisplay)
+                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =ColorFade(_cBaseColor,-20%)
                     RadiusBottomLeft: =20
@@ -321,13 +323,22 @@ screenCanvas As screen:
                     X: =111
                     ZIndex: =2
 
-                ButtonEntireDisplay_2 As button:
+                ButtonOutput As button:
                     BorderColor: =_cBaseColor
                     BorderThickness: =0
                     Fill: =_cBaseColor
+                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
                     Height: =30
+                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: =
+                    OnSelect: |
+                        =//Set(ExportData, Concat(ExportCol, category & "," & answer & Char(13)));
+                        Set(ExportData, "確認,確認");
+                        UpdateContext({result: ExportCSV.Run("仮説構築支援_"&Today(),ExportData)});
+                        Notify("ファイル：["&result.filepath&"]"&"をOneDriveに出力しました。", NotificationType.Information)
+                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(_cBaseColor,-20%)
                     RadiusBottomLeft: =20
                     RadiusBottomRight: =20
                     RadiusTopLeft: =20
@@ -335,6 +346,5 @@ screenCanvas As screen:
                     Text: ="出力"
                     Width: =200
                     X: =111
-                    Y: =
                     ZIndex: =3
 
