@@ -323,7 +323,7 @@ screenCanvas As screen:
                     X: =111
                     ZIndex: =2
 
-                ButtonOutput As button:
+                ButtonOutput_1 As button:
                     BorderColor: =_cBaseColor
                     BorderThickness: =0
                     Fill: =_cBaseColor
@@ -345,7 +345,8 @@ screenCanvas As screen:
                     RadiusTopRight: =20
                     Text: ="出力"
                     Width: =200
-                    X: =111
+                    X: =1148
+                    Y: =10
                     ZIndex: =3
 
     Image1 As image:

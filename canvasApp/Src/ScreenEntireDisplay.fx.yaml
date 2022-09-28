@@ -10,7 +10,7 @@ ScreenEntireDisplay As screen:
         Image As image:
             Height: =Parent.Height
             Image: =header
-            Width: =1366
+            Width: =Parent.Width
             ZIndex: =1
 
     ContainerMain As groupContainer.manualLayoutContainer:
@@ -35,6 +35,57 @@ ScreenEntireDisplay As screen:
                 X: =19
                 Y: =10
                 ZIndex: =2
+
+            ButtonOutput As button:
+                BorderColor: =_cBaseColor
+                BorderThickness: =0
+                Fill: =_cBaseColor
+                FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
+                Height: =30
+                HoverBorderColor: =ColorFade(_cBaseColor,-20%)
+                HoverFill: =ColorFade(_cBaseColor,-20%)
+                OnSelect: |
+                    =//Set(ExportData, Concat(ExportCol, category & "," & answer & Char(13)));
+                    Set(ExportData, "test");
+                    Set(_k,Sort(Filter(answerList,And(themeID=themeId,category="顧客")),questionID));
+                    Set(_j,Sort(Filter(answerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
+                    Set(_s,Sort(Filter(answerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+                    Set(_g,Sort(Filter(answerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
+                    Set(_m,Sort(Filter(answerList,And(themeID=themeId,category="満足状況")),questionID));
+                    Set(_t,Sort(Filter(answerList,And(themeID=themeId,category="提供価値")),questionID));
+                    Set(_mv,Sort(Filter(answerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
+                    
+                    ClearCollect(ExportCol1,_k);
+                    ClearCollect(ExportCol2,_j);
+                    ClearCollect(ExportCol3,_s);
+                    ClearCollect(ExportCol4,_g);
+                    ClearCollect(ExportCol5,_m);
+                    ClearCollect(ExportCol6,_t);
+                    ClearCollect(ExportCol7,_mv);
+                    
+                    
+                    Set(ExportData1, "【背景・属性】"&Char(13)&Concat(ExportCol1,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                     "【JTBD】"&Char(13)&Concat(ExportCol2,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                     "【阻害要因】"&Char(13)&Concat(ExportCol3,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                    "【現状対策】"&Char(13)&Concat(ExportCol4,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                    "【満足状況】"&Char(13)&Concat(ExportCol5,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                    "【VP】"&Char(13)&Concat(ExportCol6,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                    "【MVP】"&Char(13)&Concat(ExportCol7,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13)));
+                    
+                    UpdateContext({result: ExportCSV.Run("仮説構築支援_"& Now(),ExportData1)});
+                    Notify("OneDriveにファイルを出力しました。ファイルパス：["&result.filepath&"]", NotificationType.Information)
+                PressedBorderColor: =ColorFade(_cBaseColor,-20%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(_cBaseColor,-20%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: ="出力"
+                Width: =200
+                X: =1148
+                Y: =10
+                ZIndex: =3
 
         ContainerCanvas As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-ContainerFooter3.Height
@@ -127,7 +178,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =1
 
-                        LabelTitleHindranceFactor_3 As label:
+                        LabelTitleVP As label:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
@@ -137,7 +188,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =2
 
-                        LabelDetailMVP_1 As label:
+                        LabelDetailVP As label:
                             Height: =Parent.Height-LabelTitleCustomer.Height-20
                             Overflow: =Overflow.Scroll
                             Size: =11
@@ -176,7 +227,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =1
 
-                        LabelTitleHindranceFactor_2 As label:
+                        LabelTitleSatisfaction As label:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
@@ -186,7 +237,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =2
 
-                        LabelDetailMVP_2 As label:
+                        LabelDetailSatisfaction As label:
                             Height: =Parent.Height-LabelTitleCustomer.Height-20
                             Overflow: =Overflow.Scroll
                             Size: =11
@@ -230,7 +281,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =1
 
-                        LabelTitleHindranceFactor_1 As label:
+                        LabelTitleCurrentMeasures As label:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
@@ -240,7 +291,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =2
 
-                        LabelDetailMVP_3 As label:
+                        LabelDetailCurrentMeasures As label:
                             Height: =Parent.Height-LabelTitleCustomer.Height-20
                             Overflow: =Overflow.Scroll
                             Size: =11
@@ -290,7 +341,7 @@ ScreenEntireDisplay As screen:
                             Y: =9
                             ZIndex: =2
 
-                        LabelDetailMVP_4 As label:
+                        LabelDetailHindranceFactor As label:
                             Height: =Parent.Height-LabelTitleCustomer.Height-20
                             Overflow: =Overflow.Scroll
                             Size: =11
