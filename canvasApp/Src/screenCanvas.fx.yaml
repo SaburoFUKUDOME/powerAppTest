@@ -289,31 +289,52 @@ screenCanvas As screen:
                 LayoutGap: =50
                 LayoutMode: =LayoutMode.Auto
                 Width: =FooterContainer_1.Width
-                X: =50
+                X: =20
                 Y: =20
                 ZIndex: =6
 
                 IconBackThemeScreen As icon.BackArrow:
                     Color: =_cBaseColor
-                    Height: =40
+                    Height: =30
                     Icon: =Icon.BackArrow
                     OnSelect: =Navigate(screenTheme,Fade)
                     Tooltip: ="テーマ一覧へ戻る"
-                    Width: =40
+                    Width: =30
                     ZIndex: =1
 
                 ButtonEntireDisplay As button:
                     BorderColor: =_cBaseColor
                     BorderThickness: =0
                     Fill: =_cBaseColor
+                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
+                    Height: =30
                     HoverFill: =ColorFade(_cBaseColor,-20%)
                     OnSelect: =Navigate(ScreenEntireDisplay)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(_cBaseColor,-20%)
                     RadiusBottomLeft: =20
                     RadiusBottomRight: =20
                     RadiusTopLeft: =20
                     RadiusTopRight: =20
                     Text: ="全体表示"
+                    Width: =200
+                    X: =111
+                    ZIndex: =2
+
+                ButtonEntireDisplay_2 As button:
+                    BorderColor: =_cBaseColor
+                    BorderThickness: =0
+                    Fill: =_cBaseColor
+                    Height: =30
+                    HoverFill: =ColorFade(_cBaseColor,-20%)
+                    OnSelect: =
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Text: ="出力"
+                    Width: =200
                     X: =111
                     Y: =
-                    ZIndex: =2
+                    ZIndex: =3
 

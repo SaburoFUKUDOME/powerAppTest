@@ -1544,19 +1544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ScreenEntireDisplay",
-                "type": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3"
+                "type": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory"
               }
             }
           ],
@@ -1574,19 +1574,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3.TabIndex"
+                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3.TabIndex",
+                  "fullyQualifiedName": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ScreenEntireDisplay",
-                "type": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.Gallery3"
+                "type": "ScreenEntireDisplay.ContainerMain.ContainerCanvas.GalleryAddCategory"
               }
             }
           ],

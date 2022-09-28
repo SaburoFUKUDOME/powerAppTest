@@ -206,7 +206,7 @@
         "Name": "homeButton",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 155,
+        "PublishOrderIndex": 163,
         "Rules": [
           {
             "Category": "Data",
@@ -216,7 +216,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "1",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -656,7 +656,7 @@
         "Name": "homeButtonView",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 156,
+        "PublishOrderIndex": 164,
         "Rules": [
           {
             "Category": "Data",
@@ -828,7 +828,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "1",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -928,7 +928,7 @@
             "Name": "galleryTemplate1_7",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 158,
+            "PublishOrderIndex": 166,
             "Rules": [
               {
                 "Category": "Data",
@@ -1124,7 +1124,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 159,
+            "PublishOrderIndex": 167,
             "Rules": [
               {
                 "Category": "Data",
@@ -1371,7 +1371,14 @@
           },
           "WrapCount",
           "TemplateSize",
-          "TemplatePadding",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "0",
+            "InvariantPropertyName": "TemplatePadding",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Layout",
           "Transition",
           "LoadingSpinner",
@@ -1443,7 +1450,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 157,
+        "PublishOrderIndex": 165,
         "Rules": [
           {
             "Category": "Data",
@@ -1477,7 +1484,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "2",
             "Property": "TemplatePadding",
             "RuleProviderType": "Unknown"
           },
@@ -1658,7 +1665,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637999453766560679",
+    "LastModifiedTimestamp": "637999468554126494",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -1774,7 +1781,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637999453766560679",
+  "LastModifiedTimestamp": "637999468554126494",
   "Name": "7c3cf122a435439fa23ddcb43d273dff",
   "OverridableProperties": {},
   "TemplateOriginalName": "e88d8fa5810f418a94473be296e5e99e",

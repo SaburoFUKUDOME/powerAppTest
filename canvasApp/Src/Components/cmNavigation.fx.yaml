@@ -181,7 +181,7 @@ cmNavigation As CanvasComponent:
         Layout: =Layout.Vertical
         TemplateFill: |
             =If(ThisItem.question_id = navigationKey,_cBaseColor,White)
-        TemplatePadding: =0
+        TemplatePadding: =2
         TemplateSize: =40
         Width: =200
         Y: =92
@@ -232,6 +232,7 @@ cmNavigation As CanvasComponent:
         Text: ="Home"
         Visible: =If(pageKey="question",true,false)
         Width: =200
+        Y: =1
         ZIndex: =4
 
     homeButtonView As button:
@@ -255,5 +256,6 @@ cmNavigation As CanvasComponent:
         Text: ="Home"
         Visible: =If(pageKey="canvas",true,false)
         Width: =200
+        Y: =1
         ZIndex: =5
 

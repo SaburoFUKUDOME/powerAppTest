@@ -90,7 +90,7 @@ ScreenEntireDisplay As screen:
                     Y: =50
                     ZIndex: =3
 
-            Gallery3 As gallery.galleryVertical:
+            GalleryAddCategory As gallery.galleryVertical:
                 Height: =Parent.Height
                 Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                 Layout: =Layout.Vertical
