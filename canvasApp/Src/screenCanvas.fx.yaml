@@ -349,9 +349,3 @@ screenCanvas As screen:
                     Y: =10
                     ZIndex: =3
 
-    Image1 As image:
-        Image: =header
-        X: =40
-        Y: =40
-        ZIndex: =39
-

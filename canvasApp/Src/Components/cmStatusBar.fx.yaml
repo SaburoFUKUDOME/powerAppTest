@@ -9,7 +9,7 @@ cmStatusBar As CanvasComponent:
     statusGallery As gallery.galleryHorizontal:
         Height: =50
         Items: ='仮説構築支援ツール - ナビゲーション'
-        TemplateSize: =25
+        TemplateSize: =27
         Width: =298
         ZIndex: =2
 
@@ -25,6 +25,7 @@ cmStatusBar As CanvasComponent:
             Height: =25
             OnSelect: =Select(Parent)
             Text: =
+            Tooltip: ="ああああ"
             Width: =25
             Y: =8
             ZIndex: =1

@@ -143,7 +143,15 @@
               "PaddingTop",
               "PaddingRight",
               "PaddingBottom",
-              "PaddingLeft"
+              "PaddingLeft",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "\"\"",
+                "InvariantPropertyName": "Tooltip",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              }
             ],
             "ControlUniqueId": "36",
             "HasDynamicProperties": false,
@@ -176,6 +184,12 @@
                 "Category": "Data",
                 "InvariantScript": "",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Data",
+                "InvariantScript": "\"ああああ\"",
+                "Property": "Tooltip",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -517,7 +531,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "25",
+            "InvariantScript": "27",
             "Property": "TemplateSize",
             "RuleProviderType": "Unknown"
           },
@@ -657,7 +671,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637999453766557698",
+    "LastModifiedTimestamp": "637999529204185016",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -716,7 +730,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637999453766557698",
+  "LastModifiedTimestamp": "637999529204185016",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"
