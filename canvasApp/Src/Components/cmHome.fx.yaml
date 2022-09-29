@@ -171,14 +171,14 @@ cmHome As CanvasComponent:
         ZIndex: =3
 
     "GalleryCategory As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        Height: =112
+        Height: =67
         Items: =Sort(Filter(navigationList,Not(Title="前提条件")),ID,Descending)//)
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =153
         Width: =1042
         X: =62
-        Y: =41
+        Y: =81
         ZIndex: =4
 
         LabelCategoryName As label:
