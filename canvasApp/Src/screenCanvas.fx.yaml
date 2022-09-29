@@ -22,37 +22,21 @@ screenCanvas As screen:
             cmHome_1 As cmHome:
                 Height: =562
                 moveQuestion: |-
-                    =If(addAnswerFlag,
-                    With(
-                        {
-                            getAnswerRecord: LookUp(
-                                '仮説構築支援ツール - 回答',
-                                And(
-                                    themeID = themeId,
-                                    questionID = questionKey,
-                                    add_answerID = addAnswerId
-                                )
-                            )
-                        },
-                        If(IsBlank(getAnswerRecord),
-                        Patch('仮説構築支援ツール - 回答',
-                        Defaults('仮説構築支援ツール - 回答'),
-                        {
-                            themeID: themeId,
-                            questionID: qid,
-                            category: addCategory,
-                            answer:"",
-                            skip_flag: false,
-                            no_answer_flag:false,
-                            status:0,
-                            add_answerID:addAnswerId
-                        }
+                    =If(
+                        addAnswerFlag,
+                        Set(
+                            addAnswer,
+                            true
+                        );
+                        Set(
+                            addAnswerId,
+                            addAnswerId
+                        ),
+                        Set(
+                            addAnswerId,
+                            0
                         )
-                    
-                    ));
-                    Set(addAnswer,true);
-                    Set(addAnswerId,addAnswerId),
-                    Set(addAnswerId,0));
+                    );
                     
                     
                     //問いへ遷移

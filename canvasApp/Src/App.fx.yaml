@@ -13,5 +13,7 @@ App As appinfo:
         Set(completeStatus,10);
         Set(incompleteStatus,2);
         Set(noneStatus,0);
+        // 追加の問いフラグ
+        Set(addAnswer,false);
     StartScreen: =screenTheme
 
