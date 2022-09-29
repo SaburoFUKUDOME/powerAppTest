@@ -2,7 +2,7 @@ screenCanvas As screen:
     OnVisible: |
         =Set(navigationKey,0);
         Set(currentCategory,"");
-        Set(_gAnswerList,'仮説構築支援ツール - 回答');
+        Set(_cAnswerList,'仮説構築支援ツール - 回答');
         Set(themeId,galleryTheme.Selected.ID);
         Set(pageKey,"canvas");
 
@@ -303,7 +303,18 @@ screenCanvas As screen:
                     Height: =30
                     HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: =Navigate(ScreenEntireDisplay)
+                    OnSelect: |-
+                        =ClearCollect(colCustomer,Sort(Filter(_cAnswerList,And(themeID=themeId,category="顧客")),questionID));
+                        ClearCollect(colJTBD,Sort(Filter(_cAnswerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
+                        ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+                        ClearCollect(colCurrentMeasures,Sort(Filter(_cAnswerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
+                        ClearCollect(colSatisfaction,Sort(Filter(_cAnswerList,And(themeID=themeId,category="満足状況")),questionID));
+                        ClearCollect(colVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="提供価値")),questionID));
+                        ClearCollect(colMVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
+                        
+                        
+                        
+                        Navigate(ScreenEntireDisplay)
                     PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =ColorFade(_cBaseColor,-20%)
@@ -315,30 +326,4 @@ screenCanvas As screen:
                     Width: =200
                     X: =111
                     ZIndex: =2
-
-                ButtonOutput_1 As button:
-                    BorderColor: =_cBaseColor
-                    BorderThickness: =0
-                    Fill: =_cBaseColor
-                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    Height: =30
-                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
-                    HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: |
-                        =//Set(ExportData, Concat(ExportCol, category & "," & answer & Char(13)));
-                        Set(ExportData, "確認,確認");
-                        UpdateContext({result: ExportCSV.Run("仮説構築支援_"&Today(),ExportData)});
-                        Notify("ファイル：["&result.filepath&"]"&"をOneDriveに出力しました。", NotificationType.Information)
-                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(_cBaseColor,-20%)
-                    RadiusBottomLeft: =20
-                    RadiusBottomRight: =20
-                    RadiusTopLeft: =20
-                    RadiusTopRight: =20
-                    Text: ="出力"
-                    Width: =200
-                    X: =1148
-                    Y: =10
-                    ZIndex: =3
 

@@ -3,7 +3,7 @@
     "IsComponentScoped": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "ExportCol6",
+    "Name": "colOutputTextSatisfaction",
     "Type": "CollectionDataSourceInfo"
   }
 ]

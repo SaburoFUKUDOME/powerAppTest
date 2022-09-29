@@ -1,6 +1,18 @@
 ScreenEntireDisplay As screen:
-    OnVisible: |-
-        =UpdateContext({_lNewLine:Char(10),_lIcon:"■"});
+    OnVisible: |+
+        =UpdateContext({
+        _lNewLine:Char(10),
+        _lIcon:"■",
+        _lCustomer:"属性・背景",_lJTBD:"JTBD",_lHindranceFactor:"阻害要因",_lCurrentMeasures:"現状対策",_lSatisfaction:"満足状況",_lVP:"VP",_lMVP:"MVP"
+        });
+        
+        UpdateContext({
+        _lCustomerData:Concat(colCustomer,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),
+        _lJTBDData:Concat(colJTBD,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),
+        _lMVPData:Concat(colMVP,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+        
+        });
+        
 
     ContainerHeader As groupContainer.manualLayoutContainer:
         Height: =80
@@ -46,33 +58,60 @@ ScreenEntireDisplay As screen:
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |
                     =//Set(ExportData, Concat(ExportCol, category & "," & answer & Char(13)));
-                    Set(ExportData, "test");
-                    Set(_k,Sort(Filter(answerList,And(themeID=themeId,category="顧客")),questionID));
-                    Set(_j,Sort(Filter(answerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
-                    Set(_s,Sort(Filter(answerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
-                    Set(_g,Sort(Filter(answerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
-                    Set(_m,Sort(Filter(answerList,And(themeID=themeId,category="満足状況")),questionID));
-                    Set(_t,Sort(Filter(answerList,And(themeID=themeId,category="提供価値")),questionID));
-                    Set(_mv,Sort(Filter(answerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
                     
-                    ClearCollect(ExportCol1,_k);
-                    ClearCollect(ExportCol2,_j);
-                    ClearCollect(ExportCol3,_s);
-                    ClearCollect(ExportCol4,_g);
-                    ClearCollect(ExportCol5,_m);
-                    ClearCollect(ExportCol6,_t);
-                    ClearCollect(ExportCol7,_mv);
-                    
-                    
-                    Set(ExportData1, "【背景・属性】"&Char(13)&Concat(ExportCol1,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
+                    /**
+                    Set(ExportData, "【背景・属性】"&Char(13)&Concat(ExportCol1,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                      "【JTBD】"&Char(13)&Concat(ExportCol2,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                      "【阻害要因】"&Char(13)&Concat(ExportCol3,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                     "【現状対策】"&Char(13)&Concat(ExportCol4,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                     "【満足状況】"&Char(13)&Concat(ExportCol5,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                     "【VP】"&Char(13)&Concat(ExportCol6,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
                     "【MVP】"&Char(13)&Concat(ExportCol7,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13)));
+                    */
                     
-                    UpdateContext({result: ExportCSV.Run("仮説構築支援_"& Now(),ExportData1)});
+                    // 阻害要因
+                    Clear(colOutputTextHindranceFactor);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 現状対策
+                    Clear(colOutputTextCurrentMeasures);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 満足状況
+                    Clear(colOutputTextSatisfaction);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextSatisfaction, {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // VP
+                    Clear(colOutputTextVP);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextVP, {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 出力文字を連結する
+                    Set(ExportData,
+                    "【"&_lCustomer&"】"&_lNewLine&_lCustomerData&_lNewLine&
+                    "【"&_lJTBD&"】"&_lNewLine&_lJTBDData&_lNewLine&
+                    Concat(colOutputTextHindranceFactor,text&_lNewLine)&
+                    Concat(colOutputTextCurrentMeasures,text&_lNewLine)&
+                    Concat(colOutputTextSatisfaction,text&_lNewLine)&
+                    Concat(colOutputTextVP,text&_lNewLine)&
+                    "【"&_lMVP&"】"&_lNewLine&_lMVPData);
+                    
+                    UpdateContext({result: ExportCSV.Run("仮説構築支援_"& Now(),ExportData)});
                     Notify("OneDriveにファイルを出力しました。ファイルパス：["&result.filepath&"]", NotificationType.Information)
                 PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -112,7 +151,7 @@ ScreenEntireDisplay As screen:
                     FontWeight: =Semibold
                     Height: =44
                     Size: =16
-                    Text: ="MVP"
+                    Text: =_lMVP
                     Width: =Parent.Width-20
                     X: =10
                     ZIndex: =2
@@ -122,7 +161,8 @@ ScreenEntireDisplay As screen:
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
-                        =
+                        =_lMVPData
+                        /**
                         With({_startid:19},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
@@ -136,7 +176,8 @@ ScreenEntireDisplay As screen:
                         &_lNewLine&
                         LookUp(_gAnswerList,questionID=_startid+2).answer
                         )
-                    Width: =Parent.Width-20
+                        */
+                    Width: =172.13333333333333
                     X: =10
                     Y: =50
                     ZIndex: =3
@@ -182,7 +223,7 @@ ScreenEntireDisplay As screen:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
-                            Text: ="VP"&ThisItem.sort_order
+                            Text: =_lVP&ThisItem.sort_order
                             Width: =Parent.Width
                             X: =1
                             Y: =9
@@ -193,12 +234,17 @@ ScreenEntireDisplay As screen:
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
-                                =
+                                =Concat(Filter(colVP,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                                
+                                //ClearCollect(colVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="提供価値")),questionID));
+                                
+                                /**
                                 With({_startid:18},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
                                 LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
                                 )
+                                */
                             Width: =Parent.Width-20
                             X: =10
                             Y: =50
@@ -231,7 +277,7 @@ ScreenEntireDisplay As screen:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
-                            Text: ="満足状況"&ThisItem.sort_order
+                            Text: =_lSatisfaction&ThisItem.sort_order
                             Width: =Parent.Width
                             X: =1
                             Y: =9
@@ -242,7 +288,10 @@ ScreenEntireDisplay As screen:
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
-                                =
+                                =Concat(Filter(colSatisfaction,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                                
+                                //ClearCollect(colSatisfaction,Sort(Filter(_cAnswerList,And(themeID=themeId,category="満足状況")),questionID));
+                                /**
                                 With({_startid:14},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
@@ -260,6 +309,7 @@ ScreenEntireDisplay As screen:
                                 &_lNewLine&
                                 LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
                                 )
+                                */
                             Width: =Parent.Width-20
                             X: =10
                             Y: =50
@@ -285,7 +335,7 @@ ScreenEntireDisplay As screen:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
-                            Text: ="現状対策"&ThisItem.sort_order
+                            Text: =_lCurrentMeasures&ThisItem.sort_order
                             Width: =Parent.Width
                             X: =1
                             Y: =9
@@ -296,7 +346,12 @@ ScreenEntireDisplay As screen:
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
-                                =
+                                =Concat(Filter(colCurrentMeasures,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                                
+                                //ClearCollect(colCurrentMeasures,Sort(Filter(_cAnswerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
+                                
+                                
+                                /**
                                 With({_startid:11},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
@@ -310,6 +365,7 @@ ScreenEntireDisplay As screen:
                                 &_lNewLine&
                                 LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
                                 )
+                                */
                             Width: =Parent.Width-20
                             X: =10
                             Y: =50
@@ -335,7 +391,7 @@ ScreenEntireDisplay As screen:
                             FontWeight: =Semibold
                             Height: =44
                             Size: =16
-                            Text: ="阻害要因"&ThisItem.sort_order
+                            Text: =_lHindranceFactor&ThisItem.sort_order
                             Width: =Parent.Width
                             X: =1
                             Y: =9
@@ -346,7 +402,10 @@ ScreenEntireDisplay As screen:
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
-                                =
+                                =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                                
+                                //ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+                                /**
                                 With({_startid:7},
                                 _lIcon&LookUp(questionList,ID=_startid).Title
                                 &_lNewLine&
@@ -364,6 +423,7 @@ ScreenEntireDisplay As screen:
                                 &_lNewLine&
                                 LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
                                 )
+                                */
                             Width: =Parent.Width-20
                             X: =10
                             Y: =50
@@ -391,7 +451,7 @@ ScreenEntireDisplay As screen:
                     FontWeight: =Semibold
                     Height: =44
                     Size: =16
-                    Text: ="JTBD"
+                    Text: =_lJTBD
                     Width: =Parent.Width-20
                     X: =10
                     ZIndex: =5
@@ -401,12 +461,15 @@ ScreenEntireDisplay As screen:
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
-                        =
+                        =_lJTBDData
+                        
+                        /**
                         With({_startid:6},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
                         LookUp(_gAnswerList,questionID=_startid).answer
                         )
+                        */
                     Width: =Parent.Width-20
                     X: =10
                     Y: =50
@@ -432,7 +495,7 @@ ScreenEntireDisplay As screen:
                     FontWeight: =Semibold
                     Height: =44
                     Size: =16
-                    Text: ="属性・背景"
+                    Text: =_lCustomer
                     Width: =Parent.Width-20
                     X: =10
                     ZIndex: =8
@@ -442,7 +505,9 @@ ScreenEntireDisplay As screen:
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
-                        =
+                        =_lCustomerData
+                        
+                        /**
                         With({_startid:3},
                         _lIcon&LookUp(questionList,ID=_startid).Title
                         &_lNewLine&
@@ -456,6 +521,7 @@ ScreenEntireDisplay As screen:
                         &_lNewLine&
                         LookUp(_gAnswerList,questionID=_startid+2).answer
                         )
+                        */
                     Width: =Parent.Width-20
                     X: =10
                     Y: =50
