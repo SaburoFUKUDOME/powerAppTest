@@ -64,7 +64,7 @@ scrennQuestion As screen:
                         questionKey,
                         qId
                     );
-                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},
+                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
                     Reset(textAnswer);
                     Reset(skipAnswerCheckbox);
                     Reset(noAnswerCheckbox);
@@ -137,6 +137,15 @@ scrennQuestion As screen:
                     Set(
                         exampleGroupVisible,
                         false
+                    );
+                    // 追加の問いフラグを初期化
+                    Set(
+                        addAnswer,
+                        false
+                    );
+                    Set(
+                        addAnswerId,
+                        0
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 ZIndex: =1
@@ -442,7 +451,7 @@ scrennQuestion As screen:
                         If(qRecord.next_question_id=0,true,false)
                     );
                     
-                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
+                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId,add_answerID=addAnswerId))},
                     Reset(textAnswer);
                     Reset(skipAnswerCheckbox);
                     Reset(noAnswerCheckbox);
@@ -469,6 +478,15 @@ scrennQuestion As screen:
                     Set(
                         exampleGroupVisible,
                         false
+                    );
+                    // 追加の問いフラグを初期化
+                    Set(
+                        addAnswer,
+                        false
+                    );
+                    Set(
+                        addAnswerId,
+                        0
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                     )

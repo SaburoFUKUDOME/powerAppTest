@@ -76,7 +76,7 @@ cmQuestionButton As CanvasComponent:
                     If(qRecord.next_question_id=0,true,false)
                 );
                 
-                With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId))},
+                With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=qId,add_answerID=addAnswerId))},
                 Reset(textAnswer);
                 Reset(skipAnswerCheckbox);
                 Reset(noAnswerCheckbox);
@@ -104,6 +104,15 @@ cmQuestionButton As CanvasComponent:
                     exampleGroupVisible,
                     false
                 );
+                // 追加の問いフラグを初期化
+                Set(
+                    addAnswer,
+                    false
+                );
+                Set(
+                    addAnswerId,
+                    0
+                );
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 )
                 
@@ -121,13 +130,22 @@ cmQuestionButton As CanvasComponent:
                 Radio1.Selected.Result
             )
         );
+        // 追加の問いか判別
+        If(
+            Not(addAnswer),
+            Set(
+                addAnswerId,
+                0
+            )
+        );
         With(
             {
                 getAnswerRecord: LookUp(
                     '仮説構築支援ツール - 回答',
                     And(
                         themeID = themeId,
-                        questionID = questionKey
+                        questionID = questionKey,
+                        add_answerID = addAnswerId
                     )
                 )
             },
@@ -162,7 +180,8 @@ cmQuestionButton As CanvasComponent:
                                 ),
                                 completeStatus,
                                 noneStatus
-                            )
+                            ),
+                            add_answerID: addAnswerId
                         }
                     );
                     ,

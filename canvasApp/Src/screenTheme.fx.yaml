@@ -84,7 +84,12 @@ screenTheme As screen:
                 Height: =ThemeContainer.Height-100
                 Items: =If(!admin,Filter(_cThemeList,author=loginUserAddres),_cThemeList)
                 Layout: =Layout.Vertical
-                OnSelect: =Navigate(screenCanvas)
+                OnSelect: |-
+                    =Navigate(screenCanvas);
+                    If(
+                        IsBlank(LookUp('仮説構築支援ツール - 追加の問い',themeID=ThisItem.ID)),
+                        Collect('仮説構築支援ツール - 追加の問い',{themeID:ThisItem.ID,sort_order:1});
+                    );
                 TemplateSize: =120
                 Width: =1302
                 X: =30

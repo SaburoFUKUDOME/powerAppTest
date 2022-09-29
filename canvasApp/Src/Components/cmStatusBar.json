@@ -26,7 +26,7 @@
             "Name": "galleryTemplate3_1",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 171,
+            "PublishOrderIndex": 170,
             "Rules": [
               {
                 "Category": "Design",
@@ -166,7 +166,7 @@
             "Name": "statusBarLabel",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 172,
+            "PublishOrderIndex": 171,
             "Rules": [
               {
                 "Category": "Data",
@@ -491,7 +491,7 @@
         "Name": "statusGallery",
         "Parent": "cmStatusBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 170,
+        "PublishOrderIndex": 169,
         "Rules": [
           {
             "Category": "Data",
@@ -671,7 +671,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "637999529204185016",
+    "LastModifiedTimestamp": "638000110124527939",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -730,7 +730,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637999529204185016",
+  "LastModifiedTimestamp": "638000110124527939",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"

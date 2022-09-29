@@ -206,7 +206,7 @@
         "Name": "homeButton",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 165,
+        "PublishOrderIndex": 164,
         "Rules": [
           {
             "Category": "Data",
@@ -656,7 +656,7 @@
         "Name": "homeButtonView",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 166,
+        "PublishOrderIndex": 165,
         "Rules": [
           {
             "Category": "Data",
@@ -928,7 +928,7 @@
             "Name": "galleryTemplate1_7",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 168,
+            "PublishOrderIndex": 167,
             "Rules": [
               {
                 "Category": "Data",
@@ -1124,7 +1124,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 169,
+            "PublishOrderIndex": 168,
             "Rules": [
               {
                 "Category": "Data",
@@ -1450,7 +1450,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 167,
+        "PublishOrderIndex": 166,
         "Rules": [
           {
             "Category": "Data",
@@ -1665,7 +1665,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637999468554126494",
+    "LastModifiedTimestamp": "638000115025977887",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -1712,13 +1712,13 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "Set(\r\n    navigationKey,\r\n    qId\r\n);\r\nSet(\r\n    questionKey,\r\n    qId\r\n);\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey))},\r\nReset(textAnswer);\r\nReset(skipAnswerCheckbox);\r\nReset(noAnswerCheckbox);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\nSet(\r\n    skipFlag,\r\n    getAnswerRecord.skip_flag\r\n    );\r\nSet(\r\n    noAnswerFlag,\r\n    getAnswerRecord.no_answer_flag\r\n    );\r\n);\r\n\r\nWith({qRecord:LookUp(questionList, ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(currentCategory,qRecord.category);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    currentRequired,\r\n    qRecord.required\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    backVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\nIf(Not(currentRequired=\"2\"),Set(currentQuestion,Concatenate(currentQuestion,\"*\")))",
+        "InvariantScript": "Set(\r\n    navigationKey,\r\n    qId\r\n);\r\nSet(\r\n    questionKey,\r\n    qId\r\n);\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},\r\nReset(textAnswer);\r\nReset(skipAnswerCheckbox);\r\nReset(noAnswerCheckbox);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\nSet(\r\n    skipFlag,\r\n    getAnswerRecord.skip_flag\r\n    );\r\nSet(\r\n    noAnswerFlag,\r\n    getAnswerRecord.no_answer_flag\r\n    );\r\n);\r\n\r\nWith({qRecord:LookUp(questionList, ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(currentCategory,qRecord.category);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    currentRequired,\r\n    qRecord.required\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    backVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\n// 追加の問いフラグを初期化\r\nSet(\r\n    addAnswer,\r\n    false\r\n);\r\nSet(\r\n    addAnswerId,\r\n    0\r\n);\r\nIf(Not(currentRequired=\"2\"),Set(currentQuestion,Concatenate(currentQuestion,\"*\")))",
         "Property": "setQuestionValue",
         "RuleProviderType": "System"
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "If(\r\n    controlType = \"text\",\r\n    Set(\r\n        answerContent,\r\n        textAnswer.Text\r\n    ),\r\n    Set(\r\n        answerContent,\r\n        Radio1.Selected.Result\r\n    )\r\n);\r\nWith(\r\n    {\r\n        getAnswerRecord: LookUp(\r\n            '仮説構築支援ツール - 回答',\r\n            And(\r\n                themeID = themeId,\r\n                questionID = questionKey\r\n            )\r\n        )\r\n    },\r\n    If(\r\n        Not(\r\n            And(\r\n                If(IsBlank(currentAnswer),IsBlank(answerContent)=IsBlank(currentAnswer),answerContent=currentAnswer),\r\n                skipFlag = skipAnswerCheckbox.Value,\r\n                noAnswerFlag = noAnswerCheckbox.Value\r\n            )\r\n        ),\r\n        If(\r\n            IsBlank(getAnswerRecord),\r\n            Patch(\r\n                '仮説構築支援ツール - 回答',\r\n                Defaults('仮説構築支援ツール - 回答'),\r\n                {\r\n                    themeID: themeId,\r\n                    questionID: questionKey,\r\n                    category: currentCategory,\r\n                    answer: answerContent,\r\n                    skip_flag: skipAnswerCheckbox.Value,\r\n                    no_answer_flag: noAnswerCheckbox.Value,\r\n                    status: If(\r\n                        skipAnswerCheckbox.Value,\r\n                        incompleteStatus,\r\n                        !IsBlank(answerContent),\r\n                        completeStatus,\r\n                        And(\r\n                            currentRequired = \"2\",\r\n                            noAnswerCheckbox.Value\r\n                        ),\r\n                        completeStatus,\r\n                        noneStatus\r\n                    )\r\n                }\r\n            );\r\n            ,\r\n            Patch(\r\n                '仮説構築支援ツール - 回答',\r\n                getAnswerRecord,\r\n                {\r\n                    answer: answerContent,\r\n                    skip_flag: skipAnswerCheckbox.Value,\r\n                    no_answer_flag: noAnswerCheckbox.Value,\r\n                    status: If(\r\n                        skipAnswerCheckbox.Value,\r\n                        incompleteStatus,\r\n                        !IsBlank(answerContent),\r\n                        completeStatus,\r\n                        And(\r\n                            currentRequired = \"2\",\r\n                            noAnswerCheckbox.Value\r\n                        ),\r\n                        completeStatus,\r\n                        noneStatus\r\n                    )\r\n                }\r\n            );\r\n        )\r\n    );\r\n)",
+        "InvariantScript": "If(\r\n    controlType = \"text\",\r\n    Set(\r\n        answerContent,\r\n        textAnswer.Text\r\n    ),\r\n    Set(\r\n        answerContent,\r\n        Radio1.Selected.Result\r\n    )\r\n);\r\n// 追加の問いか判別\r\nIf(\r\n    Not(addAnswer),\r\n    Set(\r\n        addAnswerId,\r\n        0\r\n    )\r\n);\r\nWith(\r\n    {\r\n        getAnswerRecord: LookUp(\r\n            '仮説構築支援ツール - 回答',\r\n            And(\r\n                themeID = themeId,\r\n                questionID = questionKey,\r\n                add_answerID = addAnswerId\r\n            )\r\n        )\r\n    },\r\n    If(\r\n        Not(\r\n            And(\r\n                If(IsBlank(currentAnswer),IsBlank(answerContent)=IsBlank(currentAnswer),answerContent=currentAnswer),\r\n                skipFlag = skipAnswerCheckbox.Value,\r\n                noAnswerFlag = noAnswerCheckbox.Value\r\n            )\r\n        ),\r\n        If(\r\n            IsBlank(getAnswerRecord),\r\n            Patch(\r\n                '仮説構築支援ツール - 回答',\r\n                Defaults('仮説構築支援ツール - 回答'),\r\n                {\r\n                    themeID: themeId,\r\n                    questionID: questionKey,\r\n                    category: currentCategory,\r\n                    answer: answerContent,\r\n                    skip_flag: skipAnswerCheckbox.Value,\r\n                    no_answer_flag: noAnswerCheckbox.Value,\r\n                    status: If(\r\n                        skipAnswerCheckbox.Value,\r\n                        incompleteStatus,\r\n                        !IsBlank(answerContent),\r\n                        completeStatus,\r\n                        And(\r\n                            currentRequired = \"2\",\r\n                            noAnswerCheckbox.Value\r\n                        ),\r\n                        completeStatus,\r\n                        noneStatus\r\n                    ),\r\n                    add_answerID: addAnswerId\r\n                }\r\n            );\r\n            ,\r\n            Patch(\r\n                '仮説構築支援ツール - 回答',\r\n                getAnswerRecord,\r\n                {\r\n                    answer: answerContent,\r\n                    skip_flag: skipAnswerCheckbox.Value,\r\n                    no_answer_flag: noAnswerCheckbox.Value,\r\n                    status: If(\r\n                        skipAnswerCheckbox.Value,\r\n                        incompleteStatus,\r\n                        !IsBlank(answerContent),\r\n                        completeStatus,\r\n                        And(\r\n                            currentRequired = \"2\",\r\n                            noAnswerCheckbox.Value\r\n                        ),\r\n                        completeStatus,\r\n                        noneStatus\r\n                    )\r\n                }\r\n            );\r\n        )\r\n    );\r\n)",
         "Property": "updateAnswer",
         "RuleProviderType": "System"
       }
@@ -1781,7 +1781,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637999468554126494",
+  "LastModifiedTimestamp": "638000115025977887",
   "Name": "7c3cf122a435439fa23ddcb43d273dff",
   "OverridableProperties": {},
   "TemplateOriginalName": "e88d8fa5810f418a94473be296e5e99e",

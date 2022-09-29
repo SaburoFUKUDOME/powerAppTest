@@ -18,7 +18,7 @@
       "Name": "addition",
       "PropertyDataTypeKey": "Number",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "27",
+        "PropertyScopeRuleNamespaceKey": "3",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "addition_param1",
@@ -64,7 +64,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637999453766059449",
+  "LastModifiedTimestamp": "638000110124497479",
   "Name": "3ec6fa9577ca4e37a10aa5118c9072e0",
   "OverridableProperties": {},
   "Version": "637975115257887409"
