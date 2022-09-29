@@ -183,6 +183,7 @@ cmHome As CanvasComponent:
 
         LabelCategoryName As label:
             Align: =Align.Center
+            Color: =_cBaseColor
             Height: =35
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -330,6 +331,28 @@ cmHome As CanvasComponent:
             X: =483
             Y: =14
             ZIndex: =13
+
+    LabelCategorize2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =_cBaseColor
+        Height: =28
+        Text: ="顧客価値"
+        Width: =242
+        X: =71
+        Y: =53
+        ZIndex: =11
+
+    LabelCategorize As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =_cBaseColor
+        Height: =28
+        Text: ="顧客セグメント"
+        Width: =693
+        X: =405
+        Y: =53
+        ZIndex: =12
 
     GroupDeleteConfirm As group:
         Height: =5
