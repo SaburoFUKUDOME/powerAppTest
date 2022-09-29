@@ -87,13 +87,16 @@ cmNavigation As CanvasComponent:
                     false
                 );
                 // 追加の問いフラグを初期化
-                Set(
-                    addAnswer,
-                    false
-                );
-                Set(
-                    addAnswerId,
-                    0
+                If(
+                    IsBlank(LookUp(_cCategory,Value=currentCategory)),
+                    Set(
+                        addAnswer,
+                        false
+                    );
+                    Set(
+                        addAnswerId,
+                        0
+                    );
                 );
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
     Fill: =RGBA(0, 0, 0, 0)
@@ -112,7 +115,7 @@ cmNavigation As CanvasComponent:
         );
         // 追加の問いか判別
         If(
-            Not(addAnswer),
+           And(Not(addAnswer),IsBlank(LookUp(_cCategory,Value=currentCategory))),
             Set(
                 addAnswerId,
                 0
@@ -220,6 +223,11 @@ cmNavigation As CanvasComponent:
                     scrennQuestion,
                     ScreenTransition.Fade
                 );); 
+                // 追加できるカテゴリの場合、先頭のIDを保持
+                If(
+                    Not(IsBlank(LookUp(_cCategory,Value=ThisItem.Title))),
+                    Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID);
+                );
                 cmNavigation.setQuestionValue(ThisItem.question_id);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0

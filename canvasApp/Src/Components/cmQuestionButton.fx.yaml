@@ -105,13 +105,16 @@ cmQuestionButton As CanvasComponent:
                     false
                 );
                 // 追加の問いフラグを初期化
-                Set(
-                    addAnswer,
-                    false
-                );
-                Set(
-                    addAnswerId,
-                    0
+                If(
+                    IsBlank(LookUp(_cCategory,Value=currentCategory)),
+                    Set(
+                        addAnswer,
+                        false
+                    );
+                    Set(
+                        addAnswerId,
+                        0
+                    );
                 );
                 If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 )
@@ -132,7 +135,7 @@ cmQuestionButton As CanvasComponent:
         );
         // 追加の問いか判別
         If(
-            Not(addAnswer),
+            And(Not(addAnswer),IsBlank(LookUp(_cCategory,Value=currentCategory))),
             Set(
                 addAnswerId,
                 0

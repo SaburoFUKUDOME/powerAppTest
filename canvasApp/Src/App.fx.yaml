@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |
+    OnStart: |-
         =Set(_cBaseColor,RGBA(100, 149, 237, 1));
         // 変更しないデータベースをセットする
         Set(questionList,'仮説構築支援ツール - 問い');
@@ -15,5 +15,6 @@ App As appinfo:
         Set(noneStatus,0);
         // 追加の問いフラグ
         Set(addAnswer,false);
+        Set(_cCategory,["阻害要因（課題）","現状対策（代替）","満足状況","提供価値"]);
     StartScreen: =screenTheme
 

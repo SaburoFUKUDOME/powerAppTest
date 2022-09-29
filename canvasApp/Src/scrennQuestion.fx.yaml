@@ -139,13 +139,16 @@ scrennQuestion As screen:
                         false
                     );
                     // 追加の問いフラグを初期化
-                    Set(
-                        addAnswer,
-                        false
-                    );
-                    Set(
-                        addAnswerId,
-                        0
+                    If(
+                        IsBlank(LookUp(_cCategory,Value=currentCategory)),
+                        Set(
+                            addAnswer,
+                            false
+                        );
+                        Set(
+                            addAnswerId,
+                            0
+                        );
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                 ZIndex: =1
@@ -480,13 +483,16 @@ scrennQuestion As screen:
                         false
                     );
                     // 追加の問いフラグを初期化
-                    Set(
-                        addAnswer,
-                        false
-                    );
-                    Set(
-                        addAnswerId,
-                        0
+                    If(
+                        IsBlank(LookUp(_cCategory,Value=currentCategory)),
+                        Set(
+                            addAnswer,
+                            false
+                        );
+                        Set(
+                            addAnswerId,
+                            0
+                        );
                     );
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                     )
