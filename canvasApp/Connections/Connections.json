@@ -16,6 +16,63 @@
     "dependents": [],
     "id": "072ef5f6-d80b-4646-8488-2054ee3e8c82"
   },
+  "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "5c1d40ee-2f79-4e4d-8099-56da13e1aeee"
+    ],
+    "id": "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e"
+  },
+  "5c1d40ee-2f79-4e4d-8099-56da13e1aeee": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-16.japaneast.logic.azure.com:443/workflows/d3dbcf8edd39452c98040c733d9be58a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AqwSuCqGhjfHCu9TEk0j16TReKazc8q1xrSM9IVznJA",
+      "workflowEndpoint": "/subscriptions/9f3a0e5f-8058-487f-9d45-d3ff51164c54/resourceGroups/e717ec3d60364776b72e41f49481d91e-73adae8338464ed3972a62230c6b44d9/providers/Microsoft.Logic/workflows/a5ed0b2d-30ab-4d9f-a763-fae67f47d66a",
+      "workflowName": "a5ed0b2d-30ab-4d9f-a763-fae67f47d66a",
+      "workflowPath": "/subscriptions/9f3a0e5f-8058-487f-9d45-d3ff51164c54/resourceGroups/e717ec3d60364776b72e41f49481d91e-73adae8338464ed3972a62230c6b44d9/providers/Microsoft.Logic/workflows/a5ed0b2d-30ab-4d9f-a763-fae67f47d66a"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a5ed0b2d-30ab-4d9f-a763-fae67f47d66a"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a5ed0b2d-30ab-4d9f-a763-fae67f47d66a"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExportCSV"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e"
+    },
+    "dependents": [],
+    "id": "5c1d40ee-2f79-4e4d-8099-56da13e1aeee"
+  },
   "cbf8f4e7-dc86-4698-90ef-6d5c9d5cb678": {
     "connectionParameters": {
       "sku": "Enterprise"

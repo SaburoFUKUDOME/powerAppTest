@@ -111,7 +111,7 @@ ScreenEntireDisplay As screen:
                     Concat(colOutputTextVP,text&_lNewLine)&
                     "【"&_lMVP&"】"&_lNewLine&_lMVPData);
                     
-                    UpdateContext({result: ExportCSV.Run("HypothesisCreator"& Text(Now(), "yyyy-mm-dd_hh-mm"),ExportData)});
+                    UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
                     Notify("OneDriveにファイルを出力しました。ファイルパス：["&result.filepath&"]", NotificationType.Information)
                 PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                 PressedColor: =RGBA(255, 255, 255, 1)

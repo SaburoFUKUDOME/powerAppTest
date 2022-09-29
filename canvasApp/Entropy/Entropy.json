@@ -232,10 +232,12 @@
   "DoesTestStepsMetadataExist": false,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/29/2022 07:32:40",
+  "HeaderLastSavedDateTimeUTC": "09/29/2022 07:36:16",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/727c8fe29941409ea4cf566a7fd7299f\"",
+    "3bc9096b-f59a-4e4e-b75e-02f0132a5e0e": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/shared-onedriveforbu-ef4a8fdd-25b5-4e03-9b47-4fe59d751e1f\"",
+    "5c1d40ee-2f79-4e4d-8099-56da13e1aeee": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/A5ED0B2D30AB4D9FA763FAE67F47D66A-595D013F6D47E041\"",
     "cbf8f4e7-dc86-4698-90ef-6d5c9d5cb678": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/b6b93fd074d240a084dc718791306655\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -262,27 +264,28 @@
     "a0d3516f99e8436fbcf0b750d172662e": 2
   },
   "OrderDataSource": {
-    "colCurrentMeasures": 13,
-    "colCustomer": 17,
-    "colHindranceFactor": 14,
-    "colJTBD": 16,
-    "colMVP": 10,
-    "colOutputTextCurrentMeasures": 19,
-    "colOutputTextHindranceFactor": 20,
-    "colOutputTextSatisfaction": 18,
-    "colOutputTextVP": 15,
-    "colSatisfaction": 12,
-    "colVP": 11,
-    "ComboBoxSample": 8,
-    "CustomGallerySample": 1,
+    "colCurrentMeasures": 14,
+    "colCustomer": 18,
+    "colHindranceFactor": 15,
+    "colJTBD": 17,
+    "colMVP": 11,
+    "colOutputTextCurrentMeasures": 20,
+    "colOutputTextHindranceFactor": 21,
+    "colOutputTextSatisfaction": 19,
+    "colOutputTextVP": 16,
+    "colSatisfaction": 13,
+    "colVP": 12,
+    "ComboBoxSample": 9,
+    "CustomGallerySample": 2,
+    "ExportCSV": 1,
     "Office365Outlook": 0,
-    "RadioSample": 2,
-    "仮説構築支援ツール - テーマ": 7,
-    "仮説構築支援ツール - ナビゲーション": 6,
-    "仮説構築支援ツール - 回答": 5,
-    "仮説構築支援ツール - 管理者リスト": 4,
-    "仮説構築支援ツール - 追加の問い": 9,
-    "仮説構築支援ツール - 問い": 3
+    "RadioSample": 3,
+    "仮説構築支援ツール - テーマ": 8,
+    "仮説構築支援ツール - ナビゲーション": 7,
+    "仮説構築支援ツール - 回答": 6,
+    "仮説構築支援ツール - 管理者リスト": 5,
+    "仮説構築支援ツール - 追加の問い": 10,
+    "仮説構築支援ツール - 問い": 4
   },
   "OrderGroupControls": {
     "GroupDeleteConfirm": {
@@ -565,7 +568,7 @@
       "typedDataCard": 2
     },
     "DeserializationLoadTime": 5.6553365,
-    "ErrorCount": 2
+    "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
