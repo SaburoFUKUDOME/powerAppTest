@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 68,
+                  "charLength": 78,
                   "charOffset": 2893,
                   "snippet": {
-                    "text": "ExportCSV.Run(\"仮説構築支援_\"& Text(Now(), \"yyyy-mm-dd_hh-mm\"),ExportData)"
+                    "text": "ExportCSV.Run(\"HypothesisCreator\"& Text(Now(), \"yyyy-mm-dd_hh-mm\"),ExportData)"
                   }
                 }
               },
@@ -65,7 +65,7 @@
                 },
                 "region": {
                   "charLength": 9,
-                  "charOffset": 3010,
+                  "charOffset": 3020,
                   "snippet": {
                     "text": ".filepath"
                   }
