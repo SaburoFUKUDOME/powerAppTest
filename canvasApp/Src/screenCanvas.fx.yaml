@@ -378,8 +378,8 @@ screenCanvas As screen:
                     
                     ※問いに紐づく回答も削除されます。"
                 Visible: =If(_gIsDelete,true,false)
-                Width: =291
-                X: =Rectangle1.X+(Rectangle1.Width/2)-(Self.Width/2)
+                Width: =305
+                X: =532
                 Y: =Rectangle1.Y+30
                 ZIndex: =10
 
