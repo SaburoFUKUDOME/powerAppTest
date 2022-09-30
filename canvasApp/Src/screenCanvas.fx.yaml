@@ -244,6 +244,21 @@ screenCanvas As screen:
             Y: =cmHeader_2.Height
             ZIndex: =6
 
+            cmStatusBar_2 As cmStatusBar:
+                checkStatus: |-
+                    =With({
+                    categoryQuestionCount:
+                    // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
+                    If(Or(navigationKey=1,navigationKey=2,navigationKey=3,navigationKey=8),
+                    CountIf(questionList,category=navigationName),
+                    // それ以外の場合は、問の追加分かけた件数をセットする
+                    CountIf(questionList,category=navigationName)*_gMaxSortNumber),
+                    answerTable:Filter('仮説構築支援ツール - 回答',And(category=navigationName,themeID=themeId))},
+                    If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
+                    CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
+                    2,1))
+                X: =HeaderContainer.Width/3
+
             lineContainer2_1 As groupContainer.verticalAutoLayoutContainer:
                 Height: =66
                 LayoutDirection: =LayoutDirection.Vertical
@@ -270,11 +285,6 @@ screenCanvas As screen:
                     X: =50
                     Y: =505
                     ZIndex: =2
-
-            statusBar_2 As cmStatusBar:
-                Width: =600
-                X: =HeaderContainer.Width/3
-                ZIndex: =2
 
         FooterContainer_1 As groupContainer.manualLayoutContainer:
             Height: =70
@@ -309,14 +319,7 @@ screenCanvas As screen:
                     HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
                     OnSelect: |-
-                        =ClearCollect(colCustomer,Sort(Filter(_cAnswerList,And(themeID=themeId,category="顧客")),questionID));
-                        ClearCollect(colJTBD,Sort(Filter(_cAnswerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
-                        ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
-                        ClearCollect(colCurrentMeasures,Sort(Filter(_cAnswerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
-                        ClearCollect(colSatisfaction,Sort(Filter(_cAnswerList,And(themeID=themeId,category="満足状況")),questionID));
-                        ClearCollect(colVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="提供価値")),questionID));
-                        ClearCollect(colMVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
-                        
+                        =
                         
                         
                         Navigate(ScreenEntireDisplay)
@@ -331,10 +334,4 @@ screenCanvas As screen:
                     Width: =200
                     X: =111
                     ZIndex: =2
-
-    Label5 As label:
-        Text: =_gMaxSortNumber
-        X: =145
-        Y: =135
-        ZIndex: =39
 

@@ -247,11 +247,6 @@ screenCanvas_1 As screen:
                     Y: =505
                     ZIndex: =2
 
-            statusBar_4 As cmStatusBar:
-                Width: =600
-                X: =HeaderContainer_2.Width/3
-                ZIndex: =2
-
         FooterContainer_2 As groupContainer.manualLayoutContainer:
             Height: =70
             Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer_2.Width

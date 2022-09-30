@@ -3,14 +3,23 @@ ScreenEntireDisplay As screen:
         =UpdateContext({
         _lNewLine:Char(10),
         _lIcon:"■",
-        _lCustomer:"属性・背景",_lJTBD:"JTBD",_lHindranceFactor:"阻害要因",_lCurrentMeasures:"現状対策",_lSatisfaction:"満足状況",_lVP:"VP",_lMVP:"MVP"
+        _lCustomer:"属性・背景",_lJTBD:"JTBD",_lHindranceFactor:"阻害要因",_lCurrentMeasures:"現状対策",_lSatisfaction:"満足状況",_lVP:"VP",_lMVP:"MVP"// キャンバスのタイトル
         });
         
-        UpdateContext({
-        _lCustomerData:Concat(colCustomer,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),
-        _lJTBDData:Concat(colJTBD,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),
-        _lMVPData:Concat(colMVP,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+        // コレクションを作成
+        ClearCollect(colCustomer,Sort(Filter(_cAnswerList,And(themeID=themeId,category="顧客")),questionID));
+        ClearCollect(colJTBD,Sort(Filter(_cAnswerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
+        ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+        ClearCollect(colCurrentMeasures,Sort(Filter(_cAnswerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
+        ClearCollect(colSatisfaction,Sort(Filter(_cAnswerList,And(themeID=themeId,category="満足状況")),questionID));
+        ClearCollect(colVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="提供価値")),questionID));
+        ClearCollect(colMVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
         
+        // キャンバスのボックス内に表示する文字を作成(追加できるカテゴリは、ギャラリー内の各ラベルで作成する)
+        UpdateContext({
+        _lCustomerData:Concat(colCustomer,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),// 属性・背景
+        _lJTBDData:Concat(colJTBD,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine),// JTBD
+        _lMVPData:Concat(colMVP,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)// MVP
         });
         
 
@@ -57,17 +66,7 @@ ScreenEntireDisplay As screen:
                 HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |
-                    =//Set(ExportData, Concat(ExportCol, category & "," & answer & Char(13)));
-                    
-                    /**
-                    Set(ExportData, "【背景・属性】"&Char(13)&Concat(ExportCol1,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                     "【JTBD】"&Char(13)&Concat(ExportCol2,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                     "【阻害要因】"&Char(13)&Concat(ExportCol3,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                    "【現状対策】"&Char(13)&Concat(ExportCol4,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                    "【満足状況】"&Char(13)&Concat(ExportCol5,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                    "【VP】"&Char(13)&Concat(ExportCol6,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13))&
-                    "【MVP】"&Char(13)&Concat(ExportCol7,_lIcon&LookUp(questionList,ID=questionID).Title&Char(13)&answer&Char(13)&Char(13)));
-                    */
+                    =
                     
                     // 阻害要因
                     Clear(colOutputTextHindranceFactor);

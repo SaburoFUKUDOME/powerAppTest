@@ -14,6 +14,21 @@ scrennQuestion As screen:
             Y: =cmHeader_4.Height
             ZIndex: =2
 
+            cmStatusBar_1 As cmStatusBar:
+                checkStatus: |-
+                    =With({
+                    categoryQuestionCount:
+                    // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
+                    If(Or(navigationKey=1,navigationKey=2,navigationKey=3,navigationKey=8),
+                    CountIf(questionList,category=navigationName),
+                    // それ以外の場合は、問の追加分かけた件数をセットする
+                    CountIf(questionList,category=navigationName)*_gMaxSortNumber),
+                    answerTable:Filter('仮説構築支援ツール - 回答',And(category=navigationName,themeID=themeId))},
+                    If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
+                    CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
+                    2,1))
+                X: =HeaderContainer_1.Width/3
+
             lineContainer2_2 As groupContainer.verticalAutoLayoutContainer:
                 Height: =66
                 LayoutDirection: =LayoutDirection.Vertical
@@ -40,11 +55,6 @@ scrennQuestion As screen:
                     X: =50
                     Y: =505
                     ZIndex: =2
-
-            statusBar_3 As cmStatusBar:
-                Width: =600
-                X: =HeaderContainer_1.Width/3
-                ZIndex: =2
 
         NavigateContainer_1 As groupContainer.manualLayoutContainer:
             Height: =BodyContainer1.Height
