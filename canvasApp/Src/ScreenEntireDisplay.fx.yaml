@@ -54,12 +54,13 @@ ScreenEntireDisplay As screen:
                 Tooltip: ="Home画面へ戻る"
                 Width: =30
                 X: =20
-                Y: =15
+                Y: =10
                 ZIndex: =2
 
             ButtonOutput As button:
                 BorderColor: =_cBaseColor
                 BorderThickness: =0
+                DisplayMode: =DisplayMode.Disabled
                 Fill: =_cBaseColor
                 FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
                 Height: =30
@@ -137,6 +138,115 @@ ScreenEntireDisplay As screen:
                 X: =515
                 Y: =20
                 ZIndex: =4
+
+            Button1 As button:
+                OnSelect: |
+                    =// 阻害要因
+                    Clear(colOutputTextHindranceFactor);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    }))
+                    );
+                    
+                    // 現状対策
+                    Clear(colOutputTextCurrentMeasures);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    }))
+                    );
+                    
+                    // 満足状況
+                    Clear(colOutputTextSatisfaction);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextSatisfaction, {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    }))
+                    );
+                    
+                    // VP
+                    Clear(colOutputTextVP);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextVP, {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    }))
+                    );
+                    
+                    
+                    Set(ExportData2,
+                    Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)&
+                    Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)&
+                    Concat(colOutputTextHindranceFactor,text)&
+                    Concat(colOutputTextCurrentMeasures,text)&
+                    Concat(colOutputTextSatisfaction,text)&
+                    Concat(colOutputTextVP,text)&
+                    Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine));
+                    
+                    
+                    UpdateContext({result: exportList.Run("HypothesisCreator_csv_"& Text(Now(), "yyyymmddhhmm"),ExportData2)});
+                    Notify("ファイルをダウンロードしました。", NotificationType.Information);
+                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
+                Text: ="CSV形式で出力"
+                X: =775
+                Y: =5
+                ZIndex: =5
+
+            Button2 As button:
+                OnSelect: |
+                    =
+                    
+                    // 阻害要因
+                    Clear(colOutputTextHindranceFactor);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 現状対策
+                    Clear(colOutputTextCurrentMeasures);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 満足状況
+                    Clear(colOutputTextSatisfaction);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextSatisfaction, {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // VP
+                    Clear(colOutputTextVP);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextVP, {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 出力文字を連結する
+                    Set(ExportData,
+                    "【"&_lCustomer&"】"&_lNewLine&_lCustomerData&_lNewLine&
+                    "【"&_lJTBD&"】"&_lNewLine&_lJTBDData&_lNewLine&
+                    Concat(colOutputTextHindranceFactor,text&_lNewLine)&
+                    Concat(colOutputTextCurrentMeasures,text&_lNewLine)&
+                    Concat(colOutputTextSatisfaction,text&_lNewLine)&
+                    Concat(colOutputTextVP,text&_lNewLine)&
+                    "【"&_lMVP&"】"&_lNewLine&_lMVPData);
+                    
+                    //UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
+                    UpdateContext({result: exportList.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
+                    Notify("ファイルをダウンロードしました。", NotificationType.Information);
+                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
+                Size: =12
+                Text: ="テキスト形式で出力"
+                X: =961
+                Y: =5
+                ZIndex: =6
 
         ContainerCanvas As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-ContainerFooter3.Height
@@ -264,6 +374,7 @@ ScreenEntireDisplay As screen:
 
                     IconArrow As icon.ChevronLeft:
                         Color: =RGBA(0, 13, 75, 1)
+                        DisplayMode: =DisplayMode.View
                         Height: =Parent.Height-10
                         Icon: =Icon.ChevronLeft
                         Width: =30
@@ -541,6 +652,7 @@ ScreenEntireDisplay As screen:
 
             IconArrow_1 As icon.ChevronLeft:
                 Color: =RGBA(0, 13, 75, 1)
+                DisplayMode: =DisplayMode.View
                 Height: =Parent.Height-10
                 Icon: =Icon.ChevronLeft
                 Width: =30
