@@ -671,7 +671,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638000382314202686",
+    "LastModifiedTimestamp": "638000929506168652",
     "Name": "cmStatusBar",
     "Rules": [
       {
@@ -730,7 +730,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638000382314202686",
+  "LastModifiedTimestamp": "638000929506168652",
   "Name": "8fef180aebaa45dc9a14f69838b127c5",
   "OverridableProperties": {},
   "Version": "637987405467998392"
