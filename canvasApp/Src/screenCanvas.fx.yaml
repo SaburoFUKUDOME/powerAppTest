@@ -370,6 +370,8 @@ screenCanvas As screen:
                 ZIndex: =9
 
             LabelConfirmMessage As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
                 Height: =90
                 Text: |-
                     ="削除しますか？
@@ -402,7 +404,8 @@ screenCanvas As screen:
                 ZIndex: =11
 
             ButtonCancel As button:
-                Fill: =_cBaseColor
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =35
                 OnSelect: =Set(_gIsDelete,false)
                 Size: =12
