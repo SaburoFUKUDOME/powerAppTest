@@ -171,7 +171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ButtonOutput",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3074,7 +3074,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconBackThemeScreen_2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3531,7 +3531,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label3",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -112,7 +112,7 @@ ScreenEntireDisplay As screen:
                     
                     //UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
                     UpdateContext({result: exportList.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
-                    Notify("OneDriveにファイルを出力しました。ファイルパス：["&result.filepath&"]", NotificationType.Information);
+                    Notify("ファイルをダウンロードしました。", NotificationType.Information);
                     Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
                 PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -135,7 +135,7 @@ ScreenEntireDisplay As screen:
                 Text: ="©New*New All rights reserved."
                 Width: =337
                 X: =515
-                Y: =30
+                Y: =20
                 ZIndex: =4
 
         ContainerCanvas As groupContainer.manualLayoutContainer:
