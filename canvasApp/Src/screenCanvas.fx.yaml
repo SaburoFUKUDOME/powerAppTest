@@ -6,7 +6,7 @@ screenCanvas As screen:
         Set(themeId,galleryTheme.Selected.ID);
         Set(pageKey,"canvas");
         Set(pageKey,"canvas");
-        Set(maxSortNumber,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order);
+        Set(_gMaxSortNumber,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order);
 
     MainContainer2 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
@@ -333,7 +333,7 @@ screenCanvas As screen:
                     ZIndex: =2
 
     Label5 As label:
-        Text: =maxSortNumber
+        Text: =_gMaxSortNumber
         X: =145
         Y: =135
         ZIndex: =39

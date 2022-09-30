@@ -24,7 +24,7 @@ cmStatusBar As CanvasComponent:
                 If(Or(ThisItem.ID=1,ThisItem.ID=2,ThisItem.ID=3,ThisItem.ID=8),
                 CountIf(questionList,category=ThisItem.Title),
                 // それ以外の場合は、問の追加分かけた件数をセットする
-                CountIf(questionList,category=ThisItem.Title)*maxSortNumber),
+                CountIf(questionList,category=ThisItem.Title)*_gMaxSortNumber),
                 answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
