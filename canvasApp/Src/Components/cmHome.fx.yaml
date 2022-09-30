@@ -170,34 +170,6 @@ cmHome As CanvasComponent:
         Y: =153
         ZIndex: =3
 
-    "GalleryCategory As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        Height: =67
-        Items: =Sort(Filter(navigationList,Not(Title="前提条件")),ID,Descending)//)
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =153
-        Width: =1042
-        X: =62
-        Y: =81
-        ZIndex: =4
-
-        LabelCategoryName As label:
-            Align: =Align.Center
-            Color: =_cBaseColor
-            Height: =35
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =113
-            X: =9
-            Y: =15
-            ZIndex: =2
-
     "GalleryAddQuestion As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         Height: =400
         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
@@ -214,8 +186,9 @@ cmHome As CanvasComponent:
         LabelCategory3 As label:
             BorderThickness: =1
             Fill: |-
-                =With({answerTable:Filter('仮説構築支援ツール - 回答',And(questionID=7,themeID=themeId,add_answerID=ThisItem.ID))},
-                If(CountIf(answerTable,status=completeStatus),_cBaseColor,
+                =With({categoryQuestionCount:CountIf(questionList,category="阻害要因（課題）"),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category="阻害要因（課題）",themeID=themeId,add_answerID=ThisItem.ID))},
+                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 RGBA(200,220,255,1),RGBA(245,245,245,1)))
             Height: =96
@@ -229,8 +202,9 @@ cmHome As CanvasComponent:
         LabelCategory4 As label:
             BorderThickness: =1
             Fill: |-
-                =With({answerTable:Filter('仮説構築支援ツール - 回答',And(questionID=11,themeID=themeId,add_answerID=ThisItem.ID))},
-                If(CountIf(answerTable,status=completeStatus),_cBaseColor,
+                =With({categoryQuestionCount:CountIf(questionList,category="現状対策（代替）"),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category="現状対策（代替）",themeID=themeId,add_answerID=ThisItem.ID))},
+                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 RGBA(200,220,255,1),RGBA(245,245,245,1)))
             Height: =96
@@ -244,8 +218,9 @@ cmHome As CanvasComponent:
         LabelCategory5 As label:
             BorderThickness: =1
             Fill: |-
-                =With({answerTable:Filter('仮説構築支援ツール - 回答',And(questionID=14,themeID=themeId,add_answerID=ThisItem.ID))},
-                If(CountIf(answerTable,status=completeStatus),_cBaseColor,
+                =With({categoryQuestionCount:CountIf(questionList,category="満足状況"),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category="満足状況",themeID=themeId,add_answerID=ThisItem.ID))},
+                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 RGBA(200,220,255,1),RGBA(245,245,245,1)))
             Height: =96
@@ -268,8 +243,9 @@ cmHome As CanvasComponent:
         LabelCategory6 As label:
             BorderThickness: =1
             Fill: |-
-                =With({answerTable:Filter('仮説構築支援ツール - 回答',And(questionID=18,themeID=themeId,add_answerID=ThisItem.ID))},
-                If(CountIf(answerTable,status=completeStatus),_cBaseColor,
+                =With({categoryQuestionCount:CountIf(questionList,category="提供価値"),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category="提供価値",themeID=themeId,add_answerID=ThisItem.ID))},
+                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 RGBA(200,220,255,1),RGBA(245,245,245,1)))
             Height: =96
@@ -339,7 +315,7 @@ cmHome As CanvasComponent:
         Text: ="顧客価値"
         Width: =242
         X: =71
-        Y: =53
+        Y: =71
         ZIndex: =11
 
     LabelCategorize As label:
@@ -350,72 +326,90 @@ cmHome As CanvasComponent:
         Text: ="顧客セグメント"
         Width: =693
         X: =405
-        Y: =53
+        Y: =71
         ZIndex: =12
 
-    GroupDeleteConfirm As group:
+    GroupCategoryName As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =12
+        ZIndex: =20
 
-        Rectangle1_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =RGBA(0, 0, 0, 0.2)
-            Height: =620
-            Visible: =If(_gIsDelete,true,false)
-            Width: =1138
-            ZIndex: =6
+        LabelCategoryCustomer As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="顧客"
+            Width: =96
+            X: =1002
+            Y: =117
+            ZIndex: =13
 
-        Rectangle1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =208
-            Visible: =If(_gIsDelete,true,false)
-            Width: =395
-            X: =313
-            Y: =200
-            ZIndex: =7
+        LabelCategoryJTBD As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="JTBD"
+            Width: =96
+            X: =845
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =14
 
-        LabelConfirmMessage As label:
-            Text: ="削除しますか？"
-            Visible: =If(_gIsDelete,true,false)
-            X: =437
-            Y: =258
-            ZIndex: =8
+        LabelCategoryHindranceFactor As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="阻害要因"
+            Width: =96
+            X: =698
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =15
 
-        ButtonDelete As button:
-            Fill: =_cBaseColor
-            Height: =35
-            OnSelect: |-
-                =If(
-                    Not(IsBlank(LookUp('仮説構築支援ツール - 回答',add_answerID=_gDeleteId))),
-                    Remove('仮説構築支援ツール - 回答',Filter('仮説構築支援ツール - 回答',add_answerID=_gDeleteId));
-                );
-                Remove('仮説構築支援ツール - 追加の問い',LookUp('仮説構築支援ツール - 追加の問い',ID=_gDeleteId));
-                UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder),{sort_order:LookUp('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder)).sort_order-1});
-                Set(_gIsDelete,false);
-                Set(_gMaxSortNumber,_gMaxSortNumber-1);
-            Size: =12
-            Text: ="削除"
-            Visible: =If(_gIsDelete,true,false)
-            Width: =100
-            X: =371
-            Y: =340
-            ZIndex: =9
-
-        ButtonCancel As button:
-            Fill: =_cBaseColor
-            Height: =35
-            OnSelect: =Set(_gIsDelete,false)
-            Size: =12
-            Text: ="キャンセル"
-            Visible: =If(_gIsDelete,true,false)
-            Width: =100
+        LabelCategoryCurrentMeasures As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="現状対策"
+            Width: =96
             X: =547
-            Y: =340
-            ZIndex: =10
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =16
+
+        LabelCategorySatisfaction As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="満足状況"
+            Width: =96
+            X: =402
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =17
+
+        LabelValueProvided As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="提供価値"
+            Width: =96
+            X: =230
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =18
+
+        LabelCategoryMVP As label:
+            Align: =Align.Center
+            Color: =_cBaseColor
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="MVP"
+            Width: =96
+            X: =71
+            Y: =LabelCategoryCustomer.Y
+            ZIndex: =19
 
