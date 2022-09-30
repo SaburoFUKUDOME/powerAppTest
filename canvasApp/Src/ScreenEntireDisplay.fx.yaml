@@ -53,8 +53,8 @@ ScreenEntireDisplay As screen:
                 OnSelect: =Navigate(screenCanvas,Fade)
                 Tooltip: ="Home画面へ戻る"
                 Width: =30
-                X: =19
-                Y: =10
+                X: =20
+                Y: =15
                 ZIndex: =2
 
             ButtonOutput As button:
@@ -126,6 +126,17 @@ ScreenEntireDisplay As screen:
                 X: =1148
                 Y: =10
                 ZIndex: =3
+
+            Label3 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =20
+                LineHeight: =1.0
+                Size: =11
+                Text: ="©New*New All rights reserved."
+                Width: =337
+                X: =515
+                Y: =30
+                ZIndex: =4
 
         ContainerCanvas As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-ContainerFooter3.Height
