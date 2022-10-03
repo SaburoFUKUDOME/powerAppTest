@@ -140,12 +140,12 @@ ScreenEntireDisplay As screen:
                 ZIndex: =4
 
             Button1 As button:
-                OnSelect: |+
+                OnSelect: |-
                     =// 阻害要因
                     Clear(colOutputTextHindranceFactor);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                     With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
-                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)
                     }))
                     );
                     
@@ -153,7 +153,7 @@ ScreenEntireDisplay As screen:
                     Clear(colOutputTextCurrentMeasures);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                     With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
-                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)
                     }))
                     );
                     
@@ -161,7 +161,7 @@ ScreenEntireDisplay As screen:
                     Clear(colOutputTextSatisfaction);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                     With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
-                    Collect(colOutputTextSatisfaction, {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    Collect(colOutputTextSatisfaction, {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)
                     }))
                     );
                     
@@ -169,25 +169,24 @@ ScreenEntireDisplay As screen:
                     Clear(colOutputTextVP);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                     With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
-                    Collect(colOutputTextVP, {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)
+                    Collect(colOutputTextVP, {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)
                     }))
                     );
                     
                     
                     Set(ExportData2,
-                    Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)&
-                    Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine)&
+                    Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)&
+                    Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine)&
                     Concat(colOutputTextHindranceFactor,text)&
                     Concat(colOutputTextCurrentMeasures,text)&
                     Concat(colOutputTextSatisfaction,text)&
                     Concat(colOutputTextVP,text)&
-                    Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine));
+                    Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&answer&""""&_lNewLine));
                     
                     
                     UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(), "yyyymmddhhmm"),ExportData2)});
                     Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path);
                     Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                    
                 Size: =12
                 Text: ="3.CSV形式でDL"
                 Width: =120
