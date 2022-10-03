@@ -240,6 +240,7 @@ screenTheme As screen:
                 BorderColor: =_cBaseColor
                 BorderThickness: =0
                 Fill: =_cBaseColor
+                FocusedBorderThickness: =0
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: |-
                     =NewForm(FormThemeCreate);//ScreenCreateThemeのフォームコントロールを新規作成モードにする

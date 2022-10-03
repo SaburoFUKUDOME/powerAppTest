@@ -248,6 +248,12 @@ ScreenEntireDisplay As screen:
                 Y: =5
                 ZIndex: =6
 
+            Button3 As button:
+                OnSelect: =Excel.Run()
+                Text: ="ボタン"
+                X: =163
+                ZIndex: =7
+
         ContainerCanvas As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-ContainerFooter3.Height
             Width: =Parent.Width

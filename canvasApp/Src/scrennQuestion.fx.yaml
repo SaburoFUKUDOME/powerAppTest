@@ -336,7 +336,7 @@ scrennQuestion As screen:
                         Fill: =White
                         FocusedBorderThickness: =0
                         Height: =35
-                        HoverBorderColor: =ColorFade(White, -5%)
+                        HoverBorderColor: =ColorFade(_cBaseColor, 5%)
                         HoverFill: =_cBaseColor
                         OnSelect: |
                             =Set(exampleGroupVisible,false);
@@ -508,6 +508,7 @@ scrennQuestion As screen:
                     )
                     
                 X: =323
+                Y: =10
                 ZIndex: =1
 
             requiredLabel As label:
@@ -520,11 +521,11 @@ scrennQuestion As screen:
                 ZIndex: =2
 
             pagingContainer As groupContainer.horizontalAutoLayoutContainer:
-                Height: =70
+                Height: =40
                 LayoutMode: =LayoutMode.Auto
                 Width: =123
                 X: =FooterContainer.Width-pagingContainer.Width
-                Y: =10
+                Y: =20
                 ZIndex: =3
 
                 currentPageLabel As label:
