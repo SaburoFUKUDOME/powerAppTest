@@ -1,5 +1,5 @@
-<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://japan-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="ExportCSV" xmlns="http://wadl.dev.java.net/2009/02">
-  <doc title="ExportCSV" />
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://japan-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="csvDL" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="csvDL" />
   <grammars>
     <jsonTypes targetNamespace="https://japan-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput__Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux306E_Ux4F5C_Ux6210___Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux540D__def" />
@@ -8,9 +8,9 @@
         <property name="ファイルの作成_ファイル名" type="string" />
         <property name="ファイルの作成_ファイルコンテンツ" type="string" />
       </object>
-      <string name="ResponseActionOutput_filepath_def" />
+      <string name="ResponseActionOutput_path_def" />
       <object name="ResponseActionOutput">
-        <property name="filepath" type="string" />
+        <property name="path" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>

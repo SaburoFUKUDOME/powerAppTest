@@ -112,9 +112,9 @@ ScreenEntireDisplay As screen:
                     "【"&_lMVP&"】"&_lNewLine&_lMVPData);
                     
                     //UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
-                    UpdateContext({result: exportList.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
+                    UpdateContext({result: csvDL.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
                     Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
+                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path)
                 PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(_cBaseColor,-20%)
@@ -140,7 +140,7 @@ ScreenEntireDisplay As screen:
                 ZIndex: =4
 
             Button1 As button:
-                OnSelect: |
+                OnSelect: |+
                     =// 阻害要因
                     Clear(colOutputTextHindranceFactor);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
@@ -184,19 +184,18 @@ ScreenEntireDisplay As screen:
                     Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","&answer&_lNewLine));
                     
                     
-                    UpdateContext({result: exportList.Run("HypothesisCreator_csv_"& Text(Now(), "yyyymmddhhmm"),ExportData2)});
+                    UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(), "yyyymmddhhmm"),ExportData2)});
+                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path);
                     Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
-                Text: ="CSV形式で出力"
-                X: =775
+                    
+                Text: ="CSV形式でDL"
+                X: =802
                 Y: =5
                 ZIndex: =5
 
-            Button2 As button:
+            Button2_1 As button:
                 OnSelect: |
-                    =
-                    
-                    // 阻害要因
+                    =// 阻害要因
                     Clear(colOutputTextHindranceFactor);
                     ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                     With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
@@ -239,20 +238,75 @@ ScreenEntireDisplay As screen:
                     "【"&_lMVP&"】"&_lNewLine&_lMVPData);
                     
                     //UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
-                    UpdateContext({result: exportList.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
-                    Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.filepath)
+                    UpdateContext({result: ExportTxtOneDrive.Run("/HypothesisCreator","HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
+                    Notify("OneDriveにダウンロードしました。["&result.path&"]", NotificationType.Information);
                 Size: =12
-                Text: ="テキスト形式で出力"
-                X: =961
+                Text: ="テキスト形式でOneDriveに保存"
+                X: =988
                 Y: =5
-                ZIndex: =6
-
-            Button3 As button:
-                OnSelect: =Excel.Run()
-                Text: ="ボタン"
-                X: =163
                 ZIndex: =7
+
+            Button2_2 As button:
+                OnSelect: |
+                    =// 阻害要因
+                    Clear(colOutputTextHindranceFactor);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextHindranceFactor, {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 現状対策
+                    Clear(colOutputTextCurrentMeasures);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextCurrentMeasures, {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 満足状況
+                    Clear(colOutputTextSatisfaction);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextSatisfaction, {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // VP
+                    Clear(colOutputTextVP);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextVP, {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                    }))
+                    );
+                    
+                    // 出力文字を連結する
+                    Set(ExportData3,
+                    "【"&_lCustomer&"】"&_lNewLine&_lCustomerData&_lNewLine&
+                    "【"&_lJTBD&"】"&_lNewLine&_lJTBDData&_lNewLine&
+                    Concat(colOutputTextHindranceFactor,text&_lNewLine)&
+                    Concat(colOutputTextCurrentMeasures,text&_lNewLine)&
+                    Concat(colOutputTextSatisfaction,text&_lNewLine)&
+                    Concat(colOutputTextVP,text&_lNewLine)&
+                    "【"&_lMVP&"】"&_lNewLine&_lMVPData);
+                    
+                    //UpdateContext({result: ExportCSV.Run("HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
+                    UpdateContext({result: txtDL.Run("HypothesisCreator_txt_"& Text(Now(), "yyyymmddhhmm"),ExportData3)});
+                    Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path);
+                    Notify("ファイルをダウンロードしました。", NotificationType.Information);
+                Size: =12
+                Text: ="テキスト形式でDL"
+                X: =313
+                Y: =10
+                ZIndex: =8
+
+            Label1 As label:
+                Height: =45
+                Text: ="形式はテキストですが、ファイルの拡張子はcsvになります→"
+                Width: =263
+                X: =61
+                Y: =5
+                ZIndex: =9
 
         ContainerCanvas As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-ContainerFooter3.Height

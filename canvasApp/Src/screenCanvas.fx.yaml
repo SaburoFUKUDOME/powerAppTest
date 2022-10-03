@@ -319,11 +319,7 @@ screenCanvas As screen:
                     Height: =30
                     HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: |-
-                        =
-                        
-                        
-                        Navigate(ScreenEntireDisplay)
+                    OnSelect: =Navigate(ScreenEntireDisplay)
                     PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =ColorFade(_cBaseColor,-20%)
