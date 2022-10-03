@@ -123,7 +123,8 @@ cmHome As CanvasComponent:
     ZIndex: =4
 
     LabelCategory1 As label:
-        BorderThickness: =1
+        BorderColor: =_cBaseColor
+        BorderThickness: =3
         Fill: |-
             =With({categoryQuestionCount:CountIf(questionList,category="顧客"),
             answerTable:Filter('仮説構築支援ツール - 回答',And(category="顧客",themeID=themeId))},
@@ -134,12 +135,13 @@ cmHome As CanvasComponent:
         OnSelect: =cmHome.moveQuestion(3,false,0);
         Text: =
         Width: =96
-        X: =1002
-        Y: =153
+        X: =992
+        Y: =113
         ZIndex: =1
 
     LabelCategory2 As label:
-        BorderThickness: =1
+        BorderColor: =_cBaseColor
+        BorderThickness: =3
         Fill: |-
             =With({categoryQuestionCount:CountIf(questionList,category="目的（JTBD）"),
             answerTable:Filter('仮説構築支援ツール - 回答',And(category="目的（JTBD）",themeID=themeId))},
@@ -150,12 +152,13 @@ cmHome As CanvasComponent:
         OnSelect: =cmHome.moveQuestion(6,false,0);
         Text: =
         Width: =96
-        X: =845
-        Y: =153
+        X: =835
+        Y: =113
         ZIndex: =2
 
     LabelCategory7 As label:
-        BorderThickness: =1
+        BorderColor: =_cBaseColor
+        BorderThickness: =3
         Fill: |-
             =With({categoryQuestionCount:CountIf(questionList,category="MVP（ソリューション）"),
             answerTable:Filter('仮説構築支援ツール - 回答',And(category="MVP（ソリューション）",themeID=themeId))},
@@ -166,25 +169,26 @@ cmHome As CanvasComponent:
         OnSelect: =cmHome.moveQuestion(19,false,0);
         Text: =
         Width: =96
-        X: =71
-        Y: =153
+        X: =61
+        Y: =113
         ZIndex: =3
 
     "GalleryAddQuestion As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         Height: =400
         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
         Layout: =Layout.Vertical
-        TemplatePadding: =4
+        TemplatePadding: =
         TemplateSize: |-
             =400
             //Min(870, Self.Height - 60)
         Width: =621
-        X: =202
-        Y: =153
+        X: =192
+        Y: =113
         ZIndex: =5
 
         LabelCategory3 As label:
-            BorderThickness: =1
+            BorderColor: =_cBaseColor
+            BorderThickness: =3
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category="阻害要因（課題）"),
                 answerTable:Filter('仮説構築支援ツール - 回答',And(category="阻害要因（課題）",themeID=themeId,add_answerID=ThisItem.ID))},
@@ -200,7 +204,8 @@ cmHome As CanvasComponent:
             ZIndex: =5
 
         LabelCategory4 As label:
-            BorderThickness: =1
+            BorderColor: =_cBaseColor
+            BorderThickness: =3
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category="現状対策（代替）"),
                 answerTable:Filter('仮説構築支援ツール - 回答',And(category="現状対策（代替）",themeID=themeId,add_answerID=ThisItem.ID))},
@@ -216,7 +221,8 @@ cmHome As CanvasComponent:
             ZIndex: =6
 
         LabelCategory5 As label:
-            BorderThickness: =1
+            BorderColor: =_cBaseColor
+            BorderThickness: =3
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category="満足状況"),
                 answerTable:Filter('仮説構築支援ツール - 回答',And(category="満足状況",themeID=themeId,add_answerID=ThisItem.ID))},
@@ -232,6 +238,8 @@ cmHome As CanvasComponent:
             ZIndex: =7
 
         IconLeft As icon.ChevronLeft:
+            Color: =_cBaseColor
+            DisplayMode: =DisplayMode.View
             Height: =50
             Icon: =Icon.ChevronLeft
             OnSelect: =Select(Parent)
@@ -241,7 +249,8 @@ cmHome As CanvasComponent:
             ZIndex: =8
 
         LabelCategory6 As label:
-            BorderThickness: =1
+            BorderColor: =_cBaseColor
+            BorderThickness: =3
             Fill: |-
                 =With({categoryQuestionCount:CountIf(questionList,category="提供価値"),
                 answerTable:Filter('仮説構築支援ツール - 回答',And(category="提供価値",themeID=themeId,add_answerID=ThisItem.ID))},
@@ -257,53 +266,76 @@ cmHome As CanvasComponent:
             ZIndex: =9
 
         IconDelete As icon.CancelBadge:
-            Height: =36
+            Color: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            Height: =30
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =Set(_gDeleteId,ThisItem.ID);
                 Set(_gIsDelete,true);
                 Set(_gDeleteSortOrder,ThisItem.sort_order);
+            Tooltip: ="追加した回答行を削除"
             Visible: =If(ThisItem.sort_order=1, false, true)
-            Width: =42
+            Width: =30
             X: =11
             Y: =14
             ZIndex: =10
 
         IconDown As icon.Hamburger:
-            Height: =36
+            Color: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            Height: =30
             Icon: =Icon.ChevronDown
             OnSelect: |-
                 =UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order=ThisItem.sort_order+1),{sort_order:ThisItem.sort_order});
                 UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order+1});
+            Tooltip: ="回答行を下に移動"
             Visible: =If(ThisItem.sort_order=First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order, false, true)
-            Width: =42
-            X: =537
+            Width: =30
+            X: =552
             Y: =14
             ZIndex: =11
 
         ButtonAddQuestion As button:
+            BorderThickness: =1
             Color: =_cBaseColor
+            DisabledFill: =ColorFade(_cBaseColor, 20%)
             Fill: =RGBA(245,245,245,1)
-            Height: =81
+            FocusedBorderColor: =ColorFade(_cBaseColor, 20%)
+            FocusedBorderThickness: =1
+            FontWeight: =Normal
+            Height: =80
+            HoverBorderColor: =ColorFade(_cBaseColor, 20%)
+            HoverFill: =ColorFade(_cBaseColor, 20%)
             OnSelect: |-
                 =Collect('仮説構築支援ツール - 追加の問い',{themeID:themeId,sort_order:_gMaxSortNumber+1});
                 Set(_gMaxSortNumber,_gMaxSortNumber+1);
+            PaddingBottom: =10
+            PressedFill: =ColorFade(_cBaseColor, 20%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =24
             Text: ="＋追加"
             Visible: =If(And(First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order=ThisItem.sort_order,CountRows(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId).ID)<5),true)
             Width: =567
-            X: =21
-            Y: =196
+            X: =20
+            Y: =180
             ZIndex: =12
 
         IconUp As icon.Hamburger:
-            Height: =36
+            Color: =_cBaseColor
+            DisabledColor: =_cBaseColor
+            Height: =30
             Icon: =Icon.ChevronUp
             OnSelect: |-
                 =UpdateIf('仮説構築支援ツール - 追加の問い', And(themeID=themeId,sort_order=ThisItem.sort_order-1), {sort_order:ThisItem.sort_order});
                 UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
+            Tooltip: ="かいとうｇ"
             Visible: =If(ThisItem.sort_order=1, false, true)
-            Width: =42
-            X: =483
+            Width: =30
+            X: =500
             Y: =14
             ZIndex: =13
 
@@ -314,8 +346,8 @@ cmHome As CanvasComponent:
         Height: =28
         Text: ="顧客価値"
         Width: =242
-        X: =71
-        Y: =71
+        X: =61
+        Y: =31
         ZIndex: =11
 
     LabelCategorize As label:
@@ -325,8 +357,8 @@ cmHome As CanvasComponent:
         Height: =28
         Text: ="顧客セグメント"
         Width: =693
-        X: =405
-        Y: =71
+        X: =395
+        Y: =31
         ZIndex: =12
 
     GroupCategoryName As group:
@@ -343,8 +375,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="顧客"
             Width: =96
-            X: =1002
-            Y: =117
+            X: =992
+            Y: =77
             ZIndex: =13
 
         LabelCategoryJTBD As label:
@@ -354,8 +386,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="JTBD"
             Width: =96
-            X: =845
-            Y: =LabelCategoryCustomer.Y
+            X: =835
+            Y: =77
             ZIndex: =14
 
         LabelCategoryHindranceFactor As label:
@@ -365,8 +397,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="阻害要因"
             Width: =96
-            X: =698
-            Y: =LabelCategoryCustomer.Y
+            X: =688
+            Y: =77
             ZIndex: =15
 
         LabelCategoryCurrentMeasures As label:
@@ -376,8 +408,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="現状対策"
             Width: =96
-            X: =547
-            Y: =LabelCategoryCustomer.Y
+            X: =537
+            Y: =77
             ZIndex: =16
 
         LabelCategorySatisfaction As label:
@@ -387,8 +419,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="満足状況"
             Width: =96
-            X: =402
-            Y: =LabelCategoryCustomer.Y
+            X: =392
+            Y: =77
             ZIndex: =17
 
         LabelValueProvided As label:
@@ -398,8 +430,8 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="提供価値"
             Width: =96
-            X: =230
-            Y: =LabelCategoryCustomer.Y
+            X: =220
+            Y: =77
             ZIndex: =18
 
         LabelCategoryMVP As label:
@@ -409,7 +441,7 @@ cmHome As CanvasComponent:
             Height: =31
             Text: ="MVP"
             Width: =96
-            X: =71
-            Y: =LabelCategoryCustomer.Y
+            X: =61
+            Y: =77
             ZIndex: =19
 

@@ -206,7 +206,7 @@
         "Name": "homeButton",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 175,
+        "PublishOrderIndex": 174,
         "Rules": [
           {
             "Category": "Data",
@@ -656,7 +656,7 @@
         "Name": "homeButtonView",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 176,
+        "PublishOrderIndex": 175,
         "Rules": [
           {
             "Category": "Data",
@@ -928,7 +928,7 @@
             "Name": "galleryTemplate1_7",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 178,
+            "PublishOrderIndex": 177,
             "Rules": [
               {
                 "Category": "Data",
@@ -1124,7 +1124,7 @@
             "Name": "navigateButton",
             "Parent": "navigateGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 179,
+            "PublishOrderIndex": 178,
             "Rules": [
               {
                 "Category": "Data",
@@ -1450,7 +1450,7 @@
         "Name": "navigateGallery",
         "Parent": "cmNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 177,
+        "PublishOrderIndex": 176,
         "Rules": [
           {
             "Category": "Data",
@@ -1665,7 +1665,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638003792405035479",
+    "LastModifiedTimestamp": "638003805758872635",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -1781,7 +1781,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638003792405035479",
+  "LastModifiedTimestamp": "638003805758872635",
   "Name": "7c3cf122a435439fa23ddcb43d273dff",
   "OverridableProperties": {},
   "TemplateOriginalName": "e88d8fa5810f418a94473be296e5e99e",
