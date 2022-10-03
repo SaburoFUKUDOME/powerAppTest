@@ -189,7 +189,7 @@ ScreenEntireDisplay As screen:
                     Notify("ファイルをダウンロードしました。", NotificationType.Information);
                     
                 Size: =12
-                Text: ="CSV形式でDL"
+                Text: ="4.CSV形式でDL"
                 Width: =120
                 X: =1133
                 Y: =7
@@ -243,7 +243,7 @@ ScreenEntireDisplay As screen:
                     UpdateContext({result: ExportTxtOneDrive.Run("/HypothesisCreator","HypothesisCreator_"& Text(Now(), "yyyymmddhhmm"),ExportData)});
                     Notify("OneDriveにダウンロードしました。["&result.path&"]", NotificationType.Information);
                 Size: =10
-                Text: ="テキスト形式でOneDriveに保存"
+                Text: ="3.テキスト形式でOneDriveに保存"
                 Width: =120
                 X: =997
                 Y: =7
@@ -298,7 +298,7 @@ ScreenEntireDisplay As screen:
                     Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path);
                     Notify("ファイルをダウンロードしました。", NotificationType.Information);
                 Size: =10
-                Text: ="テキスト形式でDL(拡張子csv)"
+                Text: ="1.テキスト形式でDL(拡張子csv)"
                 Width: =120
                 X: =374
                 Y: =10
@@ -364,7 +364,7 @@ ScreenEntireDisplay As screen:
                     Download("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL"&result.path);
                     Notify("ファイルを作成しました。"&result.path, NotificationType.Information);
                 Size: =11
-                Text: ="テキスト形式でDL"
+                Text: ="2.テキスト形式でDL"
                 Width: =120
                 X: =864
                 Y: =4
