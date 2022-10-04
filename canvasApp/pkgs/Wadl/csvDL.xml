@@ -4,9 +4,11 @@
     <jsonTypes targetNamespace="https://japan-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput__Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux306E_Ux4F5C_Ux6210___Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux540D__def" />
       <string name="ManualTriggerInput__Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux306E_Ux4F5C_Ux6210___Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux30B3_Ux30F3_Ux30C6_Ux30F3_Ux30C4__def" />
+      <string name="ManualTriggerInput__Ux30D5_Ux30A1_Ux30A4_Ux30EB_Ux306E_Ux4F5C_Ux6210___Ux30B5_Ux30A4_Ux30C8_Ux306E_Ux30A2_Ux30C9_Ux30EC_Ux30B9__def" />
       <object name="ManualTriggerInput">
         <property name="ファイルの作成_ファイル名" type="string" />
         <property name="ファイルの作成_ファイルコンテンツ" type="string" />
+        <property name="ファイルの作成_サイトのアドレス" type="string" />
       </object>
       <string name="ResponseActionOutput_path_def" />
       <object name="ResponseActionOutput">
@@ -27,6 +29,7 @@
           <representation mediaType="application/json">
             <param style="plain" name="ファイルの作成_ファイル名" path="/ファイルの作成_ファイル名" type="xs:string" required="true" />
             <param style="plain" name="ファイルの作成_ファイルコンテンツ" path="/ファイルの作成_ファイルコンテンツ" type="xs:string" required="true" />
+            <param style="plain" name="ファイルの作成_サイトのアドレス" path="/ファイルの作成_サイトのアドレス" type="xs:string" required="true" />
           </representation>
         </request>
         <response>

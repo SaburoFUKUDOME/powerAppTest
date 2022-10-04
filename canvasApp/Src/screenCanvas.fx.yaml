@@ -316,6 +316,7 @@ screenCanvas As screen:
                     BorderThickness: =0
                     Fill: =_cBaseColor
                     FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
+                    FocusedBorderThickness: =0
                     Height: =30
                     HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
