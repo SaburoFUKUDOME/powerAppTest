@@ -287,8 +287,8 @@ cmHome As CanvasComponent:
             Height: =30
             Icon: =Icon.ChevronDown
             OnSelect: |-
-                =UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order=ThisItem.sort_order+1),{sort_order:ThisItem.sort_order});
-                UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order+1});
+                =UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order=ThisItem.sort_order+1),{sort_order:ThisItem.sort_order},ID=ThisItem.ID,{sort_order:ThisItem.sort_order+1});
+                //UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order+1});
             Tooltip: ="回答行を下に移動"
             Visible: =If(ThisItem.sort_order=First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order, false, true)
             Width: =30
@@ -330,8 +330,8 @@ cmHome As CanvasComponent:
             Height: =30
             Icon: =Icon.ChevronUp
             OnSelect: |-
-                =UpdateIf('仮説構築支援ツール - 追加の問い', And(themeID=themeId,sort_order=ThisItem.sort_order-1), {sort_order:ThisItem.sort_order});
-                UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
+                =UpdateIf('仮説構築支援ツール - 追加の問い', And(themeID=themeId,sort_order=ThisItem.sort_order-1), {sort_order:ThisItem.sort_order},ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
+                //UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
             Tooltip: ="かいとうｇ"
             Visible: =If(ThisItem.sort_order=1, false, true)
             Width: =30
