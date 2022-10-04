@@ -131,7 +131,7 @@ cmHome As CanvasComponent:
             If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
             CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
             RGBA(200,220,255,1),RGBA(245,245,245,1)))
-        Height: =404
+        Height: =410
         OnSelect: =cmHome.moveQuestion(3,false,0);
         Text: =
         Width: =96
@@ -148,7 +148,7 @@ cmHome As CanvasComponent:
             If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
             CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
             RGBA(200,220,255,1),RGBA(245,245,245,1)))
-        Height: =404
+        Height: =410
         OnSelect: =cmHome.moveQuestion(6,false,0);
         Text: =
         Width: =96
@@ -165,7 +165,7 @@ cmHome As CanvasComponent:
             If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
             CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
             RGBA(200,220,255,1),RGBA(245,245,245,1)))
-        Height: =404
+        Height: =410
         OnSelect: =cmHome.moveQuestion(19,false,0);
         Text: =
         Width: =96
@@ -174,13 +174,11 @@ cmHome As CanvasComponent:
         ZIndex: =3
 
     "GalleryAddQuestion As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
-        Height: =400
+        Height: =410
         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
         Layout: =Layout.Vertical
         TemplatePadding: =
-        TemplateSize: |-
-            =400
-            //Min(870, Self.Height - 60)
+        TemplateSize: =410
         Width: =621
         X: =192
         Y: =113
