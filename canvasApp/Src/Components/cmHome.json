@@ -3999,7 +3999,7 @@
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "\"かいとうｇ\"",
+                "InvariantScript": "\"回答行を上に移動\"",
                 "Property": "Tooltip",
                 "RuleProviderType": "Unknown"
               },
@@ -7720,7 +7720,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638004409299563755",
+    "LastModifiedTimestamp": "638004440790893476",
     "Name": "cmHome",
     "Rules": [
       {
@@ -7884,7 +7884,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638004409299563755",
+  "LastModifiedTimestamp": "638004440790893476",
   "Name": "a0d3516f99e8436fbcf0b750d172662e",
   "OverridableProperties": {},
   "TemplateOriginalName": "0d0d37b6f28941bb91f899ea6b89f80d",

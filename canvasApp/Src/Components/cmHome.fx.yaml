@@ -332,7 +332,7 @@ cmHome As CanvasComponent:
             OnSelect: |-
                 =UpdateIf('仮説構築支援ツール - 追加の問い', And(themeID=themeId,sort_order=ThisItem.sort_order-1), {sort_order:ThisItem.sort_order},ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
                 //UpdateIf('仮説構築支援ツール - 追加の問い',ID=ThisItem.ID,{sort_order:ThisItem.sort_order-1});
-            Tooltip: ="かいとうｇ"
+            Tooltip: ="回答行を上に移動"
             Visible: =If(ThisItem.sort_order=1, false, true)
             Width: =30
             X: =500
