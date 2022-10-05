@@ -296,7 +296,6 @@ screenCanvas As screen:
                 Height: =FooterContainer_1.Height-20
                 LayoutGap: =50
                 LayoutMode: =LayoutMode.Auto
-                PaddingTop: =10
                 Width: =1094
                 X: =20
                 Y: =20
@@ -317,7 +316,7 @@ screenCanvas As screen:
                     Fill: =_cBaseColor
                     FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
                     FocusedBorderThickness: =0
-                    Height: =30
+                    Height: =35
                     HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                     HoverFill: =ColorFade(_cBaseColor,-20%)
                     OnSelect: =Navigate(ScreenEntireDisplay)
@@ -380,10 +379,10 @@ screenCanvas As screen:
 
             ButtonDelete As button:
                 BorderThickness: =0
-                Fill: =_cBaseColor
+                Fill: =RGBA(203, 102, 102, 1)
                 FocusedBorderThickness: =0
                 Height: =35
-                HoverFill: =ColorFade(Self.Fill,20%)
+                HoverFill: =ColorFade(Self.Fill,-20%)
                 OnSelect: |-
                     =With({answerRecord:LookUp('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
                     If(
@@ -395,7 +394,11 @@ screenCanvas As screen:
                     UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder),{sort_order:sort_order-1});
                     Set(_gIsDelete,false);
                     Set(_gMaxSortNumber,_gMaxSortNumber-1);
-                Size: =12
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =14
                 Text: ="削除"
                 Visible: =If(_gIsDelete,true,false)
                 Width: =100
@@ -409,8 +412,13 @@ screenCanvas As screen:
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =1
                 Height: =35
+                HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(Self.Fill, -20%)
                 OnSelect: =Set(_gIsDelete,false)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
                 Size: =12
                 Text: ="キャンセル"
                 Visible: =If(_gIsDelete,true,false)

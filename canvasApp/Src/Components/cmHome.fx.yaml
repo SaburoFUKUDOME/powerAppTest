@@ -174,11 +174,11 @@ cmHome As CanvasComponent:
         ZIndex: =3
 
     "GalleryAddQuestion As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
-        Height: =410
+        Height: =420
         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
         Layout: =Layout.Vertical
         TemplatePadding: =
-        TemplateSize: =410
+        TemplateSize: =420
         Width: =621
         X: =192
         Y: =113
@@ -302,7 +302,7 @@ cmHome As CanvasComponent:
             FocusedBorderColor: =ColorFade(_cBaseColor, 20%)
             FocusedBorderThickness: =1
             FontWeight: =Normal
-            Height: =80
+            Height: =75
             HoverBorderColor: =ColorFade(_cBaseColor, 20%)
             HoverFill: =ColorFade(_cBaseColor, 20%)
             OnSelect: |-

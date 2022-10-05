@@ -170,7 +170,7 @@ ScreenEntireDisplay As screen:
                         Concat(colOutputTextTXT,text&_lNewLine)&
                         "【"&_lMVP&"】"&_lNewLine&_lMVPData);
                         
-                        UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(),"yyyymmddhhmm"),ExportDataCSV,_cSharePointLink)});
+                        UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(),"yyyymmddhhmm"),ExportDataTxt,_cSharePointLink)});
                         Download(_cSharePointLink&result.path);
                         Notify("ファイルをダウンロードしました。", NotificationType.Information);
                     PressedBorderColor: =ColorFade(_cBaseColor,-20%)
