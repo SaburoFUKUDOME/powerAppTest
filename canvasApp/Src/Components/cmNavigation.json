@@ -1338,7 +1338,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "//問画面の場合のみ、答えを更新する\r\nIf(pageKey =\"question\",cmNavigation.updateAnswer(),Navigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);); \r\n// 追加できるカテゴリの場合、先頭のIDを保持\r\nIf(\r\n    Not(IsBlank(LookUp(_cCategory,Value=ThisItem.Title))),\r\n    Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID);\r\n);\r\ncmNavigation.setQuestionValue(ThisItem.question_id);\r\n",
+                "InvariantScript": "//問画面の場合のみ、答えを更新する\r\nIf(pageKey =\"question\",cmNavigation.updateAnswer(),Navigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);); \r\n// 追加できるカテゴリの場合、先頭のIDを保持\r\nIf(\r\n    Not(IsBlank(LookUp(_cCategory,Value=ThisItem.Title))),\r\n    Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID),\r\n    Set(addAnswerId,0);\r\n);\r\ncmNavigation.setQuestionValue(ThisItem.question_id);\r\n",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1665,7 +1665,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638005550122420947",
+    "LastModifiedTimestamp": "638005575498907511",
     "Name": "cmNavigation",
     "Rules": [
       {
@@ -1781,7 +1781,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638005550122420947",
+  "LastModifiedTimestamp": "638005575498907511",
   "Name": "7c3cf122a435439fa23ddcb43d273dff",
   "OverridableProperties": {},
   "TemplateOriginalName": "e88d8fa5810f418a94473be296e5e99e",

@@ -226,7 +226,8 @@ cmNavigation As CanvasComponent:
                 // 追加できるカテゴリの場合、先頭のIDを保持
                 If(
                     Not(IsBlank(LookUp(_cCategory,Value=ThisItem.Title))),
-                    Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID);
+                    Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID),
+                    Set(addAnswerId,0);
                 );
                 cmNavigation.setQuestionValue(ThisItem.question_id);
             RadiusBottomLeft: =0
