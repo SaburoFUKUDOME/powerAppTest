@@ -22,7 +22,7 @@ screenCanvas As screen:
             ZIndex: =2
 
             cmHome_1 As cmHome:
-                Height: =562
+                Height: =568
                 moveQuestion: |-
                     =If(
                         addAnswerFlag,
@@ -287,9 +287,9 @@ screenCanvas As screen:
                     ZIndex: =2
 
         FooterContainer_1 As groupContainer.manualLayoutContainer:
-            Height: =70
+            Height: =57
             Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer.Width
-            Y: =MainContainer.Height-70
+            Y: =710
             ZIndex: =7
 
             ContainerFooter As groupContainer.horizontalAutoLayoutContainer:
@@ -298,7 +298,7 @@ screenCanvas As screen:
                 LayoutMode: =LayoutMode.Auto
                 Width: =1094
                 X: =20
-                Y: =20
+                Y: =10
                 ZIndex: =6
 
                 IconBackThemeScreen As icon.BackArrow:
