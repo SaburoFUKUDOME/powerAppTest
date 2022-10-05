@@ -384,7 +384,7 @@ screenCanvas As screen:
                 Height: =35
                 HoverFill: =ColorFade(Self.Fill,-20%)
                 OnSelect: |-
-                    =With({answerRecord:LookUp('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
+                    =With({answerRecord:Filter('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
                     If(
                         Not(IsBlank(answerRecord)),
                         Remove('仮説構築支援ツール - 回答',answerRecord);
