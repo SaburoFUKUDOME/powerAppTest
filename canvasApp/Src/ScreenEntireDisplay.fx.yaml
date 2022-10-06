@@ -91,21 +91,20 @@ ScreenEntireDisplay As screen:
                         ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                         With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
                         Collect(colOutputTextCSV, 
-                        {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")
-                        &""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine)}
+                        {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                        {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                        {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                        {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)}
                         ))
                         );
                         
                         
                         // 出力文字の連結
                         Set(ExportDataCSV,
-                        Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine)&
-                        Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine)&
+                        Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
+                        Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
                         Concat(colOutputTextCSV,text)&
-                        Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(Substitute(answer,"""",""),",","")&""""&_lNewLine));
+                        Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine));
                         
                         UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(),"yyyymmddhhmm"),ExportDataCSV,_cSharePointLink)});
                         Download(_cSharePointLink&result.path);
@@ -154,22 +153,22 @@ ScreenEntireDisplay As screen:
                         ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
                         With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
                         Collect(colOutputTextTXT, 
-                        {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&Substitute(Substitute(answer,"""",""),",","")&_lNewLine&_lNewLine)},
-                        {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&Substitute(Substitute(answer,"""",""),",","")&_lNewLine&_lNewLine)
+                        {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)},
+                        {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                         },
-                        {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&Substitute(Substitute(answer,"""",""),",","")&_lNewLine&_lNewLine)
+                        {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                         },
-                        {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&Substitute(Substitute(answer,"""",""),",","")&_lNewLine&_lNewLine)}
+                        {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)}
                         ))
                         );
                         
                         
                         // 出力文字を連結する
                         Set(ExportDataTxt,
-                        "【"&_lCustomer&"】"&_lNewLine&Substitute(Substitute(_lCustomerData,"""",""),",","")&_lNewLine&
-                        "【"&_lJTBD&"】"&_lNewLine&Substitute(Substitute(_lJTBDData,"""",""),",","")&_lNewLine&
+                        "【"&_lCustomer&"】"&_lNewLine&_lCustomerData&_lNewLine&
+                        "【"&_lJTBD&"】"&_lNewLine&_lJTBDData&_lNewLine&
                         Concat(colOutputTextTXT,text&_lNewLine)&
-                        "【"&_lMVP&"】"&_lNewLine&Substitute(Substitute(_lMVPData,"""",""),",",""));
+                        "【"&_lMVP&"】"&_lNewLine&_lMVPData);
                         
                         UpdateContext({result: csvDL.Run("HypothesisCreator_txt_"& Text(Now(),"yyyymmddhhmm"),ExportDataTxt,_cSharePointLink)});
                         Download(_cSharePointLink&result.path);
