@@ -318,7 +318,7 @@ cmHome As CanvasComponent:
             RadiusTopRight: =5
             Size: =24
             Text: ="＋追加"
-            Visible: =If(And(First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order=ThisItem.sort_order,CountRows(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId).ID)<5),true)
+            Visible: =If(And(_gMaxSortNumber=ThisItem.sort_order,_gMaxSortNumber<5),true)
             Width: =567
             X: =20
             Y: =180
