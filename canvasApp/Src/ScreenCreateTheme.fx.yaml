@@ -20,6 +20,7 @@ ScreenCreateTheme As screen:
                 BorderColor: =_cBaseColor
                 BorderThickness: =0
                 Fill: =_cBaseColor
+                FocusedBorderThickness: =0
                 HoverFill: =ColorFade(_cBaseColor,-20%)
                 OnSelect: =SubmitForm(FormThemeCreate);
                 RadiusBottomLeft: =20
