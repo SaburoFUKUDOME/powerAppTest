@@ -241,6 +241,105 @@ ScreenEntireDisplay_1 As screen:
                 Icon2_7 As icon.Edit:
                     Height: =38
                     Icon: =Icon.Edit
+                    OnSelect: |-
+                        =Set(
+                            addAnswer,
+                            false
+                        );
+                        Set(
+                            addAnswerId,
+                            0
+                        );
+                        
+                        
+                        //問いへ遷移
+                        Set(
+                            navigationKey,
+                            19
+                        );
+                        Set(
+                            questionKey,
+                            19
+                        );
+                        With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+                        Reset(textAnswer);
+                        Reset(skipAnswerCheckbox);
+                        Reset(noAnswerCheckbox);
+                        Set(
+                            currentAnswer,
+                            If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                            );
+                        Set(
+                            skipFlag,
+                            getAnswerRecord.skip_flag
+                            );
+                        Set(
+                            noAnswerFlag,
+                            getAnswerRecord.no_answer_flag
+                            );
+                        );
+                        
+                        With({qRecord:LookUp(questionList, ID=questionKey)},
+                        Set(
+                            currentTitle,
+                            qRecord.Title
+                        );
+                        Set(
+                            currentQuestion,
+                            qRecord.question_content
+                        );
+                        Set(currentCategory,qRecord.category);
+                        Set(
+                            controlType,
+                            qRecord.control_type
+                        );
+                        Set(
+                            currentPage,
+                            qRecord.current_question_number
+                        );
+                        Set(
+                            totalPage,
+                            qRecord.question_totalnumber
+                        );
+                        Set(
+                            commentary,
+                            qRecord.commentary
+                        );
+                        Set(
+                            example,
+                            qRecord.example
+                        );
+                        Set(
+                            currentRequired,
+                            qRecord.required
+                        );
+                        Set(
+                            nextVisible,
+                            If(qRecord.next_question_id=0,false,true)
+                        
+                        );
+                        Set(
+                            confirmVisible,
+                            If(qRecord.next_question_id=0,true,false)
+                        );
+                        );
+                        Set(
+                            backVisible,
+                            false
+                        );
+                        Set(
+                            commentaryGroupVisible,
+                            true
+                        );
+                        Set(
+                            exampleGroupVisible,
+                            false
+                        );
+                        If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
+                        Navigate(
+                            scrennQuestion,
+                            ScreenTransition.Fade
+                        );
                     Width: =38
                     X: =134
                     Y: =5
@@ -296,6 +395,105 @@ ScreenEntireDisplay_1 As screen:
                 Icon2_8 As icon.Edit:
                     Height: =38
                     Icon: =Icon.Edit
+                    OnSelect: |-
+                        =Set(
+                            addAnswer,
+                            false
+                        );
+                        Set(
+                            addAnswerId,
+                            0
+                        );
+                        
+                        
+                        //問いへ遷移
+                        Set(
+                            navigationKey,
+                            6
+                        );
+                        Set(
+                            questionKey,
+                            6
+                        );
+                        With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+                        Reset(textAnswer);
+                        Reset(skipAnswerCheckbox);
+                        Reset(noAnswerCheckbox);
+                        Set(
+                            currentAnswer,
+                            If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                            );
+                        Set(
+                            skipFlag,
+                            getAnswerRecord.skip_flag
+                            );
+                        Set(
+                            noAnswerFlag,
+                            getAnswerRecord.no_answer_flag
+                            );
+                        );
+                        
+                        With({qRecord:LookUp(questionList, ID=questionKey)},
+                        Set(
+                            currentTitle,
+                            qRecord.Title
+                        );
+                        Set(
+                            currentQuestion,
+                            qRecord.question_content
+                        );
+                        Set(currentCategory,qRecord.category);
+                        Set(
+                            controlType,
+                            qRecord.control_type
+                        );
+                        Set(
+                            currentPage,
+                            qRecord.current_question_number
+                        );
+                        Set(
+                            totalPage,
+                            qRecord.question_totalnumber
+                        );
+                        Set(
+                            commentary,
+                            qRecord.commentary
+                        );
+                        Set(
+                            example,
+                            qRecord.example
+                        );
+                        Set(
+                            currentRequired,
+                            qRecord.required
+                        );
+                        Set(
+                            nextVisible,
+                            If(qRecord.next_question_id=0,false,true)
+                        
+                        );
+                        Set(
+                            confirmVisible,
+                            If(qRecord.next_question_id=0,true,false)
+                        );
+                        );
+                        Set(
+                            backVisible,
+                            false
+                        );
+                        Set(
+                            commentaryGroupVisible,
+                            true
+                        );
+                        Set(
+                            exampleGroupVisible,
+                            false
+                        );
+                        If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
+                        Navigate(
+                            scrennQuestion,
+                            ScreenTransition.Fade
+                        );
                     Width: =38
                     X: =134
                     Y: =5
@@ -357,6 +555,105 @@ ScreenEntireDisplay_1 As screen:
                 Icon2_9 As icon.Edit:
                     Height: =38
                     Icon: =Icon.Edit
+                    OnSelect: |-
+                        =Set(
+                            addAnswer,
+                            false
+                        );
+                        Set(
+                            addAnswerId,
+                            0
+                        );
+                        
+                        
+                        //問いへ遷移
+                        Set(
+                            navigationKey,
+                            3
+                        );
+                        Set(
+                            questionKey,
+                            3
+                        );
+                        With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+                        Reset(textAnswer);
+                        Reset(skipAnswerCheckbox);
+                        Reset(noAnswerCheckbox);
+                        Set(
+                            currentAnswer,
+                            If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                            );
+                        Set(
+                            skipFlag,
+                            getAnswerRecord.skip_flag
+                            );
+                        Set(
+                            noAnswerFlag,
+                            getAnswerRecord.no_answer_flag
+                            );
+                        );
+                        
+                        With({qRecord:LookUp(questionList, ID=questionKey)},
+                        Set(
+                            currentTitle,
+                            qRecord.Title
+                        );
+                        Set(
+                            currentQuestion,
+                            qRecord.question_content
+                        );
+                        Set(currentCategory,qRecord.category);
+                        Set(
+                            controlType,
+                            qRecord.control_type
+                        );
+                        Set(
+                            currentPage,
+                            qRecord.current_question_number
+                        );
+                        Set(
+                            totalPage,
+                            qRecord.question_totalnumber
+                        );
+                        Set(
+                            commentary,
+                            qRecord.commentary
+                        );
+                        Set(
+                            example,
+                            qRecord.example
+                        );
+                        Set(
+                            currentRequired,
+                            qRecord.required
+                        );
+                        Set(
+                            nextVisible,
+                            If(qRecord.next_question_id=0,false,true)
+                        
+                        );
+                        Set(
+                            confirmVisible,
+                            If(qRecord.next_question_id=0,true,false)
+                        );
+                        );
+                        Set(
+                            backVisible,
+                            false
+                        );
+                        Set(
+                            commentaryGroupVisible,
+                            true
+                        );
+                        Set(
+                            exampleGroupVisible,
+                            false
+                        );
+                        If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
+                        Navigate(
+                            scrennQuestion,
+                            ScreenTransition.Fade
+                        );
                     Width: =38
                     X: =134
                     Y: =5
@@ -443,8 +740,7 @@ ScreenEntireDisplay_1 As screen:
                             Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
-                                =
-                                Set(
+                                =Set(
                                     addAnswer,
                                     true
                                 );
@@ -618,8 +914,7 @@ ScreenEntireDisplay_1 As screen:
                             Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
-                                =
-                                Set(
+                                =Set(
                                     addAnswer,
                                     true
                                 );
@@ -783,8 +1078,7 @@ ScreenEntireDisplay_1 As screen:
                             Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
-                                =
-                                Set(
+                                =Set(
                                     addAnswer,
                                     true
                                 );
@@ -950,8 +1244,7 @@ ScreenEntireDisplay_1 As screen:
                             Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
-                                =
-                                Set(
+                                =Set(
                                     addAnswer,
                                     true
                                 );

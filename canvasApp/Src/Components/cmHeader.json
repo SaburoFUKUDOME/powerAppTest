@@ -65,7 +65,7 @@
         "Name": "headerLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 246,
+        "PublishOrderIndex": 245,
         "Rules": [
           {
             "Category": "Design",
@@ -259,7 +259,7 @@
         "Name": "titleLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 247,
+        "PublishOrderIndex": 246,
         "Rules": [
           {
             "Category": "Data",
@@ -618,7 +618,7 @@
         "Name": "addressLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 248,
+        "PublishOrderIndex": 247,
         "Rules": [
           {
             "Category": "Data",
@@ -988,7 +988,7 @@
         "Name": "userIcon",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 249,
+        "PublishOrderIndex": 248,
         "Rules": [
           {
             "Category": "Data",

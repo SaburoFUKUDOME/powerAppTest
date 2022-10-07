@@ -103,7 +103,7 @@
         "Name": "LabelCategorize2",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 259,
+        "PublishOrderIndex": 258,
         "Rules": [
           {
             "Category": "Data",
@@ -455,7 +455,7 @@
         "Name": "LabelCategorize",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 260,
+        "PublishOrderIndex": 259,
         "Rules": [
           {
             "Category": "Data",
@@ -814,7 +814,7 @@
         "Name": "LabelCategoryMVP",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 262,
+        "PublishOrderIndex": 261,
         "Rules": [
           {
             "Category": "Data",
@@ -1173,7 +1173,7 @@
         "Name": "LabelValueProvided",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 263,
+        "PublishOrderIndex": 262,
         "Rules": [
           {
             "Category": "Data",
@@ -1532,7 +1532,7 @@
         "Name": "LabelCategorySatisfaction",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 264,
+        "PublishOrderIndex": 263,
         "Rules": [
           {
             "Category": "Data",
@@ -1891,7 +1891,7 @@
         "Name": "LabelCategoryCurrentMeasures",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 265,
+        "PublishOrderIndex": 264,
         "Rules": [
           {
             "Category": "Data",
@@ -2250,7 +2250,7 @@
         "Name": "LabelCategoryHindranceFactor",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 266,
+        "PublishOrderIndex": 265,
         "Rules": [
           {
             "Category": "Data",
@@ -2609,7 +2609,7 @@
         "Name": "LabelCategoryJTBD",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 267,
+        "PublishOrderIndex": 266,
         "Rules": [
           {
             "Category": "Data",
@@ -2961,7 +2961,7 @@
         "Name": "LabelCategoryCustomer",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 268,
+        "PublishOrderIndex": 267,
         "Rules": [
           {
             "Category": "Data",
@@ -3321,7 +3321,7 @@
         "Name": "LabelCategory7",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 269,
+        "PublishOrderIndex": 268,
         "Rules": [
           {
             "Category": "Data",
@@ -3602,7 +3602,7 @@
             "Name": "galleryTemplate5",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 271,
+            "PublishOrderIndex": 270,
             "Rules": [
               {
                 "Category": "Design",
@@ -3720,7 +3720,7 @@
             "Name": "IconDelete",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 272,
+            "PublishOrderIndex": 271,
             "Rules": [
               {
                 "Category": "Data",
@@ -4002,7 +4002,7 @@
             "Name": "IconUp",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 273,
+            "PublishOrderIndex": 272,
             "Rules": [
               {
                 "Category": "Data",
@@ -4277,7 +4277,7 @@
             "Name": "IconDown",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 274,
+            "PublishOrderIndex": 273,
             "Rules": [
               {
                 "Category": "Data",
@@ -4559,7 +4559,7 @@
             "Name": "LabelCategory6",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 275,
+            "PublishOrderIndex": 274,
             "Rules": [
               {
                 "Category": "Data",
@@ -4925,7 +4925,7 @@
             "Name": "LabelCategory5",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 276,
+            "PublishOrderIndex": 275,
             "Rules": [
               {
                 "Category": "Data",
@@ -5291,7 +5291,7 @@
             "Name": "LabelCategory4",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 277,
+            "PublishOrderIndex": 276,
             "Rules": [
               {
                 "Category": "Data",
@@ -5671,7 +5671,7 @@
             "Name": "LabelCategory3",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 278,
+            "PublishOrderIndex": 277,
             "Rules": [
               {
                 "Category": "Data",
@@ -5993,7 +5993,7 @@
             "Name": "IconLeft",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 279,
+            "PublishOrderIndex": 278,
             "Rules": [
               {
                 "Category": "Design",
@@ -6391,7 +6391,7 @@
             "Name": "ButtonAddQuestion",
             "Parent": "GalleryAddQuestion",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 280,
+            "PublishOrderIndex": 279,
             "Rules": [
               {
                 "Category": "Data",
@@ -6737,7 +6737,7 @@
         "Name": "GalleryAddQuestion",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 270,
+        "PublishOrderIndex": 269,
         "Rules": [
           {
             "Category": "Data",
@@ -7007,7 +7007,7 @@
         "Name": "LabelCategory2",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 281,
+        "PublishOrderIndex": 280,
         "Rules": [
           {
             "Category": "Data",
@@ -7373,7 +7373,7 @@
         "Name": "LabelCategory1",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 282,
+        "PublishOrderIndex": 281,
         "Rules": [
           {
             "Category": "Data",
@@ -7664,7 +7664,7 @@
         "Name": "GroupCategoryName",
         "Parent": "cmHome",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 261,
+        "PublishOrderIndex": 260,
         "Rules": [
           {
             "Category": "Design",
