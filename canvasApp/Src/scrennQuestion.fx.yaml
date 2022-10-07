@@ -409,10 +409,10 @@ scrennQuestion As screen:
                             Text: ="PSFキャンバス例"
                             Tooltip: ="Employee EngagementサービスのPSFキャンバスの例を開く"
                             Width: =107
-                            Y: =Icon9.Height+10
+                            Y: =IconPDF.Height+10
                             ZIndex: =1
 
-                        Icon9 As icon.DocumentPDF:
+                        IconPDF As icon.DocumentPDF:
                             Height: =25
                             Icon: =Icon.DocumentPDF
                             OnSelect: |-
