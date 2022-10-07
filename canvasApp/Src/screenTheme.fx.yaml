@@ -130,13 +130,15 @@ screenTheme As screen:
 
                 themeTitleLabel As label:
                     FontWeight: =Semibold
-                    Height: =55
+                    Height: =35
                     OnSelect: =Select(Parent)
-                    Text: =If(Len(ThisItem.Title)<30,ThisItem.Title,Left(ThisItem.Title,25)&"…")
+                    Overflow: =Overflow.Scroll
+                    Size: =15
+                    Text: =ThisItem.Title
                     Tooltip: =ThisItem.Title
-                    Width: =Len(themeTitleLabel.Text)*23
+                    Width: =statusThemeGallery.X-20
                     X: =5
-                    Y: =4
+                    Y: =10
                     ZIndex: =3
 
                 gearIcon As icon.Settings:
@@ -144,15 +146,15 @@ screenTheme As screen:
                     Color: =_cBaseColor
                     DisabledBorderColor: =_cBaseColor
                     DisabledColor: =_cBaseColor
-                    Height: =25
+                    Height: =31
                     Icon: =Icon.Settings
                     OnSelect: |-
                         =EditForm(FormThemeCreate);//ScreenCreateThemeのフォームコントロールを編集モードにする
                         Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID,_lButtonLabel:"更新"})
                     Tooltip: ="テーマを編集する"
                     Width: =42
-                    X: =themeTitleLabel.Width
-                    Y: =17
+                    X: =265
+                    Y: =64
                     ZIndex: =4
 
                 lastModifiedLabel As label:
@@ -169,8 +171,8 @@ screenTheme As screen:
                     Height: =60
                     Items: =navigationList
                     TemplateSize: =25
-                    Width: =500
-                    X: =651
+                    Width: =296
+                    X: =800
                     Y: =23
                     ZIndex: =6
 
