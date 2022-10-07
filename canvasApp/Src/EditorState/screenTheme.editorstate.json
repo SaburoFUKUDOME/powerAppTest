@@ -1275,7 +1275,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gearIcon",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2146,7 +2146,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelMaxSortOrder",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3118,7 +3118,14 @@
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
-        "Tooltip",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"項目の詳細の表示\"",
+          "InvariantPropertyName": "Tooltip",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "AccessibleLabel",
         "PaddingLeft",
         "PaddingRight",

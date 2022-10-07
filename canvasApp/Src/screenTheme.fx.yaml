@@ -122,7 +122,7 @@ screenTheme As screen:
                     PaddingRight: =10
                     PaddingTop: =10
                     TabIndex: =0
-                    Tooltip: ="項目の詳細の表示"
+                    Tooltip: ="テーマの回答登録画面へ"
                     Width: =60
                     X: =galleryTheme.Width -100
                     Y: =23
