@@ -91,10 +91,10 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "df69e975-5576-4c52-9911-fc1b4bbeb6b6",
-    "Id": "04baa486-68fb-4503-ba67-555a1f03977b",
+    "Id": "b98a7317-2d69-4165-8da3-eb5c3d3b4b4d",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール",
+    "Name": "%25e4%25bb%25ae%25e8%25aa%25ac%25e6%25a7%258b%25e7%25af%2589%25e6%2594%25af%25e6%258f%25b4%25e3%2583%2584%25e3%2583%25bc%25e3%2583%25ab.msapp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
@@ -114,6 +114,7 @@
     "screenCanvas_1",
     "scrennQuestion",
     "ScreenEntireDisplay",
+    "ScreenEntireDisplay_1",
     "ScreenCreateTheme"
   ]
 }
