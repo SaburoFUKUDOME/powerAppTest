@@ -65,7 +65,7 @@
         "Name": "headerLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 249,
+        "PublishOrderIndex": 246,
         "Rules": [
           {
             "Category": "Design",
@@ -259,7 +259,7 @@
         "Name": "titleLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 250,
+        "PublishOrderIndex": 247,
         "Rules": [
           {
             "Category": "Data",
@@ -618,7 +618,7 @@
         "Name": "addressLabel",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 251,
+        "PublishOrderIndex": 248,
         "Rules": [
           {
             "Category": "Data",
@@ -988,7 +988,7 @@
         "Name": "userIcon",
         "Parent": "cmHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 252,
+        "PublishOrderIndex": 249,
         "Rules": [
           {
             "Category": "Data",
@@ -1204,7 +1204,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638007223539665619",
+    "LastModifiedTimestamp": "638007246297591445",
     "Name": "cmHeader",
     "Rules": [
       {
@@ -1263,7 +1263,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638007223539665619",
+  "LastModifiedTimestamp": "638007246297591445",
   "Name": "74380d984ce148eca4423ee6f2d35989",
   "OverridableProperties": {},
   "TemplateOriginalName": "48a811cd834d494084536b41f327a27e",

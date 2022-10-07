@@ -154,139 +154,31 @@ ScreenEntireDisplay_1 As screen:
                 Y: =10
                 ZIndex: =4
 
-            Container2_2 As groupContainer.manualLayoutContainer:
-                Height: =40
-                Width: =492
-                X: =872
-                Y: =5
+            ButtonDLCsv_2 As button:
+                BorderColor: =_cBaseColor
+                BorderThickness: =0
+                Fill: =_cBaseColor
+                FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
+                FocusedBorderThickness: =0
+                FontWeight: =Semibold
+                Height: =30
+                HoverBorderColor: =ColorFade(_cBaseColor,-20%)
+                HoverFill: =ColorFade(_cBaseColor,-20%)
+                OnSelect: =Set(_gIsShowDialog,true);
+                PressedBorderColor: =ColorFade(_cBaseColor,-20%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(_cBaseColor,-20%)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =14
+                Text: ="CSV出力"
+                Tooltip: ="回答のCSVファイルをダウンロード"
+                Width: =150
+                X: =1199
+                Y: =10
                 ZIndex: =5
-
-                ButtonDLCsv_2 As button:
-                    BorderColor: =_cBaseColor
-                    BorderThickness: =0
-                    Fill: =_cBaseColor
-                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    FocusedBorderThickness: =0
-                    FontWeight: =Semibold
-                    Height: =30
-                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
-                    HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: |-
-                        =// 追加の問を連結したコレクションを作成
-                        Clear(colOutputTextCSV);
-                        ForAll(Sequence(CountRows(GalleryAddCategory_2.AllItems)),
-                        With({_addId:Index(GalleryAddCategory_2.AllItems,Value).ID},
-                        Collect(colOutputTextCSV, 
-                        {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
-                        {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)}
-                        ))
-                        );
-                        
-                        
-                        // 出力文字の連結
-                        Set(ExportDataCSV,
-                        Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
-                        Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
-                        Concat(colOutputTextCSV,text)&
-                        Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine));
-                        
-                        UpdateContext({result: csvDL.Run("HypothesisCreator_csv_"& Text(Now(),"yyyymmddhhmm"),ExportDataCSV,_cSharePointLink)});
-                        Download(_cSharePointLink&result.path);
-                        Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(_cBaseColor,-20%)
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =10
-                    Text: ="CSV形式でダウンロード"
-                    Tooltip: ="回答をCSV形式でダウンロード"
-                    Width: =200
-                    X: =30
-                    Y: =5
-                    ZIndex: =1
-
-                IconDL2_2 As icon.Download:
-                    Color: =_cBaseColor
-                    DisabledColor: =_cBaseColor
-                    DisplayMode: =DisplayMode.View
-                    Height: =25
-                    Icon: =Icon.Download
-                    OnSelect: =
-                    PressedColor: =ColorFade(Self.Color, 20%)
-                    Width: =30
-                    X: =250
-                    Y: =10
-                    ZIndex: =2
-
-                ButtonDLText_2 As button:
-                    BorderColor: =_cBaseColor
-                    BorderThickness: =0
-                    Fill: =_cBaseColor
-                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    FocusedBorderThickness: =0
-                    FontWeight: =Semibold
-                    Height: =30
-                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
-                    HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: |+
-                        =// 追加の問を連結したコレクションを作成
-                        Clear(colOutputTextTXT);
-                        ForAll(Sequence(CountRows(GalleryAddCategory_2.AllItems)),
-                        With({_addId:Index(GalleryAddCategory_2.AllItems,Value).ID},
-                        Collect(colOutputTextTXT, 
-                        {addId:_addId,text:"【"&_lHindranceFactor&Value&"】"&_lNewLine&Concat(Filter(colHindranceFactor,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)},
-                        {addId:_addId,text:"【"&_lCurrentMeasures&Value&"】"&_lNewLine&Concat(Filter(colCurrentMeasures,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
-                        },
-                        {addId:_addId,text:"【"&_lSatisfaction&Value&"】"&_lNewLine&Concat(Filter(colSatisfaction,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
-                        },
-                        {addId:_addId,text:"【"&_lVP&Value&"】"&_lNewLine&Concat(Filter(colVP,add_answerID=_addId),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)}
-                        ))
-                        );
-                        
-                        
-                        // 出力文字を連結する
-                        Set(ExportDataTxt,
-                        "【"&_lCustomer&"】"&_lNewLine&_lCustomerData&_lNewLine&
-                        "【"&_lJTBD&"】"&_lNewLine&_lJTBDData&_lNewLine&
-                        Concat(colOutputTextTXT,text&_lNewLine)&
-                        "【"&_lMVP&"】"&_lNewLine&_lMVPData);
-                        
-                        UpdateContext({result: csvDL.Run("HypothesisCreator_txt_"& Text(Now(),"yyyymmddhhmm"),ExportDataTxt,_cSharePointLink)});
-                        Download(_cSharePointLink&result.path);
-                        Notify("ファイルをダウンロードしました。", NotificationType.Information);
-                        
-                        
-                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(_cBaseColor,-20%)
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =10
-                    Text: ="テキスト形式でダウンロード"
-                    Tooltip: ="回答をテキスト形式でダウンロード"
-                    Width: =200
-                    X: =280
-                    Y: =5
-                    ZIndex: =3
-
-                IconDL_2 As icon.Download:
-                    Color: =_cBaseColor
-                    DisabledColor: =_cBaseColor
-                    DisplayMode: =DisplayMode.View
-                    Height: =25
-                    Icon: =Icon.Download
-                    OnSelect: =
-                    PressedColor: =ColorFade(Self.Color, 20%)
-                    Width: =30
-                    Y: =10
-                    ZIndex: =4
 
         ContainerCanvas_2 As groupContainer.manualLayoutContainer:
             Height: =496
@@ -347,7 +239,7 @@ ScreenEntireDisplay_1 As screen:
                     ZIndex: =3
 
                 Icon2_7 As icon.Edit:
-                    Height: =58
+                    Height: =38
                     Icon: =Icon.Edit
                     Width: =38
                     X: =134
@@ -402,7 +294,7 @@ ScreenEntireDisplay_1 As screen:
                     ZIndex: =6
 
                 Icon2_8 As icon.Edit:
-                    Height: =58
+                    Height: =38
                     Icon: =Icon.Edit
                     Width: =38
                     X: =134
@@ -463,7 +355,7 @@ ScreenEntireDisplay_1 As screen:
                     ZIndex: =10
 
                 Icon2_9 As icon.Edit:
-                    Height: =58
+                    Height: =38
                     Icon: =Icon.Edit
                     Width: =38
                     X: =134
@@ -486,8 +378,8 @@ ScreenEntireDisplay_1 As screen:
                 Layout: =Layout.Vertical
                 TemplateSize: =400
                 Width: =Parent.Width-Parent.Width/7.5*3-IconArrow_4.Width
-                X: =ContainerMVP_2.Width+IconArrow_4.Width
-                Y: =10
+                X: =199
+                Y: =20
                 ZIndex: =6
 
                 ContainerAddCategory_2 As groupContainer.horizontalAutoLayoutContainer:
@@ -548,7 +440,7 @@ ScreenEntireDisplay_1 As screen:
                             ZIndex: =3
 
                         Icon2_10 As icon.Edit:
-                            Height: =58
+                            Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
                                 =
@@ -723,7 +615,7 @@ ScreenEntireDisplay_1 As screen:
                             ZIndex: =3
 
                         Icon2_11 As icon.Edit:
-                            Height: =58
+                            Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
                                 =
@@ -888,7 +780,7 @@ ScreenEntireDisplay_1 As screen:
                             ZIndex: =3
 
                         Icon2_12 As icon.Edit:
-                            Height: =58
+                            Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
                                 =
@@ -1055,7 +947,7 @@ ScreenEntireDisplay_1 As screen:
                             ZIndex: =3
 
                         Icon2_13 As icon.Edit:
-                            Height: =58
+                            Height: =38
                             Icon: =Icon.Edit
                             OnSelect: |-
                                 =
