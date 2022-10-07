@@ -198,6 +198,7 @@ cmNavigation As CanvasComponent:
     ZIndex: =5
 
     "navigateGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        FocusedBorderThickness: =0
         Height: =380
         Items: =navigationList
         Layout: =Layout.Vertical
