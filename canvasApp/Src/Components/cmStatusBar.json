@@ -26,7 +26,7 @@
             "Name": "galleryTemplate3_1",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 211,
+            "PublishOrderIndex": 214,
             "Rules": [
               {
                 "Category": "Design",
@@ -173,7 +173,7 @@
             "Name": "statusBarLabel",
             "Parent": "statusGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 212,
+            "PublishOrderIndex": 215,
             "Rules": [
               {
                 "Category": "Data",
@@ -498,7 +498,7 @@
         "Name": "statusGallery",
         "Parent": "cmStatusBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 210,
+        "PublishOrderIndex": 213,
         "Rules": [
           {
             "Category": "Data",

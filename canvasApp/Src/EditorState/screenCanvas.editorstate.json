@@ -3118,7 +3118,14 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
-        "Overflow",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Overflow.Hidden",
+          "InvariantPropertyName": "Overflow",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

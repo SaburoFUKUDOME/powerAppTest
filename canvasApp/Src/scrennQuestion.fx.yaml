@@ -27,7 +27,7 @@ scrennQuestion As screen:
                     If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
                     CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                     2,1))
-                X: =HeaderContainer_1.Width/3
+                X: =900
 
             lineContainer2_2 As groupContainer.verticalAutoLayoutContainer:
                 Height: =66
@@ -40,9 +40,10 @@ scrennQuestion As screen:
                 Label2_4 As label:
                     FontWeight: =FontWeight.Bold
                     Height: =44
+                    Overflow: =Overflow.Scroll
                     Size: =16
-                    Text: ="Ｑ&Ａフローシステム"
-                    Width: =400
+                    Text: =_gThemeName
+                    Width: =780
                     X: =50
                     Y: =461
                     ZIndex: =1
@@ -55,6 +56,32 @@ scrennQuestion As screen:
                     X: =50
                     Y: =505
                     ZIndex: =2
+
+            ContainerLink_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                Width: =107
+                X: =Rectangle3_3.Width-70
+                ZIndex: =3
+
+                Label1_3 As label:
+                    Height: =18
+                    Size: =8
+                    Text: ="共創活性化ポータル"
+                    Width: =107
+                    Y: =Icon4_1.Height
+                    ZIndex: =1
+
+                Icon4_1 As icon.OpenInNewWindow:
+                    Color: =_cBaseColor
+                    Height: =25
+                    Icon: =Icon.OpenInNewWindow
+                    OnSelect: |-
+                        =Launch("https://rfgricoh.sharepoint.com/sites/ZJS_cocreation_portal/SitePages/reference.aspx?OR=Teams-HL&CT=1665043619579&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA5MDQwMDcxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#psf%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%E4%BA%8B%E4%BE%8B%E9%9B%86")
+                    Tooltip: ="別タブで共創活性化ポータルを開く"
+                    Width: =30
+                    X: =39
+                    Y: =2
+                    ZIndex: =3
 
         NavigateContainer_1 As groupContainer.manualLayoutContainer:
             Height: =BodyContainer1.Height

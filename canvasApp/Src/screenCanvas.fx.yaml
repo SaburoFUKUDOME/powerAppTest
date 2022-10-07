@@ -3,8 +3,6 @@ screenCanvas As screen:
         =Set(navigationKey,0);
         Set(currentCategory,"");
         Set(_cAnswerList,'仮説構築支援ツール - 回答');
-        Set(themeId,galleryTheme.Selected.ID);
-        Set(pageKey,"canvas");
         Set(pageKey,"canvas");
         Set(_gMaxSortNumber,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order);
 
@@ -257,7 +255,7 @@ screenCanvas As screen:
                     If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
                     CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                     2,1))
-                X: =HeaderContainer.Width/3
+                X: =900
 
             lineContainer2_1 As groupContainer.verticalAutoLayoutContainer:
                 Height: =66
@@ -270,9 +268,10 @@ screenCanvas As screen:
                 Label2_3 As label:
                     FontWeight: =FontWeight.Bold
                     Height: =44
-                    Size: =16
-                    Text: ="Ｑ&Ａフローシステム"
-                    Width: =400
+                    Overflow: =Overflow.Scroll
+                    Size: =15
+                    Text: =_gThemeName
+                    Width: =780
                     X: =50
                     Y: =461
                     ZIndex: =1

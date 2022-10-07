@@ -89,6 +89,8 @@ screenTheme As screen:
                         IsBlank(LookUp('仮説構築支援ツール - 追加の問い',themeID=ThisItem.ID)),
                         Collect('仮説構築支援ツール - 追加の問い',{themeID:ThisItem.ID,sort_order:1});
                     );
+                    Set(_gThemeName,ThisItem.Title);
+                    Set(themeId,ThisItem.ID);
                     Navigate(screenCanvas);
                 TemplateSize: =120
                 Width: =1302
