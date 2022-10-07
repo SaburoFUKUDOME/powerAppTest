@@ -1064,7 +1064,7 @@ ScreenEntireDisplay_1 As screen:
                         Set(_gIsDelete,true);
                         Set(_gDeleteSortOrder,ThisItem.sort_order);
                     Tooltip: ="追加した回答行を削除"
-                    Visible: =If(ThisItem.sort_order=1, false, true)
+                    Visible: =If(CountRows(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId).ID)=1, false, true)
                     Width: =30
                     X: =10.600000000000023
                     ZIndex: =3
