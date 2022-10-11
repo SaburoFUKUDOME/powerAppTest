@@ -801,14 +801,6 @@ ScreenEntireDisplay_1 As screen:
                     Y: =11
                     ZIndex: =14
 
-                Circle1 As circle:
-                    Fill: =_cBaseColor
-                    Height: =20
-                    Width: =20
-                    X: =116
-                    Y: =17
-                    ZIndex: =15
-
             IconArrow_4 As icon.ChevronLeft:
                 Color: =RGBA(0, 13, 75, 1)
                 DisplayMode: =DisplayMode.View
