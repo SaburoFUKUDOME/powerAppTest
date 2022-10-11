@@ -1005,7 +1005,7 @@ cmHome_2 As CanvasComponent:
                     Text: ="＋追加"
                     Visible: =If(And(_gMaxSortNumber=ThisItem.sort_order,_gMaxSortNumber<5),true)
                     Width: =760
-                    X: =10
+                    X: =5
                     Y: =290
                     ZIndex: =4
 

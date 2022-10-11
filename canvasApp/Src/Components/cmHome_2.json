@@ -10568,7 +10568,14 @@
                       },
                       "Align",
                       "VerticalAlign",
-                      "X",
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "10",
+                        "InvariantPropertyName": "X",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
                       {
                         "AFDDataSourceName": "",
                         "AutoRuleBindingEnabled": false,
@@ -10739,7 +10746,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "10",
+                        "InvariantScript": "5",
                         "Property": "X",
                         "RuleProviderType": "Unknown"
                       },
@@ -21714,7 +21721,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638010724626690675",
+    "LastModifiedTimestamp": "638010725295016899",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -21878,7 +21885,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638010724626690675",
+  "LastModifiedTimestamp": "638010725295016899",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",
