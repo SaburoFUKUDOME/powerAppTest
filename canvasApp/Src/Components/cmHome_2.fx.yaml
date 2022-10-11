@@ -142,7 +142,7 @@ cmHome_2 As CanvasComponent:
             X: =5
             ZIndex: =2
 
-        LabelValueProposition_1 As label:
+        LabelCustomerSegment As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 134, 208, 1)
@@ -235,7 +235,7 @@ cmHome_2 As CanvasComponent:
                 Height: =436
                 Width: =Parent.Width/7.5
                 X: =5
-                Y: =48
+                Y: =38
                 ZIndex: =1
 
                 LabelBoxMVP_2 As label:
@@ -336,7 +336,7 @@ cmHome_2 As CanvasComponent:
                 X: |-
                     =ContainerCustomer_2.X-
                     ContainerCustomer_2.Width
-                Y: =48
+                Y: =38
                 ZIndex: =3
 
                 LabelBoxJTBD_2 As label:
@@ -427,7 +427,7 @@ cmHome_2 As CanvasComponent:
                 Height: =438
                 Width: =Parent.Width/7.5
                 X: =Parent.Width-ContainerCustomer_2.Width
-                Y: =48
+                Y: =38
                 ZIndex: =4
 
                 LabelBoxCustomer_2 As label:
@@ -539,7 +539,7 @@ cmHome_2 As CanvasComponent:
                 TemplateSize: =400
                 Width: =Parent.Width-Parent.Width/7.5*3-IconArrow_4.Width
                 X: =199
-                Y: =20
+                Y: =10
                 ZIndex: =6
 
                 ContainerAddCategory_2 As groupContainer.horizontalAutoLayoutContainer:
@@ -874,7 +874,7 @@ cmHome_2 As CanvasComponent:
                             Text: =
                             Width: =LabelBoxCustomer_2.Width
                             X: =1
-                            Y: =29
+                            Y: =28
                             ZIndex: =1
 
                         LabelTitleHindranceFactor_2 As label:
@@ -1004,8 +1004,8 @@ cmHome_2 As CanvasComponent:
                     Size: =24
                     Text: ="＋追加"
                     Visible: =If(And(_gMaxSortNumber=ThisItem.sort_order,_gMaxSortNumber<5),true)
-                    Width: =769
-                    Y: =300
+                    Width: =768
+                    Y: =290
                     ZIndex: =4
 
                 IconDown_2 As icon.Hamburger:
