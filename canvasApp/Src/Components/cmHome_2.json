@@ -494,7 +494,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(\r\n    addAnswer,\r\n    false\r\n);\r\nSet(\r\n    addAnswerId,\r\n    0\r\n);\r\n\r\n\r\n//問いへ遷移\r\nSet(\r\n    navigationKey,\r\n    1\r\n);\r\nSet(\r\n    questionKey,\r\n    1\r\n);\r\nWith({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},\r\nReset(textAnswer);\r\nReset(skipAnswerCheckbox);\r\nReset(noAnswerCheckbox);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\nSet(\r\n    skipFlag,\r\n    getAnswerRecord.skip_flag\r\n    );\r\nSet(\r\n    noAnswerFlag,\r\n    getAnswerRecord.no_answer_flag\r\n    );\r\n);\r\n\r\nWith({qRecord:LookUp(questionList, ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(currentCategory,qRecord.category);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    currentRequired,\r\n    qRecord.required\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    backVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\nIf(Not(currentRequired=\"2\"),Set(currentQuestion,Concatenate(currentQuestion,\"*\")));\r\nNavigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);",
+                "InvariantScript": "cmHome_2.moveQuestion(1,false,0);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -19402,7 +19402,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638010670409294282",
+    "LastModifiedTimestamp": "638010670767220950",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -19566,7 +19566,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638010670409294282",
+  "LastModifiedTimestamp": "638010670767220950",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",
