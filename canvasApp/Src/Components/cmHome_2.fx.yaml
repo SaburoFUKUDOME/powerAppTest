@@ -138,7 +138,7 @@ cmHome_2 As CanvasComponent:
             Text: |-
                 ="VP：Value Proposition
                 （提供価値）"
-            Width: =372
+            Width: =382
             X: =5
             ZIndex: =2
 
@@ -152,8 +152,8 @@ cmHome_2 As CanvasComponent:
             Text: |-
                 ="CS：Customer Segment
                 （提供価値）"
-            Width: =930
-            X: =430
+            Width: =936
+            X: =423
             ZIndex: =3
 
     ContainerMain_2 As groupContainer.manualLayoutContainer:
