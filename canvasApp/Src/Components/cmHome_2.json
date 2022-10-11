@@ -1542,7 +1542,14 @@
                               "DisabledFill",
                               "PressedFill",
                               "HoverFill",
-                              "DisplayMode",
+                              {
+                                "AFDDataSourceName": "",
+                                "AutoRuleBindingEnabled": false,
+                                "AutoRuleBindingString": "",
+                                "InvariantPropertyName": "DisplayMode",
+                                "IsLockable": false,
+                                "NameMapSourceSchema": "?"
+                              },
                               {
                                 "AFDDataSourceName": "",
                                 "AutoRuleBindingEnabled": false,
@@ -1636,7 +1643,7 @@
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
+                                "InvariantScript": "DisplayMode.View",
                                 "Property": "DisplayMode",
                                 "RuleProviderType": "Unknown"
                               },
@@ -3897,7 +3904,14 @@
                               "DisabledFill",
                               "PressedFill",
                               "HoverFill",
-                              "DisplayMode",
+                              {
+                                "AFDDataSourceName": "",
+                                "AutoRuleBindingEnabled": false,
+                                "AutoRuleBindingString": "",
+                                "InvariantPropertyName": "DisplayMode",
+                                "IsLockable": false,
+                                "NameMapSourceSchema": "?"
+                              },
                               {
                                 "AFDDataSourceName": "",
                                 "AutoRuleBindingEnabled": false,
@@ -3991,7 +4005,7 @@
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
+                                "InvariantScript": "DisplayMode.View",
                                 "Property": "DisplayMode",
                                 "RuleProviderType": "Unknown"
                               },
@@ -5963,7 +5977,14 @@
                               "DisabledFill",
                               "PressedFill",
                               "HoverFill",
-                              "DisplayMode",
+                              {
+                                "AFDDataSourceName": "",
+                                "AutoRuleBindingEnabled": false,
+                                "AutoRuleBindingString": "",
+                                "InvariantPropertyName": "DisplayMode",
+                                "IsLockable": false,
+                                "NameMapSourceSchema": "?"
+                              },
                               {
                                 "AFDDataSourceName": "",
                                 "AutoRuleBindingEnabled": false,
@@ -6057,7 +6078,7 @@
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
+                                "InvariantScript": "DisplayMode.View",
                                 "Property": "DisplayMode",
                                 "RuleProviderType": "Unknown"
                               },
@@ -8029,7 +8050,14 @@
                               "DisabledFill",
                               "PressedFill",
                               "HoverFill",
-                              "DisplayMode",
+                              {
+                                "AFDDataSourceName": "",
+                                "AutoRuleBindingEnabled": false,
+                                "AutoRuleBindingString": "",
+                                "InvariantPropertyName": "DisplayMode",
+                                "IsLockable": false,
+                                "NameMapSourceSchema": "?"
+                              },
                               {
                                 "AFDDataSourceName": "",
                                 "AutoRuleBindingEnabled": false,
@@ -8123,7 +8151,7 @@
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
+                                "InvariantScript": "DisplayMode.View",
                                 "Property": "DisplayMode",
                                 "RuleProviderType": "Unknown"
                               },
@@ -11902,7 +11930,14 @@
                       "DisabledFill",
                       "PressedFill",
                       "HoverFill",
-                      "DisplayMode",
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "DisplayMode",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
                       {
                         "AFDDataSourceName": "",
                         "AutoRuleBindingEnabled": false,
@@ -11996,7 +12031,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
+                        "InvariantScript": "DisplayMode.View",
                         "Property": "DisplayMode",
                         "RuleProviderType": "Unknown"
                       },
@@ -13940,7 +13975,14 @@
                       "DisabledFill",
                       "PressedFill",
                       "HoverFill",
-                      "DisplayMode",
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "DisplayMode",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
                       {
                         "AFDDataSourceName": "",
                         "AutoRuleBindingEnabled": false,
@@ -14027,7 +14069,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
+                        "InvariantScript": "DisplayMode.View",
                         "Property": "DisplayMode",
                         "RuleProviderType": "Unknown"
                       },
@@ -15943,7 +15985,14 @@
                       "DisabledFill",
                       "PressedFill",
                       "HoverFill",
-                      "DisplayMode",
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "DisplayMode",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
                       "X",
                       {
                         "AFDDataSourceName": "",
@@ -16030,7 +16079,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
+                        "InvariantScript": "DisplayMode.View",
                         "Property": "DisplayMode",
                         "RuleProviderType": "Unknown"
                       },
@@ -21215,7 +21264,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638010686016761002",
+    "LastModifiedTimestamp": "638010687144438986",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -21379,7 +21428,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638010686016761002",
+  "LastModifiedTimestamp": "638010687144438986",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",

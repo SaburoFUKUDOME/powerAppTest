@@ -295,6 +295,7 @@ cmHome_2 As CanvasComponent:
 
                 IconCheck_6 As icon.CheckBadge:
                     Color: =_cBaseColor
+                    DisplayMode: =DisplayMode.View
                     Height: =20
                     Icon: =Icon.CheckBadge
                     Tooltip: ="MVP（ソリューション）"&" 作成済"
@@ -387,6 +388,7 @@ cmHome_2 As CanvasComponent:
 
                 IconCheck_1 As icon.CheckBadge:
                     Color: =_cBaseColor
+                    DisplayMode: =DisplayMode.View
                     Height: =20
                     Icon: =Icon.CheckBadge
                     Tooltip: ="目的（JTBD）"&" 作成済"
@@ -485,6 +487,7 @@ cmHome_2 As CanvasComponent:
 
                 IconCheck As icon.CheckBadge:
                     Color: =_cBaseColor
+                    DisplayMode: =DisplayMode.View
                     Height: =20
                     Icon: =Icon.CheckBadge
                     Tooltip: ="顧客"&" 作成済"
@@ -608,6 +611,7 @@ cmHome_2 As CanvasComponent:
 
                         IconCheck_5 As icon.CheckBadge:
                             Color: =_cBaseColor
+                            DisplayMode: =DisplayMode.View
                             Height: =20
                             Icon: =Icon.CheckBadge
                             Tooltip: ="提供価値"&" 作成済"
@@ -719,6 +723,7 @@ cmHome_2 As CanvasComponent:
 
                         IconCheck_4 As icon.CheckBadge:
                             Color: =_cBaseColor
+                            DisplayMode: =DisplayMode.View
                             Height: =20
                             Icon: =Icon.CheckBadge
                             Tooltip: ="満足状況"&" 作成済"
@@ -820,6 +825,7 @@ cmHome_2 As CanvasComponent:
 
                         IconCheck_3 As icon.CheckBadge:
                             Color: =_cBaseColor
+                            DisplayMode: =DisplayMode.View
                             Height: =20
                             Icon: =Icon.CheckBadge
                             Tooltip: ="現状対策（代替）"&" 作成済"
@@ -923,6 +929,7 @@ cmHome_2 As CanvasComponent:
 
                         IconCheck_2 As icon.CheckBadge:
                             Color: =_cBaseColor
+                            DisplayMode: =DisplayMode.View
                             Height: =20
                             Icon: =Icon.CheckBadge
                             Tooltip: ="阻害要因（課題）"&" 作成済"
