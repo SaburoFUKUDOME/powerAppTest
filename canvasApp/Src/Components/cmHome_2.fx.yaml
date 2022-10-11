@@ -123,16 +123,38 @@ cmHome_2 As CanvasComponent:
     ZIndex: =4
 
     ContainerHeader_2 As groupContainer.manualLayoutContainer:
-        Height: =60
+        Height: =50
         Width: =Max(App.Width, App.MinScreenWidth)
         Y: =52
         ZIndex: =1
 
-        Image_2 As image:
-            Height: =Parent.Height
-            Image: =header
-            Width: =Parent.Width
-            ZIndex: =1
+        LabelValueProposition As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(23, 163, 152, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =16
+            Text: |-
+                ="VP：Value Proposition
+                （提供価値）"
+            Width: =372
+            X: =5
+            ZIndex: =2
+
+        LabelValueProposition_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 134, 208, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =16
+            Text: |-
+                ="CS：Customer Segment
+                （提供価値）"
+            Width: =930
+            X: =430
+            ZIndex: =3
 
     ContainerMain_2 As groupContainer.manualLayoutContainer:
         Height: =640
