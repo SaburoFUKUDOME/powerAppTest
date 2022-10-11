@@ -465,10 +465,10 @@ ScreenEntireDisplay_1 As screen:
 
                 LabelTitleJTBD_2 As label:
                     FontWeight: =Semibold
-                    Height: =44
+                    Height: =50
                     Size: =16
                     Text: =_lJTBD
-                    Width: =Parent.Width-20
+                    Width: =111
                     X: =10
                     ZIndex: =5
 
@@ -487,12 +487,12 @@ ScreenEntireDisplay_1 As screen:
                         )
                         */
                     Width: =Parent.Width-20
-                    X: =10
-                    Y: =81
+                    X: =5
+                    Y: =60
                     ZIndex: =6
 
                 Icon2_8 As icon.Edit:
-                    Height: =38
+                    Height: =20
                     Icon: =Icon.Edit
                     OnSelect: |-
                         =Set(
@@ -593,10 +593,31 @@ ScreenEntireDisplay_1 As screen:
                             scrennQuestion,
                             ScreenTransition.Fade
                         );
-                    Width: =38
-                    X: =72
-                    Y: =41
+                    Width: =20
+                    X: =76
+                    Y: =15
                     ZIndex: =7
+
+                IconExpand_1 As icon.ExpandView:
+                    Color: =_cBaseColor
+                    Height: =20
+                    Icon: =Icon.ExpandView
+                    OnSelect: |
+                        =UpdateContext(
+                            {
+                                _lDialogTitle: _lJTBD,
+                                _lDialogData: _lJTBDData
+                            }
+                        );
+                        Set(
+                            _gIsShowDialog,
+                            true
+                        );
+                    Tooltip: ="ボックスを展開して表示する"
+                    Width: =20
+                    X: =150
+                    Y: =10
+                    ZIndex: =9
 
             ContainerCustomer_2 As groupContainer.manualLayoutContainer:
                 Height: =438
@@ -620,7 +641,7 @@ ScreenEntireDisplay_1 As screen:
                     Height: =44
                     Size: =16
                     Text: =_lCustomer
-                    Width: =131
+                    Width: =121
                     Y: =5
                     ZIndex: =8
 
@@ -648,10 +669,11 @@ ScreenEntireDisplay_1 As screen:
                         */
                     Width: =Parent.Width-20
                     X: =5
-                    Y: =62
+                    Y: =60
                     ZIndex: =10
 
                 Icon2_9 As icon.Edit:
+                    Color: =_cBaseColor
                     Height: =20
                     Icon: =Icon.Edit
                     OnSelect: |-
@@ -755,7 +777,7 @@ ScreenEntireDisplay_1 As screen:
                         );
                     Width: =20
                     X: =147
-                    Y: =42
+                    Y: =37
                     ZIndex: =11
 
                 IconExpand As icon.ExpandView:
@@ -773,18 +795,19 @@ ScreenEntireDisplay_1 As screen:
                             _gIsShowDialog,
                             true
                         );
+                    Tooltip: ="ボックスを展開して表示する"
                     Width: =20
-                    X: =157
-                    Y: =12
+                    X: =147
+                    Y: =11
                     ZIndex: =14
 
-                Icon5 As icon.CheckBadge:
-                    Height: =35
-                    Icon: =Icon.CheckBadge
-                    Width: =29
-                    X: =118
-                    Y: =14
-                    ZIndex: =16
+                Circle1 As circle:
+                    Fill: =_cBaseColor
+                    Height: =20
+                    Width: =20
+                    X: =116
+                    Y: =17
+                    ZIndex: =15
 
             IconArrow_4 As icon.ChevronLeft:
                 Color: =RGBA(0, 13, 75, 1)
@@ -1682,17 +1705,6 @@ ScreenEntireDisplay_1 As screen:
             Y: =(Parent.Height/2)-(Self.Height/2)
             ZIndex: =2
 
-        Icon2_4 As icon.CancelBadge:
-            Color: =_cBaseColor
-            Height: =30
-            Icon: =Icon.CancelBadge
-            OnSelect: =Set(_gIsShowDialog,false);
-            Tooltip: ="ダイアログを閉じる"
-            Width: =30
-            X: =1249
-            Y: =51
-            ZIndex: =3
-
         LabelDialgoTitle As label:
             Align: =Center
             FontWeight: =Semibold
@@ -1712,4 +1724,15 @@ ScreenEntireDisplay_1 As screen:
             X: =93
             Y: =110
             ZIndex: =7
+
+        Icon8 As icon.Cancel:
+            Color: =_cBaseColor
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: =Set(_gIsShowDialog,false);
+            Tooltip: ="ダイアログを閉じる"
+            Width: =30
+            X: =1253
+            Y: =50
+            ZIndex: =8
 
