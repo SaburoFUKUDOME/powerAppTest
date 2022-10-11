@@ -293,6 +293,20 @@ cmHome_2 As CanvasComponent:
                     Y: =11
                     ZIndex: =5
 
+                IconCheck_6 As icon.CheckBadge:
+                    Color: =_cBaseColor
+                    Height: =20
+                    Icon: =Icon.CheckBadge
+                    Tooltip: ="MVP（ソリューション）"&" 作成済"
+                    Visible: |-
+                        =With({categoryQuestionCount:CountIf(questionList,category="MVP（ソリューション）"),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="MVP（ソリューション）",themeID=themeId))},
+                        If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                    Width: =20
+                    X: =120
+                    Y: =11
+                    ZIndex: =6
+
             ContainerJTBD_2 As groupContainer.manualLayoutContainer:
                 Height: =438
                 Width: =Parent.Width/7.5
@@ -370,6 +384,20 @@ cmHome_2 As CanvasComponent:
                     X: =150
                     Y: =10
                     ZIndex: =9
+
+                IconCheck_1 As icon.CheckBadge:
+                    Color: =_cBaseColor
+                    Height: =20
+                    Icon: =Icon.CheckBadge
+                    Tooltip: ="目的（JTBD）"&" 作成済"
+                    Visible: |-
+                        =With({categoryQuestionCount:CountIf(questionList,category="目的（JTBD）"),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="目的（JTBD）",themeID=themeId))},
+                        If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                    Width: =20
+                    X: =120
+                    Y: =10
+                    ZIndex: =10
 
             ContainerCustomer_2 As groupContainer.manualLayoutContainer:
                 Height: =438
@@ -454,6 +482,20 @@ cmHome_2 As CanvasComponent:
                     X: =147
                     Y: =11
                     ZIndex: =14
+
+                IconCheck As icon.CheckBadge:
+                    Color: =_cBaseColor
+                    Height: =20
+                    Icon: =Icon.CheckBadge
+                    Tooltip: ="顧客"&" 作成済"
+                    Visible: |-
+                        =With({categoryQuestionCount:CountIf(questionList,category="顧客"),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="顧客",themeID=themeId))},
+                        If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                    Width: =20
+                    X: =120
+                    Y: =11
+                    ZIndex: =15
 
             IconArrow_4 As icon.ChevronLeft:
                 Color: =RGBA(0, 13, 75, 1)
@@ -564,6 +606,20 @@ cmHome_2 As CanvasComponent:
                             Y: =32
                             ZIndex: =5
 
+                        IconCheck_5 As icon.CheckBadge:
+                            Color: =_cBaseColor
+                            Height: =20
+                            Icon: =Icon.CheckBadge
+                            Tooltip: ="提供価値"&" 作成済"
+                            Visible: |-
+                                =With({categoryQuestionCount:CountIf(questionList,category="提供価値"),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="提供価値",themeID=themeId,add_answerID=ThisItem.ID))},
+                                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                            Width: =20
+                            X: =120
+                            Y: =32
+                            ZIndex: =6
+
                     IconArrow_5 As icon.ChevronLeft:
                         Color: =RGBA(0, 13, 75, 1)
                         DisplayMode: =DisplayMode.View
@@ -661,6 +717,20 @@ cmHome_2 As CanvasComponent:
                             Y: =32
                             ZIndex: =5
 
+                        IconCheck_4 As icon.CheckBadge:
+                            Color: =_cBaseColor
+                            Height: =20
+                            Icon: =Icon.CheckBadge
+                            Tooltip: ="満足状況"&" 作成済"
+                            Visible: |-
+                                =With({categoryQuestionCount:CountIf(questionList,category="満足状況"),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="満足状況",themeID=themeId,add_answerID=ThisItem.ID))},
+                                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                            Width: =20
+                            X: =120
+                            Y: =32
+                            ZIndex: =6
+
                     ContainerCurrentMeasures_2 As groupContainer.manualLayoutContainer:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =LabelBoxCustomer_2.Width
@@ -747,6 +817,20 @@ cmHome_2 As CanvasComponent:
                             X: =147
                             Y: =32
                             ZIndex: =5
+
+                        IconCheck_3 As icon.CheckBadge:
+                            Color: =_cBaseColor
+                            Height: =20
+                            Icon: =Icon.CheckBadge
+                            Tooltip: ="現状対策（代替）"&" 作成済"
+                            Visible: |-
+                                =With({categoryQuestionCount:CountIf(questionList,category="現状対策（代替）"),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="現状対策（代替）",themeID=themeId,add_answerID=ThisItem.ID))},
+                                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                            Width: =20
+                            X: =120
+                            Y: =32
+                            ZIndex: =6
 
                     ContainerHindranceFactor_2 As groupContainer.manualLayoutContainer:
                         LayoutMinHeight: =100
@@ -836,6 +920,20 @@ cmHome_2 As CanvasComponent:
                             X: =147
                             Y: =32
                             ZIndex: =5
+
+                        IconCheck_2 As icon.CheckBadge:
+                            Color: =_cBaseColor
+                            Height: =20
+                            Icon: =Icon.CheckBadge
+                            Tooltip: ="阻害要因（課題）"&" 作成済"
+                            Visible: |-
+                                =With({categoryQuestionCount:CountIf(questionList,category="阻害要因（課題）"),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="阻害要因（課題）",themeID=themeId,add_answerID=ThisItem.ID))},
+                                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
+                            Width: =20
+                            X: =120
+                            Y: =32
+                            ZIndex: =6
 
                 IconDelete_2 As icon.CancelBadge:
                     Color: =_cBaseColor
