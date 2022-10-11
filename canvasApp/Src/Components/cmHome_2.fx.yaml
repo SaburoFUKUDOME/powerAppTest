@@ -232,7 +232,7 @@ cmHome_2 As CanvasComponent:
             ZIndex: =3
 
             ContainerMVP_2 As groupContainer.manualLayoutContainer:
-                Height: =436
+                Height: =438
                 Width: =Parent.Width/7.5
                 X: =5
                 Y: =38
@@ -1004,7 +1004,8 @@ cmHome_2 As CanvasComponent:
                     Size: =24
                     Text: ="＋追加"
                     Visible: =If(And(_gMaxSortNumber=ThisItem.sort_order,_gMaxSortNumber<5),true)
-                    Width: =768
+                    Width: =760
+                    X: =10
                     Y: =290
                     ZIndex: =4
 
