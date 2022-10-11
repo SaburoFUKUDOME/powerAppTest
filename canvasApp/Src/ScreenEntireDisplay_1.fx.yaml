@@ -250,7 +250,7 @@ ScreenEntireDisplay_1 As screen:
                 Text: ="©New*New All rights reserved."
                 Width: =268
                 X: =515
-                Y: =10
+                Y: =24
                 ZIndex: =4
 
             ButtonDLCsv_2 As button:
@@ -473,7 +473,7 @@ ScreenEntireDisplay_1 As screen:
                     ZIndex: =5
 
                 LabelDetailJTBD_2 As label:
-                    Height: =Parent.Height-LabelTitleCustomer_2.Height-20
+                    Height: =342
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
@@ -488,7 +488,7 @@ ScreenEntireDisplay_1 As screen:
                         */
                     Width: =Parent.Width-20
                     X: =10
-                    Y: =50
+                    Y: =81
                     ZIndex: =6
 
                 Icon2_8 As icon.Edit:
@@ -594,8 +594,8 @@ ScreenEntireDisplay_1 As screen:
                             ScreenTransition.Fade
                         );
                     Width: =38
-                    X: =134
-                    Y: =5
+                    X: =72
+                    Y: =41
                     ZIndex: =7
 
             ContainerCustomer_2 As groupContainer.manualLayoutContainer:
@@ -620,12 +620,12 @@ ScreenEntireDisplay_1 As screen:
                     Height: =44
                     Size: =16
                     Text: =_lCustomer
-                    Width: =Parent.Width-20
-                    X: =10
+                    Width: =131
+                    Y: =5
                     ZIndex: =8
 
                 LabelDetailCustomer_2 As label:
-                    Height: =347
+                    Height: =359
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
@@ -647,12 +647,12 @@ ScreenEntireDisplay_1 As screen:
                         )
                         */
                     Width: =Parent.Width-20
-                    X: =10
-                    Y: =50
+                    X: =5
+                    Y: =62
                     ZIndex: =10
 
                 Icon2_9 As icon.Edit:
-                    Height: =24
+                    Height: =20
                     Icon: =Icon.Edit
                     OnSelect: |-
                         =Set(
@@ -753,14 +753,14 @@ ScreenEntireDisplay_1 As screen:
                             scrennQuestion,
                             ScreenTransition.Fade
                         );
-                    Width: =28
-                    X: =144
-                    Y: =10
+                    Width: =20
+                    X: =147
+                    Y: =42
                     ZIndex: =11
 
-                Icon13_1 As icon.ExpandView:
+                IconExpand As icon.ExpandView:
                     Color: =_cBaseColor
-                    Height: =25
+                    Height: =20
                     Icon: =Icon.ExpandView
                     OnSelect: |
                         =UpdateContext(
@@ -773,10 +773,18 @@ ScreenEntireDisplay_1 As screen:
                             _gIsShowDialog,
                             true
                         );
-                    Width: =30
-                    X: =148
-                    Y: =408
-                    ZIndex: =12
+                    Width: =20
+                    X: =157
+                    Y: =12
+                    ZIndex: =14
+
+                Icon5 As icon.CheckBadge:
+                    Height: =35
+                    Icon: =Icon.CheckBadge
+                    Width: =29
+                    X: =118
+                    Y: =14
+                    ZIndex: =16
 
             IconArrow_4 As icon.ChevronLeft:
                 Color: =RGBA(0, 13, 75, 1)
@@ -1681,8 +1689,8 @@ ScreenEntireDisplay_1 As screen:
             OnSelect: =Set(_gIsShowDialog,false);
             Tooltip: ="ダイアログを閉じる"
             Width: =30
-            X: =1256
-            Y: =52
+            X: =1249
+            Y: =51
             ZIndex: =3
 
         LabelDialgoTitle As label:
@@ -1692,15 +1700,16 @@ ScreenEntireDisplay_1 As screen:
             Text: =_lDialogTitle
             Width: =863
             X: =252
-            Y: =70
+            Y: =50
             ZIndex: =4
 
         LabelDialogData As label:
-            Height: =392
-            Size: =14
+            Height: =RectangleDialog_6.Height-100
+            Overflow: =Overflow.Scroll
+            Size: =11
             Text: =_lDialogData
-            Width: =1074
-            X: =117
+            Width: =RectangleDialog_6.Width-50
+            X: =93
             Y: =110
             ZIndex: =7
 
