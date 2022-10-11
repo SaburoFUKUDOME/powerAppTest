@@ -134,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6"
               }
             }
           ],
@@ -164,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.Icon2_10"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerVP_2.IconEdit_6"
               }
             }
           ],
@@ -254,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5"
               }
             }
           ],
@@ -284,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.Icon2_11"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerSatisfaction_2.IconEdit_5"
               }
             }
           ],
@@ -374,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4"
               }
             }
           ],
@@ -404,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.Icon2_12"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerCurrentMeasures_2.IconEdit_4"
               }
             }
           ],
@@ -494,19 +494,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3"
               }
             }
           ],
@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.Icon2_13"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.GalleryAddCategory_2.ContainerAddCategory_2.ContainerHindranceFactor_2.IconEdit_3"
               }
             }
           ],
@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7"
               }
             }
           ],
@@ -824,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.Icon2_7"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerMVP_2.IconEdit_7"
               }
             }
           ],
@@ -914,19 +914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2"
               }
             }
           ],
@@ -944,19 +944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.Icon2_8"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerJTBD_2.IconEdit_2"
               }
             }
           ],
@@ -1034,19 +1034,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9.AccessibleLabel"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9.AccessibleLabel",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit"
               }
             }
           ],
@@ -1064,19 +1064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9.TabIndex"
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9.TabIndex",
+                  "fullyQualifiedName": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "cmHome_2",
-                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.Icon2_9"
+                "type": "cmHome_2.ContainerMain_2.ContainerCanvas_2.ContainerCustomer_2.IconEdit"
               }
             }
           ],

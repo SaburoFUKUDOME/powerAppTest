@@ -181,7 +181,7 @@ cmHome_2 As CanvasComponent:
                 Color: =_cBaseColor
                 Height: =30
                 Icon: =Icon.BackArrow
-                OnSelect: =Navigate(screenCanvas,Fade)
+                OnSelect: =Navigate(screenTheme,Fade)
                 Tooltip: ="Home画面へ戻る"
                 Width: =30
                 X: =11
@@ -284,7 +284,7 @@ cmHome_2 As CanvasComponent:
                     Y: =60
                     ZIndex: =3
 
-                Icon2_7 As icon.Edit:
+                IconEdit_7 As icon.Edit:
                     Color: =_cBaseColor
                     Height: =20
                     Icon: =Icon.Edit
@@ -377,7 +377,7 @@ cmHome_2 As CanvasComponent:
                     Y: =60
                     ZIndex: =6
 
-                Icon2_8 As icon.Edit:
+                IconEdit_2 As icon.Edit:
                     Color: =_cBaseColor
                     Height: =20
                     Icon: =Icon.Edit
@@ -476,7 +476,7 @@ cmHome_2 As CanvasComponent:
                     Y: =60
                     ZIndex: =10
 
-                Icon2_9 As icon.Edit:
+                IconEdit As icon.Edit:
                     Color: =_cBaseColor
                     Height: =20
                     Icon: =Icon.Edit
@@ -600,7 +600,7 @@ cmHome_2 As CanvasComponent:
                             Y: =90
                             ZIndex: =3
 
-                        Icon2_10 As icon.Edit:
+                        IconEdit_6 As icon.Edit:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
@@ -712,7 +712,7 @@ cmHome_2 As CanvasComponent:
                             Y: =90
                             ZIndex: =3
 
-                        Icon2_11 As icon.Edit:
+                        IconEdit_5 As icon.Edit:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
@@ -814,7 +814,7 @@ cmHome_2 As CanvasComponent:
                             Y: =90
                             ZIndex: =3
 
-                        Icon2_12 As icon.Edit:
+                        IconEdit_4 As icon.Edit:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
@@ -918,7 +918,7 @@ cmHome_2 As CanvasComponent:
                             Y: =90
                             ZIndex: =3
 
-                        Icon2_13 As icon.Edit:
+                        IconEdit_3 As icon.Edit:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit

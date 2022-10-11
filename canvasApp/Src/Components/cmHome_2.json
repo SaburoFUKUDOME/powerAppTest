@@ -2132,39 +2132,57 @@
                             "IsLocked": false,
                             "LayoutName": "",
                             "MetaDataIDKey": "",
-                            "Name": "Icon2_10",
+                            "Name": "IconEdit_6",
                             "Parent": "ContainerVP_2",
                             "PersistMetaDataIDKey": false,
                             "PublishOrderIndex": 246,
                             "Rules": [
                               {
                                 "Category": "Design",
-                                "InvariantScript": "Icon.Edit",
-                                "Property": "Icon",
+                                "InvariantScript": "20",
+                                "Property": "Width",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "_cBaseColor",
-                                "Property": "Color",
+                                "InvariantScript": "57",
+                                "Property": "Y",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(244, 244, 244, 1)",
-                                "Property": "DisabledColor",
+                                "InvariantScript": "147",
+                                "Property": "X",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                                "Property": "PressedColor",
+                                "InvariantScript": "4",
+                                "Property": "ZIndex",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, 20%)",
-                                "Property": "HoverColor",
+                                "InvariantScript": "DisplayMode.Edit",
+                                "Property": "DisplayMode",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "2",
+                                "Property": "FocusedBorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "0",
+                                "Property": "BorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(166, 166, 166, 1)",
+                                "Property": "DisabledBorderColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -2175,8 +2193,68 @@
                               },
                               {
                                 "Category": "Design",
+                                "InvariantScript": "RGBA(244, 244, 244, 1)",
+                                "Property": "DisabledColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "_cBaseColor",
+                                "Property": "Color",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Icon.Edit",
+                                "Property": "Icon",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Self.BorderColor",
+                                "Property": "FocusedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                                "Property": "HoverBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                                "Property": "PressedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "DisabledFill",
+                                "Property": "HoverFill",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(0, 18, 107, 1)",
+                                "Property": "BorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "BorderStyle.Solid",
+                                "Property": "BorderStyle",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "20",
+                                "Property": "Height",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                                "Property": "PressedColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -2188,91 +2266,13 @@
                               {
                                 "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "HoverFill",
+                                "Property": "DisabledFill",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
-                                "Property": "DisplayMode",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "147",
-                                "Property": "X",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "57",
-                                "Property": "Y",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Width",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Height",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "BorderStyle.Solid",
-                                "Property": "BorderStyle",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(0, 18, 107, 1)",
-                                "Property": "BorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(166, 166, 166, 1)",
-                                "Property": "DisabledBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                                "Property": "PressedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                                "Property": "HoverBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "Self.BorderColor",
-                                "Property": "FocusedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "4",
-                                "Property": "ZIndex",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "0",
-                                "Property": "BorderThickness",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "2",
-                                "Property": "FocusedBorderThickness",
+                                "InvariantScript": "ColorFade(Self.Color, 20%)",
+                                "Property": "HoverColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -4494,39 +4494,57 @@
                             "IsLocked": false,
                             "LayoutName": "",
                             "MetaDataIDKey": "",
-                            "Name": "Icon2_11",
+                            "Name": "IconEdit_5",
                             "Parent": "ContainerSatisfaction_2",
                             "PersistMetaDataIDKey": false,
                             "PublishOrderIndex": 254,
                             "Rules": [
                               {
                                 "Category": "Design",
-                                "InvariantScript": "Icon.Edit",
-                                "Property": "Icon",
+                                "InvariantScript": "20",
+                                "Property": "Width",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "_cBaseColor",
-                                "Property": "Color",
+                                "InvariantScript": "57",
+                                "Property": "Y",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(244, 244, 244, 1)",
-                                "Property": "DisabledColor",
+                                "InvariantScript": "147",
+                                "Property": "X",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                                "Property": "PressedColor",
+                                "InvariantScript": "4",
+                                "Property": "ZIndex",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, 20%)",
-                                "Property": "HoverColor",
+                                "InvariantScript": "DisplayMode.Edit",
+                                "Property": "DisplayMode",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "2",
+                                "Property": "FocusedBorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "0",
+                                "Property": "BorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(166, 166, 166, 1)",
+                                "Property": "DisabledBorderColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -4537,8 +4555,68 @@
                               },
                               {
                                 "Category": "Design",
+                                "InvariantScript": "RGBA(244, 244, 244, 1)",
+                                "Property": "DisabledColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "_cBaseColor",
+                                "Property": "Color",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Icon.Edit",
+                                "Property": "Icon",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Self.BorderColor",
+                                "Property": "FocusedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                                "Property": "HoverBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                                "Property": "PressedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "DisabledFill",
+                                "Property": "HoverFill",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(0, 18, 107, 1)",
+                                "Property": "BorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "BorderStyle.Solid",
+                                "Property": "BorderStyle",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "20",
+                                "Property": "Height",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                                "Property": "PressedColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -4550,91 +4628,13 @@
                               {
                                 "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "HoverFill",
+                                "Property": "DisabledFill",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
-                                "Property": "DisplayMode",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "147",
-                                "Property": "X",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "57",
-                                "Property": "Y",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Width",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Height",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "BorderStyle.Solid",
-                                "Property": "BorderStyle",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(0, 18, 107, 1)",
-                                "Property": "BorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(166, 166, 166, 1)",
-                                "Property": "DisabledBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                                "Property": "PressedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                                "Property": "HoverBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "Self.BorderColor",
-                                "Property": "FocusedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "4",
-                                "Property": "ZIndex",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "0",
-                                "Property": "BorderThickness",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "2",
-                                "Property": "FocusedBorderThickness",
+                                "InvariantScript": "ColorFade(Self.Color, 20%)",
+                                "Property": "HoverColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -6567,39 +6567,57 @@
                             "IsLocked": false,
                             "LayoutName": "",
                             "MetaDataIDKey": "",
-                            "Name": "Icon2_12",
+                            "Name": "IconEdit_4",
                             "Parent": "ContainerCurrentMeasures_2",
                             "PersistMetaDataIDKey": false,
                             "PublishOrderIndex": 261,
                             "Rules": [
                               {
                                 "Category": "Design",
-                                "InvariantScript": "Icon.Edit",
-                                "Property": "Icon",
+                                "InvariantScript": "20",
+                                "Property": "Width",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "_cBaseColor",
-                                "Property": "Color",
+                                "InvariantScript": "57",
+                                "Property": "Y",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(244, 244, 244, 1)",
-                                "Property": "DisabledColor",
+                                "InvariantScript": "147",
+                                "Property": "X",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                                "Property": "PressedColor",
+                                "InvariantScript": "4",
+                                "Property": "ZIndex",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, 20%)",
-                                "Property": "HoverColor",
+                                "InvariantScript": "DisplayMode.Edit",
+                                "Property": "DisplayMode",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "2",
+                                "Property": "FocusedBorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "0",
+                                "Property": "BorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(166, 166, 166, 1)",
+                                "Property": "DisabledBorderColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -6610,8 +6628,68 @@
                               },
                               {
                                 "Category": "Design",
+                                "InvariantScript": "RGBA(244, 244, 244, 1)",
+                                "Property": "DisabledColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "_cBaseColor",
+                                "Property": "Color",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Icon.Edit",
+                                "Property": "Icon",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Self.BorderColor",
+                                "Property": "FocusedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                                "Property": "HoverBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                                "Property": "PressedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "DisabledFill",
+                                "Property": "HoverFill",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(0, 18, 107, 1)",
+                                "Property": "BorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "BorderStyle.Solid",
+                                "Property": "BorderStyle",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "20",
+                                "Property": "Height",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                                "Property": "PressedColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -6623,91 +6701,13 @@
                               {
                                 "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "HoverFill",
+                                "Property": "DisabledFill",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
-                                "Property": "DisplayMode",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "147",
-                                "Property": "X",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "57",
-                                "Property": "Y",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Width",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Height",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "BorderStyle.Solid",
-                                "Property": "BorderStyle",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(0, 18, 107, 1)",
-                                "Property": "BorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(166, 166, 166, 1)",
-                                "Property": "DisabledBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                                "Property": "PressedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                                "Property": "HoverBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "Self.BorderColor",
-                                "Property": "FocusedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "4",
-                                "Property": "ZIndex",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "0",
-                                "Property": "BorderThickness",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "2",
-                                "Property": "FocusedBorderThickness",
+                                "InvariantScript": "ColorFade(Self.Color, 20%)",
+                                "Property": "HoverColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -8640,39 +8640,57 @@
                             "IsLocked": false,
                             "LayoutName": "",
                             "MetaDataIDKey": "",
-                            "Name": "Icon2_13",
+                            "Name": "IconEdit_3",
                             "Parent": "ContainerHindranceFactor_2",
                             "PersistMetaDataIDKey": false,
                             "PublishOrderIndex": 268,
                             "Rules": [
                               {
                                 "Category": "Design",
-                                "InvariantScript": "Icon.Edit",
-                                "Property": "Icon",
+                                "InvariantScript": "20",
+                                "Property": "Width",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "_cBaseColor",
-                                "Property": "Color",
+                                "InvariantScript": "57",
+                                "Property": "Y",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(244, 244, 244, 1)",
-                                "Property": "DisabledColor",
+                                "InvariantScript": "147",
+                                "Property": "X",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                                "Property": "PressedColor",
+                                "InvariantScript": "4",
+                                "Property": "ZIndex",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.Color, 20%)",
-                                "Property": "HoverColor",
+                                "InvariantScript": "DisplayMode.Edit",
+                                "Property": "DisplayMode",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "2",
+                                "Property": "FocusedBorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "0",
+                                "Property": "BorderThickness",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(166, 166, 166, 1)",
+                                "Property": "DisabledBorderColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -8683,8 +8701,68 @@
                               },
                               {
                                 "Category": "Design",
+                                "InvariantScript": "RGBA(244, 244, 244, 1)",
+                                "Property": "DisabledColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "_cBaseColor",
+                                "Property": "Color",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Icon.Edit",
+                                "Property": "Icon",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "Self.BorderColor",
+                                "Property": "FocusedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                                "Property": "HoverBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                                "Property": "PressedBorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "DisabledFill",
+                                "Property": "HoverFill",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "RGBA(0, 18, 107, 1)",
+                                "Property": "BorderColor",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "BorderStyle.Solid",
+                                "Property": "BorderStyle",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "20",
+                                "Property": "Height",
+                                "RuleProviderType": "Unknown"
+                              },
+                              {
+                                "Category": "Design",
+                                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                                "Property": "PressedColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -8696,91 +8774,13 @@
                               {
                                 "Category": "Design",
                                 "InvariantScript": "Self.Fill",
-                                "Property": "HoverFill",
+                                "Property": "DisabledFill",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Category": "Design",
-                                "InvariantScript": "DisplayMode.Edit",
-                                "Property": "DisplayMode",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "147",
-                                "Property": "X",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "57",
-                                "Property": "Y",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Width",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "20",
-                                "Property": "Height",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "BorderStyle.Solid",
-                                "Property": "BorderStyle",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(0, 18, 107, 1)",
-                                "Property": "BorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "RGBA(166, 166, 166, 1)",
-                                "Property": "DisabledBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                                "Property": "PressedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                                "Property": "HoverBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "Self.BorderColor",
-                                "Property": "FocusedBorderColor",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "4",
-                                "Property": "ZIndex",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "0",
-                                "Property": "BorderThickness",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Category": "Design",
-                                "InvariantScript": "2",
-                                "Property": "FocusedBorderThickness",
+                                "InvariantScript": "ColorFade(Self.Color, 20%)",
+                                "Property": "HoverColor",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -12527,39 +12527,57 @@
                     "IsLocked": false,
                     "LayoutName": "",
                     "MetaDataIDKey": "",
-                    "Name": "Icon2_7",
+                    "Name": "IconEdit_7",
                     "Parent": "ContainerMVP_2",
                     "PersistMetaDataIDKey": false,
                     "PublishOrderIndex": 279,
                     "Rules": [
                       {
                         "Category": "Design",
-                        "InvariantScript": "Icon.Edit",
-                        "Property": "Icon",
+                        "InvariantScript": "20",
+                        "Property": "Width",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "_cBaseColor",
-                        "Property": "Color",
+                        "InvariantScript": "37",
+                        "Property": "Y",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "RGBA(244, 244, 244, 1)",
-                        "Property": "DisabledColor",
+                        "InvariantScript": "147",
+                        "Property": "X",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, -20%)",
-                        "Property": "PressedColor",
+                        "InvariantScript": "4",
+                        "Property": "ZIndex",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, 20%)",
-                        "Property": "HoverColor",
+                        "InvariantScript": "DisplayMode.Edit",
+                        "Property": "DisplayMode",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "2",
+                        "Property": "FocusedBorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "0",
+                        "Property": "BorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(166, 166, 166, 1)",
+                        "Property": "DisabledBorderColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -12570,8 +12588,68 @@
                       },
                       {
                         "Category": "Design",
+                        "InvariantScript": "RGBA(244, 244, 244, 1)",
+                        "Property": "DisabledColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "_cBaseColor",
+                        "Property": "Color",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Icon.Edit",
+                        "Property": "Icon",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Self.BorderColor",
+                        "Property": "FocusedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                        "Property": "HoverBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                        "Property": "PressedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "DisabledFill",
+                        "Property": "HoverFill",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(0, 18, 107, 1)",
+                        "Property": "BorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "BorderStyle.Solid",
+                        "Property": "BorderStyle",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "20",
+                        "Property": "Height",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.Color, -20%)",
+                        "Property": "PressedColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -12583,91 +12661,13 @@
                       {
                         "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "HoverFill",
+                        "Property": "DisabledFill",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
-                        "Property": "DisplayMode",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "147",
-                        "Property": "X",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "37",
-                        "Property": "Y",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Width",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Height",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "BorderStyle.Solid",
-                        "Property": "BorderStyle",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 18, 107, 1)",
-                        "Property": "BorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(166, 166, 166, 1)",
-                        "Property": "DisabledBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                        "Property": "PressedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                        "Property": "HoverBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "Self.BorderColor",
-                        "Property": "FocusedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "4",
-                        "Property": "ZIndex",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "0",
-                        "Property": "BorderThickness",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "2",
-                        "Property": "FocusedBorderThickness",
+                        "InvariantScript": "ColorFade(Self.Color, 20%)",
+                        "Property": "HoverColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -14551,39 +14551,57 @@
                     "IsLocked": false,
                     "LayoutName": "",
                     "MetaDataIDKey": "",
-                    "Name": "Icon2_8",
+                    "Name": "IconEdit_2",
                     "Parent": "ContainerJTBD_2",
                     "PersistMetaDataIDKey": false,
                     "PublishOrderIndex": 286,
                     "Rules": [
                       {
                         "Category": "Design",
-                        "InvariantScript": "Icon.Edit",
-                        "Property": "Icon",
+                        "InvariantScript": "20",
+                        "Property": "Width",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "_cBaseColor",
-                        "Property": "Color",
+                        "InvariantScript": "37",
+                        "Property": "Y",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "RGBA(244, 244, 244, 1)",
-                        "Property": "DisabledColor",
+                        "InvariantScript": "147",
+                        "Property": "X",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, -20%)",
-                        "Property": "PressedColor",
+                        "InvariantScript": "7",
+                        "Property": "ZIndex",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, 20%)",
-                        "Property": "HoverColor",
+                        "InvariantScript": "DisplayMode.Edit",
+                        "Property": "DisplayMode",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "2",
+                        "Property": "FocusedBorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "0",
+                        "Property": "BorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(166, 166, 166, 1)",
+                        "Property": "DisabledBorderColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -14594,8 +14612,68 @@
                       },
                       {
                         "Category": "Design",
+                        "InvariantScript": "RGBA(244, 244, 244, 1)",
+                        "Property": "DisabledColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "_cBaseColor",
+                        "Property": "Color",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Icon.Edit",
+                        "Property": "Icon",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Self.BorderColor",
+                        "Property": "FocusedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                        "Property": "HoverBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                        "Property": "PressedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "DisabledFill",
+                        "Property": "HoverFill",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(0, 18, 107, 1)",
+                        "Property": "BorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "BorderStyle.Solid",
+                        "Property": "BorderStyle",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "20",
+                        "Property": "Height",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.Color, -20%)",
+                        "Property": "PressedColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -14607,91 +14685,13 @@
                       {
                         "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "HoverFill",
+                        "Property": "DisabledFill",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
-                        "Property": "DisplayMode",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "147",
-                        "Property": "X",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "37",
-                        "Property": "Y",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Width",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Height",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "BorderStyle.Solid",
-                        "Property": "BorderStyle",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 18, 107, 1)",
-                        "Property": "BorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(166, 166, 166, 1)",
-                        "Property": "DisabledBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                        "Property": "PressedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                        "Property": "HoverBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "Self.BorderColor",
-                        "Property": "FocusedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "7",
-                        "Property": "ZIndex",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "0",
-                        "Property": "BorderThickness",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "2",
-                        "Property": "FocusedBorderThickness",
+                        "InvariantScript": "ColorFade(Self.Color, 20%)",
+                        "Property": "HoverColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -16547,39 +16547,57 @@
                     "IsLocked": false,
                     "LayoutName": "",
                     "MetaDataIDKey": "",
-                    "Name": "Icon2_9",
+                    "Name": "IconEdit",
                     "Parent": "ContainerCustomer_2",
                     "PersistMetaDataIDKey": false,
                     "PublishOrderIndex": 293,
                     "Rules": [
                       {
                         "Category": "Design",
-                        "InvariantScript": "Icon.Edit",
-                        "Property": "Icon",
+                        "InvariantScript": "20",
+                        "Property": "Width",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "_cBaseColor",
-                        "Property": "Color",
+                        "InvariantScript": "37",
+                        "Property": "Y",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "RGBA(244, 244, 244, 1)",
-                        "Property": "DisabledColor",
+                        "InvariantScript": "147",
+                        "Property": "X",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, -20%)",
-                        "Property": "PressedColor",
+                        "InvariantScript": "11",
+                        "Property": "ZIndex",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.Color, 20%)",
-                        "Property": "HoverColor",
+                        "InvariantScript": "DisplayMode.Edit",
+                        "Property": "DisplayMode",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "2",
+                        "Property": "FocusedBorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "0",
+                        "Property": "BorderThickness",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(166, 166, 166, 1)",
+                        "Property": "DisabledBorderColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -16590,8 +16608,68 @@
                       },
                       {
                         "Category": "Design",
+                        "InvariantScript": "RGBA(244, 244, 244, 1)",
+                        "Property": "DisabledColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "_cBaseColor",
+                        "Property": "Color",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Icon.Edit",
+                        "Property": "Icon",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "Self.BorderColor",
+                        "Property": "FocusedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                        "Property": "HoverBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                        "Property": "PressedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "DisabledFill",
+                        "Property": "HoverFill",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "RGBA(0, 18, 107, 1)",
+                        "Property": "BorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "BorderStyle.Solid",
+                        "Property": "BorderStyle",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "20",
+                        "Property": "Height",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "ColorFade(Self.Color, -20%)",
+                        "Property": "PressedColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -16603,91 +16681,13 @@
                       {
                         "Category": "Design",
                         "InvariantScript": "Self.Fill",
-                        "Property": "HoverFill",
+                        "Property": "DisabledFill",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "DisplayMode.Edit",
-                        "Property": "DisplayMode",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "147",
-                        "Property": "X",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "37",
-                        "Property": "Y",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Width",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "20",
-                        "Property": "Height",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "BorderStyle.Solid",
-                        "Property": "BorderStyle",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(0, 18, 107, 1)",
-                        "Property": "BorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "RGBA(166, 166, 166, 1)",
-                        "Property": "DisabledBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                        "Property": "PressedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                        "Property": "HoverBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "Self.BorderColor",
-                        "Property": "FocusedBorderColor",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "11",
-                        "Property": "ZIndex",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "0",
-                        "Property": "BorderThickness",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Category": "Design",
-                        "InvariantScript": "2",
-                        "Property": "FocusedBorderThickness",
+                        "InvariantScript": "ColorFade(Self.Color, 20%)",
+                        "Property": "HoverColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -19481,7 +19481,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Navigate(screenCanvas,Fade)",
+                    "InvariantScript": "Navigate(screenTheme,Fade)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -21721,7 +21721,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638010725840374288",
+    "LastModifiedTimestamp": "638010747067270342",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -21885,7 +21885,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638010725840374288",
+  "LastModifiedTimestamp": "638010747067270342",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",
