@@ -238,7 +238,7 @@ cmHome_2 As CanvasComponent:
                     ZIndex: =2
 
                 LabelDetailMVP_2 As label:
-                    Height: =Parent.Height-LabelTitleCustomer_2.Height-20
+                    Height: =359
                     Overflow: =Overflow.Scroll
                     Size: =11
                     Text: |-
