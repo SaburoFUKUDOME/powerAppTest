@@ -288,7 +288,7 @@ cmQuestionButton As CanvasComponent:
                 //　更新処理する
                 cmQuestionButton.updateAnswer();
                 Navigate(
-                    ScreenEntireDisplay_1,
+                    screenCanvas,
                     ScreenTransition.Fade
                 );
             RadiusBottomLeft: =20

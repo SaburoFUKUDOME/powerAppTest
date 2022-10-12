@@ -1,469 +1,301 @@
 screenCanvas As screen:
-    OnVisible: |
+    OnVisible: |+
         =Set(navigationKey,0);
         Set(currentCategory,"");
         Set(_cAnswerList,'仮説構築支援ツール - 回答');
-        Set(pageKey,"canvas");
+        //Set(pageKey,"canvas");
         Set(_gMaxSortNumber,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order);
+        
+        Set(
+            _lNewLine,Char(10);
+        );
+        Set(
+            _lIcon,"■";
+        );
+        Set(
+            _lCustomer,"属性・背景";
+        );
+        Set(
+            _lJTBD,"JTBD";
+        );
+        Set(
+            _lHindranceFactor,"阻害要因";
+        );
+        Set(
+            _lCurrentMeasures,"現状対策";
+        );
+        Set(
+            _lSatisfaction,"満足状況";
+        );
+        Set(
+            _lVP,"VP";
+        );
+        Set(
+            _lMVP,"MVP";// キャンバスのタイトル
+        );
+        
+        // コレクションを作成
+        ClearCollect(colCustomer,Sort(Filter(_cAnswerList,And(themeID=themeId,category="顧客")),questionID));
+        ClearCollect(colJTBD,Sort(Filter(_cAnswerList,And(themeID=themeId,category="目的（JTBD）")),questionID));
+        ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+        ClearCollect(colCurrentMeasures,Sort(Filter(_cAnswerList,And(themeID=themeId,category="現状対策（代替）")),questionID));
+        ClearCollect(colSatisfaction,Sort(Filter(_cAnswerList,And(themeID=themeId,category="満足状況")),questionID));
+        ClearCollect(colVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="提供価値")),questionID));
+        ClearCollect(colMVP,Sort(Filter(_cAnswerList,And(themeID=themeId,category="MVP（ソリューション）")),questionID));
+        
+        // キャンバスのボックス内に表示する文字を作成(追加できるカテゴリは、ギャラリー内の各ラベルで作成する)
+        Set(
+            _lCustomerData,Concat(colCustomer,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine);// 属性・背景
+        );
+        Set(
+            _lJTBDData,Concat(colJTBD,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine);// JTBD
+        );
+        Set(
+            _lMVPData,Concat(colMVP,_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine);// MVP
+        );
+        
+        
 
-    MainContainer2 As groupContainer.manualLayoutContainer:
+    cmHeader_6 As cmHeader:
+
+    HeaderContainer_3 As groupContainer.manualLayoutContainer:
+        Height: =66
+        Width: =MainContainer3.Width
+        Y: =cmHeader_4.Height
+        ZIndex: =2
+
+        cmStatusBar_3 As cmStatusBar:
+            checkStatus: |-
+                =With({
+                categoryQuestionCount:
+                // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
+                If(Or(navigationKey=1,navigationKey=2,navigationKey=3,navigationKey=8),
+                CountIf(questionList,category=navigationName),
+                // それ以外の場合は、問の追加分かけた件数をセットする
+                CountIf(questionList,category=navigationName)*_gMaxSortNumber),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category=navigationName,themeID=themeId))},
+                If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
+                CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
+                2,1))
+            X: =900
+
+        lineContainer2_4 As groupContainer.verticalAutoLayoutContainer:
+            Height: =66
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =HeaderContainer_3.Width
+            X: =30
+            ZIndex: =1
+
+            Label2_7 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Overflow: =Overflow.Scroll
+                Size: =16
+                Text: =_gThemeName
+                Width: =780
+                X: =50
+                Y: =461
+                ZIndex: =1
+
+            Rectangle3_6 As rectangle:
+                BorderColor: =_cBaseColor
+                Fill: =_cBaseColor
+                Height: =4
+                Width: =Max(App.Width-60, App.MinScreenWidth-60)
+                X: =50
+                Y: =505
+                ZIndex: =2
+
+        ContainerLink_3 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height
+            Width: =107
+            X: =Rectangle3_3.Width-70
+            ZIndex: =3
+
+            Label1_4 As label:
+                Height: =18
+                Size: =8
+                Text: ="共創活性化ポータル"
+                Width: =107
+                Y: =Icon4_2.Height
+                ZIndex: =1
+
+            Icon4_2 As icon.OpenInNewWindow:
+                Color: =_cBaseColor
+                Height: =25
+                Icon: =Icon.OpenInNewWindow
+                OnSelect: |-
+                    =Launch("https://rfgricoh.sharepoint.com/sites/ZJS_cocreation_portal/SitePages/reference.aspx?OR=Teams-HL&CT=1665043619579&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA5MDQwMDcxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#psf%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%E4%BA%8B%E4%BE%8B%E9%9B%86")
+                Tooltip: ="別タブで共創活性化ポータルを開く"
+                Width: =30
+                X: =39
+                Y: =2
+                ZIndex: =3
+
+    cmHome_3 As cmHome_2:
+        moveQuestion: |-
+            =If(
+                addAnswerFlag,
+                Set(
+                    addAnswer,
+                    true
+                );
+                Set(
+                    addAnswerId,
+                    addAnswerId
+                ),
+                Set(
+                    addAnswerId,
+                    0
+                )
+            );
+            
+            
+            //問いへ遷移
+            Set(
+                navigationKey,
+                qid
+            );
+            Set(
+                questionKey,
+                qid
+            );
+            With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+            Reset(textAnswer);
+            Reset(skipAnswerCheckbox);
+            Reset(noAnswerCheckbox);
+            Set(
+                currentAnswer,
+                If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                );
+            Set(
+                skipFlag,
+                getAnswerRecord.skip_flag
+                );
+            Set(
+                noAnswerFlag,
+                getAnswerRecord.no_answer_flag
+                );
+            );
+            
+            With({qRecord:LookUp(questionList, ID=questionKey)},
+            Set(
+                currentTitle,
+                qRecord.Title
+            );
+            Set(
+                currentQuestion,
+                qRecord.question_content
+            );
+            Set(currentCategory,qRecord.category);
+            Set(
+                controlType,
+                qRecord.control_type
+            );
+            Set(
+                currentPage,
+                qRecord.current_question_number
+            );
+            Set(
+                totalPage,
+                qRecord.question_totalnumber
+            );
+            Set(
+                commentary,
+                qRecord.commentary
+            );
+            Set(
+                example,
+                qRecord.example
+            );
+            Set(
+                currentRequired,
+                qRecord.required
+            );
+            Set(
+                nextVisible,
+                If(qRecord.next_question_id=0,false,true)
+            
+            );
+            Set(
+                confirmVisible,
+                If(qRecord.next_question_id=0,true,false)
+            );
+            );
+            Set(
+                backVisible,
+                false
+            );
+            Set(
+                commentaryGroupVisible,
+                true
+            );
+            Set(
+                exampleGroupVisible,
+                false
+            );
+            If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
+            Navigate(
+                scrennQuestion,
+                ScreenTransition.Fade
+            );
+        Y: =128
+        ZIndex: =3
+
+    ContainerDialogMain As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
+        Visible: =_gIsShowDialog
         Width: =Max(App.Width, App.MinScreenWidth)
-        ZIndex: =38
+        ZIndex: =4
 
-        cmHeader_2 As cmHeader:
+        RectangleBack1_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0.2)
+            FocusedBorderThickness: =0
+            Height: =Parent.Height
+            Width: =Parent.Width
+            ZIndex: =1
 
-        BodyContainer1 As groupContainer.manualLayoutContainer:
-            Height: =MainContainer.Height-cmHeader_1.Height-HeaderContainer.Height-FooterContainer_1.Height
-            Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer.Width
-            Y: =cmHeader_1.Height+HeaderContainer.Height
+        RectangleDialog_6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =Parent.Height*90%
+            Width: =Parent.Width*90%
+            X: =(Parent.Width/2)-(Self.Width/2)
+            Y: =(Parent.Height/2)-(Self.Height/2)
             ZIndex: =2
 
-            cmHome_1 As cmHome:
-                Height: =568
-                moveQuestion: |-
-                    =If(
-                        addAnswerFlag,
-                        Set(
-                            addAnswer,
-                            true
-                        );
-                        Set(
-                            addAnswerId,
-                            addAnswerId
-                        ),
-                        Set(
-                            addAnswerId,
-                            0
-                        )
-                    );
-                    
-                    
-                    //問いへ遷移
-                    Set(
-                        navigationKey,
-                        qid
-                    );
-                    Set(
-                        questionKey,
-                        qid
-                    );
-                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
-                    Reset(textAnswer);
-                    Reset(skipAnswerCheckbox);
-                    Reset(noAnswerCheckbox);
-                    Set(
-                        currentAnswer,
-                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
-                        );
-                    Set(
-                        skipFlag,
-                        getAnswerRecord.skip_flag
-                        );
-                    Set(
-                        noAnswerFlag,
-                        getAnswerRecord.no_answer_flag
-                        );
-                    );
-                    
-                    With({qRecord:LookUp(questionList, ID=questionKey)},
-                    Set(
-                        currentTitle,
-                        qRecord.Title
-                    );
-                    Set(
-                        currentQuestion,
-                        qRecord.question_content
-                    );
-                    Set(currentCategory,qRecord.category);
-                    Set(
-                        controlType,
-                        qRecord.control_type
-                    );
-                    Set(
-                        currentPage,
-                        qRecord.current_question_number
-                    );
-                    Set(
-                        totalPage,
-                        qRecord.question_totalnumber
-                    );
-                    Set(
-                        commentary,
-                        qRecord.commentary
-                    );
-                    Set(
-                        example,
-                        qRecord.example
-                    );
-                    Set(
-                        currentRequired,
-                        qRecord.required
-                    );
-                    Set(
-                        nextVisible,
-                        If(qRecord.next_question_id=0,false,true)
-                    
-                    );
-                    Set(
-                        confirmVisible,
-                        If(qRecord.next_question_id=0,true,false)
-                    );
-                    );
-                    Set(
-                        backVisible,
-                        false
-                    );
-                    Set(
-                        commentaryGroupVisible,
-                        true
-                    );
-                    Set(
-                        exampleGroupVisible,
-                        false
-                    );
-                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")));
-                    Navigate(
-                        scrennQuestion,
-                        ScreenTransition.Fade
-                    );
-                ZIndex: =3
-
-        NavigateContainer As groupContainer.manualLayoutContainer:
-            Height: =BodyContainer1.Height
-            Width: =MainContainer2.Width/6
-            X: =MainContainer2.Width-MainContainer2.Width/6
-            Y: =BodyContainer1.Y
+        LabelDialgoTitle As label:
+            Align: =Center
+            FontWeight: =Semibold
+            Size: =18
+            Text: =_lDialogTitle
+            Width: =863
+            X: =252
+            Y: =50
             ZIndex: =4
 
-            cmNavigation_1 As cmNavigation:
-                Height: =455
-                setQuestionValue: |-
-                    =Set(
-                        navigationKey,
-                        qId
-                    );
-                    Set(
-                        questionKey,
-                        qId
-                    );
-                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
-                    Reset(textAnswer);
-                    Reset(skipAnswerCheckbox);
-                    Reset(noAnswerCheckbox);
-                    Set(
-                        currentAnswer,
-                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
-                        );
-                    Set(
-                        skipFlag,
-                        getAnswerRecord.skip_flag
-                        );
-                    Set(
-                        noAnswerFlag,
-                        getAnswerRecord.no_answer_flag
-                        );
-                    );
-                    
-                    With({qRecord:LookUp(questionList, ID=questionKey)},
-                    Set(
-                        currentTitle,
-                        qRecord.Title
-                    );
-                    Set(
-                        currentQuestion,
-                        qRecord.question_content
-                    );
-                    Set(currentCategory,qRecord.category);
-                    Set(
-                        controlType,
-                        qRecord.control_type
-                    );
-                    Set(
-                        currentPage,
-                        qRecord.current_question_number
-                    );
-                    Set(
-                        totalPage,
-                        qRecord.question_totalnumber
-                    );
-                    Set(
-                        commentary,
-                        qRecord.commentary
-                    );
-                    Set(
-                        example,
-                        qRecord.example
-                    );
-                    Set(
-                        currentRequired,
-                        qRecord.required
-                    );
-                    Set(
-                        nextVisible,
-                        If(qRecord.next_question_id=0,false,true)
-                    
-                    );
-                    Set(
-                        confirmVisible,
-                        If(qRecord.next_question_id=0,true,false)
-                    );
-                    );
-                    Set(
-                        backVisible,
-                        false
-                    );
-                    Set(
-                        commentaryGroupVisible,
-                        true
-                    );
-                    Set(
-                        exampleGroupVisible,
-                        false
-                    );
-                    // 追加の問いフラグを初期化
-                    If(
-                        IsBlank(LookUp(_cCategory,Value=currentCategory)),
-                        Set(
-                            addAnswer,
-                            false
-                        );
-                        Set(
-                            addAnswerId,
-                            0
-                        );
-                    );
-                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                ZIndex: =1
-
-        HeaderContainer As groupContainer.manualLayoutContainer:
-            Height: =66
-            Width: =MainContainer2.Width
-            Y: =cmHeader_2.Height
-            ZIndex: =6
-
-            cmStatusBar_2 As cmStatusBar:
-                checkStatus: |-
-                    =With({
-                    categoryQuestionCount:
-                    // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
-                    If(Or(navigationKey=1,navigationKey=2,navigationKey=3,navigationKey=8),
-                    CountIf(questionList,category=navigationName),
-                    // それ以外の場合は、問の追加分かけた件数をセットする
-                    CountIf(questionList,category=navigationName)*_gMaxSortNumber),
-                    answerTable:Filter('仮説構築支援ツール - 回答',And(category=navigationName,themeID=themeId))},
-                    If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,10,
-                    CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
-                    2,1))
-                X: =900
-
-            lineContainer2_1 As groupContainer.verticalAutoLayoutContainer:
-                Height: =66
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMode: =LayoutMode.Auto
-                Width: =HeaderContainer.Width
-                X: =30
-                ZIndex: =1
-
-                Label2_3 As label:
-                    FontWeight: =FontWeight.Bold
-                    Height: =44
-                    Overflow: =Overflow.Scroll
-                    Size: =15
-                    Text: =_gThemeName
-                    Width: =780
-                    X: =50
-                    Y: =461
-                    ZIndex: =1
-
-                Rectangle3_3 As rectangle:
-                    BorderColor: =_cBaseColor
-                    Fill: =_cBaseColor
-                    Height: =4
-                    Width: =Max(App.Width-60, App.MinScreenWidth-60)
-                    X: =50
-                    Y: =505
-                    ZIndex: =2
-
-            ContainerLink As groupContainer.manualLayoutContainer:
-                Height: =Parent.Height
-                Width: =107
-                X: =Rectangle3_3.Width-70
-                ZIndex: =3
-
-                Label1 As label:
-                    Height: =18
-                    Size: =8
-                    Text: ="共創活性化ポータル"
-                    Width: =107
-                    Y: =Icon4.Height
-                    ZIndex: =1
-
-                Icon4 As icon.OpenInNewWindow:
-                    Color: =_cBaseColor
-                    Height: =25
-                    Icon: =Icon.OpenInNewWindow
-                    OnSelect: |-
-                        =Launch("https://rfgricoh.sharepoint.com/sites/ZJS_cocreation_portal/SitePages/reference.aspx?OR=Teams-HL&CT=1665043619579&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA5MDQwMDcxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#psf%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%E4%BA%8B%E4%BE%8B%E9%9B%86")
-                    Tooltip: ="別タブで共創活性化ポータルを開く"
-                    Width: =30
-                    X: =39
-                    Y: =2
-                    ZIndex: =3
-
-        FooterContainer_1 As groupContainer.manualLayoutContainer:
-            Height: =57
-            Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer.Width
-            Y: =710
+        LabelDialogData As label:
+            Height: =RectangleDialog_6.Height-100
+            Overflow: =Overflow.Scroll
+            Size: =11
+            Text: =_lDialogData
+            Width: =RectangleDialog_6.Width-50
+            X: =93
+            Y: =110
             ZIndex: =7
 
-            ContainerFooter As groupContainer.horizontalAutoLayoutContainer:
-                Height: =FooterContainer_1.Height-20
-                LayoutGap: =50
-                LayoutMode: =LayoutMode.Auto
-                Width: =1094
-                X: =20
-                Y: =10
-                ZIndex: =6
-
-                IconBackThemeScreen As icon.BackArrow:
-                    Color: =_cBaseColor
-                    Height: =30
-                    Icon: =Icon.BackArrow
-                    OnSelect: =Navigate(screenTheme,Fade)
-                    Tooltip: ="テーマ一覧へ戻る"
-                    Width: =30
-                    ZIndex: =1
-
-                ButtonEntireDisplay As button:
-                    BorderColor: =_cBaseColor
-                    BorderThickness: =0
-                    Fill: =_cBaseColor
-                    FocusedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    FocusedBorderThickness: =0
-                    Height: =35
-                    HoverBorderColor: =ColorFade(_cBaseColor,-20%)
-                    HoverFill: =ColorFade(_cBaseColor,-20%)
-                    OnSelect: =Navigate(ScreenEntireDisplay)
-                    PressedBorderColor: =ColorFade(_cBaseColor,-20%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(_cBaseColor,-20%)
-                    RadiusBottomLeft: =20
-                    RadiusBottomRight: =20
-                    RadiusTopLeft: =20
-                    RadiusTopRight: =20
-                    Text: ="全体表示"
-                    Width: =200
-                    X: =111
-                    ZIndex: =2
-
-        GroupDeleteConfirm As group:
-            Height: =5
-            Width: =5
-            X: =40
-            Y: =40
-            ZIndex: =14
-
-            Rectangle1_2 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =1
-                Fill: =RGBA(0, 0, 0, 0.2)
-                Height: =(App.Height)-(cmHeader_2.Height+HeaderContainer.Height)
-                Visible: =If(_gIsDelete,true,false)
-                Width: =Max(App.Width, App.MinScreenWidth)
-                Y: =(cmHeader_2.Height)+(HeaderContainer.Height)
-                ZIndex: =8
-
-            RectangleDialog As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =0
-                Height: =270
-                Visible: =If(_gIsDelete,true,false)
-                Width: =500
-                X: =(App.Width/2)-(Self.Width/2)
-                Y: =Rectangle1_2.Height/2
-                ZIndex: =9
-
-            LabelConfirmMessage As label:
-                Align: =Left
-                Color: =RGBA(116, 116, 116, 1)
-                FontWeight: =Normal
-                Height: =103
-                Size: =12
-                Text: |-
-                    ="この行を削除すると登録した回答も削除されます。
-                    この操作を元に戻すことはできません。
-                    続行しますか？"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =470
-                X: =448
-                Y: =397
-                ZIndex: =10
-
-            ButtonDelete As button:
-                BorderThickness: =0
-                Fill: =RGBA(203, 102, 102, 1)
-                FocusedBorderThickness: =0
-                Height: =35
-                HoverFill: =ColorFade(Self.Fill,-20%)
-                OnSelect: |-
-                    =With({answerRecord:Filter('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
-                    If(
-                        Not(IsBlank(answerRecord)),
-                        Remove('仮説構築支援ツール - 回答',answerRecord);
-                    );
-                    );
-                    Remove('仮説構築支援ツール - 追加の問い',LookUp('仮説構築支援ツール - 追加の問い',ID=_gDeleteId));
-                    UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder),{sort_order:sort_order-1});
-                    Set(_gIsDelete,false);
-                    Set(_gMaxSortNumber,_gMaxSortNumber-1);
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =14
-                Text: ="削除"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =100
-                X: =692
-                Y: =535
-                ZIndex: =11
-
-            ButtonCancel As button:
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =1
-                Height: =35
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: =Set(_gIsDelete,false)
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =12
-                Text: ="キャンセル"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =100
-                X: =817
-                Y: =535
-                ZIndex: =12
-
-            LabelDeleteTitle As label:
-                Align: =Left
-                Color: =RGBA(0, 13, 75, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =70
-                Size: =20
-                Text: |-
-                    ="追加した行を削除しますか？
-                    "
-                Visible: =If(_gIsDelete,true,false)
-                Width: =425
-                X: =447
-                Y: =327
-                ZIndex: =13
+        IconDialogClose As icon.Cancel:
+            Color: =_cBaseColor
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: =Set(_gIsShowDialog,false);
+            Tooltip: ="ダイアログを閉じる"
+            Width: =30
+            X: =1253
+            Y: =50
+            ZIndex: =8
 

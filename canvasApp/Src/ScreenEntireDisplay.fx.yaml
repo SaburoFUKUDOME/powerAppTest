@@ -50,7 +50,7 @@ ScreenEntireDisplay As screen:
                 Color: =_cBaseColor
                 Height: =30
                 Icon: =Icon.BackArrow
-                OnSelect: =Navigate(screenCanvas,Fade)
+                OnSelect: =Navigate(screenCanvas_2,Fade)
                 Tooltip: ="Home画面へ戻る"
                 Width: =30
                 X: =11

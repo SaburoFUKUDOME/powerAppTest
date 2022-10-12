@@ -91,7 +91,7 @@ screenTheme As screen:
                     );
                     Set(_gThemeName,ThisItem.Title);
                     Set(themeId,ThisItem.ID);
-                    Navigate(ScreenEntireDisplay_1);
+                    Navigate(screenCanvas);
                 TemplateSize: =120
                 Width: =1302
                 X: =30
