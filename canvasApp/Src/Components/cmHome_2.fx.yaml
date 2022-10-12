@@ -168,8 +168,8 @@ cmHome_2 As CanvasComponent:
                 OnSelect: |-
                     =// 追加の問を連結したコレクションを作成
                     Clear(colOutputTextCSV);
-                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
-                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    ForAll(Sequence(CountRows(GalleryAddCategory_2.AllItems)),
+                    With({_addId:Index(GalleryAddCategory_2.AllItems,Value).ID},
                     Collect(colOutputTextCSV, 
                     {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
                     {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
