@@ -122,54 +122,10 @@ cmHome_2 As CanvasComponent:
     Y: =0
     ZIndex: =4
 
-    ContainerHeader_2 As groupContainer.manualLayoutContainer:
-        Height: =50
-        Width: =Max(App.Width, App.MinScreenWidth)
-        Y: =52
-        ZIndex: =1
-
-        LabelValueProposition As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(23, 163, 152, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            Size: =16
-            Text: |-
-                ="VP：Value Proposition
-                （提供価値）"
-            Width: =382
-            X: =5
-            ZIndex: =2
-
-        LabelCustomerSegment As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 134, 208, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            Size: =16
-            Text: |-
-                ="CS：Customer Segment
-                （提供価値）"
-            Width: =936
-            X: =423
-            ZIndex: =3
-
     ContainerMain_2 As groupContainer.manualLayoutContainer:
         Height: =640
         Width: =Max(App.Width, App.MinScreenWidth)
         ZIndex: =2
-
-        Button1_1 As button:
-            Fill: =_cBaseColor
-            Height: =44
-            OnSelect: =cmHome_2.moveQuestion(1,false,0);
-            Text: ="前提条件を設定"
-            Width: =222
-            X: =1110
-            Y: =2
-            ZIndex: =1
 
         ContainerFooter3_2 As groupContainer.manualLayoutContainer:
             Height: =50
@@ -209,7 +165,30 @@ cmHome_2 As CanvasComponent:
                 Height: =30
                 HoverBorderColor: =ColorFade(_cBaseColor,-20%)
                 HoverFill: =ColorFade(_cBaseColor,-20%)
-                OnSelect: =Set(_gIsShowDialog,true);
+                OnSelect: |-
+                    =// 追加の問を連結したコレクションを作成
+                    Clear(colOutputTextCSV);
+                    ForAll(Sequence(CountRows(GalleryAddCategory.AllItems)),
+                    With({_addId:Index(GalleryAddCategory.AllItems,Value).ID},
+                    Collect(colOutputTextCSV, 
+                    {addId:_addId,text:Concat(Filter(colHindranceFactor,add_answerID=_addId),"【"&_lHindranceFactor&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                    {addId:_addId,text:Concat(Filter(colCurrentMeasures,add_answerID=_addId),"【"&_lCurrentMeasures&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                    {addId:_addId,text:Concat(Filter(colSatisfaction,add_answerID=_addId),"【"&_lSatisfaction&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)},
+                    {addId:_addId,text:Concat(Filter(colVP,add_answerID=_addId),"【"&_lVP&Value&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)}
+                    ))
+                    );
+                    
+                    
+                    // 出力文字の連結
+                    Set(ExportDataCSV,
+                    Concat(colCustomer,"【"&_lCustomer&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
+                    Concat(colJTBD,"【"&_lJTBD&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine)&
+                    Concat(colOutputTextCSV,text)&
+                    Concat(colMVP,"【"&_lMVP&"】,"&_lIcon&LookUp(questionList,ID=questionID).Title&","""&Substitute(answer,"""","""""")&""""&_lNewLine));
+                    
+                    Set(result, csvDL.Run("HypothesisCreator_"& Text(Now(),"yyyymmddhhmm"),ExportDataCSV,_cSharePointLink));
+                    Download(_cSharePointLink&result.path);
+                    Notify("CSVファイルをダウンロードしました。", NotificationType.Information);
                 PressedBorderColor: =ColorFade(_cBaseColor,-20%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(_cBaseColor,-20%)
@@ -226,9 +205,9 @@ cmHome_2 As CanvasComponent:
                 ZIndex: =5
 
         ContainerCanvas_2 As groupContainer.manualLayoutContainer:
-            Height: =484
+            Height: =Parent.Height-ContainerFooter3_2.Height-ContainerHeader_2.Height-50
             Width: =Parent.Width
-            Y: =106
+            Y: =ContainerHeader_2.Height+50
             ZIndex: =3
 
             ContainerMVP_2 As groupContainer.manualLayoutContainer:
@@ -1021,7 +1000,7 @@ cmHome_2 As CanvasComponent:
                     Tooltip: ="回答行を下に移動"
                     Visible: =If(ThisItem.sort_order=First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order,Descending)).sort_order, false, true)
                     Width: =25
-                    X: =740
+                    X: =735
                     ZIndex: =5
 
                 IconUp_2 As icon.Hamburger:
@@ -1038,6 +1017,51 @@ cmHome_2 As CanvasComponent:
                     Width: =25
                     X: =690
                     ZIndex: =6
+
+        ContainerHeader_2 As groupContainer.manualLayoutContainer:
+            Height: =40
+            Width: =Max(App.Width, App.MinScreenWidth)
+            Y: =40
+            ZIndex: =10
+
+            LabelValueProposition As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(23, 143, 152, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =35
+                Size: =12
+                Text: ="VP：Value Proposition（提供価値）"
+                Width: =Parent.Width*28%
+                X: =5
+                ZIndex: =2
+
+            LabelCustomerSegment As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 200, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =35
+                Size: =12
+                Text: ="CS：Customer Segment（提供価値）"
+                Width: =Parent.Width*68%
+                X: =423
+                ZIndex: =3
+
+        Button1_1 As button:
+            BorderThickness: =0
+            DisabledFill: =ColorFade(_cBaseColor,-20%)
+            Fill: =_cBaseColor
+            FocusedBorderThickness: =0
+            Height: =25
+            HoverFill: =ColorFade(_cBaseColor,-20%)
+            OnSelect: =cmHome_2.moveQuestion(1,false,0);
+            Size: =12
+            Text: ="前提条件を設定"
+            Width: =222
+            X: =10
+            Y: =5
+            ZIndex: =11
 
         GroupDeleteConfirm_2 As group:
             Height: =5
@@ -1074,7 +1098,8 @@ cmHome_2 As CanvasComponent:
                 Height: =103
                 Size: =12
                 Text: |-
-                    ="この行を削除すると登録した回答も削除されます。
+                    ="色が付いた行を削除します。
+                    この行を削除すると登録した回答も削除されます。
                     この操作を元に戻すことはできません。
                     続行しますか？"
                 Visible: =If(_gIsDelete,true,false)
@@ -1140,7 +1165,7 @@ cmHome_2 As CanvasComponent:
                 Height: =70
                 Size: =20
                 Text: |-
-                    ="追加した行を削除しますか？
+                    ="行を削除しますか？
                     "
                 Visible: =If(_gIsDelete,true,false)
                 Width: =425
