@@ -422,33 +422,32 @@ scrennQuestion As screen:
                         ZIndex: =5
 
                     ContainerLink_2 As groupContainer.manualLayoutContainer:
-                        Height: =buttonLabel_2.Height
+                        Height: =45
                         Visible: =exampleGroupVisible
-                        Width: =107
-                        X: =6
-                        Y: =200
+                        Width: =359
+                        Y: =205
                         ZIndex: =6
 
                         Label1_2 As label:
                             Align: =Center
-                            Height: =18
+                            Color: =RGBA(0, 18, 107, 1)
+                            Height: =25
                             Size: =8
-                            Text: ="PSFキャンバス例"
+                            Text: ="Employee EngagementサービスのPSFキャンバス"
                             Tooltip: ="Employee EngagementサービスのPSFキャンバスの例を開く"
-                            Width: =107
-                            Y: =IconPDF.Height+10
+                            Width: =270
+                            X: =5
+                            Y: =10
                             ZIndex: =1
 
-                        IconPDF As icon.DocumentPDF:
-                            Height: =25
-                            Icon: =Icon.DocumentPDF
-                            OnSelect: |-
-                                =Launch("https://rfgricoh.sharepoint.com/:b:/r/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL/Shared%20Documents/%E3%82%A2%E3%83%97%E3%83%AA%E7%94%A8%E7%94%BB%E5%83%8F/PSF%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%E4%BA%8B%E4%BE%8B%E9%9B%86.pdf?csf=1&web=1&e=kLotc1")
-                            Tooltip: ="Employee EngagementサービスのPSFキャンバスを開く"
-                            Width: =30
-                            X: =40
-                            Y: =6
-                            ZIndex: =4
+                        Icon6 As icon.OpenInNewWindow:
+                            Height: =20
+                            Icon: =Icon.OpenInNewWindow
+                            OnSelect: =Launch("")
+                            Width: =25
+                            X: =265
+                            Y: =10
+                            ZIndex: =2
 
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =70

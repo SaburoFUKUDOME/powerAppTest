@@ -1039,7 +1039,7 @@ cmHome_2 As CanvasComponent:
             LabelCustomerSegment As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(0, 134, 200, 1)
+                Fill: =RGBA(0, 154, 230, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =12
