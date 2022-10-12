@@ -253,7 +253,7 @@ cmNavigation As CanvasComponent:
         HoverFill: =_cBaseColor
         OnSelect: |-
             =cmNavigation.updateAnswer();
-            Navigate(screenCanvas,ScreenTransition.Fade)
+            Navigate(ScreenEntireDisplay_1,ScreenTransition.Fade)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
