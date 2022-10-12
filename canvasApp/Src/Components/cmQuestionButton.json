@@ -637,7 +637,7 @@
         "Name": "nextButton",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 197,
+        "PublishOrderIndex": 198,
         "Rules": [
           {
             "Category": "Data",
@@ -1087,7 +1087,7 @@
         "Name": "confirmButton",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 198,
+        "PublishOrderIndex": 199,
         "Rules": [
           {
             "Category": "Data",
@@ -1319,7 +1319,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "\r\n//\u3000更新処理する\r\ncmQuestionButton.updateAnswer();\r\nNavigate(\r\n    screenCanvas,\r\n    ScreenTransition.Fade\r\n);\r\n",
+            "InvariantScript": "\r\n//\u3000更新処理する\r\ncmQuestionButton.updateAnswer();\r\nNavigate(\r\n    ScreenEntireDisplay_1,\r\n    ScreenTransition.Fade\r\n);\r\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -1368,7 +1368,7 @@
         "Name": "qButtonGroup",
         "Parent": "cmQuestionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 199,
+        "PublishOrderIndex": 197,
         "Rules": [
           {
             "Category": "Design",
@@ -1455,7 +1455,7 @@
       "getStatus_nowNoAnswerFlag",
       "getStatus"
     ],
-    "LastModifiedTimestamp": "638011302919772305",
+    "LastModifiedTimestamp": "638011312758217895",
     "Name": "cmQuestionButton",
     "Rules": [
       {
@@ -1675,7 +1675,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638011302919772305",
+  "LastModifiedTimestamp": "638011312758217895",
   "Name": "3286880be74343259c8a1f5cd07e5c0c",
   "OverridableProperties": {},
   "TemplateOriginalName": "512e11d4d55e4c4fa72c8698930170cd",
