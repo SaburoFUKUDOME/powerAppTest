@@ -444,7 +444,7 @@ scrennQuestion As screen:
                             Height: =20
                             Icon: =Icon.OpenInNewWindow
                             OnSelect: |-
-                                =Launch("https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL/test/SitePages/%E4%BB%AE%E8%AA%AC%E6%A7%8B%E7%AF%89%E6%94%AF%E6%8F%B4%E3%82%A2%E3%83%97%E3%83%AA.aspx")
+                                =Launch("https://rfgricoh.sharepoint.com/teams/ZJG_008987/HYPOBUIL/example/SitePages/%E3%80%90%E4%BE%8B%E3%80%91Employee-Engagement%E5%90%91%E4%B8%8A%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.aspx")
                             Width: =25
                             X: =265
                             Y: =10
