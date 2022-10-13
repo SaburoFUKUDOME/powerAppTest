@@ -340,8 +340,8 @@ screenCanvas As screen:
                 続行しますか？"
             Visible: =If(_gIsDelete,true,false)
             Width: =470
-            X: =463
-            Y: =316
+            X: =443
+            Y: =336
             ZIndex: =7
 
         ButtonDelete_2 As button:
@@ -369,8 +369,8 @@ screenCanvas As screen:
             Text: ="削除"
             Visible: =If(_gIsDelete,true,false)
             Width: =100
-            X: =712
-            Y: =450
+            X: =692
+            Y: =470
             ZIndex: =8
 
         ButtonCancel_2 As button:
@@ -390,8 +390,8 @@ screenCanvas As screen:
             Text: ="キャンセル"
             Visible: =If(_gIsDelete,true,false)
             Width: =100
-            X: =837
-            Y: =450
+            X: =817
+            Y: =470
             ZIndex: =9
 
         LabelDeleteTitle_2 As label:
@@ -405,7 +405,7 @@ screenCanvas As screen:
                 "
             Visible: =If(_gIsDelete,true,false)
             Width: =425
-            X: =463
-            Y: =250
+            X: =443
+            Y: =270
             ZIndex: =10
 
