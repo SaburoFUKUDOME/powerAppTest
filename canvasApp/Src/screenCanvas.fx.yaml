@@ -299,3 +299,113 @@ screenCanvas As screen:
             Y: =50
             ZIndex: =8
 
+    GroupDeleteConfirm_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =11
+
+        RectangleBack1_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 0.2)
+            Height: =Max(App.Height, App.MinScreenHeight)
+            Visible: =If(_gIsDelete,true,false)
+            Width: =Max(App.Width, App.MinScreenWidth)
+            ZIndex: =5
+
+        RectangleDialog_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =270
+            Visible: =If(_gIsDelete,true,false)
+            Width: =500
+            X: =(App.Width/2)-(Self.Width/2)
+            Y: =RectangleBack1_4.Height/3
+            ZIndex: =6
+
+        LabelConfirmMessage_2 As label:
+            Align: =Left
+            Color: =RGBA(116, 116, 116, 1)
+            FontWeight: =Normal
+            Height: =103
+            Size: =12
+            Text: |-
+                ="色が付いた行を削除します。
+                この行を削除すると登録した回答も削除されます。
+                この操作を元に戻すことはできません。
+                続行しますか？"
+            Visible: =If(_gIsDelete,true,false)
+            Width: =470
+            X: =463
+            Y: =316
+            ZIndex: =7
+
+        ButtonDelete_2 As button:
+            BorderThickness: =0
+            Fill: =RGBA(203, 102, 102, 1)
+            FocusedBorderThickness: =0
+            Height: =35
+            HoverFill: =ColorFade(Self.Fill,-20%)
+            OnSelect: |-
+                =With({answerRecord:Filter('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
+                If(
+                    Not(IsBlank(answerRecord)),
+                    Remove('仮説構築支援ツール - 回答',answerRecord);
+                );
+                );
+                Remove('仮説構築支援ツール - 追加の問い',LookUp('仮説構築支援ツール - 追加の問い',ID=_gDeleteId));
+                UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder),{sort_order:sort_order-1});
+                Set(_gIsDelete,false);
+                Set(_gMaxSortNumber,_gMaxSortNumber-1);
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="削除"
+            Visible: =If(_gIsDelete,true,false)
+            Width: =100
+            X: =712
+            Y: =450
+            ZIndex: =8
+
+        ButtonCancel_2 As button:
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Set(_gIsDelete,false)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =12
+            Text: ="キャンセル"
+            Visible: =If(_gIsDelete,true,false)
+            Width: =100
+            X: =837
+            Y: =450
+            ZIndex: =9
+
+        LabelDeleteTitle_2 As label:
+            Align: =Left
+            Color: =RGBA(0, 13, 75, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =20
+            Text: |-
+                ="行を削除しますか？
+                "
+            Visible: =If(_gIsDelete,true,false)
+            Width: =425
+            X: =463
+            Y: =250
+            ZIndex: =10
+

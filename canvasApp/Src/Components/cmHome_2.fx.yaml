@@ -138,7 +138,7 @@ cmHome_2 As CanvasComponent:
                 Height: =30
                 Icon: =Icon.BackArrow
                 OnSelect: =Navigate(screenTheme,Fade)
-                Tooltip: ="Home画面へ戻る"
+                Tooltip: ="テーマ一覧へ戻る"
                 Width: =30
                 X: =11
                 Y: =10
@@ -146,7 +146,7 @@ cmHome_2 As CanvasComponent:
 
             LabelCopyright As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Height: =16
+                Height: =20
                 LineHeight: =1.0
                 Size: =11
                 Text: ="©New*New All rights reserved."
@@ -364,7 +364,7 @@ cmHome_2 As CanvasComponent:
                     OnSelect: =cmHome_2.moveQuestion(6,false,0);
                     Tooltip: ="回答画面へ移動する"
                     Width: =20
-                    X: =147
+                    X: =150
                     Y: =37
                     ZIndex: =7
 
@@ -1071,114 +1071,4 @@ cmHome_2 As CanvasComponent:
             X: =10
             Y: =5
             ZIndex: =11
-
-        GroupDeleteConfirm_2 As group:
-            Height: =5
-            Width: =5
-            X: =40
-            Y: =-287
-            ZIndex: =58
-
-            RectangleBack1_4 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =1
-                Fill: =RGBA(0, 0, 0, 0.2)
-                Height: =640
-                Visible: =If(_gIsDelete,true,false)
-                Width: =Max(App.Width, App.MinScreenWidth)
-                ZIndex: =4
-
-            RectangleDialog_2 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                BorderThickness: =
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =0
-                Height: =270
-                Visible: =If(_gIsDelete,true,false)
-                Width: =500
-                X: =(App.Width/2)-(Self.Width/2)
-                Y: =RectangleBack1_4.Height/3
-                ZIndex: =5
-
-            LabelConfirmMessage_2 As label:
-                Align: =Left
-                Color: =RGBA(116, 116, 116, 1)
-                FontWeight: =Normal
-                Height: =103
-                Size: =12
-                Text: |-
-                    ="色が付いた行を削除します。
-                    この行を削除すると登録した回答も削除されます。
-                    この操作を元に戻すことはできません。
-                    続行しますか？"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =470
-                X: =443
-                Y: =296
-                ZIndex: =6
-
-            ButtonDelete_2 As button:
-                BorderThickness: =0
-                Fill: =RGBA(203, 102, 102, 1)
-                FocusedBorderThickness: =0
-                Height: =35
-                HoverFill: =ColorFade(Self.Fill,-20%)
-                OnSelect: |-
-                    =With({answerRecord:Filter('仮説構築支援ツール - 回答',add_answerID=_gDeleteId)},
-                    If(
-                        Not(IsBlank(answerRecord)),
-                        Remove('仮説構築支援ツール - 回答',answerRecord);
-                    );
-                    );
-                    Remove('仮説構築支援ツール - 追加の問い',LookUp('仮説構築支援ツール - 追加の問い',ID=_gDeleteId));
-                    UpdateIf('仮説構築支援ツール - 追加の問い',And(themeID=themeId,sort_order>_gDeleteSortOrder),{sort_order:sort_order-1});
-                    Set(_gIsDelete,false);
-                    Set(_gMaxSortNumber,_gMaxSortNumber-1);
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =14
-                Text: ="削除"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =100
-                X: =692
-                Y: =430
-                ZIndex: =7
-
-            ButtonCancel_2 As button:
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =1
-                Height: =35
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: =Set(_gIsDelete,false)
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =12
-                Text: ="キャンセル"
-                Visible: =If(_gIsDelete,true,false)
-                Width: =100
-                X: =817
-                Y: =430
-                ZIndex: =8
-
-            LabelDeleteTitle_2 As label:
-                Align: =Left
-                Color: =RGBA(0, 13, 75, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =70
-                Size: =20
-                Text: |-
-                    ="行を削除しますか？
-                    "
-                Visible: =If(_gIsDelete,true,false)
-                Width: =425
-                X: =443
-                Y: =230
-                ZIndex: =9
 
