@@ -11379,7 +11379,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "5",
+                        "InvariantScript": "8",
                         "Property": "X",
                         "RuleProviderType": "Unknown"
                       },
@@ -11511,7 +11511,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "Parent.Width-30",
+                        "InvariantScript": "Parent.Width-35",
                         "Property": "Width",
                         "RuleProviderType": "Unknown"
                       },
@@ -19872,7 +19872,7 @@
       },
       "moveQuestion_qid"
     ],
-    "LastModifiedTimestamp": "638013263221472229",
+    "LastModifiedTimestamp": "638013266022380420",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -20036,7 +20036,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638013263221472229",
+  "LastModifiedTimestamp": "638013266022380420",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",
