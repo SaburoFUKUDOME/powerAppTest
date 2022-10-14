@@ -331,11 +331,12 @@ cmHome_2 As CanvasComponent:
 
                 LabelTitleJTBD_2 As label:
                     FontWeight: =Semibold
-                    Height: =50
+                    Height: =44
                     Size: =16
                     Text: =_lJTBD
                     Width: =111
-                    X: =10
+                    X: =5
+                    Y: =5
                     ZIndex: =5
 
                 LabelDetailJTBD_2 As label:
@@ -400,7 +401,7 @@ cmHome_2 As CanvasComponent:
                         answerTable:Filter('仮説構築支援ツール - 回答',And(category="目的（JTBD）",themeID=themeId))},
                         If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                     Width: =20
-                    X: =70
+                    X: =60
                     Y: =17
                     ZIndex: =10
 
@@ -427,7 +428,7 @@ cmHome_2 As CanvasComponent:
                     Size: =16
                     Text: =_lCustomer
                     Width: =121
-                    X: =10
+                    X: =5
                     Y: =5
                     ZIndex: =8
 
@@ -501,7 +502,7 @@ cmHome_2 As CanvasComponent:
                         answerTable:Filter('仮説構築支援ツール - 回答',And(category="顧客",themeID=themeId))},
                         If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                     Width: =20
-                    X: =126
+                    X: =120
                     Y: =17
                     ZIndex: =15
 
