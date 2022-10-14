@@ -521,8 +521,8 @@ cmHome_2 As CanvasComponent:
                 Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                 Layout: =Layout.Vertical
                 TemplateSize: =400
-                Width: =Parent.Width-Parent.Width/7.5*3-IconArrow_4.Width
-                X: =199
+                Width: =Parent.Width-Parent.Width/7.5*3-IconArrow_4.Width+10
+                X: =200
                 ZIndex: =6
 
                 ContainerAddCategory_2 As groupContainer.horizontalAutoLayoutContainer:

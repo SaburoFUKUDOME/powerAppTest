@@ -164,7 +164,7 @@ screenTheme As screen:
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: ="最終更新日：" & ThisItem.Modified
-                    Width: =260
+                    Width: =255
                     X: =10
                     Y: =59
                     ZIndex: =5
