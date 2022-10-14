@@ -148,13 +148,13 @@ screenTheme As screen:
                     Color: =_cBaseColor
                     DisabledBorderColor: =_cBaseColor
                     DisabledColor: =_cBaseColor
-                    Height: =31
+                    Height: =30
                     Icon: =Icon.Settings
                     OnSelect: |-
                         =EditForm(FormThemeCreate);//ScreenCreateThemeのフォームコントロールを編集モードにする
                         Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID,_lButtonLabel:"更新"})
                     Tooltip: ="テーマを編集する"
-                    Width: =42
+                    Width: =40
                     X: =265
                     Y: =64
                     ZIndex: =4
@@ -164,7 +164,7 @@ screenTheme As screen:
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: ="最終更新日：" & ThisItem.Modified
-                    Width: =Len(lastModifiedLabel.Text)*12
+                    Width: =260
                     X: =10
                     Y: =59
                     ZIndex: =5

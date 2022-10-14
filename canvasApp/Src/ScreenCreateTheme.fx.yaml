@@ -169,7 +169,7 @@ ScreenCreateTheme As screen:
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Fill: =RGBA(237, 237, 237, 1)
-                            Height: =100
+                            Height: =50
                             HoverBorderColor: =Parent.BorderColor
                             HoverColor: =
                             HoverFill: =RGBA(237, 237, 237, 1)
@@ -180,7 +180,7 @@ ScreenCreateTheme As screen:
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
-                            Width: =Parent.Width-100
+                            Width: =Parent.Width-60
                             X: =30
                             Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                             ZIndex: =2
