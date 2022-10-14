@@ -103,7 +103,7 @@ ScreenCreateTheme As screen:
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            Tooltip: =Parent.DisplayName
+                            Tooltip: =
                             Width: =Parent.Width-100
                             X: =30
                             Y: =DataCardKey13.Y + DataCardKey13.Height + 5
@@ -179,7 +179,7 @@ ScreenCreateTheme As screen:
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            Tooltip: =Parent.DisplayName
+                            Tooltip: =
                             Width: =Parent.Width-60
                             X: =30
                             Y: =DataCardKey7.Y + DataCardKey7.Height + 5
