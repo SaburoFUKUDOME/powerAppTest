@@ -2854,7 +2854,7 @@
                               },
                               {
                                 "Category": "Behavior",
-                                "InvariantScript": "cmHome_2.moveQuestion(18,true,ThisItem.ID,\"提供価値\");",
+                                "InvariantScript": "cmHome_2.moveQuestion(18,true,ThisItem.ID,7);",
                                 "Property": "OnSelect",
                                 "RuleProviderType": "Unknown"
                               }
@@ -5230,7 +5230,7 @@
                               },
                               {
                                 "Category": "Behavior",
-                                "InvariantScript": "cmHome_2.moveQuestion(14,true,ThisItem.ID,\"満足状況\");",
+                                "InvariantScript": "cmHome_2.moveQuestion(14,true,ThisItem.ID,6);",
                                 "Property": "OnSelect",
                                 "RuleProviderType": "Unknown"
                               }
@@ -7317,7 +7317,7 @@
                               },
                               {
                                 "Category": "Behavior",
-                                "InvariantScript": "cmHome_2.moveQuestion(11,true,ThisItem.ID,\"現状対策（代替）\");",
+                                "InvariantScript": "cmHome_2.moveQuestion(11,true,ThisItem.ID,5);",
                                 "Property": "OnSelect",
                                 "RuleProviderType": "Unknown"
                               }
@@ -9404,7 +9404,7 @@
                               },
                               {
                                 "Category": "Behavior",
-                                "InvariantScript": "cmHome_2.moveQuestion(7,true,ThisItem.ID,\"阻害要因（課題）\");",
+                                "InvariantScript": "cmHome_2.moveQuestion(7,true,ThisItem.ID,4);",
                                 "Property": "OnSelect",
                                 "RuleProviderType": "Unknown"
                               }
@@ -19860,19 +19860,12 @@
       "Y",
       "ZIndex",
       "moveQuestion_addAnswerId",
-      "moveQuestion_addCategory",
       "moveQuestion_addAnswerFlag",
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "If(addAnswerFlag,\r\nWith(\r\n    {\r\n        getAnswerRecord: LookUp(\r\n            '正本テスト - 回答',\r\n            And(\r\n                themeID = themeId,\r\n                questionID = questionKey,\r\n                add_answerID = addAnswerId\r\n            )\r\n        )\r\n    },\r\n    If(IsBlank(getAnswerRecord),\r\n    Patch('正本テスト - 回答',\r\n    Defaults('正本テスト - 回答'),\r\n    {\r\n        themeID: themeId,\r\n        questionID: qid,\r\n        category: moveCategory,\r\n        answer:\"\",\r\n        skip_flag: false,\r\n        no_answer_flag:false,\r\n        status:0,\r\n        add_answerID:addAnswerId\r\n    }\r\n    )\r\n\r\n));\r\nSet(addAnswer,true);\r\nSet(addAnswerId,addAnswerId),\r\nSet(addAnswerId,0));\r\n\r\n\r\n//問いへ遷移\r\nSet(\r\n    navigationKey,\r\n    qid\r\n);\r\nSet(\r\n    questionKey,\r\n    qid\r\n);\r\nWith({getAnswerRecord:LookUp('正本テスト - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},\r\nReset(textAnswer);\r\nReset(skipAnswerCheckbox);\r\nReset(noAnswerCheckbox);\r\nSet(\r\n    currentAnswer,\r\n    If(IsBlank(getAnswerRecord),\"\",getAnswerRecord.answer)\r\n    );\r\nSet(\r\n    skipFlag,\r\n    getAnswerRecord.skip_flag\r\n    );\r\nSet(\r\n    noAnswerFlag,\r\n    getAnswerRecord.no_answer_flag\r\n    );\r\n);\r\n\r\nWith({qRecord:LookUp(questionList, ID=questionKey)},\r\nSet(\r\n    currentTitle,\r\n    qRecord.Title\r\n);\r\nSet(\r\n    currentQuestion,\r\n    qRecord.question_content\r\n);\r\nSet(currentCategory,qRecord.category);\r\nSet(\r\n    controlType,\r\n    qRecord.control_type\r\n);\r\nSet(\r\n    currentPage,\r\n    qRecord.current_question_number\r\n);\r\nSet(\r\n    totalPage,\r\n    qRecord.question_totalnumber\r\n);\r\nSet(\r\n    commentary,\r\n    qRecord.commentary\r\n);\r\nSet(\r\n    example,\r\n    qRecord.example\r\n);\r\nSet(\r\n    currentRequired,\r\n    qRecord.required\r\n);\r\nSet(\r\n    nextVisible,\r\n    If(qRecord.next_question_id=0,false,true)\r\n\r\n);\r\nSet(\r\n    confirmVisible,\r\n    If(qRecord.next_question_id=0,true,false)\r\n);\r\n);\r\nSet(\r\n    backVisible,\r\n    false\r\n);\r\nSet(\r\n    commentaryGroupVisible,\r\n    true\r\n);\r\nSet(\r\n    exampleGroupVisible,\r\n    false\r\n);\r\nIf(Not(currentRequired=\"2\"),Set(currentQuestion,Concatenate(currentQuestion,\"*\")));\r\nNavigate(\r\n    scrennQuestion,\r\n    ScreenTransition.Fade\r\n);",
-        "InvariantPropertyName": "moveQuestion",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
-      "moveQuestion_qid"
+      "moveQuestion_addCategory",
+      "moveQuestion_qid",
+      "moveQuestion"
     ],
-    "LastModifiedTimestamp": "638015864918646612",
+    "LastModifiedTimestamp": "638015889928878989",
     "Name": "cmHome_2",
     "Rules": [
       {
@@ -19883,14 +19876,14 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "\"テキスト\"",
-        "Property": "moveQuestion_addCategory",
+        "InvariantScript": "true",
+        "Property": "moveQuestion_addAnswerFlag",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "true",
-        "Property": "moveQuestion_addAnswerFlag",
+        "InvariantScript": "100",
+        "Property": "moveQuestion_addCategory",
         "RuleProviderType": "System"
       },
       {
@@ -20010,7 +20003,7 @@
           {
             "DisplayName": "moveQuestion_addCategory",
             "Name": "moveQuestion_addCategory",
-            "PropertyDataTypeKey": "String",
+            "PropertyDataTypeKey": "Number",
             "ScopeVariableInfo": {
               "DependencyType": "New",
               "Description": "追加の問いのカテゴリ",
@@ -20020,7 +20013,7 @@
               "ScopeVariableName": "addCategory"
             },
             "Tooltip": "追加の問いのカテゴリ",
-            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+            "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
           }
         ]
       },
@@ -20036,7 +20029,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638015864918646612",
+  "LastModifiedTimestamp": "638015889928878989",
   "Name": "eee6d2260ca54fcb8c4f0f5e83759ed9",
   "OverridableProperties": {},
   "TemplateOriginalName": "a0d3516f99e8436fbcf0b750d172662e",

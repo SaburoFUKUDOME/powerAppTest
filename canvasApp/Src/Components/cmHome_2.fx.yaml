@@ -1,5 +1,5 @@
 cmHome_2 As CanvasComponent:
-    moveQuestion(qid As Number, addAnswerFlag As Boolean, addAnswerId As Number, addCategory As String):
+    moveQuestion(qid As Number, addAnswerFlag As Boolean, addAnswerId As Number, addCategory As Number):
         qid:
             Default: =100
         addAnswerFlag:
@@ -7,7 +7,7 @@ cmHome_2 As CanvasComponent:
         addAnswerId:
             Default: =100
         addCategory:
-            Default: ="テキスト"
+            Default: =100
         ThisProperty:
             Default: |-
                 =If(
@@ -587,7 +587,7 @@ cmHome_2 As CanvasComponent:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
-                            OnSelect: =cmHome_2.moveQuestion(18,true,ThisItem.ID,"提供価値");
+                            OnSelect: =cmHome_2.moveQuestion(18,true,ThisItem.ID,7);
                             Tooltip: ="回答画面へ移動する"
                             Width: =20
                             X: =147
@@ -700,7 +700,7 @@ cmHome_2 As CanvasComponent:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
-                            OnSelect: =cmHome_2.moveQuestion(14,true,ThisItem.ID,"満足状況");
+                            OnSelect: =cmHome_2.moveQuestion(14,true,ThisItem.ID,6);
                             Tooltip: ="回答画面へ移動する"
                             Width: =20
                             X: =147
@@ -803,7 +803,7 @@ cmHome_2 As CanvasComponent:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
-                            OnSelect: =cmHome_2.moveQuestion(11,true,ThisItem.ID,"現状対策（代替）");
+                            OnSelect: =cmHome_2.moveQuestion(11,true,ThisItem.ID,5);
                             Tooltip: ="回答画面へ移動する"
                             Width: =20
                             X: =147
@@ -908,7 +908,7 @@ cmHome_2 As CanvasComponent:
                             Color: =_cBaseColor
                             Height: =20
                             Icon: =Icon.Edit
-                            OnSelect: =cmHome_2.moveQuestion(7,true,ThisItem.ID,"阻害要因（課題）");
+                            OnSelect: =cmHome_2.moveQuestion(7,true,ThisItem.ID,4);
                             Tooltip: ="回答画面へ移動する"
                             Width: =20
                             X: =147
