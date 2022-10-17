@@ -15,7 +15,7 @@ App As appinfo:
         Set(noneStatus,0);
         // 追加の問いフラグ
         Set(addAnswer,false);
-        Set(_cCategory,["阻害要因（課題）","現状対策（代替）","満足状況","提供価値"]);
+        Set(_cCategory,[4,5,6,7]);
         
         // ★★シェアポイントリンク先は移行後変更する★★
         Set(_cSharePointLink,"https://rfgricoh.sharepoint.com/teams/ZJS_GP_JRITS_BSJ_EIMDC_APL/HYPOBUIL");

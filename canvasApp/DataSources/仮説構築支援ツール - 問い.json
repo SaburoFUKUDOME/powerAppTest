@@ -25,6 +25,7 @@
       "{VersionNumber}": "バージョン番号",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
+      "category_ID": "category_ID",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Editor": "Modified By",

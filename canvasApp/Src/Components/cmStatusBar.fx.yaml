@@ -32,7 +32,7 @@ cmStatusBar As CanvasComponent:
         ZIndex: =2
 
         statusBarLabel As label:
-            BorderColor: =If(currentCategory = ThisItem.Title,RGBA(255,215,0,1),_cBaseColor)
+            BorderColor: =If(currentCategory = ThisItem.ID,RGBA(255,215,0,1),_cBaseColor)
             BorderThickness: =2
             Fill: |-
                 =
@@ -40,10 +40,10 @@ cmStatusBar As CanvasComponent:
                 categoryQuestionCount:
                 // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
                 If(Or(ThisItem.ID=1,ThisItem.ID=2,ThisItem.ID=3,ThisItem.ID=8),
-                CountIf(questionList,category=ThisItem.Title),
+                CountIf(questionList,category_ID=ThisItem.ID),
                 // それ以外の場合は、問の追加分かけた件数をセットする
-                CountIf(questionList,category=ThisItem.Title)*_gMaxSortNumber),
-                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
+                CountIf(questionList,category_ID=ThisItem.ID)*_gMaxSortNumber),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=ThisItem.ID,themeID=themeId))},
                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,_cBaseColor,
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 RGBA(200,220,255,1),RGBA(245,245,245,1)))
@@ -56,10 +56,10 @@ cmStatusBar As CanvasComponent:
                 categoryQuestionCount:
                 // 前提条件、顧客、目的、MVPの場合は、問の複数追加は無いのでそのままの件数をセットする
                 If(Or(ThisItem.ID=1,ThisItem.ID=2,ThisItem.ID=3,ThisItem.ID=8),
-                CountIf(questionList,category=ThisItem.Title),
+                CountIf(questionList,category_ID=ThisItem.ID),
                 // それ以外の場合は、問の追加分かけた件数をセットする
-                CountIf(questionList,category=ThisItem.Title)*_gMaxSortNumber),
-                answerTable:Filter('仮説構築支援ツール - 回答',And(category=ThisItem.Title,themeID=themeId))},
+                CountIf(questionList,category_ID=ThisItem.ID)*_gMaxSortNumber),
+                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=ThisItem.ID,themeID=themeId))},
                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,ThisItem.Title&" 作成済",
                 CountIf(answerTable,(status=incompleteStatus)||(status=completeStatus))>noneStatus,
                 ThisItem.Title&" 作成中",ThisItem.Title&" 未着手"))

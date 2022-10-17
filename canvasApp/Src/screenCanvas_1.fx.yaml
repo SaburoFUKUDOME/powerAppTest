@@ -1,7 +1,7 @@
 screenCanvas_1 As screen:
     OnVisible: |
         =Set(navigationKey,0);
-        Set(currentCategory,"");
+        Set(currentCategory,Blank());
         Set(answerList,'仮説構築支援ツール - 回答');
         Set(themeId,galleryTheme.Selected.ID);
         Set(pageKey,"canvas");
@@ -152,7 +152,7 @@ screenCanvas_1 As screen:
                         currentQuestion,
                         qRecord.question_content
                     );
-                    Set(currentCategory,qRecord.category);
+                    Set(currentCategory,qRecord.category_ID);
                     Set(
                         controlType,
                         qRecord.control_type

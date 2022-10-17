@@ -39,7 +39,7 @@ cmNavigation As CanvasComponent:
                     currentQuestion,
                     qRecord.question_content
                 );
-                Set(currentCategory,qRecord.category);
+                Set(currentCategory,qRecord.category_ID);
                 Set(
                     controlType,
                     qRecord.control_type
@@ -148,7 +148,7 @@ cmNavigation As CanvasComponent:
                         {
                             themeID: themeId,
                             questionID: questionKey,
-                            category: currentCategory,
+                            category_ID: currentCategory,
                             answer: answerContent,
                             skip_flag: skipAnswerCheckbox.Value,
                             no_answer_flag: noAnswerCheckbox.Value,
@@ -226,7 +226,7 @@ cmNavigation As CanvasComponent:
                 );); 
                 // 追加できるカテゴリの場合、先頭のIDを保持
                 If(
-                    Not(IsBlank(LookUp(_cCategory,Value=ThisItem.Title))),
+                    Not(IsBlank(LookUp(_cCategory,Value=ThisItem.ID))),
                     Set(addAnswerId,First(Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)).ID),
                     Set(addAnswerId,0);
                 );

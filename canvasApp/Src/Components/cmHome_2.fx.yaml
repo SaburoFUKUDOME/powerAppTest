@@ -63,7 +63,7 @@ cmHome_2 As CanvasComponent:
                     currentQuestion,
                     qRecord.question_content
                 );
-                Set(currentCategory,qRecord.category);
+                Set(currentCategory,qRecord.category_ID);
                 Set(
                     controlType,
                     qRecord.control_type
@@ -302,8 +302,8 @@ cmHome_2 As CanvasComponent:
                     Icon: =Icon.CheckBadge
                     Tooltip: =LabelTitleMVP_2.Text&" 作成済"
                     Visible: |-
-                        =With({categoryQuestionCount:CountIf(questionList,category="MVP（ソリューション）"),
-                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="MVP（ソリューション）",themeID=themeId))},
+                        =With({categoryQuestionCount:CountIf(questionList,category_ID=8),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=8,themeID=themeId))},
                         If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                     Width: =20
                     X: =66
@@ -397,8 +397,8 @@ cmHome_2 As CanvasComponent:
                     Icon: =Icon.CheckBadge
                     Tooltip: =LabelTitleJTBD_2.Text&" 作成済"
                     Visible: |-
-                        =With({categoryQuestionCount:CountIf(questionList,category="目的（JTBD）"),
-                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="目的（JTBD）",themeID=themeId))},
+                        =With({categoryQuestionCount:CountIf(questionList,category_ID=3),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=3,themeID=themeId))},
                         If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                     Width: =20
                     X: =60
@@ -498,8 +498,8 @@ cmHome_2 As CanvasComponent:
                     Icon: =Icon.CheckBadge
                     Tooltip: =LabelTitleCustomer_2.Text&" 作成済"
                     Visible: |-
-                        =With({categoryQuestionCount:CountIf(questionList,category="顧客"),
-                        answerTable:Filter('仮説構築支援ツール - 回答',And(category="顧客",themeID=themeId))},
+                        =With({categoryQuestionCount:CountIf(questionList,category_ID=2),
+                        answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=2,themeID=themeId))},
                         If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                     Width: =20
                     X: =120
@@ -622,8 +622,8 @@ cmHome_2 As CanvasComponent:
                             Icon: =Icon.CheckBadge
                             Tooltip: =LabelTitleVP_2.Text&" 作成済"
                             Visible: |-
-                                =With({categoryQuestionCount:CountIf(questionList,category="提供価値"),
-                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="提供価値",themeID=themeId,add_answerID=ThisItem.ID))},
+                                =With({categoryQuestionCount:CountIf(questionList,category_ID=7),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=7,themeID=themeId,add_answerID=ThisItem.ID))},
                                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                             Width: =20
                             X: =47
@@ -735,8 +735,8 @@ cmHome_2 As CanvasComponent:
                             Icon: =Icon.CheckBadge
                             Tooltip: =LabelTitleSatisfaction_2.Text&" 作成済"
                             Visible: |-
-                                =With({categoryQuestionCount:CountIf(questionList,category="満足状況"),
-                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="満足状況",themeID=themeId,add_answerID=ThisItem.ID))},
+                                =With({categoryQuestionCount:CountIf(questionList,category_ID=6),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=6,themeID=themeId,add_answerID=ThisItem.ID))},
                                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                             Width: =20
                             X: =107
@@ -838,8 +838,8 @@ cmHome_2 As CanvasComponent:
                             Icon: =Icon.CheckBadge
                             Tooltip: =LabelTitleCurrentMeasures_2.Text&" 作成済"
                             Visible: |-
-                                =With({categoryQuestionCount:CountIf(questionList,category="現状対策（代替）"),
-                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="現状対策（代替）",themeID=themeId,add_answerID=ThisItem.ID))},
+                                =With({categoryQuestionCount:CountIf(questionList,category_ID=5),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=5,themeID=themeId,add_answerID=ThisItem.ID))},
                                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                             Width: =20
                             X: =107
@@ -943,8 +943,8 @@ cmHome_2 As CanvasComponent:
                             Icon: =Icon.CheckBadge
                             Tooltip: =LabelTitleHindranceFactor_2.Text&" 作成済"
                             Visible: |-
-                                =With({categoryQuestionCount:CountIf(questionList,category="阻害要因（課題）"),
-                                answerTable:Filter('仮説構築支援ツール - 回答',And(category="阻害要因（課題）",themeID=themeId,add_answerID=ThisItem.ID))},
+                                =With({categoryQuestionCount:CountIf(questionList,category_ID=4),
+                                answerTable:Filter('仮説構築支援ツール - 回答',And(category_ID=4,themeID=themeId,add_answerID=ThisItem.ID))},
                                 If(CountIf(answerTable,status=completeStatus)=categoryQuestionCount,true,false))
                             Width: =20
                             X: =107

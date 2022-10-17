@@ -63,7 +63,7 @@ cmHome As CanvasComponent:
                     currentQuestion,
                     qRecord.question_content
                 );
-                Set(currentCategory,qRecord.category);
+                Set(currentCategory,qRecord.category_ID);
                 Set(
                     controlType,
                     qRecord.control_type

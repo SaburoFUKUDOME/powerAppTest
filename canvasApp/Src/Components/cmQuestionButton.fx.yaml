@@ -49,7 +49,7 @@ cmQuestionButton As CanvasComponent:
                     currentRequired,
                     qRecord.required
                 );
-                Set(currentCategory,qRecord.category);
+                Set(currentCategory,qRecord.category_ID);
                 
                 If(buttonKey="next",
                 //次へボタンの場合
@@ -168,7 +168,7 @@ cmQuestionButton As CanvasComponent:
                         {
                             themeID: themeId,
                             questionID: questionKey,
-                            category: currentCategory,
+                            category_ID: currentCategory,
                             answer: answerContent,
                             skip_flag: skipAnswerCheckbox.Value,
                             no_answer_flag: noAnswerCheckbox.Value,

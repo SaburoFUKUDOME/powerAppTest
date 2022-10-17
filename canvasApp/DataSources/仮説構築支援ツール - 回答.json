@@ -28,6 +28,7 @@
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
       "category": "category",
+      "category_ID": "category_ID",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Editor": "Modified By",

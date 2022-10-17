@@ -128,7 +128,7 @@ scrennQuestion As screen:
                         currentQuestion,
                         qRecord.question_content
                     );
-                    Set(currentCategory,qRecord.category);
+                    Set(currentCategory,qRecord.category_ID);
                     Set(
                         controlType,
                         qRecord.control_type
@@ -493,7 +493,7 @@ scrennQuestion As screen:
                         currentRequired,
                         qRecord.required
                     );
-                    Set(currentCategory,qRecord.category);
+                    Set(currentCategory,qRecord.category_ID);
                     
                     If(buttonKey="next",
                     //次へボタンの場合
