@@ -111,9 +111,7 @@
   "ScreenOrder": [
     "screenTheme",
     "screenCanvas_2",
-    "screenCanvas_1",
     "scrennQuestion",
-    "ScreenEntireDisplay",
     "screenCanvas",
     "ScreenCreateTheme"
   ]
