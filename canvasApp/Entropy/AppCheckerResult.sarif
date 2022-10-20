@@ -3772,6 +3772,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.LabelBoxHindranceFactor_1.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.LabelBoxHindranceFactor_1.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Screen7",
+                "type": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.LabelBoxHindranceFactor_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Screen4.ScreenContainer3.FooterContainer2.ContainerFooter3_1.Y"
                 }
               ],
@@ -3785,6 +3815,66 @@
                 "member": "Y",
                 "module": "Screen4",
                 "type": "Screen4.ScreenContainer3.FooterContainer2.ContainerFooter3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Screen7",
+                "type": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.LayoutMinWidth"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1.LayoutMinWidth",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "LayoutMinWidth",
+                "module": "Screen7",
+                "type": "Screen7.Canvas3.DataCard4.ContainerMain_1.ContainerCanvas_1.GalleryAddCategory_1.ContainerAddCategory_1.ContainerHindranceFactor_1"
               }
             }
           ],

@@ -10,11 +10,35 @@
 
         HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
             FillPortions: =0
-            Height: =50
+            Height: =30
+            LayoutGap: =10
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             ZIndex: =2
+
+            LabelValueProposition_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(23, 143, 152, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="VP：Value Proposition（提供価値）"
+                Width: =Parent.Width*30%
+                ZIndex: =2
+
+            LabelCustomerSegment_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 154, 230, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="CS：Customer Segment（顧客セグメント）"
+                Width: =Parent.Width*70%
+                X: =418
+                ZIndex: =3
 
         MainSectionContainer3 As groupContainer.verticalAutoLayoutContainer:
             Height: =LabelDetailCustomer_1.Height
@@ -55,15 +79,15 @@
 
                         LabelTitleMVP As label:
                             FontWeight: =Semibold
-                            Height: =44
-                            Size: =16
+                            Height: =35
+                            Size: =12
                             Text: =_lMVP
                             Width: =Parent.Width-20
                             X: =10
                             ZIndex: =2
 
                         LabelDetailMVP As label:
-                            Height: =Parent.Height-LabelTitleCustomer.Height-20
+                            Height: =629
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
@@ -85,7 +109,7 @@
                                 */
                             Width: =172.13333333333333
                             X: =10
-                            Y: =50
+                            Y: =35
                             ZIndex: =3
 
                     GalleryAddCategory As gallery.galleryVertical:
@@ -93,7 +117,7 @@
                         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                         Layout: =Layout.Vertical
                         TemplatePadding: =1
-                        TemplateSize: =Parent.Height/2.2
+                        TemplateSize: =Parent.Height
                         Width: =Parent.Width-Parent.Width/7.5*3-IconArrow_1.Width
                         X: =ContainerMVP.Width+IconArrow_1.Width
                         ZIndex: =2
@@ -127,8 +151,8 @@
 
                                 LabelTitleVP As label:
                                     FontWeight: =Semibold
-                                    Height: =44
-                                    Size: =16
+                                    Height: =25
+                                    Size: =12
                                     Text: =_lVP&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -136,7 +160,7 @@
                                     ZIndex: =2
 
                                 LabelDetailVP As label:
-                                    Height: =Parent.Height-LabelTitleCustomer.Height-20
+                                    Height: =629
                                     Overflow: =Overflow.Scroll
                                     Size: =11
                                     Text: |-
@@ -153,7 +177,7 @@
                                         */
                                     Width: =Parent.Width-20
                                     X: =10
-                                    Y: =50
+                                    Y: =34
                                     ZIndex: =3
 
                             IconArrow As icon.ChevronLeft:
@@ -182,8 +206,8 @@
 
                                 LabelTitleSatisfaction As label:
                                     FontWeight: =Semibold
-                                    Height: =44
-                                    Size: =16
+                                    Height: =29
+                                    Size: =12
                                     Text: =_lSatisfaction&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -191,7 +215,7 @@
                                     ZIndex: =2
 
                                 LabelDetailSatisfaction As label:
-                                    Height: =Parent.Height-LabelTitleCustomer.Height-20
+                                    Height: =625
                                     Overflow: =Overflow.Scroll
                                     Size: =11
                                     Text: |-
@@ -219,7 +243,7 @@
                                         */
                                     Width: =Parent.Width-20
                                     X: =10
-                                    Y: =50
+                                    Y: =38
                                     ZIndex: =3
 
                             ContainerCurrentMeasures As groupContainer.manualLayoutContainer:
@@ -240,8 +264,8 @@
 
                                 LabelTitleCurrentMeasures As label:
                                     FontWeight: =Semibold
-                                    Height: =44
-                                    Size: =16
+                                    Height: =27
+                                    Size: =12
                                     Text: =_lCurrentMeasures&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -296,8 +320,8 @@
 
                                 LabelTitleHindranceFactor As label:
                                     FontWeight: =Semibold
-                                    Height: =44
-                                    Size: =16
+                                    Height: =24
+                                    Size: =12
                                     Text: =_lHindranceFactor&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -305,9 +329,9 @@
                                     ZIndex: =2
 
                                 LabelDetailHindranceFactor As label:
-                                    Height: =Parent.Height-LabelTitleCustomer.Height-20
+                                    Height: =630
                                     Overflow: =Overflow.Scroll
-                                    Size: =11
+                                    Size: =9
                                     Text: |-
                                         =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                                         
@@ -333,7 +357,7 @@
                                         */
                                     Width: =Parent.Width-20
                                     X: =10
-                                    Y: =50
+                                    Y: =33
                                     ZIndex: =3
 
                     ContainerJTBD As groupContainer.manualLayoutContainer:
@@ -356,17 +380,17 @@
 
                         LabelTitleJTBD As label:
                             FontWeight: =Semibold
-                            Height: =44
-                            Size: =16
+                            Height: =34
+                            Size: =12
                             Text: =_lJTBD
                             Width: =Parent.Width-20
                             X: =10
                             ZIndex: =5
 
                         LabelDetailJTBD As label:
-                            Height: =Parent.Height-LabelTitleCustomer.Height-20
+                            Height: =620
                             Overflow: =Overflow.Scroll
-                            Size: =11
+                            Size: =9
                             Text: |-
                                 =_lJTBDData
                                 
@@ -379,7 +403,7 @@
                                 */
                             Width: =Parent.Width-20
                             X: =10
-                            Y: =50
+                            Y: =34
                             ZIndex: =6
 
                     ContainerCustomer As groupContainer.manualLayoutContainer:
@@ -400,17 +424,17 @@
 
                         LabelTitleCustomer As label:
                             FontWeight: =Semibold
-                            Height: =44
-                            Size: =16
+                            Height: =34
+                            Size: =12
                             Text: =_lCustomer
                             Width: =Parent.Width-20
                             X: =10
                             ZIndex: =8
 
                         LabelDetailCustomer As label:
-                            Height: =Parent.Height-LabelTitleCustomer.Height-20
+                            Height: =620
                             Overflow: =Overflow.Scroll
-                            Size: =11
+                            Size: =9
                             Text: |-
                                 =_lCustomerData
                                 
@@ -431,7 +455,7 @@
                                 */
                             Width: =Parent.Width-20
                             X: =10
-                            Y: =50
+                            Y: =34
                             ZIndex: =10
 
                     IconArrow_1 As icon.ChevronLeft:

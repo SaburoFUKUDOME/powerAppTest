@@ -1,22 +1,10 @@
 "Screen7 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
-    RectQuickActionBar3 As rectangle:
-        Height: =31
-        Width: =Parent.Width
-        ZIndex: =1
-
-    LblAppName3 As label:
-        Align: =Align.Center
-        Height: =31
-        Text: ="[タイトル]"
-        Width: =Parent.Width
-        ZIndex: =2
-
     Canvas3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar3.Y + RectQuickActionBar3.Height
+        Y: =HeaderContainer3_1.Y + HeaderContainer3_1.Height
         ZIndex: =3
 
         DataCard4 As dataCard.blankCard:
@@ -31,7 +19,7 @@
             ZIndex: =2
 
             ContainerMain_1 As groupContainer.manualLayoutContainer:
-                Height: =LabelDetailCustomer_1.Height+200
+                Height: =LabelDetailJTBD_1.Height+200
                 Width: =Max(App.Width, App.MinScreenWidth)
                 Y: =20
                 ZIndex: =1
@@ -42,32 +30,23 @@
                     ZIndex: =51
 
                     ContainerMVP_1 As groupContainer.manualLayoutContainer:
-                        Height: =Parent.Height
+                        Height: =LabelDetailMVP_1.Height+100
                         Width: =Parent.Width/7.5
                         X: =5
                         ZIndex: =1
 
-                        LabelBoxMVP_1 As label:
-                            BorderColor: =RGBA(0, 13, 75, 1)
-                            BorderThickness: =2
-                            Height: =Parent.Height-10
-                            Text: =
-                            Width: =Parent.Width-10
-                            X: =5
-                            Y: =5
-                            ZIndex: =1
-
                         LabelTitleMVP_1 As label:
                             FontWeight: =Semibold
                             Height: =44
-                            Size: =16
+                            Size: =12
                             Text: =_lMVP
                             Width: =Parent.Width-20
                             X: =10
                             ZIndex: =2
 
                         LabelDetailMVP_1 As label:
-                            Height: =Parent.Height-LabelTitleCustomer_1.Height-20
+                            AutoHeight: =true
+                            Height: =
                             Overflow: =Overflow.Scroll
                             Size: =11
                             Text: |-
@@ -93,36 +72,27 @@
                             ZIndex: =3
 
                     ContainerJTBD_1 As groupContainer.manualLayoutContainer:
-                        Height: =Parent.Height-10
+                        Height: =LabelDetailJTBD_1.Height+100
                         Width: =Parent.Width/7.5
                         X: |-
                             =LabelBoxCustomer_1.X-
                             LabelBoxCustomer_1.Width
                         ZIndex: =3
 
-                        LabelBoxJTBD_1 As label:
-                            BorderColor: =RGBA(0, 13, 75, 1)
-                            BorderThickness: =2
-                            Height: =Parent.Height-10
-                            Text: =
-                            Width: =Parent.Width-10
-                            X: =5
-                            Y: =5
-                            ZIndex: =4
-
                         LabelTitleJTBD_1 As label:
                             FontWeight: =Semibold
                             Height: =44
-                            Size: =16
+                            Size: =12
                             Text: =_lJTBD
                             Width: =Parent.Width-20
                             X: =10
                             ZIndex: =5
 
                         LabelDetailJTBD_1 As label:
-                            Height: =Parent.Height-LabelTitleCustomer_1.Height-20
+                            AutoHeight: =true
+                            Height: =
                             Overflow: =Overflow.Scroll
-                            Size: =11
+                            Size: =9
                             Text: |-
                                 =_lJTBDData
                                 
@@ -147,7 +117,7 @@
                         LabelTitleCustomer_1 As label:
                             FontWeight: =Semibold
                             Height: =44
-                            Size: =16
+                            Size: =12
                             Text: =_lCustomer
                             Width: =Parent.Width-20
                             X: =10
@@ -157,7 +127,7 @@
                             AutoHeight: =true
                             Height: =
                             Overflow: =Overflow.Scroll
-                            Size: =11
+                            Size: =9
                             Text: |-
                                 =_lCustomerData
                                 
@@ -231,7 +201,7 @@
                                 LabelTitleVP_1 As label:
                                     FontWeight: =Semibold
                                     Height: =44
-                                    Size: =16
+                                    Size: =12
                                     Text: =_lVP&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -267,55 +237,6 @@
                                 Width: =30
                                 ZIndex: =2
 
-                            ContainerHindranceFactor_1 As groupContainer.manualLayoutContainer:
-                                LayoutMinHeight: =100
-                                LayoutMinWidth: =LabelBoxCustomer_1.Width
-                                Width: =LabelBoxCustomer_1.Width
-                                ZIndex: =3
-
-                                LabelBoxHindranceFactor_1 As label:
-                                    BorderColor: =RGBA(0, 13, 75, 1)
-                                    BorderThickness: =2
-                                    Height: =LabelDetailHindranceFactor_1.Height
-                                    Text: ="阻害要因"
-                                    Width: =LabelBoxCustomer_1.Width
-                                    X: =1
-                                    Y: =9
-                                    ZIndex: =1
-
-                                LabelDetailHindranceFactor_1 As label:
-                                    AutoHeight: =true
-                                    Height: =Parent.Height-LabelTitleCustomer_1.Height-20
-                                    Overflow: =Overflow.Scroll
-                                    Size: =11
-                                    Text: |-
-                                        =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
-                                        
-                                        //ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
-                                        /**
-                                        With({_startid:7},
-                                        _lIcon&LookUp(questionList,ID=_startid).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+1).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+2).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+3).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
-                                        )
-                                        */
-                                    Width: =Parent.Width-20
-                                    X: =10
-                                    Y: =50
-                                    ZIndex: =3
-
                             ContainerSatisfaction_1 As groupContainer.manualLayoutContainer:
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =LabelBoxCustomer_1.Width
@@ -335,7 +256,7 @@
                                 LabelTitleSatisfaction_1 As label:
                                     FontWeight: =Semibold
                                     Height: =44
-                                    Size: =16
+                                    Size: =12
                                     Text: =_lSatisfaction&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -393,7 +314,7 @@
                                 LabelTitleCurrentMeasures_1 As label:
                                     FontWeight: =Semibold
                                     Height: =44
-                                    Size: =16
+                                    Size: =12
                                     Text: =_lCurrentMeasures&ThisItem.sort_order
                                     Width: =Parent.Width
                                     X: =1
@@ -426,7 +347,95 @@
                                         )
                                         */
                                     Width: =Parent.Width-20
-                                    X: =10
-                                    Y: =50
+                                    X: =7
+                                    Y: =64
                                     ZIndex: =3
+
+                            ContainerHindranceFactor_1 As groupContainer.manualLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =LabelBoxCustomer.Width
+                                Width: =LabelBoxCustomer.Width
+                                ZIndex: =6
+
+                                LabelBoxHindranceFactor_1 As label:
+                                    BorderColor: =RGBA(0, 13, 75, 1)
+                                    BorderThickness: =2
+                                    Height: =Parent.Height-10
+                                    Text: =
+                                    Width: =LabelBoxCustomer.Width
+                                    X: =1
+                                    Y: =9
+                                    ZIndex: =1
+
+                                LabelTitleHindranceFactor_1 As label:
+                                    FontWeight: =Semibold
+                                    Height: =24
+                                    Size: =12
+                                    Text: =_lHindranceFactor&ThisItem.sort_order
+                                    Width: =Parent.Width
+                                    X: =1
+                                    Y: =9
+                                    ZIndex: =2
+
+                                LabelDetailHindranceFactor_1 As label:
+                                    Height: =630
+                                    Overflow: =Overflow.Scroll
+                                    Size: =9
+                                    Text: |-
+                                        =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
+                                        
+                                        //ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
+                                        /**
+                                        With({_startid:7},
+                                        _lIcon&LookUp(questionList,ID=_startid).Title
+                                        &_lNewLine&
+                                        LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
+                                        &_lNewLine&_lNewLine&
+                                        _lIcon&LookUp(questionList,ID=_startid+1).Title
+                                        &_lNewLine&
+                                        LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
+                                        &_lNewLine&_lNewLine&
+                                        _lIcon&LookUp(questionList,ID=_startid+2).Title
+                                        &_lNewLine&
+                                        LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
+                                        &_lNewLine&_lNewLine&
+                                        _lIcon&LookUp(questionList,ID=_startid+3).Title
+                                        &_lNewLine&
+                                        LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
+                                        )
+                                        */
+                                    Width: =Parent.Width-20
+                                    X: =10
+                                    Y: =33
+                                    ZIndex: =3
+
+    HeaderContainer3_1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =30
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =4
+
+        LabelValueProposition_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(23, 143, 152, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =12
+            Text: ="VP：Value Proposition（提供価値）"
+            Width: =Parent.Width*30%
+            ZIndex: =2
+
+        LabelCustomerSegment_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 154, 230, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =12
+            Text: ="CS：Customer Segment（顧客セグメント）"
+            Width: =Parent.Width*70%
+            X: =418
+            ZIndex: =3
 
