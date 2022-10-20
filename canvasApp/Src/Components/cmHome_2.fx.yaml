@@ -1052,7 +1052,7 @@ cmHome_2 As CanvasComponent:
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =12
-                Text: ="CS：Customer Segment（提供価値）"
+                Text: ="CS：Customer Segment（顧客セグメント）"
                 Width: =Parent.Width*68%
                 X: =423
                 ZIndex: =3
