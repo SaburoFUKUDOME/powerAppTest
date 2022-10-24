@@ -110,7 +110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "authorLabel",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -981,7 +981,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "createdLabel",
-      "ParentIndex": 9,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1305,7 +1305,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "frameLabel",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1902,7 +1902,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gearIcon",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2773,7 +2773,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelMaxSortOrder",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3081,7 +3081,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lastModifiedLabel",
-      "ParentIndex": 10,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3784,7 +3784,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryNextIcon.ID%",
       "Name": "NextArrow1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4770,7 +4770,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "statusThemeGallery",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5112,7 +5112,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "themeIdLabel",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5435,7 +5435,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "themeTitleLabel",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
