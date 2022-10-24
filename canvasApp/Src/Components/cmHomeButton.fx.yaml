@@ -199,12 +199,12 @@ cmHomeButton As CanvasComponent:
 
     homeButton_1 As button:
         BorderColor: =_cBaseColor
-        BorderThickness: =3
         Color: =_cBaseColor
         DisabledBorderColor: =_cBaseColor
         DisabledColor: =_cBaseColor
         DisabledFill: =_cBaseColor
         Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =2
         FontWeight: =FontWeight.Bold
         Height: =46
         HoverFill: =_cBaseColor
@@ -218,34 +218,8 @@ cmHomeButton As CanvasComponent:
         Size: =16
         Text: ="Home"
         Tooltip: ="Home画面に戻る"
-        Visible: =If(pageKey="question",true,false)
         Width: =150
         X: =2
         Y: =2
         ZIndex: =4
-
-    homeButtonView_1 As button:
-        BorderColor: =_cBaseColor
-        BorderThickness: =3
-        Color: =White
-        DisabledBorderColor: =_cBaseColor
-        DisabledColor: =_cBaseColor
-        DisabledFill: =_cBaseColor
-        DisplayMode: =DisplayMode.View
-        Fill: =_cBaseColor
-        FontWeight: =FontWeight.Bold
-        Height: =46
-        HoverFill: =_cBaseColor
-        OnSelect: =
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =16
-        Text: ="Home"
-        Visible: =If(pageKey="canvas",true,false)
-        Width: =200
-        X: =2
-        Y: =2
-        ZIndex: =5
 
