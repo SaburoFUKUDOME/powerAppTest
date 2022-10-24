@@ -116,7 +116,7 @@ scrennQuestion As screen:
                     Overflow: =Overflow.Scroll
                     Size: =16
                     Text: =currentTitle
-                    Width: =TitleContainer.Width - infoIcon_1.Width
+                    Width: =TitleContainer.Width - infoIcon_1.Width-20
                     X: =41
                     Y: =3
                     ZIndex: =2
@@ -162,7 +162,7 @@ scrennQuestion As screen:
                     Text: =currentQuestion
                     Width: =questionContainer.Width-50
                     X: =
-                    Y: =
+                    Y: =5
                     ZIndex: =2
 
                 Radio1 As radio:
@@ -175,7 +175,7 @@ scrennQuestion As screen:
                     RadioBorderColor: =_cBaseColor
                     RadioSelectionFill: =_cBaseColor
                     Visible: =If(controlType="radioButton",true,false)
-                    Width: =591
+                    Width: =questionContainer.Width-50
                     X: =
                     Y: =questionLabel_1.Height
                     ZIndex: =5
@@ -350,6 +350,7 @@ scrennQuestion As screen:
                 ZIndex: =5
 
                 cmHomeButton_1 As cmHomeButton:
+                    Height: =56
                     setQuestionValue: |-
                         =Set(
                             navigationKey,
