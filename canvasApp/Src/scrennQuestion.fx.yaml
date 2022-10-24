@@ -162,7 +162,7 @@ scrennQuestion As screen:
                     Text: =currentQuestion
                     Width: =questionContainer.Width-50
                     X: =
-                    Y: =5
+                    Y: =
                     ZIndex: =2
 
                 Radio1 As radio:
