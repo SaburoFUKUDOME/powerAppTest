@@ -122,43 +122,6 @@
                         X: =Parent.Width-ContainerCustomer_1.Width
                         ZIndex: =4
 
-                        LabelTitleCustomer_1 As label:
-                            FontWeight: =Semibold
-                            Height: =44
-                            Size: =12
-                            Text: =_lCustomer
-                            Width: =Parent.Width-20
-                            X: =10
-                            ZIndex: =8
-
-                        LabelDetailCustomer_1 As label:
-                            AutoHeight: =true
-                            Height: =
-                            Overflow: =Overflow.Scroll
-                            Size: =9
-                            Text: |-
-                                =_lCustomerData
-                                
-                                /**
-                                With({_startid:3},
-                                _lIcon&LookUp(questionList,ID=_startid).Title
-                                &_lNewLine&
-                                LookUp(_gAnswerList,questionID=_startid).answer
-                                &_lNewLine&_lNewLine&
-                                _lIcon&LookUp(questionList,ID=_startid+1).Title
-                                &_lNewLine&
-                                LookUp(_gAnswerList,questionID=_startid+1).answer
-                                &_lNewLine&_lNewLine&
-                                _lIcon&LookUp(questionList,ID=_startid+2).Title
-                                &_lNewLine&
-                                LookUp(_gAnswerList,questionID=_startid+2).answer
-                                )
-                                */
-                            Width: =Parent.Width-20
-                            X: =10
-                            Y: =50
-                            ZIndex: =10
-
                     IconArrow_3 As icon.ChevronLeft:
                         Color: =RGBA(0, 13, 75, 1)
                         DisplayMode: =DisplayMode.View

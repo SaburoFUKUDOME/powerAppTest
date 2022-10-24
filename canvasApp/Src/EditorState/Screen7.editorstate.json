@@ -471,14 +471,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "200",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "DisplayMode",
         "LayoutMode",
         "LayoutDirection",
@@ -488,15 +481,7 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "ZIndex"
       ],
       "DynamicProperties": [
         {
@@ -556,11 +541,6 @@
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
         {
           "Category": "Design",
           "PropertyName": "X",
@@ -638,12 +618,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "BorderThickness",
+          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -1036,15 +1016,7 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "ZIndex"
       ],
       "DynamicProperties": [
         {
@@ -1187,11 +1159,6 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "BorderThickness",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -1683,15 +1650,7 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "ZIndex"
       ],
       "DynamicProperties": [
         {
@@ -1753,11 +1712,6 @@
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
         },
@@ -1833,12 +1787,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "BorderThickness",
+          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -1878,15 +1832,7 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "ZIndex"
       ],
       "DynamicProperties": [
         {
@@ -1948,11 +1894,6 @@
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
         },
@@ -2028,12 +1969,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "BorderThickness",
+          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -4555,14 +4496,7 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "AutoHeight",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "AutoHeight"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4785,14 +4719,7 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Overflow.Hidden",
-          "InvariantPropertyName": "Overflow",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Overflow",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -5102,14 +5029,7 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Overflow.Hidden",
-          "InvariantPropertyName": "Overflow",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Overflow",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -5419,14 +5339,7 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Overflow.Hidden",
-          "InvariantPropertyName": "Overflow",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Overflow",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -5525,7 +5438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelDetailJTBD_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -83,123 +83,16 @@ scrennQuestion As screen:
                     Y: =2
                     ZIndex: =3
 
-        NavigateContainer_1 As groupContainer.manualLayoutContainer:
-            Height: =BodyContainer1.Height
-            Width: =MainContainer2.Width/6
-            X: =MainContainer2.Width-MainContainer2.Width/6
-            Y: =BodyContainer1.Y
-            ZIndex: =3
-
-            cmNavigation_3 As cmNavigation:
-                Height: =455
-                setQuestionValue: |-
-                    =Set(
-                        navigationKey,
-                        qId
-                    );
-                    Set(
-                        questionKey,
-                        qId
-                    );
-                    With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
-                    Reset(textAnswer);
-                    Reset(skipAnswerCheckbox);
-                    Reset(noAnswerCheckbox);
-                    Set(
-                        currentAnswer,
-                        If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
-                        );
-                    Set(
-                        skipFlag,
-                        getAnswerRecord.skip_flag
-                        );
-                    Set(
-                        noAnswerFlag,
-                        getAnswerRecord.no_answer_flag
-                        );
-                    );
-                    
-                    With({qRecord:LookUp(questionList, ID=questionKey)},
-                    Set(
-                        currentTitle,
-                        qRecord.Title
-                    );
-                    Set(
-                        currentQuestion,
-                        qRecord.question_content
-                    );
-                    Set(currentCategory,qRecord.category_ID);
-                    Set(
-                        controlType,
-                        qRecord.control_type
-                    );
-                    Set(
-                        currentPage,
-                        qRecord.current_question_number
-                    );
-                    Set(
-                        totalPage,
-                        qRecord.question_totalnumber
-                    );
-                    Set(
-                        commentary,
-                        qRecord.commentary
-                    );
-                    Set(
-                        example,
-                        qRecord.example
-                    );
-                    Set(
-                        currentRequired,
-                        qRecord.required
-                    );
-                    Set(
-                        nextVisible,
-                        If(qRecord.next_question_id=0,false,true)
-                    
-                    );
-                    Set(
-                        confirmVisible,
-                        If(qRecord.next_question_id=0,true,false)
-                    );
-                    );
-                    Set(
-                        backVisible,
-                        false
-                    );
-                    Set(
-                        commentaryGroupVisible,
-                        true
-                    );
-                    Set(
-                        exampleGroupVisible,
-                        false
-                    );
-                    // 追加の問いフラグを初期化
-                    If(
-                        IsBlank(LookUp(_cCategory,Value=currentCategory)),
-                        Set(
-                            addAnswer,
-                            false
-                        );
-                        Set(
-                            addAnswerId,
-                            0
-                        );
-                    );
-                    If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
-                ZIndex: =1
-
         BodyContainer1_1 As groupContainer.manualLayoutContainer:
             Height: =MainContainer.Height-cmHeader_1.Height-HeaderContainer.Height-FooterContainer.Height
-            Width: =Max(App.Width, App.MinScreenWidth)-NavigateContainer.Width
+            Width: =Max(App.Width, App.MinScreenWidth)
             Y: =cmHeader_1.Height+HeaderContainer.Height
             ZIndex: =4
 
             TitleContainer As groupContainer.horizontalAutoLayoutContainer:
                 Height: =50
                 LayoutMode: =LayoutMode.Auto
-                Width: =BodyContainer1_1.Width-TitleContainer.X
+                Width: =BodyContainer1_1.Width-TitleContainer.X-NavigateContainer_1.Width
                 X: =50
                 ZIndex: =1
 
@@ -450,6 +343,111 @@ scrennQuestion As screen:
                             Y: =10
                             ZIndex: =2
 
+            NavigateContainer_1 As groupContainer.manualLayoutContainer:
+                Height: =70
+                Width: =MainContainer2.Width/6
+                X: =Parent.Width-Self.Width
+                ZIndex: =5
+
+                cmHomeButton_1 As cmHomeButton:
+                    setQuestionValue: |-
+                        =Set(
+                            navigationKey,
+                            qId
+                        );
+                        Set(
+                            questionKey,
+                            qId
+                        );
+                        With({getAnswerRecord:LookUp('仮説構築支援ツール - 回答',And(themeID=themeId,questionID=questionKey,add_answerID=addAnswerId))},
+                        Reset(textAnswer);
+                        Reset(skipAnswerCheckbox);
+                        Reset(noAnswerCheckbox);
+                        Set(
+                            currentAnswer,
+                            If(IsBlank(getAnswerRecord),"",getAnswerRecord.answer)
+                            );
+                        Set(
+                            skipFlag,
+                            getAnswerRecord.skip_flag
+                            );
+                        Set(
+                            noAnswerFlag,
+                            getAnswerRecord.no_answer_flag
+                            );
+                        );
+                        
+                        With({qRecord:LookUp(questionList, ID=questionKey)},
+                        Set(
+                            currentTitle,
+                            qRecord.Title
+                        );
+                        Set(
+                            currentQuestion,
+                            qRecord.question_content
+                        );
+                        Set(currentCategory,qRecord.category_ID);
+                        Set(
+                            controlType,
+                            qRecord.control_type
+                        );
+                        Set(
+                            currentPage,
+                            qRecord.current_question_number
+                        );
+                        Set(
+                            totalPage,
+                            qRecord.question_totalnumber
+                        );
+                        Set(
+                            commentary,
+                            qRecord.commentary
+                        );
+                        Set(
+                            example,
+                            qRecord.example
+                        );
+                        Set(
+                            currentRequired,
+                            qRecord.required
+                        );
+                        Set(
+                            nextVisible,
+                            If(qRecord.next_question_id=0,false,true)
+                        
+                        );
+                        Set(
+                            confirmVisible,
+                            If(qRecord.next_question_id=0,true,false)
+                        );
+                        );
+                        Set(
+                            backVisible,
+                            false
+                        );
+                        Set(
+                            commentaryGroupVisible,
+                            true
+                        );
+                        Set(
+                            exampleGroupVisible,
+                            false
+                        );
+                        // 追加の問いフラグを初期化
+                        If(
+                            IsBlank(LookUp(_cCategory,Value=currentCategory)),
+                            Set(
+                                addAnswer,
+                                false
+                            );
+                            Set(
+                                addAnswerId,
+                                0
+                            );
+                        );
+                        If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
+                    ZIndex: =2
+
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =70
             Width: =BodyContainer1_1.Width
@@ -563,7 +561,7 @@ scrennQuestion As screen:
                     If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
                     )
                     
-                X: =323
+                X: =pagingContainer.X-Self.Width
                 Y: =10
                 ZIndex: =1
 
