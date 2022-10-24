@@ -1,16 +1,16 @@
 scrennQuestion As screen:
     OnVisible: =Set(pageKey,"question");
 
-    MainContainer3 As groupContainer.manualLayoutContainer:
+    MainContainer2 As groupContainer.manualLayoutContainer:
         Height: =Max(App.Height, App.MinScreenHeight)
         Width: =Max(App.Width, App.MinScreenWidth)
         ZIndex: =35
 
         cmHeader_4 As cmHeader:
 
-        HeaderContainer_1 As groupContainer.manualLayoutContainer:
+        HeaderContainer As groupContainer.manualLayoutContainer:
             Height: =66
-            Width: =MainContainer3.Width
+            Width: =MainContainer2.Width
             Y: =cmHeader_4.Height
             ZIndex: =2
 
@@ -33,7 +33,7 @@ scrennQuestion As screen:
                 Height: =66
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
-                Width: =HeaderContainer_1.Width
+                Width: =HeaderContainer.Width
                 X: =30
                 ZIndex: =1
 
@@ -48,7 +48,7 @@ scrennQuestion As screen:
                     Y: =461
                     ZIndex: =1
 
-                Rectangle3_4 As rectangle:
+                Rectangle3_3 As rectangle:
                     BorderColor: =_cBaseColor
                     Fill: =_cBaseColor
                     Height: =4

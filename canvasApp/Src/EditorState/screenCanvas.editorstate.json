@@ -955,7 +955,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmStatusBar_3",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1223,7 +1223,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerLink_3",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3870,7 +3870,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lineContainer2_4",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

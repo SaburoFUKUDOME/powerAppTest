@@ -60,7 +60,7 @@ screenCanvas As screen:
 
     HeaderContainer_3 As groupContainer.manualLayoutContainer:
         Height: =66
-        Width: =MainContainer3.Width
+        Width: =MainContainer2.Width
         Y: =cmHeader_4.Height
         ZIndex: =2
 
