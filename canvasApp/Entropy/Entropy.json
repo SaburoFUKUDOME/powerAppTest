@@ -275,7 +275,7 @@
   "DoesTestStepsMetadataExist": true,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/24/2022 05:42:28",
+  "HeaderLastSavedDateTimeUTC": "10/24/2022 05:50:45",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "072ef5f6-d80b-4646-8488-2054ee3e8c82": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/727c8fe29941409ea4cf566a7fd7299f\"",
@@ -285,7 +285,8 @@
     "85b42f60-63fa-4270-b52b-4146b106102b": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/bb983c52-db23-467b-b5e0-33d4abcd9aa6\"",
     "c4cd9101-b075-4c7c-a928-0a6359117411": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/shared-onedriveforbu-ef4a8fdd-25b5-4e03-9b47-4fe59d751e1f\"",
     "cbf8f4e7-dc86-4698-90ef-6d5c9d5cb678": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/b6b93fd074d240a084dc718791306655\"",
-    "e3f2efd8-b744-4aa9-bc7d-f9ce534cb1bb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/f857c2f0-a886-45b4-97e8-4089d6d69940\""
+    "e3f2efd8-b744-4aa9-bc7d-f9ce534cb1bb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/f857c2f0-a886-45b4-97e8-4089d6d69940\"",
+    "f156dc6d-0ffe-4fd1-9a57-3607ae3d7e74": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/97ef5afd3f69492095b00f94a95b98a1\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -315,28 +316,29 @@
     "eee6d2260ca54fcb8c4f0f5e83759ed9": 1
   },
   "OrderDataSource": {
-    "colCurrentMeasures": 14,
-    "colCustomer": 15,
-    "colHindranceFactor": 16,
-    "colJTBD": 17,
-    "colMVP": 18,
-    "colOutputTextCSV": 19,
-    "colSatisfaction": 20,
-    "colVP": 21,
-    "ComboBoxSample": 5,
+    "colCurrentMeasures": 15,
+    "colCustomer": 16,
+    "colHindranceFactor": 17,
+    "colJTBD": 18,
+    "colMVP": 19,
+    "colOutputTextCSV": 20,
+    "colSatisfaction": 21,
+    "colVP": 22,
+    "ComboBoxSample": 6,
     "csvDL": 0,
-    "CustomGallerySample": 6,
+    "CustomGallerySample": 7,
     "Excel": 1,
     "ExportTxtOneDrive": 2,
     "Office365Outlook": 3,
-    "RadioSample": 7,
+    "Office365ユーザー": 5,
+    "RadioSample": 8,
     "txtDL": 4,
-    "仮説構築支援ツール - テーマ": 8,
-    "仮説構築支援ツール - ナビゲーション": 9,
-    "仮説構築支援ツール - 回答": 11,
-    "仮説構築支援ツール - 管理者リスト": 12,
-    "仮説構築支援ツール - 追加の問い": 13,
-    "仮説構築支援ツール - 問い": 10
+    "仮説構築支援ツール - テーマ": 9,
+    "仮説構築支援ツール - ナビゲーション": 10,
+    "仮説構築支援ツール - 回答": 12,
+    "仮説構築支援ツール - 管理者リスト": 13,
+    "仮説構築支援ツール - 追加の問い": 14,
+    "仮説構築支援ツール - 問い": 11
   },
   "OrderGroupControls": {
     "GroupCategoryName": {
