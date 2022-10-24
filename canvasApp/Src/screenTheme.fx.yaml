@@ -236,14 +236,14 @@ screenTheme As screen:
 
                 authorLabel As label:
                     FontWeight: =Semibold
-                    Height: =27
+                    Height: =25
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     Size: =9
                     Text: ="作成者：" & Office365ユーザー.UserProfileV2(ThisItem.author).displayName
-                    Width: =300
+                    Width: =400
                     X: =10
-                    Y: =themeTitleLabel.Height+themeTitleLabel.Y+5
+                    Y: =themeTitleLabel.Height+themeTitleLabel.Y+2
                     ZIndex: =9
 
                 createdLabel As label:
