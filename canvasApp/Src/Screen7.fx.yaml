@@ -75,8 +75,8 @@
                         Height: =LabelDetailJTBD_1.Height+100
                         Width: =Parent.Width/7.5
                         X: |-
-                            =LabelBoxCustomer_1.X-
-                            LabelBoxCustomer_1.Width
+                            =ContainerCustomer_1.X-
+                            ContainerCustomer_1.Width
                         ZIndex: =3
 
                         LabelTitleJTBD_1 As label:
@@ -91,6 +91,7 @@
                         LabelDetailJTBD_1 As label:
                             AutoHeight: =true
                             Height: =
+                            Overflow: =Overflow.Scroll
                             Size: =9
                             Text: |-
                                 =_lJTBDData
@@ -107,10 +108,18 @@
                             Y: =50
                             ZIndex: =6
 
-                    LabelBoxCustomer_1 As groupContainer.manualLayoutContainer:
+                        Label3 As label:
+                            Text: =LabelDetailJTBD_1.Height
+                            Width: =107
+                            X: =65
+                            Y: =4
+                            ZIndex: =7
+
+                    ContainerCustomer_1 As groupContainer.manualLayoutContainer:
+                        BorderThickness: =1
                         Height: =LabelDetailCustomer_1.Height+100
                         Width: =Parent.Width/7.5
-                        X: =Parent.Width-LabelBoxCustomer_1.Width
+                        X: =Parent.Width-ContainerCustomer_1.Width
                         ZIndex: =4
 
                         LabelTitleCustomer_1 As label:
@@ -125,6 +134,7 @@
                         LabelDetailCustomer_1 As label:
                             AutoHeight: =true
                             Height: =
+                            Overflow: =Overflow.Scroll
                             Size: =9
                             Text: |-
                                 =_lCustomerData
@@ -160,16 +170,16 @@
                         ZIndex: =5
 
                     GalleryAddCategory_1 As gallery.variableTemplateHeightGallery:
-                        Height: =LabelDetailHindranceFactor_1.Height*2
+                        Height: =Parent.Height
                         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                         Layout: =Layout.Vertical
-                        TemplateSize: =LabelDetailHindranceFactor_1.Height+200
+                        TemplateSize: =1500
                         Width: =787
                         X: =214
                         ZIndex: =6
 
                         ContainerAddCategory_1 As groupContainer.horizontalAutoLayoutContainer:
-                            Height: =Parent.TemplateHeight
+                            Height: =Parent.Height
                             LayoutGap: =5
                             LayoutMode: =LayoutMode.Auto
                             LayoutOverflowY: =LayoutOverflow.Scroll
@@ -180,10 +190,11 @@
                             ZIndex: =2
 
                             ContainerVP_1 As groupContainer.manualLayoutContainer:
+                                BorderThickness: =1
                                 Height: =Parent.Height-10
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =LabelBoxCustomer_1.Width
-                                Width: =LabelBoxCustomer_1.Width
+                                LayoutMinWidth: =ContainerCustomer_1.Width
+                                Width: =ContainerCustomer_1.Width
                                 ZIndex: =1
 
                                 LabelTitleVP_1 As label:
@@ -226,9 +237,10 @@
                                 ZIndex: =2
 
                             ContainerSatisfaction_1 As groupContainer.manualLayoutContainer:
+                                BorderThickness: =1
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =LabelBoxCustomer_1.Width
-                                Width: =LabelBoxCustomer_1.Width
+                                LayoutMinWidth: =ContainerCustomer_1.Width
+                                Width: =ContainerCustomer_1.Width
                                 ZIndex: =4
 
                                 LabelTitleSatisfaction_1 As label:
@@ -274,9 +286,11 @@
                                     ZIndex: =3
 
                             ContainerCurrentMeasures_1 As groupContainer.manualLayoutContainer:
+                                BorderThickness: =1
+                                Height: =LabelDetailCurrentMeasures_1.Height+100
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =LabelBoxCustomer_1.Width
-                                Width: =LabelBoxCustomer_1.Width
+                                LayoutMinWidth: =ContainerCustomer_1.Width
+                                Width: =ContainerCustomer_1.Width
                                 ZIndex: =5
 
                                 LabelTitleCurrentMeasures_1 As label:
@@ -290,7 +304,8 @@
                                     ZIndex: =2
 
                                 LabelDetailCurrentMeasures_1 As label:
-                                    Height: =Parent.Height-LabelTitleCustomer_1.Height-20
+                                    AutoHeight: =true
+                                    Height: =
                                     Overflow: =Overflow.Scroll
                                     Size: =9
                                     Text: |-
@@ -320,7 +335,8 @@
                                     ZIndex: =3
 
                             ContainerHindranceFactor_1 As groupContainer.manualLayoutContainer:
-                                Height: =LabelDetailHindranceFactor_1.Height+300
+                                BorderThickness: =1
+                                Height: =LabelDetailHindranceFactor_1.Height+100
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =LabelBoxCustomer.Width
                                 Width: =LabelBoxCustomer.Width
@@ -339,30 +355,9 @@
                                 LabelDetailHindranceFactor_1 As label:
                                     AutoHeight: =true
                                     Height: =
+                                    Overflow: =Overflow.Scroll
                                     Size: =9
-                                    Text: |-
-                                        =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
-                                        
-                                        //ClearCollect(colHindranceFactor,Sort(Filter(_cAnswerList,And(themeID=themeId,category="阻害要因（課題）")),questionID));
-                                        /**
-                                        With({_startid:7},
-                                        _lIcon&LookUp(questionList,ID=_startid).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+1).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+1,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+2).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+2,add_answerID=ThisItem.ID)).answer
-                                        &_lNewLine&_lNewLine&
-                                        _lIcon&LookUp(questionList,ID=_startid+3).Title
-                                        &_lNewLine&
-                                        LookUp(_gAnswerList,And(questionID=_startid+3,add_answerID=ThisItem.ID)).answer
-                                        )
-                                        */
+                                    Text: =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                                     Width: =Parent.Width-20
                                     X: =10
                                     Y: =35
