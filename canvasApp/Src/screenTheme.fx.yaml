@@ -162,10 +162,10 @@ screenTheme As screen:
                 lastModifiedLabel As label:
                     Height: =25
                     OnSelect: =Select(Parent)
-                    Size: =10
+                    Size: =9
                     Text: ="最終更新日：" & ThisItem.Modified
                     Width: =255
-                    X: =10
+                    X: =createdLabel.Width+createdLabel.X
                     Y: =authorLabel.Y+authorLabel.Height
                     ZIndex: =5
 
@@ -245,6 +245,16 @@ screenTheme As screen:
                     X: =10
                     Y: =45
                     ZIndex: =9
+
+                createdLabel As label:
+                    Height: =25
+                    OnSelect: =Select(Parent)
+                    Size: =9
+                    Text: ="作成日：" & ThisItem.Created
+                    Width: =220
+                    X: =10
+                    Y: =authorLabel.Y+authorLabel.Height
+                    ZIndex: =10
 
         ContainerHeader2 As groupContainer.manualLayoutContainer:
             Height: =70
