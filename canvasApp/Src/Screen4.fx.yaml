@@ -298,8 +298,8 @@
                                         )
                                         */
                                     Width: =Parent.Width-20
-                                    X: =10
-                                    Y: =50
+                                    X: =7
+                                    Y: =36
                                     ZIndex: =3
 
                             ContainerHindranceFactor As groupContainer.manualLayoutContainer:

@@ -162,10 +162,10 @@
                         ZIndex: =5
 
                     GalleryAddCategory_1 As gallery.variableTemplateHeightGallery:
-                        Height: =568
+                        Height: =LabelDetailHindranceFactor_1.Height*2
                         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                         Layout: =Layout.Vertical
-                        TemplateSize: =280
+                        TemplateSize: =1500
                         Width: =787
                         X: =214
                         ZIndex: =6
@@ -187,16 +187,6 @@
                                 LayoutMinWidth: =LabelBoxCustomer_1.Width
                                 Width: =LabelBoxCustomer_1.Width
                                 ZIndex: =1
-
-                                LabelBoxVP_1 As label:
-                                    BorderColor: =RGBA(0, 13, 75, 1)
-                                    BorderThickness: =2
-                                    Height: =Parent.Height-10
-                                    Text: =
-                                    Width: =LabelBoxCustomer_1.Width
-                                    X: =1
-                                    Y: =9
-                                    ZIndex: =1
 
                                 LabelTitleVP_1 As label:
                                     FontWeight: =Semibold
@@ -242,16 +232,6 @@
                                 LayoutMinWidth: =LabelBoxCustomer_1.Width
                                 Width: =LabelBoxCustomer_1.Width
                                 ZIndex: =4
-
-                                LabelBoxSatisfaction_1 As label:
-                                    BorderColor: =RGBA(0, 13, 75, 1)
-                                    BorderThickness: =2
-                                    Height: =Parent.Height-10
-                                    Text: =
-                                    Width: =LabelBoxCustomer_1.Width
-                                    X: =1
-                                    Y: =9
-                                    ZIndex: =1
 
                                 LabelTitleSatisfaction_1 As label:
                                     FontWeight: =Semibold
@@ -301,16 +281,6 @@
                                 Width: =LabelBoxCustomer_1.Width
                                 ZIndex: =5
 
-                                LabelBoxCurrentMeasures_1 As label:
-                                    BorderColor: =RGBA(0, 13, 75, 1)
-                                    BorderThickness: =2
-                                    Height: =Parent.Height-10
-                                    Text: =
-                                    Width: =LabelBoxCustomer_1.Width
-                                    X: =1
-                                    Y: =9
-                                    ZIndex: =1
-
                                 LabelTitleCurrentMeasures_1 As label:
                                     FontWeight: =Semibold
                                     Height: =44
@@ -324,7 +294,7 @@
                                 LabelDetailCurrentMeasures_1 As label:
                                     Height: =Parent.Height-LabelTitleCustomer_1.Height-20
                                     Overflow: =Overflow.Scroll
-                                    Size: =11
+                                    Size: =9
                                     Text: |-
                                         =Concat(Filter(colCurrentMeasures,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                                         
@@ -352,20 +322,11 @@
                                     ZIndex: =3
 
                             ContainerHindranceFactor_1 As groupContainer.manualLayoutContainer:
+                                Height: =LabelDetailHindranceFactor_1.Height+200
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =LabelBoxCustomer.Width
                                 Width: =LabelBoxCustomer.Width
                                 ZIndex: =6
-
-                                LabelBoxHindranceFactor_1 As label:
-                                    BorderColor: =RGBA(0, 13, 75, 1)
-                                    BorderThickness: =2
-                                    Height: =Parent.Height-10
-                                    Text: =
-                                    Width: =LabelBoxCustomer.Width
-                                    X: =1
-                                    Y: =9
-                                    ZIndex: =1
 
                                 LabelTitleHindranceFactor_1 As label:
                                     FontWeight: =Semibold
@@ -378,7 +339,8 @@
                                     ZIndex: =2
 
                                 LabelDetailHindranceFactor_1 As label:
-                                    Height: =630
+                                    AutoHeight: =true
+                                    Height: =
                                     Overflow: =Overflow.Scroll
                                     Size: =9
                                     Text: |-
@@ -406,7 +368,7 @@
                                         */
                                     Width: =Parent.Width-20
                                     X: =10
-                                    Y: =33
+                                    Y: =35
                                     ZIndex: =3
 
     HeaderContainer3_1 As groupContainer.horizontalAutoLayoutContainer:

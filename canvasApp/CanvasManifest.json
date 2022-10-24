@@ -94,11 +94,11 @@
     "Id": "47933b3e-712f-4db2-9bff-d130b67c3195",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "仮説構築支援ツール_開発",
+    "Name": "仮説構築支援ツール_開発bk",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "仮説構築支援ツール_開発",
+    "AppName": "仮説構築支援ツール_開発bk",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
