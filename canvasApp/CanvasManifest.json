@@ -91,7 +91,7 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "df69e975-5576-4c52-9911-fc1b4bbeb6b6",
-    "Id": "47933b3e-712f-4db2-9bff-d130b67c3195",
+    "Id": "f6d9dc6a-a2c6-40da-a757-3fc2533a537a",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "Name": "仮説構築支援ツール_開発",
@@ -113,8 +113,6 @@
     "screenCanvas_2",
     "scrennQuestion",
     "screenCanvas",
-    "ScreenCreateTheme",
-    "Screen4",
-    "Screen7"
+    "ScreenCreateTheme"
   ]
 }
