@@ -275,7 +275,7 @@
                                 LabelDetailCurrentMeasures As label:
                                     Height: =Parent.Height-LabelTitleCustomer.Height-20
                                     Overflow: =Overflow.Scroll
-                                    Size: =11
+                                    Size: =9
                                     Text: |-
                                         =Concat(Filter(colCurrentMeasures,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
                                         
@@ -502,7 +502,7 @@
                     Size: =11
                     Text: ="©New*New All rights reserved."
                     Width: =268
-                    X: =515
-                    Y: =10
+                    X: =550
+                    Y: =24
                     ZIndex: =4
 
