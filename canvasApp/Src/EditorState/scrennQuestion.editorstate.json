@@ -708,7 +708,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "cmNavigation_3": {
+    "cmHomeButton_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -728,22 +728,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "73.19999999999999",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "298",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "X",
+        "Y",
         "ZIndex",
         "setQuestionValue_qId",
         {
@@ -777,7 +763,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "cmNavigation_3",
+      "Name": "cmHomeButton_1",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -788,42 +774,42 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "PropertyName": "Fill",
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "updateAnswer",
           "RuleProviderType": "System"
         },
         {
           "Category": "Behavior",
           "PropertyName": "setQuestionValue",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Behavior",
-          "PropertyName": "updateAnswer",
           "RuleProviderType": "System"
         }
       ],
@@ -886,7 +872,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmStatusBar_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1143,7 +1129,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commentaryButton_2",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1725,7 +1711,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerLink_1",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1877,7 +1863,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerLink_2",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2507,7 +2493,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "exampleButton_2",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3247,7 +3233,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HeaderContainer_1",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5210,7 +5196,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lineContainer2_2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6121,7 +6107,14 @@
           "NameMapSourceSchema": "?"
         },
         "Width",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "323",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6306,7 +6299,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "questionContainer",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

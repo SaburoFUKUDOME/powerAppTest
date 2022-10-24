@@ -581,7 +581,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerCustomer",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1103,7 +1103,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerJTBD",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1444,7 +1444,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerMVP",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2153,7 +2153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryAddCategory",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
