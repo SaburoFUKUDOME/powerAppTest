@@ -160,7 +160,7 @@ scrennQuestion As screen:
                     Overflow: =Overflow.Scroll
                     Size: =14
                     Text: =currentQuestion
-                    Width: =996
+                    Width: =questionContainer.Width-50
                     X: =
                     Y: =
                     ZIndex: =2
@@ -345,7 +345,7 @@ scrennQuestion As screen:
 
             NavigateContainer_1 As groupContainer.manualLayoutContainer:
                 Height: =70
-                Width: =MainContainer2.Width/6
+                Width: =MainContainer2.Width/8
                 X: =Parent.Width-Self.Width
                 ZIndex: =5
 
@@ -446,6 +446,7 @@ scrennQuestion As screen:
                             );
                         );
                         If(Not(currentRequired="2"),Set(currentQuestion,Concatenate(currentQuestion,"*")))
+                    Width: =155
                     ZIndex: =2
 
         FooterContainer As groupContainer.manualLayoutContainer:

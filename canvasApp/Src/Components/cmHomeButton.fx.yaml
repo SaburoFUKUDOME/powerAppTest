@@ -217,8 +217,9 @@ cmHomeButton As CanvasComponent:
         RadiusTopRight: =0
         Size: =16
         Text: ="Home"
+        Tooltip: ="Home画面に戻る"
         Visible: =If(pageKey="question",true,false)
-        Width: =200
+        Width: =150
         X: =2
         Y: =2
         ZIndex: =4

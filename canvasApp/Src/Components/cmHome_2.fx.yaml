@@ -1062,7 +1062,7 @@ cmHome_2 As CanvasComponent:
             DisabledFill: =ColorFade(_cBaseColor,-20%)
             Fill: =_cBaseColor
             FocusedBorderThickness: =0
-            Height: =25
+            Height: =30
             HoverFill: =ColorFade(_cBaseColor,-20%)
             OnSelect: =cmHome_2.moveQuestion(1,false,0);
             Size: =12
