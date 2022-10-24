@@ -160,13 +160,13 @@ screenTheme As screen:
                     ZIndex: =4
 
                 lastModifiedLabel As label:
-                    Height: =38
+                    Height: =25
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: ="最終更新日：" & ThisItem.Modified
                     Width: =255
                     X: =10
-                    Y: =59
+                    Y: =authorLabel.Y+authorLabel.Height
                     ZIndex: =5
 
                 statusThemeGallery As gallery.galleryHorizontal:
@@ -233,6 +233,16 @@ screenTheme As screen:
                     X: =1247
                     Y: =62
                     ZIndex: =8
+
+                authorLabel As label:
+                    Height: =25
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: ="最終更新日：" & ThisItem.Modified
+                    Width: =255
+                    X: =10
+                    Y: =45
+                    ZIndex: =9
 
         ContainerHeader2 As groupContainer.manualLayoutContainer:
             Height: =70
