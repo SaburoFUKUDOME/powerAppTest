@@ -3322,6 +3322,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen7",
+                "type": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen7",
+                "type": "Screen7.FooterContainer2_1.ContainerFooter3_3.IconBackThemeScreen_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.header"
                 }
               ],
@@ -3815,6 +3875,36 @@
                 "member": "Y",
                 "module": "Screen4",
                 "type": "Screen4.ScreenContainer3.FooterContainer2.ContainerFooter3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen7.Canvas3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen7.Canvas3.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Screen7",
+                "type": "Screen7.Canvas3"
               }
             }
           ],

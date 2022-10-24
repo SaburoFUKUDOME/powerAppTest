@@ -2,7 +2,7 @@
 
     Canvas3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
-        Height: =Parent.Height - Self.Y
+        Height: =Parent.Height - Self.Y-FooterContainer2.Height
         Width: =Parent.Width
         Y: =HeaderContainer3_1.Y + HeaderContainer3_1.Height
         ZIndex: =3
@@ -91,7 +91,6 @@
                         LabelDetailJTBD_1 As label:
                             AutoHeight: =true
                             Height: =
-                            Overflow: =Overflow.Scroll
                             Size: =9
                             Text: |-
                                 =_lJTBDData
@@ -126,7 +125,6 @@
                         LabelDetailCustomer_1 As label:
                             AutoHeight: =true
                             Height: =
-                            Overflow: =Overflow.Scroll
                             Size: =9
                             Text: |-
                                 =_lCustomerData
@@ -165,7 +163,7 @@
                         Height: =LabelDetailHindranceFactor_1.Height*2
                         Items: =Sort(Filter('仮説構築支援ツール - 追加の問い',themeID=themeId),sort_order)
                         Layout: =Layout.Vertical
-                        TemplateSize: =1500
+                        TemplateSize: =LabelDetailHindranceFactor_1.Height+200
                         Width: =787
                         X: =214
                         ZIndex: =6
@@ -322,7 +320,7 @@
                                     ZIndex: =3
 
                             ContainerHindranceFactor_1 As groupContainer.manualLayoutContainer:
-                                Height: =LabelDetailHindranceFactor_1.Height+200
+                                Height: =LabelDetailHindranceFactor_1.Height+300
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =LabelBoxCustomer.Width
                                 Width: =LabelBoxCustomer.Width
@@ -341,7 +339,6 @@
                                 LabelDetailHindranceFactor_1 As label:
                                     AutoHeight: =true
                                     Height: =
-                                    Overflow: =Overflow.Scroll
                                     Size: =9
                                     Text: |-
                                         =Concat(Filter(colHindranceFactor,add_answerID=ThisItem.ID),_lIcon&LookUp(questionList,ID=questionID).Title&_lNewLine&answer&_lNewLine&_lNewLine)
@@ -370,6 +367,15 @@
                                     X: =10
                                     Y: =35
                                     ZIndex: =3
+
+                                Label2 As label:
+                                    Height: =98
+                                    Overflow: =Overflow.Scroll
+                                    Text: =LabelDetailHindranceFactor_1.Height
+                                    Width: =80
+                                    X: =92
+                                    Y: =9
+                                    ZIndex: =4
 
     HeaderContainer3_1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =30
@@ -400,4 +406,41 @@
             Width: =Parent.Width*70%
             X: =418
             ZIndex: =3
+
+    FooterContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =50
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =718
+        ZIndex: =5
+
+        ContainerFooter3_3 As groupContainer.manualLayoutContainer:
+            Height: =50
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =Parent.Width
+            Y: =ContainerCanvas_1.Height
+            ZIndex: =1
+
+            IconBackThemeScreen_5 As icon.BackArrow:
+                Color: =_cBaseColor
+                Height: =30
+                Icon: =Icon.BackArrow
+                OnSelect: =Navigate(screenCanvas,Fade)
+                Tooltip: ="Home画面へ戻る"
+                Width: =30
+                X: =11
+                Y: =10
+                ZIndex: =2
+
+            Label3_2 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =16
+                LineHeight: =1.0
+                Size: =11
+                Text: ="©New*New All rights reserved."
+                Width: =268
+                X: =550
+                Y: =24
+                ZIndex: =4
 
