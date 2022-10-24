@@ -1902,7 +1902,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gearIcon",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2773,7 +2773,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelMaxSortOrder",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5112,7 +5112,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "themeIdLabel",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

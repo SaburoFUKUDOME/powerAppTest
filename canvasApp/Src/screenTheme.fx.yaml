@@ -155,8 +155,8 @@ screenTheme As screen:
                         Navigate(ScreenCreateTheme,Fade,{_lThemeKey:ThisItem.ID,_lButtonLabel:"更新"})
                     Tooltip: ="テーマを編集する"
                     Width: =40
-                    X: =authorLabel.Width+authorLabel.X
-                    Y: =authorLabel.Y
+                    X: =lastModifiedLabel.X+lastModifiedLabel.Width+1-0
+                    Y: =72
                     ZIndex: =4
 
                 lastModifiedLabel As label:
@@ -252,7 +252,7 @@ screenTheme As screen:
                     Size: =9
                     Text: ="作成日：" & ThisItem.Created
                     Width: =220
-                    X: =20
+                    X: =10
                     Y: =authorLabel.Y+authorLabel.Height
                     ZIndex: =10
 
