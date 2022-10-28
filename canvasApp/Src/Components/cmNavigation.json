@@ -27,7 +27,7 @@
       "Name": "setQuestionValue",
       "PropertyDataTypeKey": "Boolean",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "75",
+        "PropertyScopeRuleNamespaceKey": "74",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "setQuestionValue_qId",
@@ -58,7 +58,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638021864698494224",
+  "LastModifiedTimestamp": "638025139698965940",
   "Name": "7c3cf122a435439fa23ddcb43d273dff",
   "OverridableProperties": {},
   "TemplateOriginalName": "e88d8fa5810f418a94473be296e5e99e",

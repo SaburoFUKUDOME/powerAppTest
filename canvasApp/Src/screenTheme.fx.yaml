@@ -240,7 +240,7 @@ screenTheme As screen:
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     Size: =9
-                    Text: ="作成者：" & Office365ユーザー.UserProfileV2(ThisItem.author).displayName
+                    Text: ="作成者：" & ThisItem.'Created By'.DisplayName
                     Width: =400
                     X: =10
                     Y: =themeTitleLabel.Height+themeTitleLabel.Y+2
